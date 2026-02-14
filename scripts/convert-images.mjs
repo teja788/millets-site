@@ -18,6 +18,17 @@ const mapping = {
   'proso-millet-grain.png': 'millets/proso-millet-grain.webp',
   'browntop-millet-grain.png': 'millets/browntop-millet-grain.webp',
 
+  // Millet plant images → public/images/millets/
+  'pearl-millet-plant.png': 'millets/pearl-millet-plant.webp',
+  'finger-millet-plant.png': 'millets/finger-millet-plant.webp',
+  'sorghum-plant.png': 'millets/sorghum-plant.webp',
+  'foxtail-millet-plant.png': 'millets/foxtail-millet-plant.webp',
+  'little-millet-plant.png': 'millets/little-millet-plant.webp',
+  'kodo-millet-plant.png': 'millets/kodo-millet-plant.webp',
+  'barnyard-millet-plant.png': 'millets/barnyard-millet-plant.webp',
+  'proso-millet-plant.png': 'millets/proso-millet-plant.webp',
+  'browntop-millet-plant.png': 'millets/browntop-millet-plant.webp',
+
   // Hero images → public/images/hero/
   'hero-main.png': 'hero/hero-main.webp',
   'hero-about.png': 'hero/hero-about.webp',
