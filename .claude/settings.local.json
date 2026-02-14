@@ -22,7 +22,13 @@
       "Bash(git config:*)",
       "Bash(gh repo create:*)",
       "Bash(git status:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(where:*)",
+      "Bash(npx vercel:*)",
+      "Bash(vercel whoami:*)",
+      "Bash(vercel:*)",
+      "Bash(VERCEL_ORG_ID=team_VKOyP0IEeRmmKeA7ZwAQXM5V vercel link:*)",
+      "Bash(cmd //c:*)"
     ]
   }
 }

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { Playfair_Display, Source_Sans_3 } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme/ThemeProvider';
 import Navbar from '@/components/layout/Navbar';
@@ -6,6 +7,8 @@ import Footer from '@/components/layout/Footer';
 import ScrollProgress from '@/components/ui/ScrollProgress';
 import BackToTop from '@/components/ui/BackToTop';
 import '@/styles/globals.css';
+
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -54,6 +57,22 @@ export default function RootLayout({
       className={`${playfair.variable} ${sourceSans.variable}`}
       suppressHydrationWarning
     >
+      {GA_ID && (
+        <>
+          <Script
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+            strategy="afterInteractive"
+          />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${GA_ID}');
+            `}
+          </Script>
+        </>
+      )}
       <body className="font-body antialiased">
         <ThemeProvider>
           <ScrollProgress />
