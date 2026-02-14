@@ -1,0 +1,635 @@
+============================================================
+  MILLETS WEBSITE - AI IMAGE GENERATION PROMPTS
+  Total: 78 images
+  Copy-paste each prompt into Gemini or other AI image
+  generators one at a time. Save with the filename shown.
+============================================================
+
+
+=== IMAGE 1 of 78: hero-main ===
+SAVE AS: hero-main.png
+SIZE: 1920x1080
+
+PROMPT: Overhead photograph of nine different types of millet grains, each in a small rustic earthen bowl, arranged in a circle on a dark wooden table. The grains range from dark reddish-brown (finger millet) to golden yellow (foxtail) to white (barnyard). Some green millet stalks and leaves scattered between the bowls. Warm golden natural light from the upper left. Shallow depth of field with the center bowls in sharp focus. Food photography style. Warm earth tones palette: golden browns, rich greens, cream backgrounds. No text, no watermarks, no people.
+
+---
+
+=== IMAGE 2 of 78: hero-about ===
+SAVE AS: hero-about.png
+SIZE: 1920x600
+
+PROMPT: Panoramic photograph of a vast millet field at golden hour. Multiple varieties of millet plants swaying in a gentle breeze, their grain heads catching the warm golden sunlight. Soft focus rolling hills in the background. The sky shows warm sunset colors - amber, pink, and soft orange. Indian rural landscape. No people, no text, no watermarks. Wide cinematic aspect ratio.
+
+---
+
+=== IMAGE 3 of 78: hero-recipes ===
+SAVE AS: hero-recipes.png
+SIZE: 1920x600
+
+PROMPT: Top-down flat lay photograph of various millet dishes being prepared in a traditional Indian kitchen. Multiple earthen and brass bowls containing different millet preparations - ragi porridge, foxtail millet rice, bajra roti dough. Some hands visible at edges kneading dough. Fresh herbs (curry leaves, coriander), spices (turmeric, cumin), and cooking utensils scattered artistically. Warm kitchen lighting. No text.
+
+---
+
+=== IMAGE 4 of 78: hero-history ===
+SAVE AS: hero-history.png
+SIZE: 1920x600
+
+PROMPT: Artistic panoramic image blending ancient and modern. Left side shows ochre-toned cave painting style depictions of grain harvesting. Center transitions through archaeological clay pottery fragments with grain impressions. Right side shows golden millet grains on aged parchment. Warm sepia tones throughout. Earthy browns (#7A6132), ochres, and cream. No text, no watermarks.
+
+---
+
+=== IMAGE 5 of 78: hero-ayurveda ===
+SAVE AS: hero-ayurveda.png
+SIZE: 1920x600
+
+PROMPT: Traditional Ayurvedic setting - ornate brass mortar and pestle (Khalva Yantra) filled with millet grains and turmeric. Surrounding items: dried herbs, small clay pots of spices, an ancient-looking palm leaf manuscript partially visible, a small brass oil lamp. Warm candlelight glow with golden tones. Dark wood table surface. Styled product photography. No text.
+
+---
+
+=== IMAGE 6 of 78: hero-sustainability ===
+SAVE AS: hero-sustainability.png
+SIZE: 1920x600
+
+PROMPT: Split/transition panoramic photograph. Left third shows cracked, dry, parched earth with dead brown vegetation under harsh sun. Middle transitions gradually. Right third shows lush green millet field (pearl millet, tall stalks) thriving under dramatic cumulus clouds with golden light breaking through. Symbolizing climate resilience. No text.
+
+---
+
+=== IMAGE 7 of 78: hero-cooking ===
+SAVE AS: hero-cooking.png
+SIZE: 1920x600
+
+PROMPT: Rustic Indian kitchen morning scene. A traditional clay pot (matka) with millets soaking in water on a stone countertop. Nearby: a stone grinder (sil batta), a brass measuring cup, some whole spices (cumin, mustard seeds). Warm morning sunlight streaming through a wooden window frame. Dust motes visible in the light. Peaceful, traditional atmosphere. No text.
+
+---
+
+=== IMAGE 8 of 78: pearl-millet-grain ===
+SAVE AS: pearl-millet-grain.png
+SIZE: 800x800
+
+PROMPT: Clean close-up photograph of Pearl Millet grains (Pennisetum glaucum) on a warm wooden surface. A small mound of grey-white to pale yellow, round-ish grains with some scattered around. Soft diffused natural lighting from the left. Shallow depth of field. Warm earth tones. Background is blurred warm beige. Studio food photography style. No text, no watermarks.
+
+---
+
+=== IMAGE 9 of 78: finger-millet-grain ===
+SAVE AS: finger-millet-grain.png
+SIZE: 800x800
+
+PROMPT: Clean close-up photograph of Finger Millet grains (Eleusine coracana) on a warm wooden surface. A small mound of dark reddish-brown, very small round grains with some scattered around. The distinctive dark chocolate-brown color should be accurate. Soft diffused natural lighting from the left. Shallow depth of field. Warm earth tones. Background is blurred warm beige. Studio food photography style. No text.
+
+---
+
+=== IMAGE 10 of 78: sorghum-grain ===
+SAVE AS: sorghum-grain.png
+SIZE: 800x800
+
+PROMPT: Clean close-up photograph of Sorghum grains (Sorghum bicolor) on a warm wooden surface. A small mound of white/cream to reddish-brown, larger round grains with some scattered around. Soft diffused natural lighting from the left. Shallow depth of field. Warm earth tones. Background is blurred warm beige. Studio food photography style. No text.
+
+---
+
+=== IMAGE 11 of 78: foxtail-millet-grain ===
+SAVE AS: foxtail-millet-grain.png
+SIZE: 800x800
+
+PROMPT: Clean close-up photograph of Foxtail Millet grains (Setaria italica) on a warm wooden surface. A small mound of golden yellow, tiny elongated grains with some scattered around. Soft diffused natural lighting from the left. Shallow depth of field. Warm earth tones. Background is blurred warm beige. Studio food photography style. No text.
+
+---
+
+=== IMAGE 12 of 78: little-millet-grain ===
+SAVE AS: little-millet-grain.png
+SIZE: 800x800
+
+PROMPT: Clean close-up photograph of Little Millet grains (Panicum sumatrense) on a warm wooden surface. A small mound of light grey-brown, very tiny grains with some scattered around. Soft diffused natural lighting from the left. Shallow depth of field. Warm earth tones. Background is blurred warm beige. Studio food photography style. No text.
+
+---
+
+=== IMAGE 13 of 78: kodo-millet-grain ===
+SAVE AS: kodo-millet-grain.png
+SIZE: 800x800
+
+PROMPT: Clean close-up photograph of Kodo Millet grains (Paspalum scrobiculatum) on a warm wooden surface. A small mound of dark brown to grey, medium oval grains with some scattered around. Soft diffused natural lighting from the left. Shallow depth of field. Warm earth tones. Background is blurred warm beige. Studio food photography style. No text.
+
+---
+
+=== IMAGE 14 of 78: barnyard-millet-grain ===
+SAVE AS: barnyard-millet-grain.png
+SIZE: 800x800
+
+PROMPT: Clean close-up photograph of Barnyard Millet grains (Echinochloa frumentacea) on a warm wooden surface. A small mound of white to light brown, small round grains with some scattered around. Soft diffused natural lighting from the left. Shallow depth of field. Warm earth tones. Background is blurred warm beige. Studio food photography style. No text.
+
+---
+
+=== IMAGE 15 of 78: proso-millet-grain ===
+SAVE AS: proso-millet-grain.png
+SIZE: 800x800
+
+PROMPT: Clean close-up photograph of Proso Millet grains (Panicum miliaceum) on a warm wooden surface. A small mound of cream to golden yellow, round shiny grains with some scattered around. Soft diffused natural lighting from the left. Shallow depth of field. Warm earth tones. Background is blurred warm beige. Studio food photography style. No text.
+
+---
+
+=== IMAGE 16 of 78: browntop-millet-grain ===
+SAVE AS: browntop-millet-grain.png
+SIZE: 800x800
+
+PROMPT: Clean close-up photograph of Browntop Millet grains (Brachiaria ramosa) on a warm wooden surface. A small mound of reddish-brown, small round grains with some scattered around. Soft diffused natural lighting from the left. Shallow depth of field. Warm earth tones. Background is blurred warm beige. Studio food photography style. No text.
+
+---
+
+=== IMAGE 17 of 78: pearl-millet-plant ===
+SAVE AS: pearl-millet-plant.png
+SIZE: 1200x675
+
+PROMPT: A Pearl Millet plant (Pennisetum glaucum) growing in a field. Show the characteristic tall stalks (up to 3 meters) with thick cylindrical spike resembling a cattail, grey-green broad leaves. Golden hour lighting. Indian agricultural landscape with other millet plants in background. Warm tones. Realistic botanical photography style. Sharp focus on the seed head. No people, no text.
+
+---
+
+=== IMAGE 18 of 78: finger-millet-plant ===
+SAVE AS: finger-millet-plant.png
+SIZE: 1200x675
+
+PROMPT: A Finger Millet plant (Eleusine coracana) growing in a field. Show the characteristic distinctive finger-like branching panicle that looks like an open hand with 5-6 'fingers' radiating outward. The plant is shorter than pearl millet. Golden hour lighting. Indian agricultural landscape in background. Warm tones. Realistic botanical photography style. Sharp focus on the seed head. No people, no text.
+
+---
+
+=== IMAGE 19 of 78: sorghum-plant ===
+SAVE AS: sorghum-plant.png
+SIZE: 1200x675
+
+PROMPT: A Sorghum plant (Sorghum bicolor) growing in a field. Show the characteristic tall stalks with large open panicle and grain hanging in loose clusters at the top. Broad leaves along the stalk. Golden hour lighting. Indian agricultural landscape in background. Warm tones. Realistic botanical photography style. Sharp focus on the grain head. No people, no text.
+
+---
+
+=== IMAGE 20 of 78: foxtail-millet-plant ===
+SAVE AS: foxtail-millet-plant.png
+SIZE: 1200x675
+
+PROMPT: A Foxtail Millet plant (Setaria italica) growing in a field. Show the characteristic bushy, cylindrical bristly spike that curves slightly like a fox's tail. The spike is dense with golden-yellow grain. Golden hour lighting. Indian agricultural landscape in background. Warm tones. Realistic botanical photography style. Sharp focus on the seed head. No people, no text.
+
+---
+
+=== IMAGE 21 of 78: little-millet-plant ===
+SAVE AS: little-millet-plant.png
+SIZE: 1200x675
+
+PROMPT: A Little Millet plant (Panicum sumatrense) growing in a field. Show the characteristic thin stems with small open panicle with tiny spikelets spreading delicately. The plant is relatively short and fine-stemmed. Golden hour lighting. Indian agricultural landscape in background. Warm tones. Realistic botanical photography style. Sharp focus on the seed head. No people, no text.
+
+---
+
+=== IMAGE 22 of 78: kodo-millet-plant ===
+SAVE AS: kodo-millet-plant.png
+SIZE: 1200x675
+
+PROMPT: A Kodo Millet plant (Paspalum scrobiculatum) growing in a field. Show the characteristic branching panicle with 2-3 racemes arranged along a central axis. Medium height plant. Golden hour lighting. Indian agricultural landscape in background. Warm tones. Realistic botanical photography style. Sharp focus on the seed head. No people, no text.
+
+---
+
+=== IMAGE 23 of 78: barnyard-millet-plant ===
+SAVE AS: barnyard-millet-plant.png
+SIZE: 1200x675
+
+PROMPT: A Barnyard Millet plant (Echinochloa frumentacea) growing in a field. Show the characteristic compact panicle with short branches, slightly drooping under the weight of grain. Golden hour lighting. Indian agricultural landscape in background. Warm tones. Realistic botanical photography style. Sharp focus on the seed head. No people, no text.
+
+---
+
+=== IMAGE 24 of 78: proso-millet-plant ===
+SAVE AS: proso-millet-plant.png
+SIZE: 1200x675
+
+PROMPT: A Proso Millet plant (Panicum miliaceum) growing in a field. Show the characteristic open spreading panicle with grains hanging on drooping branches. The panicle is loose and airy. Golden hour lighting. Indian agricultural landscape in background. Warm tones. Realistic botanical photography style. Sharp focus on the seed head. No people, no text.
+
+---
+
+=== IMAGE 25 of 78: browntop-millet-plant ===
+SAVE AS: browntop-millet-plant.png
+SIZE: 1200x675
+
+PROMPT: A Browntop Millet plant (Brachiaria ramosa) growing in a field. Show the characteristic open panicle with spreading branches tipped with brownish grain clusters. The plant has a natural, slightly wild appearance. Golden hour lighting. Indian agricultural landscape in background. Warm tones. Realistic botanical photography style. Sharp focus on the seed head. No people, no text.
+
+---
+
+=== IMAGE 26 of 78: pearl-millet-cooked ===
+SAVE AS: pearl-millet-cooked.png
+SIZE: 1200x675
+
+PROMPT: A beautifully plated traditional Indian dish: Bajra roti (pearl millet flatbread) with white butter melting on top and red chili garlic chutney on a stainless steel thali plate. The roti is round, slightly charred, with a rustic texture. Warm home kitchen lighting. Overhead angle, slight tilt. Some green chili and onion garnish visible. Steam rising from the fresh roti. Styled Indian food photography. No text.
+
+---
+
+=== IMAGE 27 of 78: finger-millet-cooked ===
+SAVE AS: finger-millet-cooked.png
+SIZE: 1200x675
+
+PROMPT: A beautifully plated traditional Indian dish: Ragi mudde (finger millet ball) - a smooth, dark brown/black spherical ball served on a fresh green banana leaf with a bowl of hot sambar and white coconut chutney. Traditional Karnataka meal. Warm home kitchen lighting. Overhead angle, slight tilt. Steam visible. Styled Indian food photography. No text.
+
+---
+
+=== IMAGE 28 of 78: sorghum-cooked ===
+SAVE AS: sorghum-cooked.png
+SIZE: 1200x675
+
+PROMPT: A beautifully plated traditional Indian dish: Jowar bhakri (sorghum flatbread) with vangyache bharit (smoky roasted brinjal/eggplant bharta) served on a traditional Maharashtrian pital (brass) plate. The bhakri is thick and round. Some raw onion slices and green chili on the side. Warm home kitchen lighting. Overhead angle. Styled Indian food photography. No text.
+
+---
+
+=== IMAGE 29 of 78: foxtail-millet-cooked ===
+SAVE AS: foxtail-millet-cooked.png
+SIZE: 1200x675
+
+PROMPT: A beautifully plated traditional Indian dish: Thinai (foxtail millet) vegetable pulao in a rustic clay pot with colorful vegetables visible - green peas, carrots, beans. A small bowl of raita on the side. Garnished with fresh coriander and fried cashews. Warm home kitchen lighting. Overhead angle, slight tilt. Steam rising. Styled Indian food photography. No text.
+
+---
+
+=== IMAGE 30 of 78: little-millet-cooked ===
+SAVE AS: little-millet-cooked.png
+SIZE: 1200x675
+
+PROMPT: A beautifully plated traditional Indian dish: Samai (little millet) pongal in a traditional brass bowl. The pongal is soft and creamy with visible black pepper, cumin, curry leaves, and cashew tempering on top. A small bowl of coconut chutney alongside. Warm home kitchen lighting. Overhead angle. Styled South Indian food photography. No text.
+
+---
+
+=== IMAGE 31 of 78: kodo-millet-cooked ===
+SAVE AS: kodo-millet-cooked.png
+SIZE: 1200x675
+
+PROMPT: A beautifully plated traditional Indian dish: Varagu (kodo millet) upma with mixed vegetables (carrots, peas, beans) in a dark stone bowl. Garnished with fresh curry leaves, grated coconut, and a squeeze of lemon. Warm home kitchen lighting. Overhead angle, slight tilt. Steam visible. Styled Indian food photography. No text.
+
+---
+
+=== IMAGE 32 of 78: barnyard-millet-cooked ===
+SAVE AS: barnyard-millet-cooked.png
+SIZE: 1200x675
+
+PROMPT: A beautifully plated traditional Indian dish: Kuthiraivali (barnyard millet) dosa - a crispy golden-brown crepe on a cast iron tawa/griddle. A small steel bowl of sambar and another of coconut chutney alongside. Some oil sizzle visible on the tawa. Warm home kitchen lighting. Slightly elevated angle. Styled South Indian food photography. No text.
+
+---
+
+=== IMAGE 33 of 78: proso-millet-cooked ===
+SAVE AS: proso-millet-cooked.png
+SIZE: 1200x675
+
+PROMPT: A beautifully plated traditional Indian dish: Chena (proso millet) khichdi in a traditional copper handi pot. The khichdi is soft with turmeric-yellow color, topped with ghee and cumin tempering. A small bowl of mango pickle on the side. Warm home kitchen lighting. Overhead angle, slight tilt. Styled Indian food photography. No text.
+
+---
+
+=== IMAGE 34 of 78: browntop-millet-cooked ===
+SAVE AS: browntop-millet-cooked.png
+SIZE: 1200x675
+
+PROMPT: A beautifully plated traditional Indian dish: Korale (browntop millet) rice served like plain steamed rice in a brass bowl on a banana leaf with a bowl of hot rasam, crispy papad, and a small portion of vegetable curry. Traditional South Indian meal (thali) style. Warm home kitchen lighting. Overhead angle. Styled Indian food photography. No text.
+
+---
+
+=== IMAGE 35 of 78: ragi-porridge ===
+SAVE AS: ragi-porridge.png
+SIZE: 800x600
+
+PROMPT: Beautiful overhead food photograph of Ragi Porridge (Ragi Malt). A warm, smooth, dark brown porridge in a traditional clay cup/tumbler. Garnished with a pinch of cardamom powder and crushed jaggery on top. A small brass spoon resting on the saucer. Warm morning light. Styled food photography on a dark wooden surface. No text.
+
+---
+
+=== IMAGE 36 of 78: foxtail-millet-upma ===
+SAVE AS: foxtail-millet-upma.png
+SIZE: 800x600
+
+PROMPT: Beautiful overhead food photograph of Foxtail Millet Upma. Golden-colored upma with visible cashews, curry leaves, mustard seeds tempering, and chopped vegetables. Served in a traditional steel kadai/bowl. A wedge of lemon on the side. Warm natural lighting. Styled food photography on a dark wooden surface. No text.
+
+---
+
+=== IMAGE 37 of 78: jowar-dosa ===
+SAVE AS: jowar-dosa.png
+SIZE: 800x600
+
+PROMPT: Beautiful overhead food photograph of Jowar Dosa. A crispy, golden-brown sorghum dosa spread thin on a cast iron tawa/griddle. Accompanied by a small steel bowl of white coconut chutney and another of sambar. Some curry leaves garnish. Warm natural lighting. Styled food photography. No text.
+
+---
+
+=== IMAGE 38 of 78: bajra-roti ===
+SAVE AS: bajra-roti.png
+SIZE: 800x600
+
+PROMPT: Beautiful overhead food photograph of Bajra Roti. A stack of 3-4 thick, round bajra (pearl millet) rotis with ghee glistening on top. Served with fiery red garlic chutney (lahsun ki chutney) in a small steel bowl. A pat of white butter melting on the top roti. Warm natural lighting. Wooden serving board. No text.
+
+---
+
+=== IMAGE 39 of 78: millet-poha ===
+SAVE AS: millet-poha.png
+SIZE: 800x600
+
+PROMPT: Beautiful overhead food photograph of Millet Poha. Light, fluffy flattened millet flakes with peanuts, green curry leaves, chopped green chili, and a lemon wedge. Served on a fresh banana leaf. Garnished with fresh coriander. Warm natural lighting. Styled food photography. No text.
+
+---
+
+=== IMAGE 40 of 78: little-millet-rice ===
+SAVE AS: little-millet-rice.png
+SIZE: 800x600
+
+PROMPT: Beautiful overhead food photograph of Little Millet Rice. Fluffy, separate grains of cooked little millet rice in a brass bowl, with a drizzle of ghee and a sprig of fresh curry leaves on top. Simple, clean presentation. Warm natural lighting. Styled food photography on a dark wooden surface. No text.
+
+---
+
+=== IMAGE 41 of 78: foxtail-millet-biryani ===
+SAVE AS: foxtail-millet-biryani.png
+SIZE: 800x600
+
+PROMPT: Beautiful overhead food photograph of Foxtail Millet Biryani. Layered golden millet biryani in a copper handi pot, with visible saffron strands, fresh mint leaves, crispy fried onions (birista), and whole spices (cardamom, bay leaf). Steam rising. Warm natural lighting. Styled food photography. No text.
+
+---
+
+=== IMAGE 42 of 78: kodo-millet-pongal ===
+SAVE AS: kodo-millet-pongal.png
+SIZE: 800x600
+
+PROMPT: Beautiful overhead food photograph of Kodo Millet Pongal. Creamy, soft pongal in a brass cup (davara set), topped with ghee tempering of curry leaves, black pepper, cumin, and golden cashews. A small bowl of coconut chutney alongside. Warm natural lighting. Styled South Indian food photography. No text.
+
+---
+
+=== IMAGE 43 of 78: barnyard-millet-khichdi ===
+SAVE AS: barnyard-millet-khichdi.png
+SIZE: 800x600
+
+PROMPT: Beautiful overhead food photograph of Barnyard Millet Khichdi. A comforting bowl of khichdi with ghee tadka (tempering) poured on top, visible cumin and turmeric. Mixed vegetables visible. Served in a dark stone bowl with a brass spoon. Warm natural lighting. Styled food photography. No text.
+
+---
+
+=== IMAGE 44 of 78: ragi-mudde ===
+SAVE AS: ragi-mudde.png
+SIZE: 800x600
+
+PROMPT: Beautiful overhead food photograph of Ragi Mudde. Two smooth, dark ragi balls on a fresh green banana leaf. Accompanied by a bowl of spicy vegetable saaru (thin rasam-like curry). Some raw onion rings and green chili on the side. Traditional Karnataka presentation. Warm natural lighting. No text.
+
+---
+
+=== IMAGE 45 of 78: jowar-bhakri ===
+SAVE AS: jowar-bhakri.png
+SIZE: 800x600
+
+PROMPT: Beautiful overhead food photograph of Jowar Bhakri. A thick, rustic sorghum flatbread on a traditional brass plate. Accompanied by green chili thecha (coarse chutney), white butter, and some raw onion slices. Maharashtrian traditional setting. Warm natural lighting. No text.
+
+---
+
+=== IMAGE 46 of 78: millet-adai ===
+SAVE AS: millet-adai.png
+SIZE: 800x600
+
+PROMPT: Beautiful overhead food photograph of Millet Adai. A thick, crispy multi-millet dosa/pancake on a banana leaf, golden-brown with visible speckles of black pepper and cumin. Accompanied by avial (coconut vegetable curry) in a small bowl. South Indian traditional setting. Warm natural lighting. No text.
+
+---
+
+=== IMAGE 47 of 78: ragi-cookies ===
+SAVE AS: ragi-cookies.png
+SIZE: 800x600
+
+PROMPT: Beautiful overhead food photograph of Ragi Cookies. Dark chocolate-brown ragi cookies arranged on a rustic wooden board. Some cookies broken to show the crumbly texture inside. A few scattered ragi grains nearby for context. A cup of chai in the background, slightly blurred. Warm natural lighting. No text.
+
+---
+
+=== IMAGE 48 of 78: ragi-laddu ===
+SAVE AS: ragi-laddu.png
+SIZE: 800x600
+
+PROMPT: Beautiful overhead food photograph of Ragi Laddus. Round, dark brown laddus arranged on a decorative brass plate. Some laddus broken open to show the texture with visible dry fruits (almonds, cashews) embedded inside. Dusted with powdered cardamom. Warm natural lighting. Festive Indian setting. No text.
+
+---
+
+=== IMAGE 49 of 78: millet-murukku ===
+SAVE AS: millet-murukku.png
+SIZE: 800x600
+
+PROMPT: Beautiful overhead food photograph of Millet Murukku. Crispy, spiral-shaped golden-brown murukku (chakli) snacks stacked on a banana leaf. Some broken to show the crispy texture. Traditional South Indian snack presentation. Warm natural lighting. Styled food photography. No text.
+
+---
+
+=== IMAGE 50 of 78: jowar-pakoda ===
+SAVE AS: jowar-pakoda.png
+SIZE: 800x600
+
+PROMPT: Beautiful overhead food photograph of Jowar Pakoda. Crispy, golden-brown sorghum flour pakodas (fritters) on a newspaper-lined plate. Accompanied by a small bowl of green mint chutney. Some sliced raw onion rings and a lemon wedge on the side. Rainy day chai-time setting. Warm natural lighting. No text.
+
+---
+
+=== IMAGE 51 of 78: ragi-halwa ===
+SAVE AS: ragi-halwa.png
+SIZE: 800x600
+
+PROMPT: Beautiful overhead food photograph of Ragi Halwa. Dark, rich, glossy ragi halwa in an ornate silver bowl. Garnished with sliced almonds, cashew halves, and delicate saffron strands on top. A small spoon resting in the bowl. Warm natural lighting. Festive Indian sweet presentation. No text.
+
+---
+
+=== IMAGE 52 of 78: bajra-ladoo ===
+SAVE AS: bajra-ladoo.png
+SIZE: 800x600
+
+PROMPT: Beautiful overhead food photograph of Bajra Ladoo. Golden-brown pearl millet ladoos rolled in desiccated coconut, arranged on a decorative brass thali. Some whole and some broken to show the texture. Warm natural lighting. Traditional Rajasthani sweet setting. No text.
+
+---
+
+=== IMAGE 53 of 78: millet-payasam ===
+SAVE AS: millet-payasam.png
+SIZE: 800x600
+
+PROMPT: Beautiful overhead food photograph of Millet Payasam. Creamy, milky payasam in a traditional brass uruli (wide shallow vessel). Garnished with golden fried cashews, raisins, and a touch of cardamom. A silver ladle resting on the side. Warm natural lighting. South Indian festival setting. No text.
+
+---
+
+=== IMAGE 54 of 78: ragi-malt ===
+SAVE AS: ragi-malt.png
+SIZE: 800x600
+
+PROMPT: Beautiful overhead food photograph of Ragi Malt drink. A tall stainless steel glass filled with thick, frothy ragi malt - dark brown with a lighter frothy top. A piece of jaggery and some ragi grains placed nearby for styling. Morning breakfast setting. Warm natural lighting. No text.
+
+---
+
+=== IMAGE 55 of 78: kambu-koozh ===
+SAVE AS: kambu-koozh.png
+SIZE: 800x600
+
+PROMPT: Beautiful overhead food photograph of Kambu Koozh (pearl millet fermented porridge). Thick, creamy porridge in a traditional clay pot. Small raw onions (shallots) and a green chili placed on the side. Rural Tamil Nadu setting. Earthen and natural styling. Warm natural lighting. No text.
+
+---
+
+=== IMAGE 56 of 78: multi-millet-roti ===
+SAVE AS: multi-millet-roti.png
+SIZE: 800x600
+
+PROMPT: Beautiful overhead food photograph of Multi-Millet Roti. A stack of multi-grain rotis in a woven roti basket lined with a cotton cloth. A pat of butter and a small bowl of pickle alongside. Various millet grains scattered decoratively. Warm natural lighting. North Indian home setting. No text.
+
+---
+
+=== IMAGE 57 of 78: jowar-roti ===
+SAVE AS: jowar-roti.png
+SIZE: 800x600
+
+PROMPT: Beautiful overhead food photograph of Jowar Roti. A fresh jowar roti on a hot cast iron tawa with a light dusting of flour visible. The roti is puffed slightly with some charred spots. A brass spatula (palta) nearby. Rustic kitchen setting. Warm natural lighting. Action-style food photography. No text.
+
+---
+
+=== IMAGE 58 of 78: icon-nutrition ===
+SAVE AS: icon-nutrition.png
+SIZE: 400x400
+
+PROMPT: Watercolor illustration of a nutrition concept. A circular pie chart or wheel made entirely of different colored millet grains — golden, brown, red, white. Soft watercolor edges. Warm earth tones: golden browns (#C4A35A), rich greens (#2D5016), warm cream background. No text. Clean minimal illustration style.
+
+---
+
+=== IMAGE 59 of 78: icon-history ===
+SAVE AS: icon-history.png
+SIZE: 400x400
+
+PROMPT: Watercolor illustration of an ancient Indian clay pot (matka) tipped on its side with various millet grains spilling out onto aged parchment. Archaeological/historical feel. Warm sepia and ochre watercolor tones. Soft edges. Clean minimal illustration style. No text.
+
+---
+
+=== IMAGE 60 of 78: icon-ayurveda ===
+SAVE AS: icon-ayurveda.png
+SIZE: 400x400
+
+PROMPT: Watercolor illustration of a traditional Ayurvedic brass mortar and pestle (Khalva Yantra) with golden millet grains, green herbs (tulsi, ashwagandha), and turmeric. Warm golden tones. Soft watercolor style with visible brush strokes. No text.
+
+---
+
+=== IMAGE 61 of 78: icon-sustainability ===
+SAVE AS: icon-sustainability.png
+SIZE: 400x400
+
+PROMPT: Watercolor illustration of a large water droplet containing a small millet plant growing inside it, like a terrarium. Green and blue tones with warm earth accents. Environmental/ecological symbolism. Soft watercolor style. Clean minimal illustration. No text.
+
+---
+
+=== IMAGE 62 of 78: icon-cooking ===
+SAVE AS: icon-cooking.png
+SIZE: 400x400
+
+PROMPT: Watercolor illustration of a traditional Indian clay pot (handi) on a rustic mud stove (chulha) with gentle steam rising. Warm browns and orange-red fire glow. Soft watercolor style with visible brush strokes. Clean minimal illustration. No text.
+
+---
+
+=== IMAGE 63 of 78: icon-farming ===
+SAVE AS: icon-farming.png
+SIZE: 400x400
+
+PROMPT: Watercolor illustration of cupped human hands holding a handful of golden millet grains. Behind the hands, a faint millet field landscape. Warm golden and green tones. Soft watercolor style. Clean minimal illustration. No text.
+
+---
+
+=== IMAGE 64 of 78: bg-texture-grain ===
+SAVE AS: bg-texture-grain.png
+SIZE: 1920x1920
+
+PROMPT: Seamless tileable subtle paper texture in warm cream color (#FEFBF3). Very faint grain/fiber visible. Like handmade recycled paper. No patterns, no objects, just pure minimal texture. Warm off-white. Ultra subtle. For use as website background.
+
+---
+
+=== IMAGE 65 of 78: divider-wave ===
+SAVE AS: divider-wave.png
+SIZE: 1920x100
+
+PROMPT: A simple organic wave/curve design. Single flowing line inspired by grain field undulations. Warm gold color (#C4A35A) on transparent background. SVG-style clean vector look. Subtle, elegant. For use as section divider on a website. No text.
+
+---
+
+=== IMAGE 66 of 78: map-india-millets ===
+SAVE AS: map-india-millets.png
+SIZE: 1200x1000
+
+PROMPT: Illustrated warm-toned map of India showing major millet-growing states/regions. Each state highlighted with a different earth-tone color. Small millet grain icons in each region: Karnataka (finger millet), Rajasthan (pearl millet), Maharashtra (sorghum), Tamil Nadu (various). Warm illustrated style, not photographic. Geographic accuracy important. Decorative border. No political boundaries emphasized. No text labels needed.
+
+---
+
+=== IMAGE 67 of 78: timeline-bg ===
+SAVE AS: timeline-bg.png
+SIZE: 1920x400
+
+PROMPT: Horizontal aged parchment/papyrus texture with warm sepia tones. Subtle horizontal grain lines. Looks like ancient manuscript paper. Very subtle, for use as a timeline background on a website. Warm browns and cream. No text, no objects.
+
+---
+
+=== IMAGE 68 of 78: hero-nutrition ===
+SAVE AS: hero-nutrition.png
+SIZE: 1920x600
+
+PROMPT: Artistic arrangement of various millet grains forming abstract patterns, with brass measuring spoons and a traditional weighing scale. Subtle translucent nutrition label graphic overlaid. Warm golden tones. Clean, scientific yet traditional aesthetic. No text in the image itself.
+
+---
+
+=== IMAGE 69 of 78: hero-glossary ===
+SAVE AS: hero-glossary.png
+SIZE: 1920x600
+
+PROMPT: An open ancient leather-bound book/manuscript with hand-drawn botanical illustrations of millet plants. Dried millet stalks used as bookmarks. Warm candlelight/reading lamp glow. Scholar's desk setting with ink pot. Sepia and warm cream tones. No text.
+
+---
+
+=== IMAGE 70 of 78: hero-faq ===
+SAVE AS: hero-faq.png
+SIZE: 1920x600
+
+PROMPT: Creative arrangement of millet grains on a dark wooden surface forming question mark shapes. Multiple question marks of different sizes using different colored millets. Artistic and playful. Warm golden lighting from above. No text.
+
+---
+
+=== IMAGE 71 of 78: hero-search ===
+SAVE AS: hero-search.png
+SIZE: 1920x600
+
+PROMPT: An ornate brass magnifying glass placed over a scattered collection of various millet grains on aged parchment paper. The grains under the magnifying glass appear larger and more detailed. Warm vintage aesthetic. Golden lighting. No text.
+
+---
+
+=== IMAGE 72 of 78: og-image ===
+SAVE AS: og-image.png
+SIZE: 1200x630
+
+PROMPT: Social media sharing card image. A beautiful arrangement of 9 types of millet grains in a grid pattern on a dark wooden background. Each grain type clearly distinct in color and size. Warm golden lighting. Clean, professional food photography. No text overlay needed as text will be added programmatically.
+
+---
+
+=== IMAGE 73 of 78: favicon-source ===
+SAVE AS: favicon-source.png
+SIZE: 512x512
+
+PROMPT: A single golden millet grain (pearl millet) centered on a dark earthy background (#1F170D). Simple, iconic, clean design suitable for use as a website favicon. Warm golden color (#C4A35A). Minimal style.
+
+---
+
+=== IMAGE 74 of 78: about-team ===
+SAVE AS: about-team.png
+SIZE: 1200x675
+
+PROMPT: Indian farmers in a millet field during harvest time. Multiple farmers working together, traditional clothing, golden hour lighting. Warm, positive, community feeling. Realistic photography style. Warm earth tones.
+
+---
+
+=== IMAGE 75 of 78: sustainability-water ===
+SAVE AS: sustainability-water.png
+SIZE: 1200x675
+
+PROMPT: Infographic-style comparison showing water droplets. Left side: small amount of water for millets. Right side: large amount for rice. Visual metaphor using actual droplets/water. Clean illustration style with warm tones.
+
+---
+
+=== IMAGE 76 of 78: sustainability-climate ===
+SAVE AS: sustainability-climate.png
+SIZE: 1200x675
+
+PROMPT: Split image of a millet field thriving in harsh conditions. Left: bright sun, dry soil, yet healthy green millet plants. Right: heavy monsoon rain with millet bending but not breaking. Symbolizing resilience. Warm photographic style.
+
+---
+
+=== IMAGE 77 of 78: nutrition-comparison ===
+SAVE AS: nutrition-comparison.png
+SIZE: 1200x675
+
+PROMPT: Clean studio photograph of three bowls side by side on a wooden surface: one with cooked millet (golden), one with cooked white rice (white), one with cooked wheat (beige). Visual comparison. Warm natural lighting. Food photography style. No text.
+
+---
+
+=== IMAGE 78 of 78: cooking-tools ===
+SAVE AS: cooking-tools.png
+SIZE: 1200x675
+
+PROMPT: Traditional Indian cooking tools arranged on a rustic wooden surface: stone grinder (sil batta), clay pot (matka), brass kadai, wooden ladle, woven sieve. All related to millet preparation. Warm golden lighting. Styled product photography. No text.
+
+---
+
+============================================================
+  END OF PROMPTS - 78 of 78 images listed
+============================================================
