@@ -40,7 +40,7 @@ export default function TestimonialOrQuote({
           &mdash; {attribution}
         </p>
         {source && (
-          <p className="text-xs text-earth-400 dark:text-earth-500 italic mt-1">{source}</p>
+          <p className="text-xs text-earth-400 dark:text-earth-300 italic mt-1">{source}</p>
         )}
       </footer>
     </blockquote>

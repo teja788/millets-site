@@ -222,7 +222,7 @@ export default async function RecipeDetailPage({ params }: PageProps) {
           <aside className="space-y-6">
             {/* Nutrition Per Serving */}
             {recipe.nutritionPerServing && (
-              <div className="bg-cream rounded-xl card-shadow p-6">
+              <div className="bg-cream dark:bg-earth-800 rounded-xl card-shadow p-6">
                 <h3 className="font-heading text-lg font-bold text-earth-100 mb-4">
                   Nutrition Per Serving
                 </h3>
@@ -251,7 +251,7 @@ export default async function RecipeDetailPage({ params }: PageProps) {
 
             {/* Related Millets */}
             {relatedMillets.length > 0 && (
-              <div className="bg-cream rounded-xl card-shadow p-6">
+              <div className="bg-cream dark:bg-earth-800 rounded-xl card-shadow p-6">
                 <h3 className="font-heading text-lg font-bold text-earth-100 mb-3">
                   Millet Used
                 </h3>
@@ -275,7 +275,7 @@ export default async function RecipeDetailPage({ params }: PageProps) {
 
             {/* Tags */}
             {recipe.tags.length > 0 && (
-              <div className="bg-cream rounded-xl card-shadow p-6">
+              <div className="bg-cream dark:bg-earth-800 rounded-xl card-shadow p-6">
                 <h3 className="font-heading text-lg font-bold text-earth-100 mb-3">
                   Tags
                 </h3>
@@ -298,7 +298,7 @@ export default async function RecipeDetailPage({ params }: PageProps) {
       {/* Disclaimer */}
       <div className="content-wrapper pb-8">
         <div className="border-t border-earth-700 pt-6 mt-10">
-          <p className="text-xs text-earth-500 leading-relaxed max-w-3xl">
+          <p className="text-xs text-earth-400 leading-relaxed max-w-3xl">
             <strong>Disclaimer:</strong> This content is created with the
             assistance of AI and is intended for educational purposes only. While
             we strive for accuracy, information may contain errors or be

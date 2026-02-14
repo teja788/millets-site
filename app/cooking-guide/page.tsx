@@ -128,7 +128,7 @@ export default function CookingGuidePage() {
             Cooking Methods
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-cream rounded-xl card-shadow p-6">
+            <div className="bg-cream dark:bg-earth-800 rounded-xl card-shadow p-6">
               <h3 className="font-heading text-lg font-bold text-earth-100 mb-3">
                 Stovetop
               </h3>
@@ -141,7 +141,7 @@ export default function CookingGuidePage() {
                 <li>Turn off heat, let rest covered for 5 minutes, then fluff with a fork.</li>
               </ol>
             </div>
-            <div className="bg-cream rounded-xl card-shadow p-6">
+            <div className="bg-cream dark:bg-earth-800 rounded-xl card-shadow p-6">
               <h3 className="font-heading text-lg font-bold text-earth-100 mb-3">
                 Pressure Cooker
               </h3>
@@ -156,7 +156,7 @@ export default function CookingGuidePage() {
                 Pressure cooking is faster and works especially well for pearl millet and sorghum.
               </p>
             </div>
-            <div className="bg-cream rounded-xl card-shadow p-6">
+            <div className="bg-cream dark:bg-earth-800 rounded-xl card-shadow p-6">
               <h3 className="font-heading text-lg font-bold text-earth-100 mb-3">
                 Rice Cooker
               </h3>
@@ -234,7 +234,7 @@ export default function CookingGuidePage() {
             Storage Guide
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-cream rounded-xl card-shadow p-6">
+            <div className="bg-cream dark:bg-earth-800 rounded-xl card-shadow p-6">
               <h3 className="font-heading text-lg font-bold text-earth-100 mb-2">
                 Uncooked Millets
               </h3>
@@ -245,7 +245,7 @@ export default function CookingGuidePage() {
                 Shelf life: 6-12 months
               </p>
             </div>
-            <div className="bg-cream rounded-xl card-shadow p-6">
+            <div className="bg-cream dark:bg-earth-800 rounded-xl card-shadow p-6">
               <h3 className="font-heading text-lg font-bold text-earth-100 mb-2">
                 Cooked Millets
               </h3>
@@ -257,7 +257,7 @@ export default function CookingGuidePage() {
                 Fridge: 3-5 days / Freezer: up to 3 months
               </p>
             </div>
-            <div className="bg-cream rounded-xl card-shadow p-6">
+            <div className="bg-cream dark:bg-earth-800 rounded-xl card-shadow p-6">
               <h3 className="font-heading text-lg font-bold text-earth-100 mb-2">
                 Millet Flour
               </h3>
@@ -382,7 +382,7 @@ export default function CookingGuidePage() {
       {/* Disclaimer */}
       <div className="content-wrapper pb-8">
         <div className="border-t border-earth-700 pt-6 mt-10">
-          <p className="text-xs text-earth-500 leading-relaxed max-w-3xl">
+          <p className="text-xs text-earth-400 leading-relaxed max-w-3xl">
             <strong>Disclaimer:</strong> This content is created with the
             assistance of AI and is intended for educational purposes only. While
             we strive for accuracy, information may contain errors or be

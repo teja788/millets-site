@@ -112,12 +112,12 @@ export default function SubstitutionCalculator() {
                       <span className="text-earth-300 text-sm">
                         {quantity} cup{quantity !== 1 ? 's' : ''}
                       </span>
-                      <ArrowRight className="w-4 h-4 text-earth-500" />
+                      <ArrowRight className="w-4 h-4 text-earth-400" />
                       <span className="text-earth-100 font-semibold">
                         {milletAmount} cup{Number(milletAmount) !== 1 ? 's' : ''}{' '}
                         {sub.milletName}
                       </span>
-                      <span className="text-earth-500 text-xs">
+                      <span className="text-earth-400 text-xs">
                         ({sub.ratio})
                       </span>
                     </div>

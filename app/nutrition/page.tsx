@@ -133,7 +133,7 @@ export default function NutritionPage() {
               <SourceCitation source={icmrSource} />
             </ol>
           )}
-          <p className="text-xs text-earth-400 dark:text-earth-500 mt-4">
+          <p className="text-xs text-earth-400 dark:text-earth-300 mt-4">
             Values represent raw grain composition per 100 g. Actual nutrient
             availability may vary based on processing, cooking, and bioavailability
             factors.
@@ -144,7 +144,7 @@ export default function NutritionPage() {
       {/* Disclaimer */}
       <div className="content-wrapper pb-8">
         <div className="border-t border-earth-700 pt-6 mt-10">
-          <p className="text-xs text-earth-500 leading-relaxed max-w-3xl">
+          <p className="text-xs text-earth-400 leading-relaxed max-w-3xl">
             <strong>Disclaimer:</strong> This content is created with the
             assistance of AI and is intended for educational purposes only. While
             we strive for accuracy, information may contain errors or be

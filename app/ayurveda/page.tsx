@@ -133,7 +133,7 @@ export default function AyurvedaPage() {
                         ))}
                       </ul>
                     ) : (
-                      <p className="text-earth-500 text-sm italic">None specified</p>
+                      <p className="text-earth-400 text-sm italic">None specified</p>
                     )}
                   </div>
 
@@ -151,7 +151,7 @@ export default function AyurvedaPage() {
                         ))}
                       </ul>
                     ) : (
-                      <p className="text-earth-500 text-sm italic">None -- most millets are suitable</p>
+                      <p className="text-earth-400 text-sm italic">None -- most millets are suitable</p>
                     )}
                   </div>
                 </div>
@@ -313,7 +313,7 @@ export default function AyurvedaPage() {
       {/* Disclaimer */}
       <div className="content-wrapper pb-8">
         <div className="border-t border-earth-700 pt-6 mt-10">
-          <p className="text-xs text-earth-500 leading-relaxed max-w-3xl">
+          <p className="text-xs text-earth-400 leading-relaxed max-w-3xl">
             <strong>Disclaimer:</strong> This content is created with the
             assistance of AI and is intended for educational purposes only. While
             we strive for accuracy, information may contain errors or be

@@ -79,7 +79,7 @@ export default function RecipesPage() {
           <select
             value={activeMillet}
             onChange={(e) => setActiveMillet(e.target.value)}
-            className="px-4 py-2 rounded-lg border border-earth-700 bg-cream text-earth-200 text-sm focus:outline-none focus:ring-2 focus:ring-earth-500"
+            className="px-4 py-2 rounded-lg border border-earth-200 dark:border-earth-700 bg-cream dark:bg-earth-800 text-earth-800 dark:text-earth-200 text-sm focus:outline-none focus:ring-2 focus:ring-earth-500"
           >
             {milletOptions.map((opt) => (
               <option key={opt.value} value={opt.value}>
@@ -113,7 +113,7 @@ export default function RecipesPage() {
       {/* Disclaimer */}
       <div className="content-wrapper pb-8">
         <div className="border-t border-earth-700 pt-6 mt-10">
-          <p className="text-xs text-earth-500 leading-relaxed max-w-3xl">
+          <p className="text-xs text-earth-400 leading-relaxed max-w-3xl">
             <strong>Disclaimer:</strong> This content is created with the
             assistance of AI and is intended for educational purposes only. While
             we strive for accuracy, information may contain errors or be

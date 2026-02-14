@@ -63,7 +63,7 @@ export default function GlossaryPage() {
             placeholder="Search by any language name..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-10 pr-4 py-3 rounded-lg border border-earth-700 bg-cream text-earth-200 placeholder:text-earth-400 focus:outline-none focus:ring-2 focus:ring-earth-500 focus:border-earth-500"
+            className="w-full pl-10 pr-4 py-3 rounded-lg border border-earth-200 dark:border-earth-700 bg-cream dark:bg-earth-800 text-earth-800 dark:text-earth-200 placeholder:text-earth-400 focus:outline-none focus:ring-2 focus:ring-earth-500 focus:border-earth-500"
           />
         </div>
 
@@ -134,7 +134,7 @@ export default function GlossaryPage() {
       {/* Disclaimer */}
       <div className="content-wrapper pb-8">
         <div className="border-t border-earth-700 pt-6 mt-10">
-          <p className="text-xs text-earth-500 leading-relaxed max-w-3xl">
+          <p className="text-xs text-earth-400 leading-relaxed max-w-3xl">
             <strong>Disclaimer:</strong> This content is created with the
             assistance of AI and is intended for educational purposes only. While
             we strive for accuracy, information may contain errors or be

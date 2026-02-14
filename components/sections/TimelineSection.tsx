@@ -35,15 +35,15 @@ function TimelineItem({
           isLeft ? 'md:pr-8 md:text-right' : 'md:pl-8 md:text-left'
         }`}
       >
-        <div className="bg-cream rounded-xl p-5 card-shadow">
-          <h3 className="font-heading text-lg font-bold text-earth-100 mb-1">
+        <div className="bg-cream dark:bg-earth-800 rounded-xl p-5 card-shadow">
+          <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-1">
             {event.title}
           </h3>
-          <p className="text-sm text-earth-300 leading-relaxed">
+          <p className="text-sm text-earth-600 dark:text-earth-300 leading-relaxed">
             {event.description}
           </p>
           {event.region && (
-            <span className="inline-block mt-2 text-xs font-medium bg-earth-800 text-earth-400 px-2 py-0.5 rounded-full">
+            <span className="inline-block mt-2 text-xs font-medium bg-earth-100 dark:bg-earth-700 text-earth-600 dark:text-earth-300 px-2 py-0.5 rounded-full">
               {event.region}
             </span>
           )}

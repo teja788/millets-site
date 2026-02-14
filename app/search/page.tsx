@@ -108,13 +108,13 @@ function SearchResults() {
           </h1>
           <form onSubmit={handleSubmit}>
             <div className="relative">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-earth-400 dark:text-earth-500" />
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-earth-400 dark:text-earth-400" />
               <input
                 type="text"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search millets, recipes, FAQ..."
-                className="w-full pl-12 pr-4 py-3.5 rounded-xl border border-earth-200 dark:border-earth-700 bg-white dark:bg-earth-800 text-earth-800 dark:text-earth-100 placeholder:text-earth-400 dark:placeholder:text-earth-500 focus:outline-none focus:ring-2 focus:ring-forest-500/50 focus:border-forest-500 transition-all text-base"
+                className="w-full pl-12 pr-4 py-3.5 rounded-xl border border-earth-200 dark:border-earth-700 bg-white dark:bg-earth-800 text-earth-800 dark:text-earth-100 placeholder:text-earth-400 dark:placeholder:text-earth-400 focus:outline-none focus:ring-2 focus:ring-forest-500/50 focus:border-forest-500 transition-all text-base"
                 autoFocus
               />
             </div>
@@ -146,7 +146,7 @@ function SearchResults() {
                       <h2 className="font-heading text-lg font-bold text-earth-700 dark:text-earth-200 mb-4 flex items-center gap-2">
                         {typeConfig[type].icon}
                         {groupLabels[type]}
-                        <span className="text-sm font-normal text-earth-400 dark:text-earth-500">
+                        <span className="text-sm font-normal text-earth-400 dark:text-earth-400">
                           ({group.length})
                         </span>
                       </h2>
@@ -255,7 +255,7 @@ function SearchResults() {
       {/* Disclaimer */}
       <div className="content-wrapper pb-8">
         <div className="border-t border-earth-700 pt-6 mt-10">
-          <p className="text-xs text-earth-500 leading-relaxed max-w-3xl">
+          <p className="text-xs text-earth-400 leading-relaxed max-w-3xl">
             <strong>Disclaimer:</strong> This content is created with the
             assistance of AI and is intended for educational purposes only. While
             we strive for accuracy, information may contain errors or be

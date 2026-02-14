@@ -96,7 +96,7 @@ export default function Footer() {
 
         {/* Disclaimer */}
         <div className="mt-10 pt-8 border-t border-earth-200 dark:border-earth-700">
-          <p className="text-xs text-earth-500 dark:text-earth-400 leading-relaxed max-w-2xl">
+          <p className="text-xs text-earth-500 dark:text-earth-300 leading-relaxed max-w-2xl">
             Nutrition data sourced from ICMR-NIN Indian Food Composition Tables
             (2017) and USDA FoodData Central.
           </p>
@@ -104,7 +104,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="mt-4">
-          <p className="text-xs text-earth-400 dark:text-earth-500">
+          <p className="text-xs text-earth-400 dark:text-earth-400">
             &copy; 2024 Millets Guide. Built with care for accurate, sourced
             information.
           </p>

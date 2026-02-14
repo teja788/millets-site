@@ -86,8 +86,8 @@ function CustomTooltip({
   if (!active || !payload || payload.length === 0) return null;
 
   return (
-    <div className="bg-cream border border-earth-700 rounded-lg px-4 py-3 shadow-elevated">
-      <p className="font-heading text-sm font-semibold text-earth-100 mb-1">
+    <div className="bg-cream dark:bg-earth-800 border border-earth-200 dark:border-earth-700 rounded-lg px-4 py-3 shadow-elevated">
+      <p className="font-heading text-sm font-semibold text-earth-800 dark:text-earth-100 mb-1">
         {label}
       </p>
       {payload.map((entry, index) => (

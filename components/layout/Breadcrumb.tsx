@@ -70,7 +70,7 @@ export default function Breadcrumb() {
 
         {crumbs.map((crumb) => (
           <li key={crumb.href} className="flex items-center">
-            <ChevronRight className="w-3.5 h-3.5 text-earth-400 dark:text-earth-500 mx-1 flex-shrink-0" />
+            <ChevronRight className="w-3.5 h-3.5 text-earth-400 dark:text-earth-300 mx-1 flex-shrink-0" />
             {crumb.isLast ? (
               <span className="text-earth-600 dark:text-earth-300 font-medium">
                 {crumb.label}

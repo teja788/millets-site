@@ -221,7 +221,7 @@ export default function ComparisonTable({ millets }: ComparisonTableProps) {
                   >
                     <td className="px-4 py-3 text-sm font-medium text-earth-700 dark:text-earth-200">
                       {row.label}{' '}
-                      <span className="text-earth-400 dark:text-earth-500">({row.unit})</span>
+                      <span className="text-earth-400 dark:text-earth-300">({row.unit})</span>
                     </td>
                     {selectedMillets.map((m, colIndex) => {
                       const isBest = bestIdx === colIndex;
