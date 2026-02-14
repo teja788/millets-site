@@ -91,7 +91,7 @@ export default function RecipeCard({ recipe }: RecipeCardProps) {
             </p>
 
             {/* Meta info */}
-            <div className="flex items-center gap-4 text-sm text-earth-400 mb-3">
+            <div className="flex items-center gap-4 text-sm text-earth-300 mb-3">
               <span className="inline-flex items-center gap-1">
                 <Clock size={14} />
                 {recipe.cookTime}

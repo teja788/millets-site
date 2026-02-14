@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import Button from '@/components/ui/Button';
+import { variantStyles, sizeStyles } from '@/components/ui/Button';
 
 interface CTAButton {
   label: string;
@@ -110,10 +110,12 @@ export default function Hero({ title, subtitle, ctaButtons }: HeroProps) {
               className="flex flex-wrap gap-4"
             >
               {ctaButtons.map((cta) => (
-                <Link key={cta.href} href={cta.href}>
-                  <Button variant={cta.variant} size="lg">
-                    {cta.label}
-                  </Button>
+                <Link
+                  key={cta.href}
+                  href={cta.href}
+                  className={`inline-flex items-center justify-center rounded-lg transition font-medium ${variantStyles[cta.variant]} ${sizeStyles.lg}`}
+                >
+                  {cta.label}
                 </Link>
               ))}
             </motion.div>

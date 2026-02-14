@@ -10,7 +10,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
 }
 
-const variantStyles: Record<ButtonVariant, string> = {
+export const variantStyles: Record<ButtonVariant, string> = {
   primary: 'bg-earth-500 hover:bg-earth-600 text-white',
   secondary:
     'border-2 border-earth-400 text-earth-200 hover:bg-earth-500 hover:text-white',
@@ -18,7 +18,7 @@ const variantStyles: Record<ButtonVariant, string> = {
   link: 'text-earth-300 underline hover:text-earth-100',
 };
 
-const sizeStyles: Record<ButtonSize, string> = {
+export const sizeStyles: Record<ButtonSize, string> = {
   sm: 'px-3 py-1.5 text-sm',
   md: 'px-5 py-2.5',
   lg: 'px-7 py-3.5 text-lg',

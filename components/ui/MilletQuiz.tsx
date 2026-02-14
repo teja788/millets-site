@@ -161,7 +161,7 @@ export default function MilletQuiz() {
               transition={{ duration: 0.3, ease: 'easeInOut' }}
             >
               {/* Step label */}
-              <p className="text-sm font-medium text-forest-600 dark:text-forest-400 mb-2 text-center">
+              <p className="text-sm font-medium text-forest-600 dark:text-forest-300 mb-2 text-center">
                 Step {currentStep + 1} of {questions.length}
               </p>
 

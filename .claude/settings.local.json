@@ -33,7 +33,8 @@
       "Bash(find:*)",
       "WebFetch(domain:serwist.pages.dev)",
       "WebFetch(domain:github.com)",
-      "Bash(npx --yes svg2png-cli:*)"
+      "Bash(npx --yes svg2png-cli:*)",
+      "Bash(npx lighthouse:*)"
     ]
   }
 }

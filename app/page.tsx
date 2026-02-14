@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import {
   Wheat,
@@ -13,11 +14,13 @@ import {
 } from 'lucide-react';
 import Hero from '@/components/sections/Hero';
 import MilletGrid from '@/components/sections/MilletGrid';
-import FeaturedRecipes from '@/components/sections/FeaturedRecipes';
-import MilletQuiz from '@/components/ui/MilletQuiz';
 import { Card, CardBody } from '@/components/ui/Card';
 import { millets } from '@/data/millets';
 import { recipes } from '@/data/recipes';
+
+// Lazy load below-fold interactive components to reduce initial JS bundle
+const FeaturedRecipes = dynamic(() => import('@/components/sections/FeaturedRecipes'));
+const MilletQuiz = dynamic(() => import('@/components/ui/MilletQuiz'));
 
 export const metadata: Metadata = {
   title: 'Millets Guide - Ancient Grains, Timeless Nourishment',
