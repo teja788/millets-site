@@ -28,7 +28,8 @@
       "Bash(vercel whoami:*)",
       "Bash(vercel:*)",
       "Bash(VERCEL_ORG_ID=team_VKOyP0IEeRmmKeA7ZwAQXM5V vercel link:*)",
-      "Bash(cmd //c:*)"
+      "Bash(cmd //c:*)",
+      "Bash(VERCEL_ORG_ID=team_VKOyP0IEeRmmKeA7ZwAQXM5V npx vercel link:*)"
     ]
   }
 }
