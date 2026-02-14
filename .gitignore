@@ -35,3 +35,6 @@ next-env.d.ts
 
 # Windows reserved filename
 nul
+
+# Raw unprocessed images (too large for git)
+/raw-images
