@@ -41,7 +41,7 @@ const childVariants = {
 
 export default function Hero({ title, subtitle, ctaButtons }: HeroProps) {
   return (
-    <section className="relative overflow-hidden min-h-[50vh] md:min-h-[70vh] flex items-center grain-texture pt-20 md:pt-24">
+    <section className="relative overflow-hidden min-h-[50vh] md:min-h-[70vh] flex items-center grain-texture">
       {/* Decorative organic shapes */}
       <svg
         className="absolute top-0 right-0 w-64 h-64 opacity-[0.06] pointer-events-none"

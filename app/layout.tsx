@@ -77,7 +77,7 @@ export default function RootLayout({
         <ThemeProvider>
           <ScrollProgress />
           <Navbar />
-          <main>{children}</main>
+          <main className="pt-16 md:pt-18">{children}</main>
           <Footer />
           <BackToTop />
         </ThemeProvider>
