@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
 import { Playfair_Display, Source_Sans_3 } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme/ThemeProvider';
@@ -44,6 +44,16 @@ export const metadata: Metadata = {
     'ancient grains',
     'Indian millets',
   ],
+  manifest: '/manifest.json',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'Millets Guide',
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: '#5E4A26',
 };
 
 export default function RootLayout({
