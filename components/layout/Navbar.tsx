@@ -208,9 +208,9 @@ export default function Navbar() {
           <Image
             src="/images/logo.png"
             alt="Simply Millets"
-            width={160}
-            height={40}
-            className="h-9 md:h-10 w-auto"
+            width={200}
+            height={50}
+            className="h-12 md:h-14 w-auto"
             priority
           />
         </Link>
