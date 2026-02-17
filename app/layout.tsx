@@ -48,6 +48,11 @@ export const metadata: Metadata = {
     'ancient grains',
     'Indian millets',
   ],
+  openGraph: {
+    siteName: 'Simply Millets',
+    locale: 'en_IN',
+    type: 'website',
+  },
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,

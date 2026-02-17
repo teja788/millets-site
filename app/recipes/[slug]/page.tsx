@@ -5,7 +5,8 @@ import { Clock, Timer, Users, ChefHat, Lightbulb } from 'lucide-react';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import Badge from '@/components/ui/Badge';
 import ImageWithFallback from '@/components/ui/ImageWithFallback';
-import PrintButton from './PrintButton';
+import PrintButton from '@/components/ui/PrintButton';
+import ShareButton from '@/components/ui/ShareButton';
 import { recipes, getRecipeBySlug } from '@/data/recipes';
 import { getMilletBySlug } from '@/data/millets';
 
@@ -24,9 +25,26 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const recipe = getRecipeBySlug(slug);
   if (!recipe) return { title: 'Recipe Not Found' };
 
+  const url = `/recipes/${recipe.slug}`;
+
   return {
     title: `${recipe.title} | Millet Recipes`,
     description: recipe.description,
+    openGraph: {
+      title: recipe.title,
+      description: recipe.description,
+      url,
+      type: 'article',
+      ...(recipe.imageFile && {
+        images: [{ url: recipe.imageFile, width: 800, height: 600, alt: recipe.title }],
+      }),
+    },
+    twitter: {
+      card: recipe.imageFile ? 'summary_large_image' : 'summary',
+      title: recipe.title,
+      description: recipe.description,
+      ...(recipe.imageFile && { images: [recipe.imageFile] }),
+    },
   };
 }
 
@@ -289,8 +307,11 @@ export default async function RecipeDetailPage({ params }: PageProps) {
               </div>
             )}
 
-            {/* Print Button */}
-            <PrintButton />
+            {/* Share & Print */}
+            <div className="space-y-3">
+              <ShareButton title={recipe.title} slug={recipe.slug} />
+              <PrintButton />
+            </div>
           </aside>
         </div>
       </article>
