@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown } from 'lucide-react';
@@ -203,11 +204,15 @@ export default function Navbar() {
     >
       <nav className="content-wrapper flex items-center justify-between h-16 md:h-18">
         {/* Logo */}
-        <Link
-          href="/"
-          className="font-heading text-xl md:text-2xl font-bold text-earth-100 hover:text-earth-300 transition-colors"
-        >
-          Millets Guide
+        <Link href="/" className="flex-shrink-0">
+          <Image
+            src="/images/logo.png"
+            alt="Simply Millets"
+            width={160}
+            height={40}
+            className="h-9 md:h-10 w-auto"
+            priority
+          />
         </Link>
 
         {/* -------------------------------------------------------- */}

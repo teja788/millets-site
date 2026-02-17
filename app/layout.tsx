@@ -25,6 +25,10 @@ const sourceSans = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://simplymillets.com'),
+  alternates: {
+    canonical: './',
+  },
   title: {
     default: 'Millets Guide - Ancient Grains, Timeless Nourishment',
     template: '%s | Millets Guide',

@@ -105,8 +105,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="mt-4">
           <p className="text-xs text-earth-400 dark:text-earth-400">
-            &copy; 2024 Millets Guide. Built with care for accurate, sourced
-            information.
+            &copy; 2026 Millets Guide.
           </p>
         </div>
       </div>

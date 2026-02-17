@@ -20,25 +20,10 @@ export default function FeaturedRecipes({
           {title}
         </h2>
 
-        {/* Desktop: grid layout */}
-        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {recipes.map((recipe) => (
             <RecipeCard key={recipe.slug} recipe={recipe} />
           ))}
-        </div>
-
-        {/* Mobile: horizontal scroll snap */}
-        <div className="md:hidden -mx-6 px-6">
-          <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide">
-            {recipes.map((recipe) => (
-              <div
-                key={recipe.slug}
-                className="snap-start flex-shrink-0 w-[280px]"
-              >
-                <RecipeCard recipe={recipe} />
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* View all link */}
