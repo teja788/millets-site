@@ -36,7 +36,7 @@ export default function SubstitutionCalculator() {
         <div>
           <label
             htmlFor="grain-select"
-            className="block text-sm font-medium text-earth-300 mb-2"
+            className="block text-sm font-medium text-earth-700 dark:text-earth-300 mb-2"
           >
             Select a grain to replace
           </label>
@@ -44,7 +44,7 @@ export default function SubstitutionCalculator() {
             id="grain-select"
             value={selectedGrain}
             onChange={(e) => setSelectedGrain(e.target.value)}
-            className="w-full px-4 py-3 bg-earth-800 border border-earth-700 rounded-lg text-earth-100 focus:outline-none focus:ring-2 focus:ring-earth-500 transition-colors"
+            className="w-full px-4 py-3 bg-white dark:bg-earth-800 border border-earth-200 dark:border-earth-700 rounded-lg text-earth-800 dark:text-earth-100 focus:outline-none focus:ring-2 focus:ring-earth-500 transition-colors"
           >
             <option value="">Choose a grain...</option>
             {substitutionEntries.map((e) => (
@@ -58,7 +58,7 @@ export default function SubstitutionCalculator() {
         <div>
           <label
             htmlFor="quantity-input"
-            className="block text-sm font-medium text-earth-300 mb-2"
+            className="block text-sm font-medium text-earth-700 dark:text-earth-300 mb-2"
           >
             How many cups?
           </label>
@@ -70,7 +70,7 @@ export default function SubstitutionCalculator() {
             step={0.25}
             value={quantity}
             onChange={(e) => setQuantity(Number(e.target.value) || 1)}
-            className="w-full px-4 py-3 bg-earth-800 border border-earth-700 rounded-lg text-earth-100 focus:outline-none focus:ring-2 focus:ring-earth-500 transition-colors"
+            className="w-full px-4 py-3 bg-white dark:bg-earth-800 border border-earth-200 dark:border-earth-700 rounded-lg text-earth-800 dark:text-earth-100 focus:outline-none focus:ring-2 focus:ring-earth-500 transition-colors"
           />
         </div>
       </div>
@@ -78,8 +78,8 @@ export default function SubstitutionCalculator() {
       {/* Results */}
       {entry ? (
         <div className="space-y-4">
-          <h3 className="font-heading text-xl font-bold text-earth-100 flex items-center gap-2">
-            <Scale className="w-5 h-5 text-earth-400" />
+          <h3 className="font-heading text-xl font-bold text-earth-800 dark:text-earth-100 flex items-center gap-2">
+            <Scale className="w-5 h-5 text-warm-gray dark:text-earth-400" />
             Millet substitutes for {quantity} cup{quantity !== 1 ? 's' : ''} of{' '}
             {entry.conventionalGrain}
           </h3>
@@ -95,7 +95,7 @@ export default function SubstitutionCalculator() {
                     <div className="flex items-start justify-between gap-2 mb-3">
                       <Link
                         href={`/millets/${sub.millet}`}
-                        className="font-heading text-lg font-bold text-earth-100 hover:text-earth-300 transition-colors"
+                        className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 hover:text-earth-500 dark:hover:text-earth-300 transition-colors"
                       >
                         {sub.milletName}
                       </Link>
@@ -108,21 +108,21 @@ export default function SubstitutionCalculator() {
                     </div>
 
                     {/* Conversion */}
-                    <div className="flex items-center gap-3 mb-3 p-3 bg-earth-800/50 rounded-lg">
-                      <span className="text-earth-300 text-sm">
+                    <div className="flex items-center gap-3 mb-3 p-3 bg-earth-100/50 dark:bg-earth-800/50 rounded-lg">
+                      <span className="text-earth-700 dark:text-earth-300 text-sm">
                         {quantity} cup{quantity !== 1 ? 's' : ''}
                       </span>
-                      <ArrowRight className="w-4 h-4 text-earth-400" />
-                      <span className="text-earth-100 font-semibold">
+                      <ArrowRight className="w-4 h-4 text-warm-gray dark:text-earth-400" />
+                      <span className="text-earth-800 dark:text-earth-100 font-semibold">
                         {milletAmount} cup{Number(milletAmount) !== 1 ? 's' : ''}{' '}
                         {sub.milletName}
                       </span>
-                      <span className="text-earth-400 text-xs">
+                      <span className="text-warm-gray dark:text-earth-400 text-xs">
                         ({sub.ratio})
                       </span>
                     </div>
 
-                    <p className="text-sm text-earth-300 mb-3">{sub.notes}</p>
+                    <p className="text-sm text-earth-700 dark:text-earth-300 mb-3">{sub.notes}</p>
 
                     <div className="flex flex-wrap gap-1.5">
                       {sub.bestFor.map((use) => (
@@ -140,7 +140,7 @@ export default function SubstitutionCalculator() {
       ) : (
         <div className="text-center py-12">
           <Scale className="w-12 h-12 text-earth-600 mx-auto mb-4" />
-          <p className="text-earth-400">
+          <p className="text-warm-gray dark:text-earth-400">
             Select a grain above to see millet substitution options.
           </p>
         </div>

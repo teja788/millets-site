@@ -51,10 +51,10 @@ export default function RegionalTraditionsPage() {
 
       <div className="content-wrapper section-padding">
         {/* Page Header */}
-        <h1 className="font-heading text-4xl md:text-5xl font-bold text-earth-100 mb-4">
+        <h1 className="font-heading text-4xl md:text-5xl font-bold text-earth-800 dark:text-earth-100 mb-4">
           Regional Millet Traditions of India
         </h1>
-        <p className="text-lg text-earth-300 max-w-3xl mb-10 leading-relaxed">
+        <p className="text-lg text-earth-700 dark:text-earth-300 max-w-3xl mb-10 leading-relaxed">
           India&apos;s millet heritage is a tapestry of regional traditions, each
           shaped by local climate, soil, culture, and centuries of culinary
           innovation. From the bajra rotis of Rajasthan&apos;s deserts to the ragi
@@ -73,7 +73,7 @@ export default function RegionalTraditionsPage() {
               className={`px-4 py-2 rounded-lg text-sm font-medium transition cursor-pointer ${
                 activeRegion === rf.value
                   ? 'bg-earth-500 text-white'
-                  : 'bg-earth-800 text-earth-200 hover:bg-earth-700'
+                  : 'bg-white dark:bg-earth-800 text-earth-800 dark:text-earth-200 hover:bg-earth-100 dark:hover:bg-earth-700'
               }`}
             >
               {rf.label}
@@ -82,7 +82,7 @@ export default function RegionalTraditionsPage() {
         </div>
 
         {/* Results Count */}
-        <p className="text-sm text-earth-400 mb-6">
+        <p className="text-sm text-warm-gray dark:text-earth-400 mb-6">
           Showing {filteredTraditions.length}{' '}
           {filteredTraditions.length === 1 ? 'tradition' : 'traditions'}
         </p>
@@ -99,7 +99,7 @@ export default function RegionalTraditionsPage() {
                   <Card variant="outlined" className="h-full hover:border-earth-500 transition-colors">
                     <CardBody>
                       <div className="flex items-start justify-between gap-2 mb-3">
-                        <h2 className="font-heading text-xl font-bold text-earth-100">
+                        <h2 className="font-heading text-xl font-bold text-earth-800 dark:text-earth-100">
                           {tradition.state}
                         </h2>
                         <Badge
@@ -110,12 +110,12 @@ export default function RegionalTraditionsPage() {
                         </Badge>
                       </div>
 
-                      <p className="text-sm text-earth-300 leading-relaxed mb-4">
+                      <p className="text-sm text-earth-700 dark:text-earth-300 leading-relaxed mb-4">
                         {tradition.tagline}
                       </p>
 
-                      <p className="text-xs text-earth-400 mb-3">
-                        <span className="font-medium text-earth-300">Primary millets:</span>{' '}
+                      <p className="text-xs text-warm-gray dark:text-earth-400 mb-3">
+                        <span className="font-medium text-earth-700 dark:text-earth-300">Primary millets:</span>{' '}
                         {tradition.primaryMillets
                           .map((slug) =>
                             slug
@@ -127,7 +127,7 @@ export default function RegionalTraditionsPage() {
                       </p>
 
                       <div className="flex items-center justify-between">
-                        <span className="text-xs text-earth-400">
+                        <span className="text-xs text-warm-gray dark:text-earth-400">
                           {tradition.iconicDishes.length}{' '}
                           {tradition.iconicDishes.length === 1 ? 'dish' : 'dishes'} featured
                         </span>
@@ -143,7 +143,7 @@ export default function RegionalTraditionsPage() {
           </div>
         ) : (
           <div className="text-center py-16">
-            <p className="text-earth-400 text-lg">
+            <p className="text-warm-gray dark:text-earth-400 text-lg">
               No traditions found for the selected region. Try a different filter.
             </p>
           </div>
@@ -152,8 +152,8 @@ export default function RegionalTraditionsPage() {
 
       {/* Disclaimer */}
       <div className="content-wrapper pb-8">
-        <div className="border-t border-earth-700 pt-6 mt-10">
-          <p className="text-xs text-earth-400 leading-relaxed max-w-3xl">
+        <div className="border-t border-earth-200 dark:border-earth-700 pt-6 mt-10">
+          <p className="text-xs text-warm-gray dark:text-earth-400 leading-relaxed max-w-3xl">
             <strong>Disclaimer:</strong> This content is created with the assistance of AI and is intended for educational purposes only. While we strive for accuracy, information may contain errors or be incomplete. Always do your own research and consult qualified professionals (nutritionists, doctors, agricultural experts) before making decisions based on this content. This website does not provide medical, nutritional, or agricultural advice.
           </p>
         </div>

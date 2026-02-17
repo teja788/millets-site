@@ -37,11 +37,11 @@ const doshaBadgeVariant: Record<string, 'blue' | 'red' | 'green'> = {
 
 function MilletLink({ slug }: { slug: string }) {
   const millet = getMilletBySlug(slug);
-  if (!millet) return <span className="text-earth-400">{slug}</span>;
+  if (!millet) return <span className="text-warm-gray dark:text-earth-400">{slug}</span>;
   return (
     <Link
       href={`/millets/${millet.slug}`}
-      className="text-earth-300 hover:text-earth-100 underline underline-offset-2 transition-colors"
+      className="text-earth-700 dark:text-earth-300 hover:text-earth-800 dark:hover:text-earth-100 underline underline-offset-2 transition-colors"
     >
       {millet.name}
     </Link>
@@ -65,12 +65,12 @@ export default function AyurvedaPage() {
 
       <div className="content-wrapper py-8">
         {/* Page Header */}
-        <h1 className="font-heading text-4xl md:text-5xl font-bold text-earth-100 mb-6">
+        <h1 className="font-heading text-4xl md:text-5xl font-bold text-earth-800 dark:text-earth-100 mb-6">
           Millets in Ayurveda
         </h1>
 
         {/* Intro Section */}
-        <div className="max-w-3xl space-y-4 text-earth-200 leading-relaxed mb-10">
+        <div className="max-w-3xl space-y-4 text-earth-800 dark:text-earth-200 leading-relaxed mb-10">
           <p>{ayurvedaPageData.generalClassification}</p>
         </div>
 
@@ -84,7 +84,7 @@ export default function AyurvedaPage() {
 
         {/* Dosha Guide */}
         <section className="mb-12">
-          <h2 className="font-heading text-2xl md:text-3xl font-bold text-earth-100 mb-6">
+          <h2 className="font-heading text-2xl md:text-3xl font-bold text-earth-800 dark:text-earth-100 mb-6">
             Dosha Guide
           </h2>
           <div className="space-y-8">
@@ -97,12 +97,12 @@ export default function AyurvedaPage() {
                   <Badge variant={doshaBadgeVariant[guide.dosha] || 'default'} size="md">
                     {guide.dosha}
                   </Badge>
-                  <h3 className="font-heading text-xl font-bold text-earth-100">
+                  <h3 className="font-heading text-xl font-bold text-earth-800 dark:text-earth-100">
                     {guide.dosha} Dosha
                   </h3>
                 </div>
 
-                <p className="text-earth-200 leading-relaxed mb-6">{guide.description}</p>
+                <p className="text-earth-800 dark:text-earth-200 leading-relaxed mb-6">{guide.description}</p>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   {/* Recommended */}
@@ -133,7 +133,7 @@ export default function AyurvedaPage() {
                         ))}
                       </ul>
                     ) : (
-                      <p className="text-earth-400 text-sm italic">None specified</p>
+                      <p className="text-warm-gray dark:text-earth-400 text-sm italic">None specified</p>
                     )}
                   </div>
 
@@ -151,7 +151,7 @@ export default function AyurvedaPage() {
                         ))}
                       </ul>
                     ) : (
-                      <p className="text-earth-400 text-sm italic">None -- most millets are suitable</p>
+                      <p className="text-warm-gray dark:text-earth-400 text-sm italic">None -- most millets are suitable</p>
                     )}
                   </div>
                 </div>
@@ -162,10 +162,10 @@ export default function AyurvedaPage() {
 
         {/* Seasonal Eating (Ritucharya) */}
         <section className="mb-12">
-          <h2 className="font-heading text-2xl md:text-3xl font-bold text-earth-100 mb-6">
+          <h2 className="font-heading text-2xl md:text-3xl font-bold text-earth-800 dark:text-earth-100 mb-6">
             Seasonal Eating (Ritucharya)
           </h2>
-          <p className="text-earth-200 leading-relaxed mb-6 max-w-3xl">
+          <p className="text-earth-800 dark:text-earth-200 leading-relaxed mb-6 max-w-3xl">
             Ayurveda emphasizes aligning diet with the seasons (Ritucharya) to maintain doshic
             balance. Different millets are recommended during different seasons based on their
             inherent properties.
@@ -197,7 +197,7 @@ export default function AyurvedaPage() {
                           <Link
                             key={slug}
                             href={`/millets/${millet.slug}`}
-                            className="text-sm text-earth-300 hover:text-earth-100 underline underline-offset-2"
+                            className="text-sm text-earth-700 dark:text-earth-300 hover:text-earth-800 dark:hover:text-earth-100 underline underline-offset-2"
                           >
                             {millet.name}
                           </Link>
@@ -216,9 +216,9 @@ export default function AyurvedaPage() {
           {/* Mobile: Show reasoning below each season as expandable cards */}
           <div className="md:hidden mt-6 space-y-4">
             {ayurvedaPageData.seasonalGuide.map((season) => (
-              <div key={season.season} className="bg-earth-800 rounded-lg p-4">
-                <h4 className="font-semibold text-earth-100 mb-1">{season.season}</h4>
-                <p className="text-sm text-earth-300 leading-relaxed">{season.reasoning}</p>
+              <div key={season.season} className="bg-forest-50 dark:bg-earth-800 rounded-lg p-4">
+                <h4 className="font-semibold text-earth-800 dark:text-earth-100 mb-1">{season.season}</h4>
+                <p className="text-sm text-earth-700 dark:text-earth-300 leading-relaxed">{season.reasoning}</p>
               </div>
             ))}
           </div>
@@ -226,15 +226,15 @@ export default function AyurvedaPage() {
 
         {/* Preparation Methods */}
         <section className="mb-12">
-          <h2 className="font-heading text-2xl md:text-3xl font-bold text-earth-100 mb-6">
+          <h2 className="font-heading text-2xl md:text-3xl font-bold text-earth-800 dark:text-earth-100 mb-6">
             How Ayurveda Recommends Preparing Millets
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
-            <div className="bg-earth-800 rounded-xl p-6">
-              <h3 className="font-heading text-lg font-bold text-earth-100 mb-2">
+            <div className="bg-forest-50 dark:bg-earth-800 rounded-xl p-6">
+              <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-2">
                 Soaking (Bhavana)
               </h3>
-              <p className="text-earth-300 leading-relaxed text-sm">
+              <p className="text-earth-700 dark:text-earth-300 leading-relaxed text-sm">
                 Soaking millets for 6-8 hours before cooking enhances digestibility and reduces
                 Guru (heavy) quality. This is especially recommended for Vata types, as soaked
                 grains become easier on the digestive system. Soaking also helps reduce
@@ -242,11 +242,11 @@ export default function AyurvedaPage() {
               </p>
             </div>
 
-            <div className="bg-earth-800 rounded-xl p-6">
-              <h3 className="font-heading text-lg font-bold text-earth-100 mb-2">
+            <div className="bg-forest-50 dark:bg-earth-800 rounded-xl p-6">
+              <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-2">
                 Cooking with Ghee (Sneha Paka)
               </h3>
-              <p className="text-earth-300 leading-relaxed text-sm">
+              <p className="text-earth-700 dark:text-earth-300 leading-relaxed text-sm">
                 Ayurveda strongly recommends cooking millets with ghee (clarified butter). Ghee
                 counterbalances the inherently Ruksha (dry) quality of millets, making them more
                 nourishing and less Vata-aggravating. Even a teaspoon of ghee transforms the
@@ -254,11 +254,11 @@ export default function AyurvedaPage() {
               </p>
             </div>
 
-            <div className="bg-earth-800 rounded-xl p-6">
-              <h3 className="font-heading text-lg font-bold text-earth-100 mb-2">
+            <div className="bg-forest-50 dark:bg-earth-800 rounded-xl p-6">
+              <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-2">
                 Adding Digestive Spices (Deepana Dravya)
               </h3>
-              <p className="text-earth-300 leading-relaxed text-sm">
+              <p className="text-earth-700 dark:text-earth-300 leading-relaxed text-sm">
                 Spices like cumin (Jeeraka), ginger (Shunthi), black pepper (Maricha), ajwain
                 (Yavani), and asafoetida (Hingu) are traditionally added to millet dishes. These
                 Deepana (appetite-stimulating) and Pachana (digestive) spices kindle Agni and
@@ -266,11 +266,11 @@ export default function AyurvedaPage() {
               </p>
             </div>
 
-            <div className="bg-earth-800 rounded-xl p-6">
-              <h3 className="font-heading text-lg font-bold text-earth-100 mb-2">
+            <div className="bg-forest-50 dark:bg-earth-800 rounded-xl p-6">
+              <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-2">
                 Fermentation (Sandhaniya)
               </h3>
-              <p className="text-earth-300 leading-relaxed text-sm">
+              <p className="text-earth-700 dark:text-earth-300 leading-relaxed text-sm">
                 Fermented millet preparations like dosa and idli batter, ambali (fermented
                 porridge), and koozh (fermented drink) are valued in Ayurveda. Fermentation
                 increases the Laghu (light) quality, enhances bioavailability of minerals, and
@@ -298,8 +298,8 @@ export default function AyurvedaPage() {
         </section>
 
         {/* Sources */}
-        <section className="border-t border-earth-700 pt-8">
-          <h2 className="font-heading text-xl font-bold text-earth-100 mb-4">
+        <section className="border-t border-earth-200 dark:border-earth-700 pt-8">
+          <h2 className="font-heading text-xl font-bold text-earth-800 dark:text-earth-100 mb-4">
             Sources &amp; References
           </h2>
           <ol className="space-y-3 list-decimal list-inside">
@@ -312,8 +312,8 @@ export default function AyurvedaPage() {
 
       {/* Disclaimer */}
       <div className="content-wrapper pb-8">
-        <div className="border-t border-earth-700 pt-6 mt-10">
-          <p className="text-xs text-earth-400 leading-relaxed max-w-3xl">
+        <div className="border-t border-earth-200 dark:border-earth-700 pt-6 mt-10">
+          <p className="text-xs text-warm-gray dark:text-earth-400 leading-relaxed max-w-3xl">
             <strong>Disclaimer:</strong> This content is created with the
             assistance of AI and is intended for educational purposes only. While
             we strive for accuracy, information may contain errors or be

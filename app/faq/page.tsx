@@ -47,10 +47,10 @@ export default function FAQPage() {
 
       <div className="content-wrapper py-8">
         {/* Page Header */}
-        <h1 className="font-heading text-4xl md:text-5xl font-bold text-earth-100 mb-4">
+        <h1 className="font-heading text-4xl md:text-5xl font-bold text-earth-800 dark:text-earth-100 mb-4">
           Frequently Asked Questions
         </h1>
-        <p className="text-lg text-earth-300 max-w-3xl mb-10 leading-relaxed">
+        <p className="text-lg text-earth-700 dark:text-earth-300 max-w-3xl mb-10 leading-relaxed">
           Answers to the most common questions about millets -- from nutrition and cooking to
           health benefits and Ayurvedic perspectives.
         </p>
@@ -59,14 +59,14 @@ export default function FAQPage() {
         <div className="space-y-10 max-w-3xl">
           {groupedFAQs.map((group) => (
             <section key={group.category}>
-              <h2 className="font-heading text-2xl font-bold text-earth-100 mb-4">
+              <h2 className="font-heading text-2xl font-bold text-earth-800 dark:text-earth-100 mb-4">
                 {group.category}
               </h2>
               <Accordion
                 items={group.items.map((item) => ({
                   title: item.question,
                   content: (
-                    <p className="text-earth-200 leading-relaxed">{item.answer}</p>
+                    <p className="text-earth-800 dark:text-earth-200 leading-relaxed">{item.answer}</p>
                   ),
                 }))}
                 allowMultiple
@@ -76,8 +76,8 @@ export default function FAQPage() {
         </div>
 
         {/* Explore More */}
-        <div className="mt-14 bg-earth-800 rounded-xl p-8 max-w-3xl">
-          <h2 className="font-heading text-xl font-bold text-earth-100 mb-3">
+        <div className="mt-14 bg-forest-50 dark:bg-earth-800 rounded-xl p-8 max-w-3xl">
+          <h2 className="font-heading text-xl font-bold text-earth-800 dark:text-earth-100 mb-3">
             Still have questions? Explore our detailed guides:
           </h2>
           <div className="flex flex-wrap gap-4">
@@ -89,13 +89,13 @@ export default function FAQPage() {
             </Link>
             <Link
               href="/nutrition"
-              className="inline-flex items-center px-5 py-2.5 rounded-lg border-2 border-earth-500 text-earth-400 font-medium hover:bg-earth-500 hover:text-white transition"
+              className="inline-flex items-center px-5 py-2.5 rounded-lg border-2 border-earth-500 text-earth-600 dark:text-earth-400 font-medium hover:bg-earth-500 hover:text-white transition"
             >
               Nutrition
             </Link>
             <Link
               href="/ayurveda"
-              className="inline-flex items-center px-5 py-2.5 rounded-lg border-2 border-earth-500 text-earth-400 font-medium hover:bg-earth-500 hover:text-white transition"
+              className="inline-flex items-center px-5 py-2.5 rounded-lg border-2 border-earth-500 text-earth-600 dark:text-earth-400 font-medium hover:bg-earth-500 hover:text-white transition"
             >
               Ayurveda
             </Link>
@@ -105,8 +105,8 @@ export default function FAQPage() {
 
       {/* Disclaimer */}
       <div className="content-wrapper pb-8">
-        <div className="border-t border-earth-700 pt-6 mt-10">
-          <p className="text-xs text-earth-400 leading-relaxed max-w-3xl">
+        <div className="border-t border-earth-200 dark:border-earth-700 pt-6 mt-10">
+          <p className="text-xs text-warm-gray dark:text-earth-400 leading-relaxed max-w-3xl">
             <strong>Disclaimer:</strong> This content is created with the
             assistance of AI and is intended for educational purposes only. While
             we strive for accuracy, information may contain errors or be

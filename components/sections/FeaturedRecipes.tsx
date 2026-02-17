@@ -30,7 +30,7 @@ export default function FeaturedRecipes({
         <div className="mt-8 text-center">
           <Link
             href="/recipes"
-            className="inline-flex items-center gap-2 text-earth-500 hover:text-earth-200 font-medium transition-colors"
+            className="inline-flex items-center gap-2 text-earth-500 hover:text-earth-500 dark:hover:text-earth-200 font-medium transition-colors"
           >
             View All Recipes
             <svg

@@ -37,12 +37,12 @@ export default function RecipeCard({ recipe }: RecipeCardProps) {
 
   return (
     <motion.div
-      whileHover={{ y: -4, boxShadow: '0 12px 32px rgba(44, 24, 16, 0.15)' }}
+      whileHover={{ y: -4, boxShadow: '0 12px 32px rgba(0, 0, 0, 0.10)' }}
       transition={{ type: 'spring', stiffness: 300, damping: 20 }}
       className="w-full"
     >
       <Link href={`/recipes/${recipe.slug}`} className="block">
-        <div className="bg-earth-800 rounded-xl overflow-hidden card-shadow h-full flex flex-col">
+        <div className="bg-white dark:bg-earth-800 rounded-xl overflow-hidden card-shadow h-full flex flex-col">
           {/* Image area */}
           <div className={`relative h-48 overflow-hidden ${hasImage ? '' : `bg-gradient-to-br ${gradient}`}`}>
             {hasImage ? (
@@ -83,15 +83,15 @@ export default function RecipeCard({ recipe }: RecipeCardProps) {
 
           {/* Content */}
           <div className="px-5 py-4 flex flex-col flex-1">
-            <h3 className="font-heading text-lg font-bold text-earth-100 mb-1">
+            <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-1">
               {recipe.title}
             </h3>
-            <p className="text-sm text-earth-300 line-clamp-2 mb-3 flex-1">
+            <p className="text-sm text-earth-700 dark:text-earth-300 line-clamp-2 mb-3 flex-1">
               {recipe.description}
             </p>
 
             {/* Meta info */}
-            <div className="flex items-center gap-4 text-sm text-earth-300 mb-3">
+            <div className="flex items-center gap-4 text-sm text-earth-700 dark:text-earth-300 mb-3">
               <span className="inline-flex items-center gap-1">
                 <Clock size={14} />
                 {recipe.cookTime}

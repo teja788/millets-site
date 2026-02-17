@@ -15,10 +15,10 @@ export default function MilletQuizPage() {
 
       <div className="content-wrapper section-padding">
         <div className="text-center mb-10">
-          <h1 className="font-heading text-4xl md:text-5xl font-bold text-earth-100 mb-4">
+          <h1 className="font-heading text-4xl md:text-5xl font-bold text-earth-800 dark:text-earth-100 mb-4">
             Which Millet Should You Try?
           </h1>
-          <p className="text-earth-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-earth-700 dark:text-earth-300 max-w-2xl mx-auto leading-relaxed">
             Answer four quick questions about your health goals, taste
             preferences, and cooking habits. We&apos;ll recommend the millets
             that are the best fit for you.
@@ -30,8 +30,8 @@ export default function MilletQuizPage() {
 
       {/* Disclaimer */}
       <div className="content-wrapper pb-8">
-        <div className="border-t border-earth-700 pt-6 mt-10">
-          <p className="text-xs text-earth-400 leading-relaxed max-w-3xl">
+        <div className="border-t border-earth-200 dark:border-earth-700 pt-6 mt-10">
+          <p className="text-xs text-warm-gray dark:text-earth-400 leading-relaxed max-w-3xl">
             <strong>Disclaimer:</strong> This content is created with the
             assistance of AI and is intended for educational purposes only. While
             we strive for accuracy, information may contain errors or be

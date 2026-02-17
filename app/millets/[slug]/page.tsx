@@ -217,7 +217,7 @@ export default async function MilletDetailPage({ params }: PageProps) {
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 1200px"
-              fallbackColor="#C4A35A"
+              fallbackColor="#D4A843"
             />
           )}
           {/* SVG watermark shown on gradient (when no image) */}
@@ -356,7 +356,7 @@ export default async function MilletDetailPage({ params }: PageProps) {
                       {hb.description}
                     </p>
                     {hb.source && (
-                      <p className="text-xs text-earth-400 mt-2 italic">
+                      <p className="text-xs text-warm-gray dark:text-earth-400 mt-2 italic">
                         Source: {hb.source}
                       </p>
                     )}
@@ -775,7 +775,7 @@ export default async function MilletDetailPage({ params }: PageProps) {
                   No recipes available for this millet yet.{' '}
                   <Link
                     href="/recipes"
-                    className="text-earth-400 hover:text-earth-200 underline"
+                    className="text-earth-500 hover:text-earth-700 dark:text-earth-400 dark:hover:text-earth-200 underline"
                   >
                     Browse all recipes
                   </Link>
@@ -811,8 +811,8 @@ export default async function MilletDetailPage({ params }: PageProps) {
 
       {/* Disclaimer */}
       <div className="content-wrapper pb-8">
-        <div className="border-t border-earth-700 pt-6 mt-10">
-          <p className="text-xs text-earth-400 leading-relaxed max-w-3xl">
+        <div className="border-t border-earth-200 dark:border-earth-700 pt-6 mt-10">
+          <p className="text-xs text-warm-gray dark:text-earth-400 leading-relaxed max-w-3xl">
             <strong>Disclaimer:</strong> This content is created with the
             assistance of AI and is intended for educational purposes only. While
             we strive for accuracy, information may contain errors or be

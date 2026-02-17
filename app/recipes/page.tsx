@@ -45,10 +45,10 @@ export default function RecipesPage() {
 
       <div className="content-wrapper py-8">
         {/* Page Header */}
-        <h1 className="font-heading text-4xl md:text-5xl font-bold text-earth-100 mb-4">
+        <h1 className="font-heading text-4xl md:text-5xl font-bold text-earth-800 dark:text-earth-100 mb-4">
           Millet Recipes
         </h1>
-        <p className="text-lg text-earth-300 max-w-3xl mb-10 leading-relaxed">
+        <p className="text-lg text-earth-700 dark:text-earth-300 max-w-3xl mb-10 leading-relaxed">
           Discover the versatility of millets through our collection of traditional and modern
           recipes. From hearty Rajasthani bajra rotis to crispy South Indian dosas and warming
           porridges, millets have been the foundation of Indian cooking for thousands of years.
@@ -67,7 +67,7 @@ export default function RecipesPage() {
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition cursor-pointer ${
                   activeCategory === cat.value
                     ? 'bg-earth-500 text-white'
-                    : 'bg-earth-800 text-earth-200 hover:bg-earth-200'
+                    : 'bg-white dark:bg-earth-800 text-earth-800 dark:text-earth-200 hover:bg-earth-100 dark:hover:bg-earth-200'
                 }`}
               >
                 {cat.label}
@@ -90,7 +90,7 @@ export default function RecipesPage() {
         </div>
 
         {/* Results count */}
-        <p className="text-sm text-earth-400 mb-6">
+        <p className="text-sm text-warm-gray dark:text-earth-400 mb-6">
           Showing {filteredRecipes.length} {filteredRecipes.length === 1 ? 'recipe' : 'recipes'}
         </p>
 
@@ -103,7 +103,7 @@ export default function RecipesPage() {
           </div>
         ) : (
           <div className="text-center py-16">
-            <p className="text-earth-400 text-lg">
+            <p className="text-warm-gray dark:text-earth-400 text-lg">
               No recipes found for the selected filters. Try a different combination.
             </p>
           </div>
@@ -112,8 +112,8 @@ export default function RecipesPage() {
 
       {/* Disclaimer */}
       <div className="content-wrapper pb-8">
-        <div className="border-t border-earth-700 pt-6 mt-10">
-          <p className="text-xs text-earth-400 leading-relaxed max-w-3xl">
+        <div className="border-t border-earth-200 dark:border-earth-700 pt-6 mt-10">
+          <p className="text-xs text-warm-gray dark:text-earth-400 leading-relaxed max-w-3xl">
             <strong>Disclaimer:</strong> This content is created with the
             assistance of AI and is intended for educational purposes only. While
             we strive for accuracy, information may contain errors or be

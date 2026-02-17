@@ -4,8 +4,9 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import { useTheme } from 'next-themes';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Sun, Moon } from 'lucide-react';
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -75,6 +76,8 @@ const navItems: NavItem[] = [
 
 export default function Navbar() {
   const pathname = usePathname();
+  const { resolvedTheme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
   /* — shared state — */
   const [scrolled, setScrolled] = useState(false);
@@ -110,6 +113,8 @@ export default function Navbar() {
   /* ---------------------------------------------------------------- */
   /*  Effects                                                          */
   /* ---------------------------------------------------------------- */
+
+  useEffect(() => setMounted(true), []);
 
   // Scroll detection
   useEffect(() => {
@@ -191,6 +196,14 @@ export default function Navbar() {
   };
 
   /* ---------------------------------------------------------------- */
+  /*  Theme toggle                                                     */
+  /* ---------------------------------------------------------------- */
+
+  const toggleTheme = () => {
+    setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
+  };
+
+  /* ---------------------------------------------------------------- */
   /*  Render                                                           */
   /* ---------------------------------------------------------------- */
 
@@ -198,7 +211,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-earth-900/90 backdrop-blur-md shadow-sm'
+          ? 'bg-white/90 dark:bg-earth-900/90 backdrop-blur-md shadow-sm'
           : 'bg-transparent'
       }`}
     >
@@ -228,8 +241,8 @@ export default function Navbar() {
                   href={item.href}
                   className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                     isActive(item.href)
-                      ? 'text-earth-100 bg-earth-700/40'
-                      : 'text-earth-300 hover:text-earth-100 hover:bg-earth-800/40'
+                      ? 'text-earth-500 dark:text-forest-300 bg-forest-50 dark:bg-earth-700/40'
+                      : 'text-earth-700 dark:text-earth-300 hover:text-earth-500 dark:hover:text-forest-300 hover:bg-earth-100 dark:hover:bg-earth-800/40'
                   }`}
                 >
                   {item.label}
@@ -252,8 +265,8 @@ export default function Navbar() {
                   type="button"
                   className={`flex items-center gap-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                     groupActive
-                      ? 'text-earth-100 bg-earth-700/40'
-                      : 'text-earth-300 hover:text-earth-100 hover:bg-earth-800/40'
+                      ? 'text-earth-500 dark:text-forest-300 bg-forest-50 dark:bg-earth-700/40'
+                      : 'text-earth-700 dark:text-earth-300 hover:text-earth-500 dark:hover:text-forest-300 hover:bg-earth-100 dark:hover:bg-earth-800/40'
                   }`}
                   aria-haspopup="true"
                   aria-expanded={isDropdownOpen}
@@ -273,7 +286,7 @@ export default function Navbar() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -8 }}
                       transition={{ duration: 0.15 }}
-                      className="absolute top-full left-0 mt-1 w-56 bg-earth-900/95 backdrop-blur-md border border-earth-700 rounded-lg shadow-xl py-2 z-50"
+                      className="absolute top-full left-0 mt-1 w-56 bg-white/95 dark:bg-earth-900/95 backdrop-blur-md border border-earth-200 dark:border-earth-700 rounded-lg shadow-xl py-2 z-50"
                     >
                       {item.links.map((link) => (
                         <Link
@@ -281,8 +294,8 @@ export default function Navbar() {
                           href={link.href}
                           className={`block px-4 py-2 text-sm transition-colors ${
                             isActive(link.href)
-                              ? 'text-earth-100 bg-earth-700/40'
-                              : 'text-earth-300 hover:text-earth-100 hover:bg-earth-800/40'
+                              ? 'text-earth-500 dark:text-forest-300 bg-forest-50 dark:bg-earth-700/40'
+                              : 'text-earth-700 dark:text-earth-300 hover:text-earth-500 dark:hover:text-forest-300 hover:bg-earth-100 dark:hover:bg-earth-800/40'
                           }`}
                         >
                           {link.label}
@@ -294,15 +307,45 @@ export default function Navbar() {
               </div>
             );
           })}
+
+          {/* Theme Toggle — Desktop */}
+          {mounted && (
+            <button
+              onClick={toggleTheme}
+              className="ml-2 p-2 rounded-md text-earth-700 dark:text-earth-300 hover:text-earth-500 dark:hover:text-forest-300 hover:bg-earth-100 dark:hover:bg-earth-800/40 transition-colors"
+              aria-label={resolvedTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+            >
+              {resolvedTheme === 'dark' ? (
+                <Sun className="w-5 h-5" />
+              ) : (
+                <Moon className="w-5 h-5" />
+              )}
+            </button>
+          )}
         </div>
 
         {/* -------------------------------------------------------- */}
         {/*  Mobile Controls                                          */}
         {/* -------------------------------------------------------- */}
         <div className="flex items-center gap-2 lg:hidden">
+          {/* Theme Toggle — Mobile */}
+          {mounted && (
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-md text-earth-700 dark:text-earth-300 hover:text-earth-500 dark:hover:text-forest-300 hover:bg-earth-100 dark:hover:bg-earth-800/40 transition-colors"
+              aria-label={resolvedTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+            >
+              {resolvedTheme === 'dark' ? (
+                <Sun className="w-5 h-5" />
+              ) : (
+                <Moon className="w-5 h-5" />
+              )}
+            </button>
+          )}
+
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="p-2 rounded-md text-earth-300 hover:text-earth-100 hover:bg-earth-800/40 transition-colors"
+            className="p-2 rounded-md text-earth-700 dark:text-earth-300 hover:text-earth-500 dark:hover:text-forest-300 hover:bg-earth-100 dark:hover:bg-earth-800/40 transition-colors"
             aria-label={isOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={isOpen}
           >
@@ -337,15 +380,15 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-              className="fixed top-0 right-0 h-full w-72 bg-earth-900 shadow-xl z-50 lg:hidden overflow-y-auto"
+              className="fixed top-0 right-0 h-full w-72 bg-white dark:bg-earth-900 shadow-xl z-50 lg:hidden overflow-y-auto"
             >
-              <div className="flex items-center justify-between p-4 border-b border-earth-700">
-                <span className="font-heading text-lg font-bold text-earth-100">
+              <div className="flex items-center justify-between p-4 border-b border-earth-200 dark:border-earth-700">
+                <span className="font-heading text-lg font-bold text-earth-800 dark:text-forest-200">
                   Menu
                 </span>
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="p-2 rounded-md text-earth-300 hover:text-earth-100 hover:bg-earth-800/40 transition-colors"
+                  className="p-2 rounded-md text-earth-700 dark:text-earth-300 hover:text-earth-500 dark:hover:text-forest-300 hover:bg-earth-100 dark:hover:bg-earth-800/40 transition-colors"
                   aria-label="Close menu"
                 >
                   <X className="w-5 h-5" />
@@ -362,8 +405,8 @@ export default function Navbar() {
                         href={item.href}
                         className={`px-4 py-3 rounded-md text-base font-medium transition-colors ${
                           isActive(item.href)
-                            ? 'text-earth-100 bg-earth-700/40'
-                            : 'text-earth-300 hover:text-earth-100 hover:bg-earth-800/40'
+                            ? 'text-earth-500 dark:text-forest-300 bg-forest-50 dark:bg-earth-700/40'
+                            : 'text-earth-700 dark:text-earth-300 hover:text-earth-500 dark:hover:text-forest-300 hover:bg-earth-100 dark:hover:bg-earth-800/40'
                         }`}
                       >
                         {item.label}
@@ -382,8 +425,8 @@ export default function Navbar() {
                         onClick={() => toggleMobileGroup(item.label)}
                         className={`w-full flex items-center justify-between px-4 py-3 rounded-md text-base font-medium transition-colors ${
                           isGroupActive(item)
-                            ? 'text-earth-100 bg-earth-700/40'
-                            : 'text-earth-300 hover:text-earth-100 hover:bg-earth-800/40'
+                            ? 'text-earth-500 dark:text-forest-300 bg-forest-50 dark:bg-earth-700/40'
+                            : 'text-earth-700 dark:text-earth-300 hover:text-earth-500 dark:hover:text-forest-300 hover:bg-earth-100 dark:hover:bg-earth-800/40'
                         }`}
                         aria-expanded={isMobileExpanded}
                       >
@@ -411,8 +454,8 @@ export default function Navbar() {
                                   href={link.href}
                                   className={`block px-4 py-2 rounded-md text-sm transition-colors ${
                                     isActive(link.href)
-                                      ? 'text-earth-100 bg-earth-700/40'
-                                      : 'text-earth-300 hover:text-earth-100 hover:bg-earth-800/40'
+                                      ? 'text-earth-500 dark:text-forest-300 bg-forest-50 dark:bg-earth-700/40'
+                                      : 'text-earth-700 dark:text-earth-300 hover:text-earth-500 dark:hover:text-forest-300 hover:bg-earth-100 dark:hover:bg-earth-800/40'
                                   }`}
                                 >
                                   {link.label}

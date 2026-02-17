@@ -13,9 +13,9 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 export const variantStyles: Record<ButtonVariant, string> = {
   primary: 'bg-earth-500 hover:bg-earth-600 text-white',
   secondary:
-    'border-2 border-earth-400 text-earth-200 hover:bg-earth-500 hover:text-white',
-  ghost: 'hover:bg-earth-800 text-earth-200',
-  link: 'text-earth-300 underline hover:text-earth-100',
+    'border-2 border-earth-500 text-earth-500 dark:text-earth-200 dark:border-earth-400 hover:bg-earth-500 hover:text-white',
+  ghost: 'hover:bg-earth-100 dark:hover:bg-earth-800 text-earth-700 dark:text-earth-200',
+  link: 'text-earth-500 dark:text-earth-300 underline hover:text-earth-600 dark:hover:text-forest-300',
 };
 
 export const sizeStyles: Record<ButtonSize, string> = {

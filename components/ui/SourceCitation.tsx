@@ -12,7 +12,7 @@ export default function SourceCitation({ source }: SourceCitationProps) {
           href={source.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-earth-500 underline hover:text-earth-200 transition-colors"
+          className="text-earth-500 underline hover:text-earth-500 dark:hover:text-earth-200 transition-colors"
         >
           {source.title}
         </a>

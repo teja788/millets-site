@@ -33,12 +33,12 @@ export default function HistoryPage() {
 
       <div className="content-wrapper py-8">
         {/* Page Header */}
-        <h1 className="font-heading text-4xl md:text-5xl font-bold text-earth-100 mb-6">
+        <h1 className="font-heading text-4xl md:text-5xl font-bold text-earth-800 dark:text-earth-100 mb-6">
           History of Millets
         </h1>
 
         {/* Intro Section */}
-        <div className="max-w-3xl space-y-4 text-earth-200 leading-relaxed mb-12">
+        <div className="max-w-3xl space-y-4 text-earth-800 dark:text-earth-200 leading-relaxed mb-12">
           <p>
             Millets are among the earliest cultivated cereal crops in human history. Archaeological
             evidence from the Cishan site in northern China dates foxtail millet cultivation to
@@ -67,7 +67,7 @@ export default function HistoryPage() {
 
         {/* Timeline */}
         <section className="mb-16">
-          <h2 className="font-heading text-2xl font-bold text-earth-100 mb-8 text-center">
+          <h2 className="font-heading text-2xl font-bold text-earth-800 dark:text-earth-100 mb-8 text-center">
             Timeline: 10,000 Years of Millets
           </h2>
           <TimelineSection events={timelineEvents} />
@@ -75,10 +75,10 @@ export default function HistoryPage() {
 
         {/* The Green Revolution & Decline */}
         <section className="mb-12">
-          <h2 className="font-heading text-2xl md:text-3xl font-bold text-earth-100 mb-4">
+          <h2 className="font-heading text-2xl md:text-3xl font-bold text-earth-800 dark:text-earth-100 mb-4">
             The Green Revolution &amp; Decline
           </h2>
-          <div className="max-w-3xl space-y-4 text-earth-200 leading-relaxed">
+          <div className="max-w-3xl space-y-4 text-earth-800 dark:text-earth-200 leading-relaxed">
             <p>
               The Green Revolution of the 1960s and 1970s transformed Indian agriculture. Led by
               Dr. M.S. Swaminathan and built upon Norman Borlaug&apos;s high-yield wheat and rice
@@ -108,10 +108,10 @@ export default function HistoryPage() {
 
         {/* The Revival */}
         <section className="mb-12">
-          <h2 className="font-heading text-2xl md:text-3xl font-bold text-earth-100 mb-4">
+          <h2 className="font-heading text-2xl md:text-3xl font-bold text-earth-800 dark:text-earth-100 mb-4">
             The Revival
           </h2>
-          <div className="max-w-3xl space-y-4 text-earth-200 leading-relaxed">
+          <div className="max-w-3xl space-y-4 text-earth-800 dark:text-earth-200 leading-relaxed">
             <p>
               The 21st century has witnessed a remarkable millet renaissance, driven by growing
               awareness of nutrition, sustainability, and the limitations of monoculture agriculture.
@@ -146,8 +146,8 @@ export default function HistoryPage() {
         </section>
 
         {/* Sources */}
-        <section className="border-t border-earth-700 pt-8">
-          <h2 className="font-heading text-xl font-bold text-earth-100 mb-4">
+        <section className="border-t border-earth-200 dark:border-earth-700 pt-8">
+          <h2 className="font-heading text-xl font-bold text-earth-800 dark:text-earth-100 mb-4">
             Sources &amp; References
           </h2>
           <ol className="space-y-3 list-decimal list-inside">
@@ -160,8 +160,8 @@ export default function HistoryPage() {
 
       {/* Disclaimer */}
       <div className="content-wrapper pb-8">
-        <div className="border-t border-earth-700 pt-6 mt-10">
-          <p className="text-xs text-earth-400 leading-relaxed max-w-3xl">
+        <div className="border-t border-earth-200 dark:border-earth-700 pt-6 mt-10">
+          <p className="text-xs text-warm-gray dark:text-earth-400 leading-relaxed max-w-3xl">
             <strong>Disclaimer:</strong> This content is created with the
             assistance of AI and is intended for educational purposes only. While
             we strive for accuracy, information may contain errors or be

@@ -62,7 +62,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: '#5E4A26',
+  themeColor: '#5B8C5A',
 };
 
 export default function RootLayout({

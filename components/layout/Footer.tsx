@@ -32,13 +32,13 @@ const resourceLinks = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-earth-200 dark:border-earth-700 bg-earth-100/50 dark:bg-earth-900/50">
+    <footer className="border-t border-forest-700 dark:border-earth-700 bg-forest-600 dark:bg-earth-900/50">
       <div className="content-wrapper py-12 md:py-16">
         {/* Three-column link grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
           {/* Column 1: Quick Links */}
           <div>
-            <h3 className="font-heading text-lg font-semibold text-earth-800 dark:text-earth-200 mb-4">
+            <h3 className="font-heading text-lg font-semibold text-forest-100 dark:text-earth-200 mb-4">
               Quick Links
             </h3>
             <ul className="space-y-2">
@@ -46,7 +46,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-earth-600 hover:text-earth-800 dark:text-earth-400 dark:hover:text-earth-200 transition-colors text-sm"
+                    className="text-forest-200 hover:text-white dark:text-earth-400 dark:hover:text-earth-200 transition-colors text-sm"
                   >
                     {link.label}
                   </Link>
@@ -57,7 +57,7 @@ export default function Footer() {
 
           {/* Column 2: Learn More */}
           <div>
-            <h3 className="font-heading text-lg font-semibold text-earth-800 dark:text-earth-200 mb-4">
+            <h3 className="font-heading text-lg font-semibold text-forest-100 dark:text-earth-200 mb-4">
               Learn More
             </h3>
             <ul className="space-y-2">
@@ -65,7 +65,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-earth-600 hover:text-earth-800 dark:text-earth-400 dark:hover:text-earth-200 transition-colors text-sm"
+                    className="text-forest-200 hover:text-white dark:text-earth-400 dark:hover:text-earth-200 transition-colors text-sm"
                   >
                     {link.label}
                   </Link>
@@ -76,7 +76,7 @@ export default function Footer() {
 
           {/* Column 3: Resources */}
           <div>
-            <h3 className="font-heading text-lg font-semibold text-earth-800 dark:text-earth-200 mb-4">
+            <h3 className="font-heading text-lg font-semibold text-forest-100 dark:text-earth-200 mb-4">
               Resources
             </h3>
             <ul className="space-y-2">
@@ -84,7 +84,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-earth-600 hover:text-earth-800 dark:text-earth-400 dark:hover:text-earth-200 transition-colors text-sm"
+                    className="text-forest-200 hover:text-white dark:text-earth-400 dark:hover:text-earth-200 transition-colors text-sm"
                   >
                     {link.label}
                   </Link>
@@ -95,8 +95,8 @@ export default function Footer() {
         </div>
 
         {/* Disclaimer */}
-        <div className="mt-10 pt-8 border-t border-earth-200 dark:border-earth-700">
-          <p className="text-xs text-earth-500 dark:text-earth-300 leading-relaxed max-w-2xl">
+        <div className="mt-10 pt-8 border-t border-forest-500 dark:border-earth-700">
+          <p className="text-xs text-forest-200 dark:text-earth-300 leading-relaxed max-w-2xl">
             Nutrition data sourced from ICMR-NIN Indian Food Composition Tables
             (2017) and USDA FoodData Central.
           </p>
@@ -104,7 +104,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="mt-4">
-          <p className="text-xs text-earth-400 dark:text-earth-400">
+          <p className="text-xs text-forest-300 dark:text-earth-400">
             &copy; 2026 Millets Guide.
           </p>
         </div>

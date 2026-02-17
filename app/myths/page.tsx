@@ -35,10 +35,10 @@ export default function MythsPage() {
 
       <div className="content-wrapper py-8">
         {/* Page Header */}
-        <h1 className="font-heading text-4xl md:text-5xl font-bold text-earth-100 mb-4">
+        <h1 className="font-heading text-4xl md:text-5xl font-bold text-earth-800 dark:text-earth-100 mb-4">
           Myths &amp; Facts About Millets
         </h1>
-        <p className="text-lg text-earth-300 max-w-3xl mb-8 leading-relaxed">
+        <p className="text-lg text-earth-700 dark:text-earth-300 max-w-3xl mb-8 leading-relaxed">
           Millets have been surrounded by misconceptions -- from outdated labels like
           &ldquo;coarse grains&rdquo; to unfounded health scares. Here we address the most
           common myths with evidence-based facts, so you can make informed choices about
@@ -60,7 +60,7 @@ export default function MythsPage() {
         </div>
 
         {/* Results Count */}
-        <p className="text-sm text-earth-400 mb-6">
+        <p className="text-sm text-warm-gray dark:text-earth-400 mb-6">
           Showing {filteredMyths.length} of {myths.length} myths
         </p>
 
@@ -77,7 +77,7 @@ export default function MythsPage() {
                       <span className="text-xs font-bold text-red-400 uppercase tracking-wider">
                         Myth
                       </span>
-                      <p className="text-earth-100 font-medium mt-1 leading-relaxed">
+                      <p className="text-earth-800 dark:text-earth-100 font-medium mt-1 leading-relaxed">
                         {item.myth}
                       </p>
                     </div>
@@ -92,12 +92,12 @@ export default function MythsPage() {
                       <span className="text-xs font-bold text-green-400 uppercase tracking-wider">
                         Fact
                       </span>
-                      <p className="text-earth-200 text-sm mt-1 leading-relaxed">
+                      <p className="text-earth-800 dark:text-earth-200 text-sm mt-1 leading-relaxed">
                         {item.fact}
                       </p>
                       {item.sources && item.sources.length > 0 && (
                         <div className="mt-3">
-                          <p className="text-xs text-earth-400 italic">
+                          <p className="text-xs text-warm-gray dark:text-earth-400 italic">
                             Sources: {item.sources.join('; ')}
                           </p>
                         </div>
@@ -112,7 +112,7 @@ export default function MythsPage() {
 
         {filteredMyths.length === 0 && (
           <div className="text-center py-12">
-            <p className="text-earth-400 text-lg">
+            <p className="text-warm-gray dark:text-earth-400 text-lg">
               No myths found in this category.
             </p>
           </div>
@@ -121,8 +121,8 @@ export default function MythsPage() {
 
       {/* Disclaimer */}
       <div className="content-wrapper pb-8">
-        <div className="border-t border-earth-700 pt-6 mt-10">
-          <p className="text-xs text-earth-400 leading-relaxed max-w-3xl">
+        <div className="border-t border-earth-200 dark:border-earth-700 pt-6 mt-10">
+          <p className="text-xs text-warm-gray dark:text-earth-400 leading-relaxed max-w-3xl">
             <strong>Disclaimer:</strong> This content is created with the assistance of AI and is intended for educational purposes only. While we strive for accuracy, information may contain errors or be incomplete. Always do your own research and consult qualified professionals (nutritionists, doctors, agricultural experts) before making decisions based on this content. This website does not provide medical, nutritional, or agricultural advice.
           </p>
         </div>

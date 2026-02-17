@@ -9,7 +9,7 @@ interface ImageWithFallbackProps extends Omit<ImageProps, 'onError'> {
 }
 
 export default function ImageWithFallback({
-  fallbackColor = '#C4A35A',
+  fallbackColor = '#D4A843',
   fallbackText,
   alt,
   ...props

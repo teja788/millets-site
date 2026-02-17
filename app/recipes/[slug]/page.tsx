@@ -97,7 +97,7 @@ export default async function RecipeDetailPage({ params }: PageProps) {
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 1200px"
-                fallbackColor="#C4A35A"
+                fallbackColor="#D4A843"
               />
             ) : (
               <div className="absolute inset-0 flex items-center justify-center">
@@ -132,42 +132,42 @@ export default async function RecipeDetailPage({ params }: PageProps) {
             </Badge>
           </div>
 
-          <h1 className="font-heading text-3xl md:text-4xl font-bold text-earth-100 mb-3">
+          <h1 className="font-heading text-3xl md:text-4xl font-bold text-earth-800 dark:text-earth-100 mb-3">
             {recipe.title}
           </h1>
-          <p className="text-lg text-earth-300 leading-relaxed max-w-3xl">
+          <p className="text-lg text-earth-700 dark:text-earth-300 leading-relaxed max-w-3xl">
             {recipe.description}
           </p>
         </div>
 
         {/* Info Row */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-          <div className="bg-earth-800 rounded-lg p-4 flex items-center gap-3">
-            <Clock className="w-5 h-5 text-earth-400 flex-shrink-0" />
+          <div className="bg-white dark:bg-earth-800 rounded-lg p-4 flex items-center gap-3">
+            <Clock className="w-5 h-5 text-warm-gray dark:text-earth-400 flex-shrink-0" />
             <div>
-              <p className="text-xs text-earth-400 uppercase tracking-wide">Prep Time</p>
-              <p className="font-heading text-lg text-earth-100">{recipe.prepTime}</p>
+              <p className="text-xs text-warm-gray dark:text-earth-400 uppercase tracking-wide">Prep Time</p>
+              <p className="font-heading text-lg text-earth-800 dark:text-earth-100">{recipe.prepTime}</p>
             </div>
           </div>
-          <div className="bg-earth-800 rounded-lg p-4 flex items-center gap-3">
-            <Timer className="w-5 h-5 text-earth-400 flex-shrink-0" />
+          <div className="bg-white dark:bg-earth-800 rounded-lg p-4 flex items-center gap-3">
+            <Timer className="w-5 h-5 text-warm-gray dark:text-earth-400 flex-shrink-0" />
             <div>
-              <p className="text-xs text-earth-400 uppercase tracking-wide">Cook Time</p>
-              <p className="font-heading text-lg text-earth-100">{recipe.cookTime}</p>
+              <p className="text-xs text-warm-gray dark:text-earth-400 uppercase tracking-wide">Cook Time</p>
+              <p className="font-heading text-lg text-earth-800 dark:text-earth-100">{recipe.cookTime}</p>
             </div>
           </div>
-          <div className="bg-earth-800 rounded-lg p-4 flex items-center gap-3">
-            <Users className="w-5 h-5 text-earth-400 flex-shrink-0" />
+          <div className="bg-white dark:bg-earth-800 rounded-lg p-4 flex items-center gap-3">
+            <Users className="w-5 h-5 text-warm-gray dark:text-earth-400 flex-shrink-0" />
             <div>
-              <p className="text-xs text-earth-400 uppercase tracking-wide">Servings</p>
-              <p className="font-heading text-lg text-earth-100">{recipe.servings}</p>
+              <p className="text-xs text-warm-gray dark:text-earth-400 uppercase tracking-wide">Servings</p>
+              <p className="font-heading text-lg text-earth-800 dark:text-earth-100">{recipe.servings}</p>
             </div>
           </div>
-          <div className="bg-earth-800 rounded-lg p-4 flex items-center gap-3">
-            <ChefHat className="w-5 h-5 text-earth-400 flex-shrink-0" />
+          <div className="bg-white dark:bg-earth-800 rounded-lg p-4 flex items-center gap-3">
+            <ChefHat className="w-5 h-5 text-warm-gray dark:text-earth-400 flex-shrink-0" />
             <div>
-              <p className="text-xs text-earth-400 uppercase tracking-wide">Difficulty</p>
-              <p className="font-heading text-lg text-earth-100 capitalize">{recipe.difficulty}</p>
+              <p className="text-xs text-warm-gray dark:text-earth-400 uppercase tracking-wide">Difficulty</p>
+              <p className="font-heading text-lg text-earth-800 dark:text-earth-100 capitalize">{recipe.difficulty}</p>
             </div>
           </div>
         </div>
@@ -177,21 +177,21 @@ export default async function RecipeDetailPage({ params }: PageProps) {
           <div className="lg:col-span-2 space-y-10">
             {/* Ingredients */}
             <section>
-              <h2 className="font-heading text-2xl font-bold text-earth-100 mb-4">
+              <h2 className="font-heading text-2xl font-bold text-earth-800 dark:text-earth-100 mb-4">
                 Ingredients
               </h2>
               <ul className="space-y-2">
                 {recipe.ingredients.map((ing, index) => (
                   <li
                     key={index}
-                    className="flex items-start gap-3 text-earth-200"
+                    className="flex items-start gap-3 text-earth-800 dark:text-earth-200"
                   >
                     <span className="w-2 h-2 rounded-full bg-earth-400 flex-shrink-0 mt-2" />
                     <span>
                       <span className="font-medium">{ing.item}</span>
-                      <span className="text-earth-400"> &mdash; {ing.quantity}</span>
+                      <span className="text-warm-gray dark:text-earth-400"> &mdash; {ing.quantity}</span>
                       {ing.isOptional && (
-                        <span className="ml-2 text-xs text-earth-400 italic">(optional)</span>
+                        <span className="ml-2 text-xs text-warm-gray dark:text-earth-400 italic">(optional)</span>
                       )}
                     </span>
                   </li>
@@ -201,7 +201,7 @@ export default async function RecipeDetailPage({ params }: PageProps) {
 
             {/* Instructions */}
             <section>
-              <h2 className="font-heading text-2xl font-bold text-earth-100 mb-4">
+              <h2 className="font-heading text-2xl font-bold text-earth-800 dark:text-earth-100 mb-4">
                 Instructions
               </h2>
               <ol className="space-y-4">
@@ -210,7 +210,7 @@ export default async function RecipeDetailPage({ params }: PageProps) {
                     <span className="flex-shrink-0 w-8 h-8 rounded-full bg-earth-500 text-white flex items-center justify-center text-sm font-bold">
                       {index + 1}
                     </span>
-                    <p className="text-earth-200 leading-relaxed pt-1">{step}</p>
+                    <p className="text-earth-800 dark:text-earth-200 leading-relaxed pt-1">{step}</p>
                   </li>
                 ))}
               </ol>
@@ -218,17 +218,17 @@ export default async function RecipeDetailPage({ params }: PageProps) {
 
             {/* Tips */}
             {recipe.tips.length > 0 && (
-              <section className="bg-earth-800 rounded-xl p-6">
+              <section className="bg-forest-50 dark:bg-earth-800 rounded-xl p-6">
                 <div className="flex items-center gap-2 mb-4">
-                  <Lightbulb className="w-5 h-5 text-earth-300" />
-                  <h2 className="font-heading text-xl font-bold text-earth-100">
+                  <Lightbulb className="w-5 h-5 text-earth-700 dark:text-earth-300" />
+                  <h2 className="font-heading text-xl font-bold text-earth-800 dark:text-earth-100">
                     Tips
                   </h2>
                 </div>
                 <ul className="space-y-2">
                   {recipe.tips.map((tip, index) => (
-                    <li key={index} className="flex items-start gap-3 text-earth-200">
-                      <span className="text-earth-400 flex-shrink-0 mt-0.5">&#8226;</span>
+                    <li key={index} className="flex items-start gap-3 text-earth-800 dark:text-earth-200">
+                      <span className="text-warm-gray dark:text-earth-400 flex-shrink-0 mt-0.5">&#8226;</span>
                       <span className="leading-relaxed">{tip}</span>
                     </li>
                   ))}
@@ -242,27 +242,27 @@ export default async function RecipeDetailPage({ params }: PageProps) {
             {/* Nutrition Per Serving */}
             {recipe.nutritionPerServing && (
               <div className="bg-cream dark:bg-earth-800 rounded-xl card-shadow p-6">
-                <h3 className="font-heading text-lg font-bold text-earth-100 mb-4">
+                <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-4">
                   Nutrition Per Serving
                 </h3>
                 <div className="grid grid-cols-3 gap-3 text-center">
-                  <div className="bg-earth-800 rounded-lg p-3">
-                    <p className="font-heading text-2xl text-earth-100">
+                  <div className="bg-forest-50 dark:bg-earth-800 rounded-lg p-3">
+                    <p className="font-heading text-2xl text-earth-800 dark:text-earth-100">
                       {recipe.nutritionPerServing.calories}
                     </p>
-                    <p className="text-xs text-earth-400">Calories</p>
+                    <p className="text-xs text-warm-gray dark:text-earth-400">Calories</p>
                   </div>
-                  <div className="bg-earth-800 rounded-lg p-3">
-                    <p className="font-heading text-2xl text-earth-100">
+                  <div className="bg-forest-50 dark:bg-earth-800 rounded-lg p-3">
+                    <p className="font-heading text-2xl text-earth-800 dark:text-earth-100">
                       {recipe.nutritionPerServing.protein_g}g
                     </p>
-                    <p className="text-xs text-earth-400">Protein</p>
+                    <p className="text-xs text-warm-gray dark:text-earth-400">Protein</p>
                   </div>
-                  <div className="bg-earth-800 rounded-lg p-3">
-                    <p className="font-heading text-2xl text-earth-100">
+                  <div className="bg-forest-50 dark:bg-earth-800 rounded-lg p-3">
+                    <p className="font-heading text-2xl text-earth-800 dark:text-earth-100">
                       {recipe.nutritionPerServing.fiber_g}g
                     </p>
-                    <p className="text-xs text-earth-400">Fiber</p>
+                    <p className="text-xs text-warm-gray dark:text-earth-400">Fiber</p>
                   </div>
                 </div>
               </div>
@@ -271,7 +271,7 @@ export default async function RecipeDetailPage({ params }: PageProps) {
             {/* Related Millets */}
             {relatedMillets.length > 0 && (
               <div className="bg-cream dark:bg-earth-800 rounded-xl card-shadow p-6">
-                <h3 className="font-heading text-lg font-bold text-earth-100 mb-3">
+                <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-3">
                   Millet Used
                 </h3>
                 <div className="space-y-2">
@@ -280,11 +280,11 @@ export default async function RecipeDetailPage({ params }: PageProps) {
                       <Link
                         key={millet.slug}
                         href={`/millets/${millet.slug}`}
-                        className="flex items-center gap-2 text-earth-300 hover:text-earth-100 transition-colors"
+                        className="flex items-center gap-2 text-earth-700 dark:text-earth-300 hover:text-earth-800 dark:hover:text-earth-100 transition-colors"
                       >
                         <span className="w-2 h-2 rounded-full bg-earth-400" />
                         <span className="font-medium">{millet.name}</span>
-                        <span className="text-earth-400 text-sm">({millet.commonName})</span>
+                        <span className="text-warm-gray dark:text-earth-400 text-sm">({millet.commonName})</span>
                       </Link>
                     ) : null,
                   )}
@@ -295,7 +295,7 @@ export default async function RecipeDetailPage({ params }: PageProps) {
             {/* Tags */}
             {recipe.tags.length > 0 && (
               <div className="bg-cream dark:bg-earth-800 rounded-xl card-shadow p-6">
-                <h3 className="font-heading text-lg font-bold text-earth-100 mb-3">
+                <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-3">
                   Tags
                 </h3>
                 <div className="flex flex-wrap gap-2">
@@ -319,8 +319,8 @@ export default async function RecipeDetailPage({ params }: PageProps) {
 
       {/* Disclaimer */}
       <div className="content-wrapper pb-8">
-        <div className="border-t border-earth-700 pt-6 mt-10">
-          <p className="text-xs text-earth-400 leading-relaxed max-w-3xl">
+        <div className="border-t border-earth-200 dark:border-earth-700 pt-6 mt-10">
+          <p className="text-xs text-warm-gray dark:text-earth-400 leading-relaxed max-w-3xl">
             <strong>Disclaimer:</strong> This content is created with the
             assistance of AI and is intended for educational purposes only. While
             we strive for accuracy, information may contain errors or be

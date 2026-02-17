@@ -98,7 +98,7 @@ export default function CookingTimer() {
       <div className="max-w-md">
         <label
           htmlFor="millet-select"
-          className="block text-sm font-medium text-earth-300 mb-2"
+          className="block text-sm font-medium text-earth-700 dark:text-earth-300 mb-2"
         >
           Select a millet
         </label>
@@ -106,7 +106,7 @@ export default function CookingTimer() {
           id="millet-select"
           value={selectedMillet}
           onChange={(e) => setSelectedMillet(e.target.value)}
-          className="w-full px-4 py-3 bg-earth-800 border border-earth-700 rounded-lg text-earth-100 focus:outline-none focus:ring-2 focus:ring-earth-500 transition-colors"
+          className="w-full px-4 py-3 bg-white dark:bg-earth-800 border border-earth-200 dark:border-earth-700 rounded-lg text-earth-800 dark:text-earth-100 focus:outline-none focus:ring-2 focus:ring-earth-500 transition-colors"
         >
           <option value="">Choose a millet...</option>
           {millets.map((m) => (
@@ -122,39 +122,39 @@ export default function CookingTimer() {
           {/* Cooking Info */}
           <Card variant="outlined">
             <CardBody>
-              <h3 className="font-heading text-lg font-bold text-earth-100 mb-4">
+              <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-4">
                 {millet.name} — Cooking Info
               </h3>
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
-                  <Droplets className="w-5 h-5 text-earth-400 flex-shrink-0" />
+                  <Droplets className="w-5 h-5 text-warm-gray dark:text-earth-400 flex-shrink-0" />
                   <div>
-                    <p className="text-xs text-earth-400 uppercase tracking-wider">
+                    <p className="text-xs text-warm-gray dark:text-earth-400 uppercase tracking-wider">
                       Water Ratio
                     </p>
-                    <p className="text-earth-100 font-medium">
+                    <p className="text-earth-800 dark:text-earth-100 font-medium">
                       {millet.cooking.waterRatio}
                     </p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Timer className="w-5 h-5 text-earth-400 flex-shrink-0" />
+                  <Timer className="w-5 h-5 text-warm-gray dark:text-earth-400 flex-shrink-0" />
                   <div>
-                    <p className="text-xs text-earth-400 uppercase tracking-wider">
+                    <p className="text-xs text-warm-gray dark:text-earth-400 uppercase tracking-wider">
                       Soaking Time
                     </p>
-                    <p className="text-earth-100 font-medium">
+                    <p className="text-earth-800 dark:text-earth-100 font-medium">
                       {millet.cooking.soakingTime}
                     </p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CookingPot className="w-5 h-5 text-earth-400 flex-shrink-0" />
+                  <CookingPot className="w-5 h-5 text-warm-gray dark:text-earth-400 flex-shrink-0" />
                   <div>
-                    <p className="text-xs text-earth-400 uppercase tracking-wider">
+                    <p className="text-xs text-warm-gray dark:text-earth-400 uppercase tracking-wider">
                       Cooking Time
                     </p>
-                    <p className="text-earth-100 font-medium">
+                    <p className="text-earth-800 dark:text-earth-100 font-medium">
                       {millet.cooking.cookingTime}
                     </p>
                   </div>
@@ -193,7 +193,7 @@ export default function CookingTimer() {
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="6"
-                  className="text-earth-700"
+                  className="text-earth-200 dark:text-earth-700"
                 />
                 <circle
                   cx="100"
@@ -206,19 +206,19 @@ export default function CookingTimer() {
                   strokeDasharray={circumference}
                   strokeDashoffset={strokeDashoffset}
                   className={`transition-all duration-1000 ${
-                    isComplete ? 'text-forest-400' : 'text-earth-400'
+                    isComplete ? 'text-forest-400' : 'text-warm-gray dark:text-earth-400'
                   }`}
                 />
               </svg>
               <div className="absolute inset-0 flex flex-col items-center justify-center">
                 <span
                   className={`font-heading text-4xl font-bold ${
-                    isComplete ? 'text-forest-400' : 'text-earth-100'
+                    isComplete ? 'text-forest-400' : 'text-earth-800 dark:text-earth-100'
                   }`}
                 >
                   {formatTime(remainingSeconds)}
                 </span>
-                <span className="text-xs text-earth-400 uppercase tracking-wider mt-1">
+                <span className="text-xs text-warm-gray dark:text-earth-400 uppercase tracking-wider mt-1">
                   {timerMode === 'cooking' ? 'Cooking' : 'Soaking'}
                 </span>
               </div>
@@ -235,7 +235,7 @@ export default function CookingTimer() {
               <button
                 onClick={toggleRunning}
                 disabled={totalSeconds === 0}
-                className="w-14 h-14 rounded-full bg-earth-700 hover:bg-earth-600 text-earth-100 flex items-center justify-center transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+                className="w-14 h-14 rounded-full bg-earth-200 dark:bg-earth-700 hover:bg-earth-300 dark:hover:bg-earth-600 text-earth-800 dark:text-earth-100 flex items-center justify-center transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
                 aria-label={isRunning ? 'Pause' : 'Play'}
               >
                 {isRunning ? (
@@ -246,7 +246,7 @@ export default function CookingTimer() {
               </button>
               <button
                 onClick={resetTimer}
-                className="w-10 h-10 rounded-full bg-earth-800 hover:bg-earth-700 text-earth-300 flex items-center justify-center transition-colors"
+                className="w-10 h-10 rounded-full bg-earth-100 dark:bg-earth-800 hover:bg-earth-200 dark:hover:bg-earth-700 text-earth-700 dark:text-earth-300 flex items-center justify-center transition-colors"
                 aria-label="Reset"
               >
                 <RotateCcw className="w-5 h-5" />
@@ -257,7 +257,7 @@ export default function CookingTimer() {
       ) : (
         <div className="text-center py-12">
           <Timer className="w-12 h-12 text-earth-600 mx-auto mb-4" />
-          <p className="text-earth-400">
+          <p className="text-warm-gray dark:text-earth-400">
             Select a millet above to see cooking info and start the timer.
           </p>
         </div>

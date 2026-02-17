@@ -4,8 +4,8 @@
   "description": "Your complete guide to millets — recipes, nutrition, history, and Ayurvedic wisdom. Works offline for kitchen use.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#FEFBF3",
-  "theme_color": "#5E4A26",
+  "background_color": "#FAF6F0",
+  "theme_color": "#5B8C5A",
   "orientation": "any",
   "icons": [
     {

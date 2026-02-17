@@ -47,7 +47,7 @@ export default function Tabs({ tabs, defaultIndex = 0, className = '' }: TabsPro
       <div
         role="tablist"
         aria-orientation="horizontal"
-        className="flex border-b border-earth-700 relative"
+        className="flex border-b border-earth-200 dark:border-earth-700 relative"
       >
         {tabs.map((tab, index) => (
           <button
@@ -67,8 +67,8 @@ export default function Tabs({ tabs, defaultIndex = 0, className = '' }: TabsPro
               focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-earth-500 focus-visible:ring-offset-2
               ${
                 activeIndex === index
-                  ? 'text-earth-100 font-semibold'
-                  : 'text-earth-300 hover:text-earth-100'
+                  ? 'text-earth-800 dark:text-earth-100 font-semibold'
+                  : 'text-earth-700 dark:text-earth-300 hover:text-earth-500 dark:hover:text-earth-100'
               }
             `.trim()}
           >

@@ -23,10 +23,10 @@ export default function CookingGuidePage() {
 
       <div className="content-wrapper py-8">
         {/* Page Header */}
-        <h1 className="font-heading text-4xl md:text-5xl font-bold text-earth-100 mb-6">
+        <h1 className="font-heading text-4xl md:text-5xl font-bold text-earth-800 dark:text-earth-100 mb-6">
           Cooking Guide
         </h1>
-        <p className="text-lg text-earth-300 max-w-3xl mb-12 leading-relaxed">
+        <p className="text-lg text-earth-700 dark:text-earth-300 max-w-3xl mb-12 leading-relaxed">
           Everything you need to know about preparing millets at home -- from water ratios and
           soaking times to cooking methods and storage. Whether you are a first-time millet cook
           or looking to refine your technique, this guide covers all the essentials.
@@ -34,10 +34,10 @@ export default function CookingGuidePage() {
 
         {/* Water-to-Millet Ratios */}
         <section className="mb-14">
-          <h2 className="font-heading text-2xl md:text-3xl font-bold text-earth-100 mb-4">
+          <h2 className="font-heading text-2xl md:text-3xl font-bold text-earth-800 dark:text-earth-100 mb-4">
             Water-to-Millet Ratios
           </h2>
-          <p className="text-earth-200 leading-relaxed mb-6 max-w-3xl">
+          <p className="text-earth-800 dark:text-earth-200 leading-relaxed mb-6 max-w-3xl">
             Getting the water ratio right is the most important step in cooking millets. Too much
             water makes them mushy; too little leaves them crunchy.
           </p>
@@ -67,10 +67,10 @@ export default function CookingGuidePage() {
 
         {/* Soaking Guide */}
         <section className="mb-14">
-          <h2 className="font-heading text-2xl md:text-3xl font-bold text-earth-100 mb-4">
+          <h2 className="font-heading text-2xl md:text-3xl font-bold text-earth-800 dark:text-earth-100 mb-4">
             Soaking Guide
           </h2>
-          <div className="max-w-3xl space-y-4 text-earth-200 leading-relaxed mb-6">
+          <div className="max-w-3xl space-y-4 text-earth-800 dark:text-earth-200 leading-relaxed mb-6">
             <p>
               <strong>Why soak millets?</strong> Soaking serves two important purposes: it reduces
               anti-nutritional factors (particularly phytic acid, which can be reduced by 20-50%
@@ -80,21 +80,21 @@ export default function CookingGuidePage() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
-            <div className="bg-earth-800 rounded-xl p-6">
-              <h3 className="font-heading text-lg font-bold text-earth-100 mb-2">
+            <div className="bg-forest-50 dark:bg-earth-800 rounded-xl p-6">
+              <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-2">
                 Quick Soak (30 min - 2 hours)
               </h3>
-              <p className="text-earth-200 text-sm leading-relaxed mb-3">
+              <p className="text-earth-800 dark:text-earth-200 text-sm leading-relaxed mb-3">
                 Suitable for most small millets: foxtail, little, kodo, barnyard, browntop, and
                 proso millet. Rinse thoroughly, soak in room temperature water, then drain before
                 cooking.
               </p>
             </div>
-            <div className="bg-earth-800 rounded-xl p-6">
-              <h3 className="font-heading text-lg font-bold text-earth-100 mb-2">
+            <div className="bg-forest-50 dark:bg-earth-800 rounded-xl p-6">
+              <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-2">
                 Long Soak (6-8 hours / overnight)
               </h3>
-              <p className="text-earth-200 text-sm leading-relaxed mb-3">
+              <p className="text-earth-800 dark:text-earth-200 text-sm leading-relaxed mb-3">
                 Recommended for whole grain sorghum and pearl millet when cooking as whole grains
                 (not flour). Also recommended if you want maximum phytic acid reduction. Soak
                 overnight, drain, and rinse before cooking.
@@ -102,19 +102,19 @@ export default function CookingGuidePage() {
             </div>
           </div>
           <div className="mt-4 max-w-3xl">
-            <h4 className="font-semibold text-earth-100 mb-2">Soaking Tips</h4>
-            <ul className="space-y-2 text-earth-200 text-sm">
+            <h4 className="font-semibold text-earth-800 dark:text-earth-100 mb-2">Soaking Tips</h4>
+            <ul className="space-y-2 text-earth-800 dark:text-earth-200 text-sm">
               <li className="flex items-start gap-3">
-                <span className="text-earth-400 flex-shrink-0">&#8226;</span>
+                <span className="text-warm-gray dark:text-earth-400 flex-shrink-0">&#8226;</span>
                 Always discard the soaking water and rinse the millet before cooking.
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-earth-400 flex-shrink-0">&#8226;</span>
+                <span className="text-warm-gray dark:text-earth-400 flex-shrink-0">&#8226;</span>
                 Adding a tablespoon of lemon juice or apple cider vinegar to the soaking water
                 can further enhance phytic acid reduction.
               </li>
               <li className="flex items-start gap-3">
-                <span className="text-earth-400 flex-shrink-0">&#8226;</span>
+                <span className="text-warm-gray dark:text-earth-400 flex-shrink-0">&#8226;</span>
                 In hot weather, soak in the refrigerator to prevent fermentation (unless
                 fermentation is desired, as for dosa batter).
               </li>
@@ -124,15 +124,15 @@ export default function CookingGuidePage() {
 
         {/* Cooking Methods */}
         <section className="mb-14">
-          <h2 className="font-heading text-2xl md:text-3xl font-bold text-earth-100 mb-4">
+          <h2 className="font-heading text-2xl md:text-3xl font-bold text-earth-800 dark:text-earth-100 mb-4">
             Cooking Methods
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-cream dark:bg-earth-800 rounded-xl card-shadow p-6">
-              <h3 className="font-heading text-lg font-bold text-earth-100 mb-3">
+              <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-3">
                 Stovetop
               </h3>
-              <ol className="space-y-2 text-earth-200 text-sm list-decimal list-inside">
+              <ol className="space-y-2 text-earth-800 dark:text-earth-200 text-sm list-decimal list-inside">
                 <li>Rinse and drain the millet thoroughly.</li>
                 <li>Bring the appropriate amount of water to a rolling boil in a heavy-bottomed pot.</li>
                 <li>Add the millet and a pinch of salt. Stir once.</li>
@@ -142,25 +142,25 @@ export default function CookingGuidePage() {
               </ol>
             </div>
             <div className="bg-cream dark:bg-earth-800 rounded-xl card-shadow p-6">
-              <h3 className="font-heading text-lg font-bold text-earth-100 mb-3">
+              <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-3">
                 Pressure Cooker
               </h3>
-              <ol className="space-y-2 text-earth-200 text-sm list-decimal list-inside">
+              <ol className="space-y-2 text-earth-800 dark:text-earth-200 text-sm list-decimal list-inside">
                 <li>Rinse and drain the millet.</li>
                 <li>Add millet, water (same ratio), and salt to the pressure cooker.</li>
                 <li>Close the lid and cook on medium heat for 2-3 whistles.</li>
                 <li>Turn off heat and let pressure release naturally (do not force open).</li>
                 <li>Open the lid and fluff gently with a fork.</li>
               </ol>
-              <p className="text-xs text-earth-400 mt-3 italic">
+              <p className="text-xs text-warm-gray dark:text-earth-400 mt-3 italic">
                 Pressure cooking is faster and works especially well for pearl millet and sorghum.
               </p>
             </div>
             <div className="bg-cream dark:bg-earth-800 rounded-xl card-shadow p-6">
-              <h3 className="font-heading text-lg font-bold text-earth-100 mb-3">
+              <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-3">
                 Rice Cooker
               </h3>
-              <ol className="space-y-2 text-earth-200 text-sm list-decimal list-inside">
+              <ol className="space-y-2 text-earth-800 dark:text-earth-200 text-sm list-decimal list-inside">
                 <li>Rinse and drain the millet.</li>
                 <li>Add millet and water to the rice cooker bowl at the recommended ratio.</li>
                 <li>Add a pinch of salt and a teaspoon of oil or ghee.</li>
@@ -168,7 +168,7 @@ export default function CookingGuidePage() {
                 <li>Once the cooker switches to &ldquo;warm,&rdquo; let it rest for 10 minutes.</li>
                 <li>Open and fluff with a fork. Serve.</li>
               </ol>
-              <p className="text-xs text-earth-400 mt-3 italic">
+              <p className="text-xs text-warm-gray dark:text-earth-400 mt-3 italic">
                 Works well for foxtail, little, barnyard, and kodo millets.
               </p>
             </div>
@@ -177,49 +177,49 @@ export default function CookingGuidePage() {
 
         {/* Reducing Antinutrients */}
         <section className="mb-14">
-          <h2 className="font-heading text-2xl md:text-3xl font-bold text-earth-100 mb-4">
+          <h2 className="font-heading text-2xl md:text-3xl font-bold text-earth-800 dark:text-earth-100 mb-4">
             Reducing Antinutrients
           </h2>
-          <p className="text-earth-200 leading-relaxed mb-6 max-w-3xl">
+          <p className="text-earth-800 dark:text-earth-200 leading-relaxed mb-6 max-w-3xl">
             Millets contain phytic acid and tannins that can reduce mineral absorption. These
             simple traditional processing methods significantly reduce these compounds:
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
-            <div className="bg-earth-800 rounded-xl p-6">
-              <h3 className="font-heading text-lg font-bold text-earth-100 mb-2">
+            <div className="bg-forest-50 dark:bg-earth-800 rounded-xl p-6">
+              <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-2">
                 Soaking
               </h3>
-              <p className="text-earth-200 text-sm leading-relaxed">
+              <p className="text-earth-800 dark:text-earth-200 text-sm leading-relaxed">
                 Soaking millets for 6-8 hours reduces phytic acid content by 20-50%. The water
                 activates the grain&apos;s own phytase enzymes, which break down phytic acid.
                 Always discard the soaking water.
               </p>
             </div>
-            <div className="bg-earth-800 rounded-xl p-6">
-              <h3 className="font-heading text-lg font-bold text-earth-100 mb-2">
+            <div className="bg-forest-50 dark:bg-earth-800 rounded-xl p-6">
+              <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-2">
                 Germination / Sprouting
               </h3>
-              <p className="text-earth-200 text-sm leading-relaxed">
+              <p className="text-earth-800 dark:text-earth-200 text-sm leading-relaxed">
                 Sprouting millets for 24-48 hours is one of the most effective methods. It can
                 reduce phytic acid by up to 60-70% while also increasing vitamin C, B vitamins,
                 and overall protein digestibility. Finger millet (ragi) sprouts particularly well.
               </p>
             </div>
-            <div className="bg-earth-800 rounded-xl p-6">
-              <h3 className="font-heading text-lg font-bold text-earth-100 mb-2">
+            <div className="bg-forest-50 dark:bg-earth-800 rounded-xl p-6">
+              <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-2">
                 Fermentation
               </h3>
-              <p className="text-earth-200 text-sm leading-relaxed">
+              <p className="text-earth-800 dark:text-earth-200 text-sm leading-relaxed">
                 Traditional fermented preparations like dosa/idli batter (using millet instead of
                 rice), ambali, and koozh dramatically reduce antinutrients. Fermentation for 12-24
                 hours can reduce phytic acid by 50-75% while adding beneficial probiotics.
               </p>
             </div>
-            <div className="bg-earth-800 rounded-xl p-6">
-              <h3 className="font-heading text-lg font-bold text-earth-100 mb-2">
+            <div className="bg-forest-50 dark:bg-earth-800 rounded-xl p-6">
+              <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-2">
                 Roasting / Dry Toasting
               </h3>
-              <p className="text-earth-200 text-sm leading-relaxed">
+              <p className="text-earth-800 dark:text-earth-200 text-sm leading-relaxed">
                 Dry roasting millets before cooking reduces tannins and also enhances their nutty
                 flavor. This is a common practice in many traditional recipes (e.g., roasting
                 foxtail millet before making upma or biryani).
@@ -230,42 +230,42 @@ export default function CookingGuidePage() {
 
         {/* Storage Guide */}
         <section className="mb-14">
-          <h2 className="font-heading text-2xl md:text-3xl font-bold text-earth-100 mb-4">
+          <h2 className="font-heading text-2xl md:text-3xl font-bold text-earth-800 dark:text-earth-100 mb-4">
             Storage Guide
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-cream dark:bg-earth-800 rounded-xl card-shadow p-6">
-              <h3 className="font-heading text-lg font-bold text-earth-100 mb-2">
+              <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-2">
                 Uncooked Millets
               </h3>
-              <p className="text-earth-200 text-sm leading-relaxed mb-2">
+              <p className="text-earth-800 dark:text-earth-200 text-sm leading-relaxed mb-2">
                 Store in airtight containers in a cool, dry place away from direct sunlight.
               </p>
-              <p className="font-medium text-earth-100">
+              <p className="font-medium text-earth-800 dark:text-earth-100">
                 Shelf life: 6-12 months
               </p>
             </div>
             <div className="bg-cream dark:bg-earth-800 rounded-xl card-shadow p-6">
-              <h3 className="font-heading text-lg font-bold text-earth-100 mb-2">
+              <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-2">
                 Cooked Millets
               </h3>
-              <p className="text-earth-200 text-sm leading-relaxed mb-2">
+              <p className="text-earth-800 dark:text-earth-200 text-sm leading-relaxed mb-2">
                 Store in sealed containers in the refrigerator. Can also be frozen in portion-sized
                 bags for longer storage.
               </p>
-              <p className="font-medium text-earth-100">
+              <p className="font-medium text-earth-800 dark:text-earth-100">
                 Fridge: 3-5 days / Freezer: up to 3 months
               </p>
             </div>
             <div className="bg-cream dark:bg-earth-800 rounded-xl card-shadow p-6">
-              <h3 className="font-heading text-lg font-bold text-earth-100 mb-2">
+              <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-2">
                 Millet Flour
               </h3>
-              <p className="text-earth-200 text-sm leading-relaxed mb-2">
+              <p className="text-earth-800 dark:text-earth-200 text-sm leading-relaxed mb-2">
                 Store in airtight containers in the refrigerator, as the exposed oils in flour can
                 turn rancid faster than whole grains.
               </p>
-              <p className="font-medium text-earth-100">
+              <p className="font-medium text-earth-800 dark:text-earth-100">
                 Shelf life: 2-3 months (refrigerated)
               </p>
             </div>
@@ -274,10 +274,10 @@ export default function CookingGuidePage() {
 
         {/* Substitution Guide */}
         <section className="mb-14">
-          <h2 className="font-heading text-2xl md:text-3xl font-bold text-earth-100 mb-4">
+          <h2 className="font-heading text-2xl md:text-3xl font-bold text-earth-800 dark:text-earth-100 mb-4">
             Substitution Guide
           </h2>
-          <p className="text-earth-200 leading-relaxed mb-6 max-w-3xl">
+          <p className="text-earth-800 dark:text-earth-200 leading-relaxed mb-6 max-w-3xl">
             Millets can replace common grains in many dishes. Here is a guide to which millets
             work best as substitutes:
           </p>
@@ -338,12 +338,12 @@ export default function CookingGuidePage() {
 
         {/* Pro Tips */}
         <section className="mb-12">
-          <h2 className="font-heading text-2xl md:text-3xl font-bold text-earth-100 mb-4">
+          <h2 className="font-heading text-2xl md:text-3xl font-bold text-earth-800 dark:text-earth-100 mb-4">
             Pro Tips
           </h2>
-          <div className="bg-earth-800 rounded-xl p-6 max-w-3xl">
+          <div className="bg-forest-50 dark:bg-earth-800 rounded-xl p-6 max-w-3xl">
             <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-earth-200">
+              <li className="flex items-start gap-3 text-earth-800 dark:text-earth-200">
                 <span className="w-6 h-6 rounded-full bg-earth-500 text-white flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">
                   1
                 </span>
@@ -354,7 +354,7 @@ export default function CookingGuidePage() {
                   people managing blood sugar.
                 </span>
               </li>
-              <li className="flex items-start gap-3 text-earth-200">
+              <li className="flex items-start gap-3 text-earth-800 dark:text-earth-200">
                 <span className="w-6 h-6 rounded-full bg-earth-500 text-white flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">
                   2
                 </span>
@@ -364,7 +364,7 @@ export default function CookingGuidePage() {
                   and also helps the grains stay separate rather than becoming mushy.
                 </span>
               </li>
-              <li className="flex items-start gap-3 text-earth-200">
+              <li className="flex items-start gap-3 text-earth-800 dark:text-earth-200">
                 <span className="w-6 h-6 rounded-full bg-earth-500 text-white flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">
                   3
                 </span>
@@ -381,8 +381,8 @@ export default function CookingGuidePage() {
 
       {/* Disclaimer */}
       <div className="content-wrapper pb-8">
-        <div className="border-t border-earth-700 pt-6 mt-10">
-          <p className="text-xs text-earth-400 leading-relaxed max-w-3xl">
+        <div className="border-t border-earth-200 dark:border-earth-700 pt-6 mt-10">
+          <p className="text-xs text-warm-gray dark:text-earth-400 leading-relaxed max-w-3xl">
             <strong>Disclaimer:</strong> This content is created with the
             assistance of AI and is intended for educational purposes only. While
             we strive for accuracy, information may contain errors or be

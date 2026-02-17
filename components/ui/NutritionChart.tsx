@@ -72,7 +72,7 @@ interface NutritionChartProps {
   chartType: 'bar' | 'radar';
 }
 
-const CHART_COLORS = ['#8B6914', '#2D5016', '#D4A574', '#4A7C2E', '#C4A35A'];
+const CHART_COLORS = ['#5B8C5A', '#2D5016', '#D4A843', '#C17E5A', '#4A7C3E'];
 
 function CustomTooltip({
   active,
@@ -138,14 +138,14 @@ export default function NutritionChart({ data, chartType }: NutritionChartProps)
       <div className="w-full">
         <ResponsiveContainer width="100%" height={400}>
           <RadarChart data={radarData} cx="50%" cy="50%" outerRadius="80%">
-            <PolarGrid stroke="#E8DCC8" />
+            <PolarGrid stroke="#E0D8CE" />
             <PolarAngleAxis
               dataKey="nutrient"
-              tick={{ fill: '#5C4510', fontSize: 12 }}
+              tick={{ fill: '#2C2C2C', fontSize: 12 }}
             />
             <PolarRadiusAxis
               angle={30}
-              tick={{ fill: '#9B8B7E', fontSize: 10 }}
+              tick={{ fill: '#6B6B6B', fontSize: 10 }}
             />
             {data.map((item, index) => (
               <Radar
@@ -172,15 +172,15 @@ export default function NutritionChart({ data, chartType }: NutritionChartProps)
           data={data}
           margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
         >
-          <CartesianGrid strokeDasharray="3 3" stroke="#E8DCC8" />
+          <CartesianGrid strokeDasharray="3 3" stroke="#E0D8CE" />
           <XAxis
             dataKey="name"
-            tick={{ fill: '#5C4510', fontSize: 12 }}
-            axisLine={{ stroke: '#D4A574' }}
+            tick={{ fill: '#2C2C2C', fontSize: 12 }}
+            axisLine={{ stroke: '#D4A843' }}
           />
           <YAxis
-            tick={{ fill: '#9B8B7E', fontSize: 11 }}
-            axisLine={{ stroke: '#D4A574' }}
+            tick={{ fill: '#6B6B6B', fontSize: 11 }}
+            axisLine={{ stroke: '#D4A843' }}
           />
           <Tooltip content={<CustomTooltip />} />
           <Legend />

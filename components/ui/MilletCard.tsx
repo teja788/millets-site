@@ -32,12 +32,12 @@ export default function MilletCard({ millet }: MilletCardProps) {
 
   return (
     <motion.div
-      whileHover={{ y: -4, boxShadow: '0 12px 32px rgba(44, 24, 16, 0.15)' }}
+      whileHover={{ y: -4, boxShadow: '0 12px 32px rgba(0, 0, 0, 0.10)' }}
       transition={{ type: 'spring', stiffness: 300, damping: 20 }}
       className="w-full"
     >
       <Link href={`/millets/${millet.slug}`} className="block">
-        <div className="bg-earth-800 rounded-xl overflow-hidden card-shadow">
+        <div className="bg-white dark:bg-earth-800 rounded-xl overflow-hidden card-shadow">
           {/* Image area */}
           <div className={`relative h-48 overflow-hidden ${hasImage ? '' : `bg-gradient-to-br ${gradient}`}`}>
             {hasImage ? (
@@ -87,18 +87,18 @@ export default function MilletCard({ millet }: MilletCardProps) {
 
           {/* Content */}
           <div className="px-5 py-4">
-            <h3 className="font-heading text-lg font-bold text-earth-100 mb-0.5">
+            <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-0.5">
               {millet.name}
             </h3>
-            <p className="text-sm italic text-earth-400 mb-1">
+            <p className="text-sm italic text-warm-gray dark:text-earth-400 mb-1">
               {millet.scientificName}
             </p>
             {millet.commonName && (
-              <p className="text-sm text-earth-300 mb-2">
+              <p className="text-sm text-earth-700 dark:text-earth-300 mb-2">
                 ({millet.commonName})
               </p>
             )}
-            <p className="text-sm text-earth-300 line-clamp-2 mb-3">
+            <p className="text-sm text-earth-700 dark:text-earth-300 line-clamp-2 mb-3">
               {millet.tagline}
             </p>
 
