@@ -1,0 +1,299 @@
+@import "tailwindcss";
+
+/* ========================================
+   MILLETS WEBSITE - "Warm Earth, Modern Clarity"
+   ======================================== */
+
+@theme {
+  /* === Primary Colors: Warm Earth Browns (optimized for readability) === */
+  --color-earth-50: #FEFBF3;
+  --color-earth-100: #F5EDD6;
+  --color-earth-200: #E4D5B8;
+  --color-earth-300: #C9B18A;
+  --color-earth-400: #A08454;
+  --color-earth-500: #7A6132;
+  --color-earth-600: #5E4A26;
+  --color-earth-700: #46361C;
+  --color-earth-800: #302514;
+  --color-earth-900: #1F170D;
+
+  /* === Secondary Colors: Rich Greens === */
+  --color-forest-50: #F0F7ED;
+  --color-forest-100: #D4E8CE;
+  --color-forest-200: #A8D19B;
+  --color-forest-300: #7CBA6A;
+  --color-forest-400: #4A7C2E;
+  --color-forest-500: #2D5016;
+  --color-forest-600: #254213;
+  --color-forest-700: #1D340F;
+  --color-forest-800: #15260B;
+  --color-forest-900: #0D1807;
+
+  /* === Accent & Neutral Colors === */
+  --color-sand: #C9A87C;
+  --color-wheat: #E4D5B8;
+  --color-cream: #FFFDF7;
+  --color-warm-gray: #8A7B6E;
+  --color-border: #E4D5B8;
+
+  /* === Semantic Colors === */
+  --color-success: #27AE60;
+  --color-warning: #F39C12;
+  --color-error: #C0392B;
+  --color-info: #2980B9;
+
+  /* === Typography === */
+  --font-heading: var(--font-playfair), "Georgia", "Times New Roman", serif;
+  --font-body: var(--font-source-sans), "Segoe UI", "Helvetica Neue", sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", "Consolas", monospace;
+
+  /* === Spacing === */
+  --section-padding: 5rem;
+  --section-padding-mobile: 3rem;
+  --content-max-width: 1200px;
+
+  /* === Shadows === */
+  --shadow-card: 0 2px 8px rgba(44, 24, 16, 0.08);
+  --shadow-card-hover: 0 8px 24px rgba(44, 24, 16, 0.12);
+  --shadow-elevated: 0 12px 32px rgba(44, 24, 16, 0.15);
+}
+
+/* ========================================
+   BASE STYLES
+   ======================================== */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-earth-50);
+    color: var(--color-earth-900);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--color-earth-800);
+  }
+
+  h1 { font-size: 2.75rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.5rem; }
+  h4 { font-size: 1.25rem; }
+
+  a {
+    color: var(--color-earth-500);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    color: var(--color-earth-700);
+  }
+
+  ::selection {
+    background-color: var(--color-earth-300);
+    color: var(--color-earth-900);
+  }
+}
+
+/* ========================================
+   DARK MODE
+   ======================================== */
+
+.dark body {
+  background-color: #1a1510;
+  color: var(--color-earth-100);
+}
+
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+  color: var(--color-earth-200);
+}
+
+.dark a {
+  color: var(--color-earth-400);
+}
+
+.dark a:hover {
+  color: var(--color-earth-300);
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+@layer utilities {
+  .section-padding {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+  }
+
+  @media (max-width: 768px) {
+    .section-padding {
+      padding-top: var(--section-padding-mobile);
+      padding-bottom: var(--section-padding-mobile);
+    }
+  }
+
+  .content-wrapper {
+    max-width: var(--content-max-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, var(--color-earth-500), var(--color-earth-700));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .card-shadow {
+    box-shadow: var(--shadow-card);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  .card-shadow:hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+
+  .dark .card-shadow {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .dark .card-shadow:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Subtle grain/paper texture overlay */
+  .grain-texture::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+}
+
+/* ========================================
+   SCROLLBAR STYLING
+   ======================================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-earth-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-earth-400);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-earth-500);
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #1a1510;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: var(--color-earth-600);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: var(--color-earth-500);
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+
+@media print {
+  .no-print,
+  nav,
+  footer,
+  .scroll-progress,
+  .back-to-top {
+    display: none !important;
+  }
+
+  body {
+    font-size: 12pt;
+    color: #000;
+    background: #fff;
+    line-height: 1.5;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #000;
+    page-break-after: avoid;
+  }
+
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #555;
+  }
+
+  .content-wrapper {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+
+  th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+  }
+}
+
+/* ========================================
+   WAVE DIVIDER SVG SECTION SEPARATOR
+   ======================================== */
+
+.wave-divider {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-divider svg {
+  display: block;
+  width: 100%;
+  height: 48px;
+}
+
+.wave-divider .shape-fill {
+  fill: var(--color-earth-100);
+}
+
+.dark .wave-divider .shape-fill {
+  fill: #241e16;
+}
