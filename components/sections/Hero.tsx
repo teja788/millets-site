@@ -92,14 +92,14 @@ export default function Hero({ title, subtitle, ctaButtons }: HeroProps) {
         >
           <motion.h1
             variants={childVariants}
-            className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-gradient mb-6"
+            className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-earth-800 dark:text-earth-100 mb-6"
           >
             {title}
           </motion.h1>
 
           <motion.p
             variants={childVariants}
-            className="text-xl text-earth-700 dark:text-earth-300 mb-8 max-w-2xl leading-relaxed"
+            className="text-xl text-earth-800 dark:text-earth-300 mb-8 max-w-2xl leading-relaxed"
           >
             {subtitle}
           </motion.p>
