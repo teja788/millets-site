@@ -6,7 +6,7 @@ import Breadcrumb from '@/components/layout/Breadcrumb';
 import Badge from '@/components/ui/Badge';
 import ImageWithFallback from '@/components/ui/ImageWithFallback';
 import PrintButton from '@/components/ui/PrintButton';
-import ShareButton from '@/components/ui/ShareButton';
+import ShareButton, { FloatingShareButton } from '@/components/ui/ShareButton';
 import { recipes, getRecipeBySlug } from '@/data/recipes';
 import { getMilletBySlug } from '@/data/millets';
 
@@ -80,6 +80,7 @@ export default async function RecipeDetailPage({ params }: PageProps) {
 
   return (
     <main>
+      <FloatingShareButton title={recipe.title} slug={recipe.slug} />
       <Breadcrumb />
 
       <article className="content-wrapper py-8">
