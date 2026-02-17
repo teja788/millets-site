@@ -241,8 +241,8 @@ export default function Navbar() {
                   href={item.href}
                   className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                     isActive(item.href)
-                      ? 'text-earth-500 dark:text-forest-300 bg-forest-50 dark:bg-earth-700/40'
-                      : 'text-earth-700 dark:text-earth-300 hover:text-earth-500 dark:hover:text-forest-300 hover:bg-earth-100 dark:hover:bg-earth-800/40'
+                      ? 'text-forest-600 dark:text-forest-300 bg-forest-50 dark:bg-earth-700/40'
+                      : 'text-earth-800 dark:text-earth-300 hover:text-forest-600 dark:hover:text-forest-300 hover:bg-earth-100 dark:hover:bg-earth-800/40'
                   }`}
                 >
                   {item.label}
@@ -265,8 +265,8 @@ export default function Navbar() {
                   type="button"
                   className={`flex items-center gap-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                     groupActive
-                      ? 'text-earth-500 dark:text-forest-300 bg-forest-50 dark:bg-earth-700/40'
-                      : 'text-earth-700 dark:text-earth-300 hover:text-earth-500 dark:hover:text-forest-300 hover:bg-earth-100 dark:hover:bg-earth-800/40'
+                      ? 'text-forest-600 dark:text-forest-300 bg-forest-50 dark:bg-earth-700/40'
+                      : 'text-earth-800 dark:text-earth-300 hover:text-forest-600 dark:hover:text-forest-300 hover:bg-earth-100 dark:hover:bg-earth-800/40'
                   }`}
                   aria-haspopup="true"
                   aria-expanded={isDropdownOpen}
@@ -294,8 +294,8 @@ export default function Navbar() {
                           href={link.href}
                           className={`block px-4 py-2 text-sm transition-colors ${
                             isActive(link.href)
-                              ? 'text-earth-500 dark:text-forest-300 bg-forest-50 dark:bg-earth-700/40'
-                              : 'text-earth-700 dark:text-earth-300 hover:text-earth-500 dark:hover:text-forest-300 hover:bg-earth-100 dark:hover:bg-earth-800/40'
+                              ? 'text-forest-600 dark:text-forest-300 bg-forest-50 dark:bg-earth-700/40'
+                              : 'text-earth-800 dark:text-earth-300 hover:text-forest-600 dark:hover:text-forest-300 hover:bg-earth-100 dark:hover:bg-earth-800/40'
                           }`}
                         >
                           {link.label}
@@ -312,7 +312,7 @@ export default function Navbar() {
           {mounted && (
             <button
               onClick={toggleTheme}
-              className="ml-2 p-2 rounded-md text-earth-700 dark:text-earth-300 hover:text-earth-500 dark:hover:text-forest-300 hover:bg-earth-100 dark:hover:bg-earth-800/40 transition-colors"
+              className="ml-2 p-2 rounded-md text-earth-800 dark:text-earth-300 hover:text-forest-600 dark:hover:text-forest-300 hover:bg-earth-100 dark:hover:bg-earth-800/40 transition-colors"
               aria-label={resolvedTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
             >
               {resolvedTheme === 'dark' ? (
@@ -332,7 +332,7 @@ export default function Navbar() {
           {mounted && (
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-md text-earth-700 dark:text-earth-300 hover:text-earth-500 dark:hover:text-forest-300 hover:bg-earth-100 dark:hover:bg-earth-800/40 transition-colors"
+              className="p-2 rounded-md text-earth-800 dark:text-earth-300 hover:text-forest-600 dark:hover:text-forest-300 hover:bg-earth-100 dark:hover:bg-earth-800/40 transition-colors"
               aria-label={resolvedTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
             >
               {resolvedTheme === 'dark' ? (
@@ -345,7 +345,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="p-2 rounded-md text-earth-700 dark:text-earth-300 hover:text-earth-500 dark:hover:text-forest-300 hover:bg-earth-100 dark:hover:bg-earth-800/40 transition-colors"
+            className="p-2 rounded-md text-earth-800 dark:text-earth-300 hover:text-forest-600 dark:hover:text-forest-300 hover:bg-earth-100 dark:hover:bg-earth-800/40 transition-colors"
             aria-label={isOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={isOpen}
           >
@@ -388,7 +388,7 @@ export default function Navbar() {
                 </span>
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="p-2 rounded-md text-earth-700 dark:text-earth-300 hover:text-earth-500 dark:hover:text-forest-300 hover:bg-earth-100 dark:hover:bg-earth-800/40 transition-colors"
+                  className="p-2 rounded-md text-earth-800 dark:text-earth-300 hover:text-forest-600 dark:hover:text-forest-300 hover:bg-earth-100 dark:hover:bg-earth-800/40 transition-colors"
                   aria-label="Close menu"
                 >
                   <X className="w-5 h-5" />
@@ -405,8 +405,8 @@ export default function Navbar() {
                         href={item.href}
                         className={`px-4 py-3 rounded-md text-base font-medium transition-colors ${
                           isActive(item.href)
-                            ? 'text-earth-500 dark:text-forest-300 bg-forest-50 dark:bg-earth-700/40'
-                            : 'text-earth-700 dark:text-earth-300 hover:text-earth-500 dark:hover:text-forest-300 hover:bg-earth-100 dark:hover:bg-earth-800/40'
+                            ? 'text-forest-600 dark:text-forest-300 bg-forest-50 dark:bg-earth-700/40'
+                            : 'text-earth-800 dark:text-earth-300 hover:text-forest-600 dark:hover:text-forest-300 hover:bg-earth-100 dark:hover:bg-earth-800/40'
                         }`}
                       >
                         {item.label}
@@ -425,8 +425,8 @@ export default function Navbar() {
                         onClick={() => toggleMobileGroup(item.label)}
                         className={`w-full flex items-center justify-between px-4 py-3 rounded-md text-base font-medium transition-colors ${
                           isGroupActive(item)
-                            ? 'text-earth-500 dark:text-forest-300 bg-forest-50 dark:bg-earth-700/40'
-                            : 'text-earth-700 dark:text-earth-300 hover:text-earth-500 dark:hover:text-forest-300 hover:bg-earth-100 dark:hover:bg-earth-800/40'
+                            ? 'text-forest-600 dark:text-forest-300 bg-forest-50 dark:bg-earth-700/40'
+                            : 'text-earth-800 dark:text-earth-300 hover:text-forest-600 dark:hover:text-forest-300 hover:bg-earth-100 dark:hover:bg-earth-800/40'
                         }`}
                         aria-expanded={isMobileExpanded}
                       >
@@ -454,8 +454,8 @@ export default function Navbar() {
                                   href={link.href}
                                   className={`block px-4 py-2 rounded-md text-sm transition-colors ${
                                     isActive(link.href)
-                                      ? 'text-earth-500 dark:text-forest-300 bg-forest-50 dark:bg-earth-700/40'
-                                      : 'text-earth-700 dark:text-earth-300 hover:text-earth-500 dark:hover:text-forest-300 hover:bg-earth-100 dark:hover:bg-earth-800/40'
+                                      ? 'text-forest-600 dark:text-forest-300 bg-forest-50 dark:bg-earth-700/40'
+                                      : 'text-earth-800 dark:text-earth-300 hover:text-forest-600 dark:hover:text-forest-300 hover:bg-earth-100 dark:hover:bg-earth-800/40'
                                   }`}
                                 >
                                   {link.label}
