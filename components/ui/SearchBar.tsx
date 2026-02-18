@@ -2,10 +2,13 @@
 
 import { useState, useEffect, useRef, useMemo, useCallback, type KeyboardEvent } from 'react';
 import { Search } from 'lucide-react';
+import { useParams } from 'next/navigation';
 import Fuse from 'fuse.js';
 import Link from 'next/link';
 import type { SearchableItem } from '@/lib/types';
-import { searchIndex } from '@/data/search-index';
+import type { Locale } from '@/lib/i18n';
+import { localePath, isValidLocale } from '@/lib/i18n';
+import { getSearchIndex } from '@/lib/i18n-data';
 
 interface SearchBarProps {
   placeholder?: string;
@@ -28,6 +31,10 @@ export default function SearchBar({
   placeholder = 'Search millets, recipes, and more...',
   className = '',
 }: SearchBarProps) {
+  const params = useParams();
+  const locale: Locale = isValidLocale(params.lang as string) ? (params.lang as Locale) : 'en';
+  const searchIndex = useMemo(() => getSearchIndex(locale), [locale]);
+
   const [query, setQuery] = useState('');
   const [debouncedQuery, setDebouncedQuery] = useState('');
   const [isOpen, setIsOpen] = useState(false);
@@ -48,7 +55,7 @@ export default function SearchBar({
         threshold: 0.3,
         includeScore: true,
       }),
-    []
+    [searchIndex]
   );
 
   // Debounce the query input by 300ms
@@ -104,7 +111,7 @@ export default function SearchBar({
     for (const type of TYPE_ORDER) {
       const group = groupedResults[type];
       if (group && group.length > 0) {
-        return group[0].url;
+        return localePath(locale, group[0].url);
       }
     }
     return null;
@@ -175,7 +182,7 @@ export default function SearchBar({
                 {items.map((item) => (
                   <Link
                     key={item.id}
-                    href={item.url}
+                    href={localePath(locale, item.url)}
                     onClick={() => {
                       setIsOpen(false);
                       setQuery('');

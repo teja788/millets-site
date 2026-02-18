@@ -3,9 +3,12 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { Clock, Users } from 'lucide-react';
 import type { Recipe } from '@/lib/types';
+import type { Locale } from '@/lib/i18n';
+import { localePath, isValidLocale } from '@/lib/i18n';
 import Badge from '@/components/ui/Badge';
 
 interface RecipeCardProps {
@@ -31,6 +34,8 @@ const categoryGradients: Record<string, string> = {
 const defaultGradient = 'from-earth-400 via-earth-500 to-earth-700';
 
 export default function RecipeCard({ recipe }: RecipeCardProps) {
+  const params = useParams();
+  const locale: Locale = isValidLocale(params.lang as string) ? (params.lang as Locale) : 'en';
   const [imgError, setImgError] = useState(false);
   const gradient = categoryGradients[recipe.category] || defaultGradient;
   const hasImage = recipe.imageFile && !imgError;
@@ -41,7 +46,7 @@ export default function RecipeCard({ recipe }: RecipeCardProps) {
       transition={{ type: 'spring', stiffness: 300, damping: 20 }}
       className="w-full"
     >
-      <Link href={`/recipes/${recipe.slug}`} className="block">
+      <Link href={localePath(locale, `/recipes/${recipe.slug}`)} className="block">
         <div className="bg-white dark:bg-earth-800 rounded-xl overflow-hidden card-shadow h-full flex flex-col">
           {/* Image area */}
           <div className={`relative h-48 overflow-hidden ${hasImage ? '' : `bg-gradient-to-br ${gradient}`}`}>

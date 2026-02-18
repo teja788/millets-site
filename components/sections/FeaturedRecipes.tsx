@@ -1,7 +1,10 @@
 'use client';
 
 import Link from 'next/link';
+import { useParams } from 'next/navigation';
 import type { Recipe } from '@/lib/types';
+import type { Locale } from '@/lib/i18n';
+import { localePath, isValidLocale, getTranslations } from '@/lib/i18n';
 import RecipeCard from '@/components/ui/RecipeCard';
 
 interface FeaturedRecipesProps {
@@ -11,13 +14,17 @@ interface FeaturedRecipesProps {
 
 export default function FeaturedRecipes({
   recipes,
-  title = 'Featured Recipes',
+  title,
 }: FeaturedRecipesProps) {
+  const params = useParams();
+  const locale: Locale = isValidLocale(params.lang as string) ? (params.lang as Locale) : 'en';
+  const t = getTranslations(locale);
+  const heading = title || t.common.viewAll;
   return (
     <section className="section-padding">
       <div className="content-wrapper">
         <h2 className="font-heading text-3xl font-bold text-earth-800 dark:text-earth-100 mb-8">
-          {title}
+          {heading}
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -29,10 +36,10 @@ export default function FeaturedRecipes({
         {/* View all link */}
         <div className="mt-8 text-center">
           <Link
-            href="/recipes"
+            href={localePath(locale, '/recipes')}
             className="inline-flex items-center gap-2 text-earth-500 hover:text-earth-500 dark:hover:text-earth-200 font-medium transition-colors"
           >
-            View All Recipes
+            {t.common.viewAll}
             <svg
               width="16"
               height="16"

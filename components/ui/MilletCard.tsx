@@ -3,8 +3,11 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import type { Millet } from '@/lib/types';
+import type { Locale } from '@/lib/i18n';
+import { localePath, isValidLocale, getTranslations } from '@/lib/i18n';
 import Badge from '@/components/ui/Badge';
 
 interface MilletCardProps {
@@ -26,6 +29,9 @@ const milletGradients: Record<string, string> = {
 const defaultGradient = 'from-earth-400 via-earth-500 to-earth-700';
 
 export default function MilletCard({ millet }: MilletCardProps) {
+  const params = useParams();
+  const locale: Locale = isValidLocale(params.lang as string) ? (params.lang as Locale) : 'en';
+  const t = getTranslations(locale);
   const [imgError, setImgError] = useState(false);
   const gradient = milletGradients[millet.slug] || defaultGradient;
   const hasImage = millet.images?.grain && !imgError;
@@ -36,7 +42,7 @@ export default function MilletCard({ millet }: MilletCardProps) {
       transition={{ type: 'spring', stiffness: 300, damping: 20 }}
       className="w-full"
     >
-      <Link href={`/millets/${millet.slug}`} className="block">
+      <Link href={localePath(locale, `/millets/${millet.slug}`)} className="block">
         <div className="bg-white dark:bg-earth-800 rounded-xl overflow-hidden card-shadow">
           {/* Image area */}
           <div className={`relative h-48 overflow-hidden ${hasImage ? '' : `bg-gradient-to-br ${gradient}`}`}>
@@ -80,7 +86,7 @@ export default function MilletCard({ millet }: MilletCardProps) {
                 variant={millet.category === 'major' ? 'green' : 'orange'}
                 size="sm"
               >
-                {millet.category === 'major' ? 'Major Millet' : 'Minor Millet'}
+                {millet.category === 'major' ? t.common.majorMillet : t.common.minorMillet}
               </Badge>
             </div>
           </div>
