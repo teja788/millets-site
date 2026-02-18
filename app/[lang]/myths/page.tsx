@@ -21,6 +21,7 @@ export async function generateMetadata({
         ? 'చిరుధాన్యాల గురించి సాధారణ అపోహలు మరియు వాస్తవాలు. ఆధారాల ఆధారంగా నిజాలతో అపోహలను తొలగించండి.'
         : 'Myths & Facts About Millets. Debunk common misconceptions with evidence-based facts.',
     alternates: {
+      canonical: `/${lang}/myths`,
       languages: Object.fromEntries(
         locales.map((l) => [l, localePath(l, '/myths')])
       ),

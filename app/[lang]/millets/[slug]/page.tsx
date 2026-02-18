@@ -70,6 +70,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: millet.name,
     description: `${millet.tagline} Learn about ${millet.name} nutrition, health benefits, Ayurvedic properties, recipes, and more.`,
     alternates: {
+      canonical: `/${locale}/millets/${slug}`,
       languages: {
         en: `/en/millets/${slug}`,
         te: `/te/millets/${slug}`,

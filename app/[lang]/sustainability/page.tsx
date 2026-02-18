@@ -25,6 +25,7 @@ export async function generateMetadata({
     description:
       'Discover why millets are climate-smart crops: low water use, drought tolerance, carbon efficiency, soil health benefits, and alignment with UN Sustainable Development Goals.',
     alternates: {
+      canonical: `/${lang}/sustainability`,
       languages: {
         en: '/en/sustainability',
         te: '/te/sustainability',

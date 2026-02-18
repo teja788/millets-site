@@ -40,6 +40,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: `${recipe.title} | ${t.recipesPage.title}`,
     description: recipe.description,
     alternates: {
+      canonical: `/${locale}/recipes/${slug}`,
       languages: {
         en: `/en/recipes/${slug}`,
         te: `/te/recipes/${slug}`,

@@ -25,6 +25,7 @@ export async function generateMetadata({
     description:
       'Literary and archaeological evidence of millets in ancient texts from around the world.',
     alternates: {
+      canonical: `/${lang}/ancient-references`,
       languages: {
         en: '/en/ancient-references',
         te: '/te/ancient-references',

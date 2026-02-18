@@ -25,6 +25,7 @@ export async function generateMetadata({
     description:
       'Learn about millets — their botanical classification, the International Year of Millets 2023, India as the largest producer, and the mission behind this website.',
     alternates: {
+      canonical: '/en/about',
       languages: {
         en: '/en/about',
       },

@@ -29,7 +29,12 @@ const notoTelugu = Noto_Sans_Telugu({
 export const metadata: Metadata = {
   metadataBase: new URL('https://simplymillets.com'),
   alternates: {
-    canonical: './',
+    canonical: '/',
+    languages: {
+      en: '/en',
+      te: '/te',
+      'x-default': '/en',
+    },
   },
   title: {
     default: 'Millets Guide - Ancient Grains, Timeless Nourishment',

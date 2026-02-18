@@ -21,6 +21,7 @@ export async function generateMetadata({
         ? 'ఏదైనా చిరుధాన్యానికి మీ స్థానిక పేరును కనుగొనండి. భారతదేశంలోని వివిధ భాషలలో చిరుధాన్యాల పేర్లు.'
         : 'Find your local name for any millet. Millets are known by different names across India\'s diverse languages.',
     alternates: {
+      canonical: `/${lang}/glossary`,
       languages: Object.fromEntries(
         locales.map((l) => [l, localePath(l, '/glossary')])
       ),

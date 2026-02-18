@@ -1,6 +1,5 @@
 'use client';
 
-import { useEffect } from 'react';
 import { useParams } from 'next/navigation';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import Tabs from '@/components/ui/Tabs';
@@ -93,10 +92,6 @@ export default function MealPlansPage() {
 
   const t = getTranslations(locale);
   const mealPlans = getMealPlans(locale);
-
-  useEffect(() => {
-    document.title = `${t.mealPlan.title} | ${t.site.siteName}`;
-  }, [t]);
 
   const tabs = mealPlans.map((plan) => ({
     label: plan.title,

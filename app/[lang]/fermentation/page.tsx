@@ -25,6 +25,7 @@ export async function generateMetadata({
     description:
       'Traditional fermented millet beverages and foods from around the world.',
     alternates: {
+      canonical: `/${lang}/fermentation`,
       languages: {
         en: '/en/fermentation',
         te: '/te/fermentation',

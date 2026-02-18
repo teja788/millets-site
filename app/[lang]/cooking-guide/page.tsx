@@ -29,6 +29,7 @@ export async function generateMetadata({
         ? 'చిరుధాన్యాలను వండడానికి సంపూర్ణ గైడ్: నీటి నిష్పత్తులు, నానబెట్టే సమయాలు, వంట పద్ధతులు, యాంటీన్యూట్రియెంట్లను తగ్గించడం, నిల్వ మరియు ప్రత్యామ్నాయ చిట్కాలు.'
         : 'Complete guide to cooking millets: water ratios, soaking times, cooking methods (stovetop, pressure cooker, rice cooker), reducing antinutrients, storage, and substitution tips.',
     alternates: {
+      canonical: `/${lang}/cooking-guide`,
       languages: Object.fromEntries(
         locales.map((l) => [l, localePath(l, '/cooking-guide')])
       ),

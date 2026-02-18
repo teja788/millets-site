@@ -26,6 +26,7 @@ export async function generateMetadata({
     description:
       'How to select, store, and buy millets. Forms available, shelf life, and storage tips for all 9 millets.',
     alternates: {
+      canonical: `/${lang}/buying-guide`,
       languages: {
         en: '/en/buying-guide',
         te: '/te/buying-guide',

@@ -47,6 +47,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: `${data.region} — ${t.globalPage.title} | ${t.site.siteName}`,
     description: `${data.tagline} Explore the millet heritage of ${data.region}, including iconic foods, history, and cultural significance.`,
     alternates: {
+      canonical: `/${lang}/global-millets/${region}`,
       languages: Object.fromEntries(
         locales.map((l) => [l, `/${l}/global-millets/${region}`])
       ),

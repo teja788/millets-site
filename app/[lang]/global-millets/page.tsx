@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useMemo } from 'react';
+import { useMemo } from 'react';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { motion } from 'framer-motion';
@@ -25,10 +25,6 @@ export default function GlobalMilletsPage() {
   const t = getTranslations(locale);
 
   const globalMilletRegions = useMemo(() => getGlobalMilletRegions(locale), [locale]);
-
-  useEffect(() => {
-    document.title = `${t.globalPage.title} | ${t.site.siteName}`;
-  }, [t]);
 
   return (
     <main>

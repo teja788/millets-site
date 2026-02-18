@@ -24,6 +24,7 @@ export async function generateMetadata({
         ? '10,000 సంవత్సరాల చిరుధాన్యాల ప్రయాణాన్ని తెలుసుకోండి — చైనాలో తొలి సాగు నుండి 2023 అంతర్జాతీయ చిరుధాన్యాల సంవత్సరం వరకు.'
         : 'Trace the fascinating 10,000-year journey of millets from the earliest cultivated crops in China to the 2023 International Year of Millets. Discover archaeological evidence, Vedic references, and the modern millet revival.',
     alternates: {
+      canonical: `/${lang}/history`,
       languages: Object.fromEntries(
         locales.map((l) => [l, localePath(l, '/history')])
       ),

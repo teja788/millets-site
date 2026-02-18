@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { motion } from 'framer-motion';
@@ -45,10 +45,6 @@ export default function RegionalTraditionsPage() {
   const regionalTraditions = useMemo(() => getRegionalTraditions(locale), [locale]);
 
   const [activeRegion, setActiveRegion] = useState<RegionFilter>('all');
-
-  useEffect(() => {
-    document.title = `${t.regionalPage.title} | ${t.site.siteName}`;
-  }, [t]);
 
   const filteredTraditions = useMemo(() => {
     if (activeRegion === 'all') return regionalTraditions;

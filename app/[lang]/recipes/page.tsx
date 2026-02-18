@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo } from 'react';
 import { useParams } from 'next/navigation';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import RecipeCard from '@/components/ui/RecipeCard';
@@ -39,10 +39,6 @@ export default function RecipesPage() {
 
   const [activeCategory, setActiveCategory] = useState<RecipeCategory | 'all'>('all');
   const [activeMillet, setActiveMillet] = useState<string>('all');
-
-  useEffect(() => {
-    document.title = `${t.recipesPage.title} | ${t.site.siteName}`;
-  }, [t]);
 
   const filteredRecipes = useMemo(() => {
     return recipes.filter((recipe) => {

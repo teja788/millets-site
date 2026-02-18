@@ -29,6 +29,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: `${t.quiz.title} | ${t.site.siteName}`,
     description: t.quiz.subtitle,
     alternates: {
+      canonical: `/${lang}/tools/millet-quiz`,
       languages: Object.fromEntries(
         locales.map((l) => [l, `/${l}/tools/millet-quiz`])
       ),

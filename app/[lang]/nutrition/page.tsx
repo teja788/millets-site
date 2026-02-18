@@ -26,6 +26,7 @@ export async function generateMetadata({
         ? 'అన్ని 9 చిరుధాన్యాల పోషక విలువలను పక్కపక్కన పోల్చండి. ప్రోటీన్, కాల్షియం, ఇనుము, ఫైబర్ మరియు మరిన్నింటిలో చిరుధాన్యాలు బియ్యం మరియు గోధుమలతో ఎలా పోల్చబడతాయో చూడండి.'
         : 'Compare the nutritional profiles of all 9 millets side by side. See how millets compare to rice and wheat in protein, calcium, iron, fiber, and more.',
     alternates: {
+      canonical: `/${lang}/nutrition`,
       languages: Object.fromEntries(
         locales.map((l) => [l, localePath(l, '/nutrition')])
       ),

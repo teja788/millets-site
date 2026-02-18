@@ -48,6 +48,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: `${tradition.state} — ${t.regionalPage.title} | ${t.site.siteName}`,
     description: `${tradition.tagline} Explore the iconic millet dishes, festivals, and cultural practices of ${tradition.state}.`,
     alternates: {
+      canonical: `/${lang}/regional-traditions/${state}`,
       languages: Object.fromEntries(
         locales.map((l) => [l, `/${l}/regional-traditions/${state}`])
       ),

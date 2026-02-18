@@ -30,6 +30,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: `${t.substitutionPage.title} | ${t.site.siteName}`,
     description: 'Find the right millet to replace rice, wheat, or other grains in your recipes. Get exact ratios and cooking tips.',
     alternates: {
+      canonical: `/${lang}/tools/substitution-calculator`,
       languages: Object.fromEntries(
         locales.map((l) => [l, `/${l}/tools/substitution-calculator`])
       ),

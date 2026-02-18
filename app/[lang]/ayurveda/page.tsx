@@ -35,6 +35,7 @@ export async function generateMetadata({
         ? 'ఆయుర్వేదంలో చిరుధాన్యాల వర్గీకరణను త్రిణ ధాన్యంగా, దోష-నిర్దిష్ట సిఫార్సులు, ఋతుచర్య మరియు సాంప్రదాయ తయారీ పద్ధతులను అన్వేషించండి.'
         : 'Explore the Ayurvedic classification of millets as Trina Dhanya, dosha-specific recommendations, seasonal eating guidelines (Ritucharya), and traditional preparation methods.',
     alternates: {
+      canonical: `/${lang}/ayurveda`,
       languages: Object.fromEntries(
         locales.map((l) => [l, localePath(l, '/ayurveda')])
       ),

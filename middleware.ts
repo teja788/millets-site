@@ -28,10 +28,10 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // Redirect to default locale
+  // Redirect to default locale (301 permanent for SEO — tells Google the canonical lives at /en/...)
   const url = request.nextUrl.clone();
   url.pathname = `/${defaultLocale}${pathname}`;
-  return NextResponse.redirect(url, 308);
+  return NextResponse.redirect(url, 301);
 }
 
 export const config = {

@@ -30,6 +30,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: `${t.cookingTimerPage.title} | ${t.site.siteName}`,
     description: 'Interactive cooking timer with presets for each millet variety. Includes water ratios and soaking times.',
     alternates: {
+      canonical: `/${lang}/tools/cooking-timer`,
       languages: Object.fromEntries(
         locales.map((l) => [l, `/${l}/tools/cooking-timer`])
       ),
