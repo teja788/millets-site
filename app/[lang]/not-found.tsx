@@ -1,7 +1,16 @@
+'use client';
+
 import Link from 'next/link';
+import { useParams } from 'next/navigation';
 import { Wheat } from 'lucide-react';
+import type { Locale } from '@/lib/i18n';
+import { isValidLocale, getTranslations, localePath } from '@/lib/i18n';
 
 export default function NotFound() {
+  const params = useParams();
+  const locale: Locale = isValidLocale(params.lang as string) ? (params.lang as Locale) : 'en';
+  const t = getTranslations(locale);
+
   return (
     <div className="min-h-[70vh] flex items-center justify-center">
       <div className="content-wrapper text-center max-w-lg mx-auto py-20">
@@ -15,52 +24,51 @@ export default function NotFound() {
 
         {/* Heading */}
         <h1 className="font-heading text-3xl font-bold text-earth-800 dark:text-earth-100 mb-3">
-          Page Not Found
+          {t.notFound.heading}
         </h1>
 
         {/* Subtext */}
         <p className="text-earth-600 dark:text-earth-300 mb-8 leading-relaxed">
-          Looks like this grain got lost in the field. The page you are looking
-          for does not exist or may have been moved.
+          {t.notFound.message}
         </p>
 
         {/* Back to Home */}
         <Link
-          href="/en"
+          href={localePath(locale, '/')}
           className="inline-flex items-center justify-center rounded-lg bg-earth-500 hover:bg-earth-600 text-white font-medium px-6 py-3 transition-colors mb-8"
         >
-          Back to Home
+          {t.notFound.backHome}
         </Link>
 
         {/* Popular Sections */}
         <div className="border-t border-earth-200 dark:border-earth-700 pt-6">
           <p className="text-sm text-earth-500 dark:text-earth-400 mb-4">
-            Or explore these popular sections:
+            {t.notFound.explore}
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              href="/en/millets"
+              href={localePath(locale, '/millets')}
               className="text-earth-500 hover:text-earth-700 dark:text-earth-400 dark:hover:text-earth-200 font-medium underline transition-colors"
             >
-              Millets
+              {t.nav.millets}
             </Link>
             <Link
-              href="/en/recipes"
+              href={localePath(locale, '/recipes')}
               className="text-earth-500 hover:text-earth-700 dark:text-earth-400 dark:hover:text-earth-200 font-medium underline transition-colors"
             >
-              Recipes
+              {t.nav.recipes}
             </Link>
             <Link
-              href="/en/nutrition"
+              href={localePath(locale, '/nutrition')}
               className="text-earth-500 hover:text-earth-700 dark:text-earth-400 dark:hover:text-earth-200 font-medium underline transition-colors"
             >
-              Nutrition
+              {t.nav.nutrition}
             </Link>
             <Link
-              href="/en/faq"
+              href={localePath(locale, '/faq')}
               className="text-earth-500 hover:text-earth-700 dark:text-earth-400 dark:hover:text-earth-200 font-medium underline transition-colors"
             >
-              FAQ
+              {t.nav.faq}
             </Link>
           </div>
         </div>

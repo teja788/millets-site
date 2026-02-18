@@ -4,7 +4,10 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { Play, Pause, RotateCcw, Droplets, Timer, CookingPot } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import { Card, CardBody } from '@/components/ui/Card';
-import { millets } from '@/data/millets';
+import { millets as defaultMillets } from '@/data/millets';
+import type { Locale } from '@/lib/i18n';
+import { getTranslations } from '@/lib/i18n';
+import type { Millet } from '@/lib/types';
 
 function parseMinutes(timeStr: string): number {
   const match = timeStr.match(/(\d+)/);
@@ -17,7 +20,9 @@ function formatTime(totalSeconds: number): string {
   return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
 }
 
-export default function CookingTimer() {
+export default function CookingTimer({ locale = 'en', millets }: { locale?: Locale; millets?: Millet[] }) {
+  const t = getTranslations(locale);
+  const milletList = millets ?? defaultMillets;
   const [selectedMillet, setSelectedMillet] = useState('');
   const [timerMode, setTimerMode] = useState<'cooking' | 'soaking'>('cooking');
   const [totalSeconds, setTotalSeconds] = useState(0);
@@ -26,7 +31,7 @@ export default function CookingTimer() {
   const [isComplete, setIsComplete] = useState(false);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  const millet = millets.find((m) => m.slug === selectedMillet);
+  const millet = milletList.find((m) => m.slug === selectedMillet);
 
   const startTimer = useCallback((minutes: number) => {
     const secs = minutes * 60;
@@ -109,7 +114,7 @@ export default function CookingTimer() {
           className="w-full px-4 py-3 bg-white dark:bg-earth-800 border border-earth-200 dark:border-earth-700 rounded-lg text-earth-800 dark:text-earth-100 focus:outline-none focus:ring-2 focus:ring-earth-500 transition-colors"
         >
           <option value="">Choose a millet...</option>
-          {millets.map((m) => (
+          {milletList.map((m) => (
             <option key={m.slug} value={m.slug}>
               {m.name}
             </option>

@@ -1,91 +1,80 @@
 import Link from 'next/link';
+import type { Locale } from '@/lib/i18n';
+import { localePath, getTranslations } from '@/lib/i18n';
 
-const quickLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/millets', label: 'Millets' },
-  { href: '/recipes', label: 'Recipes' },
-  { href: '/nutrition', label: 'Nutrition' },
-  { href: '/meal-plans', label: 'Meal Plans' },
-  { href: '/buying-guide', label: 'Buying Guide' },
-];
+export default function Footer({ locale }: { locale: Locale }) {
+  const t = getTranslations(locale);
 
-const learnMoreLinks = [
-  { href: '/history', label: 'History' },
-  { href: '/ayurveda', label: 'Ayurveda' },
-  { href: '/regional-traditions', label: 'Regional Traditions' },
-  { href: '/global-millets', label: 'Global Millets' },
-  { href: '/fermentation', label: 'Fermentation' },
-  { href: '/ancient-references', label: 'Ancient References' },
-  { href: '/sustainability', label: 'Sustainability' },
-  { href: '/cooking-guide', label: 'Cooking Guide' },
-];
+  const quickLinks = [
+    { href: localePath(locale, '/'), label: t.nav.home },
+    { href: localePath(locale, '/millets'), label: t.nav.millets },
+    { href: localePath(locale, '/recipes'), label: t.nav.recipes },
+    { href: localePath(locale, '/nutrition'), label: t.nav.nutrition },
+    { href: localePath(locale, '/meal-plans'), label: t.nav.mealPlans },
+    { href: localePath(locale, '/buying-guide'), label: t.nav.buyingGuide },
+  ];
 
-const resourceLinks = [
-  { href: '/glossary', label: 'Glossary' },
-  { href: '/faq', label: 'FAQ' },
-  { href: '/myths', label: 'Myths & Facts' },
-  { href: '/tools/millet-quiz', label: 'Millet Quiz' },
-  { href: '/tools/substitution-calculator', label: 'Substitution Calculator' },
-  { href: '/tools/cooking-timer', label: 'Cooking Timer' },
-  { href: '/about', label: 'About' },
-];
+  const learnMoreLinks = [
+    { href: localePath(locale, '/history'), label: t.nav.history },
+    { href: localePath(locale, '/ayurveda'), label: t.nav.ayurveda },
+    { href: localePath(locale, '/regional-traditions'), label: t.nav.regionalTraditions },
+    { href: localePath(locale, '/global-millets'), label: t.nav.globalMillets },
+    { href: localePath(locale, '/fermentation'), label: t.nav.fermentation },
+    { href: localePath(locale, '/ancient-references'), label: t.nav.ancientReferences },
+    { href: localePath(locale, '/sustainability'), label: t.nav.sustainability },
+    { href: localePath(locale, '/cooking-guide'), label: t.nav.cookingGuide },
+  ];
 
-export default function Footer() {
+  const resourceLinks = [
+    { href: localePath(locale, '/glossary'), label: t.nav.glossary },
+    { href: localePath(locale, '/faq'), label: t.nav.faq },
+    { href: localePath(locale, '/myths'), label: t.nav.mythsFacts },
+    { href: localePath(locale, '/tools/millet-quiz'), label: t.nav.milletQuiz },
+    { href: localePath(locale, '/tools/substitution-calculator'), label: t.nav.substitutionCalculator },
+    { href: localePath(locale, '/tools/cooking-timer'), label: t.nav.cookingTimer },
+    ...(locale === 'en' ? [{ href: localePath(locale, '/about'), label: t.nav.about }] : []),
+  ];
+
   return (
     <footer className="border-t border-forest-700 dark:border-earth-700 bg-forest-600 dark:bg-earth-900/50">
       <div className="content-wrapper py-12 md:py-16">
-        {/* Three-column link grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
-          {/* Column 1: Quick Links */}
           <div>
             <h3 className="font-heading text-lg font-semibold text-forest-100 dark:text-earth-200 mb-4">
-              Quick Links
+              {t.footer.quickLinks}
             </h3>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-forest-200 hover:text-white dark:text-earth-400 dark:hover:text-earth-200 transition-colors text-sm"
-                  >
+                  <Link href={link.href} className="text-forest-200 hover:text-white dark:text-earth-400 dark:hover:text-earth-200 transition-colors text-sm">
                     {link.label}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
-
-          {/* Column 2: Learn More */}
           <div>
             <h3 className="font-heading text-lg font-semibold text-forest-100 dark:text-earth-200 mb-4">
-              Learn More
+              {t.footer.learnMore}
             </h3>
             <ul className="space-y-2">
               {learnMoreLinks.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-forest-200 hover:text-white dark:text-earth-400 dark:hover:text-earth-200 transition-colors text-sm"
-                  >
+                  <Link href={link.href} className="text-forest-200 hover:text-white dark:text-earth-400 dark:hover:text-earth-200 transition-colors text-sm">
                     {link.label}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
-
-          {/* Column 3: Resources */}
           <div>
             <h3 className="font-heading text-lg font-semibold text-forest-100 dark:text-earth-200 mb-4">
-              Resources
+              {t.footer.resources}
             </h3>
             <ul className="space-y-2">
               {resourceLinks.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-forest-200 hover:text-white dark:text-earth-400 dark:hover:text-earth-200 transition-colors text-sm"
-                  >
+                  <Link href={link.href} className="text-forest-200 hover:text-white dark:text-earth-400 dark:hover:text-earth-200 transition-colors text-sm">
                     {link.label}
                   </Link>
                 </li>
@@ -93,19 +82,14 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-
-        {/* Disclaimer */}
         <div className="mt-10 pt-8 border-t border-forest-500 dark:border-earth-700">
           <p className="text-xs text-forest-200 dark:text-earth-300 leading-relaxed max-w-2xl">
-            Nutrition data sourced from ICMR-NIN Indian Food Composition Tables
-            (2017) and USDA FoodData Central.
+            {t.footer.disclaimer}
           </p>
         </div>
-
-        {/* Copyright */}
         <div className="mt-4">
           <p className="text-xs text-forest-300 dark:text-earth-400">
-            &copy; 2026 Millets Guide.
+            {t.footer.copyright}
           </p>
         </div>
       </div>

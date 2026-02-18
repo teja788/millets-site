@@ -47,6 +47,7 @@
   /* === Typography === */
   --font-heading: var(--font-playfair), "Georgia", "Times New Roman", serif;
   --font-body: var(--font-source-sans), "Segoe UI", "Helvetica Neue", sans-serif;
+  --font-telugu: var(--font-telugu), "Noto Sans Telugu", "Segoe UI", sans-serif;
   --font-mono: "JetBrains Mono", "Fira Code", "Consolas", monospace;
 
   /* === Spacing === */

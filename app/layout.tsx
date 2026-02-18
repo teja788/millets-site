@@ -1,11 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
-import { Playfair_Display, Source_Sans_3 } from 'next/font/google';
-import { ThemeProvider } from '@/components/theme/ThemeProvider';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
-import ScrollProgress from '@/components/ui/ScrollProgress';
-import BackToTop from '@/components/ui/BackToTop';
+import { Playfair_Display, Source_Sans_3, Noto_Sans_Telugu } from 'next/font/google';
 import '@/styles/globals.css';
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
@@ -22,6 +17,13 @@ const sourceSans = Source_Sans_3({
   variable: '--font-source-sans',
   display: 'swap',
   weight: ['300', '400', '500', '600', '700'],
+});
+
+const notoTelugu = Noto_Sans_Telugu({
+  subsets: ['telugu'],
+  variable: '--font-telugu',
+  display: 'swap',
+  weight: ['400', '500', '600', '700'],
 });
 
 export const metadata: Metadata = {
@@ -73,7 +75,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${playfair.variable} ${sourceSans.variable}`}
+      className={`${playfair.variable} ${sourceSans.variable} ${notoTelugu.variable}`}
       suppressHydrationWarning
     >
       {GA_ID && (
@@ -93,13 +95,7 @@ export default function RootLayout({
         </>
       )}
       <body className="font-body antialiased">
-        <ThemeProvider>
-          <ScrollProgress />
-          <Navbar />
-          <main className="pt-16 md:pt-18">{children}</main>
-          <Footer />
-          <BackToTop />
-        </ThemeProvider>
+        {children}
       </body>
     </html>
   );

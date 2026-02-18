@@ -7,6 +7,9 @@ import { usePathname } from 'next/navigation';
 import { useTheme } from 'next-themes';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Sun, Moon } from 'lucide-react';
+import type { Locale } from '@/lib/i18n';
+import { localePath, getTranslations } from '@/lib/i18n';
+import LanguageSwitcher from '@/components/ui/LanguageSwitcher';
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -29,55 +32,57 @@ function isGroup(item: NavItem): item is NavGroup {
 }
 
 /* ------------------------------------------------------------------ */
-/*  Navigation data                                                    */
-/* ------------------------------------------------------------------ */
-
-const navItems: NavItem[] = [
-  { href: '/', label: 'Home' },
-  { href: '/millets', label: 'Millets' },
-  { href: '/recipes', label: 'Recipes' },
-  {
-    label: 'Learn',
-    links: [
-      { href: '/nutrition', label: 'Nutrition' },
-      { href: '/cooking-guide', label: 'Cooking Guide' },
-      { href: '/glossary', label: 'Glossary' },
-      { href: '/faq', label: 'FAQ' },
-      { href: '/myths', label: 'Myths & Facts' },
-      { href: '/buying-guide', label: 'Buying Guide' },
-    ],
-  },
-  {
-    label: 'Culture',
-    links: [
-      { href: '/history', label: 'History' },
-      { href: '/ayurveda', label: 'Ayurveda' },
-      { href: '/regional-traditions', label: 'Regional Traditions' },
-      { href: '/global-millets', label: 'Global Millets' },
-      { href: '/fermentation', label: 'Fermentation' },
-      { href: '/ancient-references', label: 'Ancient References' },
-      { href: '/sustainability', label: 'Sustainability' },
-    ],
-  },
-  {
-    label: 'Tools',
-    links: [
-      { href: '/tools/millet-quiz', label: 'Millet Quiz' },
-      { href: '/tools/substitution-calculator', label: 'Substitution Calculator' },
-      { href: '/tools/cooking-timer', label: 'Cooking Timer' },
-    ],
-  },
-  { href: '/about', label: 'About' },
-];
-
-/* ------------------------------------------------------------------ */
 /*  Component                                                          */
 /* ------------------------------------------------------------------ */
 
-export default function Navbar() {
+export default function Navbar({ locale }: { locale: Locale }) {
   const pathname = usePathname();
   const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+
+  const t = getTranslations(locale);
+
+  /* ---------------------------------------------------------------- */
+  /*  Navigation data (depends on locale & translations)               */
+  /* ---------------------------------------------------------------- */
+
+  const navItems: NavItem[] = [
+    { href: localePath(locale, '/'), label: t.nav.home },
+    { href: localePath(locale, '/millets'), label: t.nav.millets },
+    { href: localePath(locale, '/recipes'), label: t.nav.recipes },
+    {
+      label: t.nav.learn,
+      links: [
+        { href: localePath(locale, '/nutrition'), label: t.nav.nutrition },
+        { href: localePath(locale, '/cooking-guide'), label: t.nav.cookingGuide },
+        { href: localePath(locale, '/glossary'), label: t.nav.glossary },
+        { href: localePath(locale, '/faq'), label: t.nav.faq },
+        { href: localePath(locale, '/myths'), label: t.nav.mythsFacts },
+        { href: localePath(locale, '/buying-guide'), label: t.nav.buyingGuide },
+      ],
+    },
+    {
+      label: t.nav.culture,
+      links: [
+        { href: localePath(locale, '/history'), label: t.nav.history },
+        { href: localePath(locale, '/ayurveda'), label: t.nav.ayurveda },
+        { href: localePath(locale, '/regional-traditions'), label: t.nav.regionalTraditions },
+        { href: localePath(locale, '/global-millets'), label: t.nav.globalMillets },
+        { href: localePath(locale, '/fermentation'), label: t.nav.fermentation },
+        { href: localePath(locale, '/ancient-references'), label: t.nav.ancientReferences },
+        { href: localePath(locale, '/sustainability'), label: t.nav.sustainability },
+      ],
+    },
+    {
+      label: t.nav.tools,
+      links: [
+        { href: localePath(locale, '/tools/millet-quiz'), label: t.nav.milletQuiz },
+        { href: localePath(locale, '/tools/substitution-calculator'), label: t.nav.substitutionCalculator },
+        { href: localePath(locale, '/tools/cooking-timer'), label: t.nav.cookingTimer },
+      ],
+    },
+    ...(locale === 'en' ? [{ href: localePath(locale, '/about'), label: t.nav.about }] : []),
+  ];
 
   /* — shared state — */
   const [scrolled, setScrolled] = useState(false);
@@ -98,8 +103,10 @@ export default function Navbar() {
 
   const isActive = useCallback(
     (href: string) => {
-      if (href === '/') return pathname === '/';
-      return pathname.startsWith(href);
+      const pathWithoutLocale = pathname.replace(/^\/(en|te)/, '');
+      const hrefWithoutLocale = href.replace(/^\/(en|te)/, '');
+      if (hrefWithoutLocale === '/' || hrefWithoutLocale === '') return pathWithoutLocale === '/' || pathWithoutLocale === '';
+      return pathWithoutLocale.startsWith(hrefWithoutLocale);
     },
     [pathname],
   );
@@ -217,7 +224,7 @@ export default function Navbar() {
     >
       <nav className="content-wrapper flex items-center justify-between h-16 md:h-18">
         {/* Logo */}
-        <Link href="/" className="flex-shrink-0">
+        <Link href={localePath(locale, '/')} className="flex-shrink-0">
           <Image
             src="/images/logo.png"
             alt="Simply Millets"
@@ -308,6 +315,9 @@ export default function Navbar() {
             );
           })}
 
+          {/* Language Switcher — Desktop */}
+          <LanguageSwitcher currentLocale={locale} />
+
           {/* Theme Toggle — Desktop */}
           {mounted && (
             <button
@@ -328,6 +338,9 @@ export default function Navbar() {
         {/*  Mobile Controls                                          */}
         {/* -------------------------------------------------------- */}
         <div className="flex items-center gap-2 lg:hidden">
+          {/* Language Switcher — Mobile */}
+          <LanguageSwitcher currentLocale={locale} />
+
           {/* Theme Toggle — Mobile */}
           {mounted && (
             <button
@@ -384,7 +397,7 @@ export default function Navbar() {
             >
               <div className="flex items-center justify-between p-4 border-b border-earth-200 dark:border-earth-700">
                 <span className="font-heading text-lg font-bold text-earth-800 dark:text-forest-200">
-                  Menu
+                  {t.nav.menu}
                 </span>
                 <button
                   onClick={() => setIsOpen(false)}

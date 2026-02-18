@@ -1,0 +1,465 @@
+export const en = {
+  // Site metadata
+  site: {
+    title: 'Millets Guide - Ancient Grains, Timeless Nourishment',
+    titleTemplate: '%s | Millets Guide',
+    description: 'A comprehensive, evidence-based guide to millets — nutrition, recipes, history, Ayurveda, and sustainable farming. Every fact sourced and verified.',
+    siteName: 'Simply Millets',
+  },
+
+  // Navigation
+  nav: {
+    home: 'Home',
+    millets: 'Millets',
+    recipes: 'Recipes',
+    learn: 'Learn',
+    culture: 'Culture',
+    tools: 'Tools',
+    about: 'About',
+    nutrition: 'Nutrition',
+    cookingGuide: 'Cooking Guide',
+    glossary: 'Glossary',
+    faq: 'FAQ',
+    mythsFacts: 'Myths & Facts',
+    buyingGuide: 'Buying Guide',
+    history: 'History',
+    ayurveda: 'Ayurveda',
+    regionalTraditions: 'Regional Traditions',
+    globalMillets: 'Global Millets',
+    fermentation: 'Fermentation',
+    ancientReferences: 'Ancient References',
+    sustainability: 'Sustainability',
+    milletQuiz: 'Millet Quiz',
+    substitutionCalculator: 'Substitution Calculator',
+    cookingTimer: 'Cooking Timer',
+    mealPlans: 'Meal Plans',
+    menu: 'Menu',
+    search: 'Search',
+  },
+
+  // Footer
+  footer: {
+    quickLinks: 'Quick Links',
+    learnMore: 'Learn More',
+    resources: 'Resources',
+    disclaimer: 'Nutrition data sourced from ICMR-NIN Indian Food Composition Tables (2017) and USDA FoodData Central.',
+    copyright: '© 2026 Millets Guide.',
+  },
+
+  // Breadcrumb slug-to-name mapping
+  breadcrumb: {
+    home: 'Home',
+    about: 'About',
+    millets: 'Millets',
+    recipes: 'Recipes',
+    nutrition: 'Nutrition',
+    'cooking-guide': 'Cooking Guide',
+    glossary: 'Glossary',
+    faq: 'FAQ',
+    myths: 'Myths & Facts',
+    'buying-guide': 'Buying Guide',
+    history: 'History',
+    ayurveda: 'Ayurveda',
+    'regional-traditions': 'Regional Traditions',
+    'global-millets': 'Global Millets',
+    fermentation: 'Fermentation',
+    'ancient-references': 'Ancient References',
+    sustainability: 'Sustainability',
+    'meal-plans': 'Meal Plans',
+    tools: 'Tools',
+    'millet-quiz': 'Millet Quiz',
+    'substitution-calculator': 'Substitution Calculator',
+    'cooking-timer': 'Cooking Timer',
+    search: 'Search',
+  },
+
+  // Search
+  search: {
+    placeholder: 'Search millets, recipes, and more...',
+    noResults: 'No results found',
+    typeLabels: {
+      millet: 'Millets',
+      recipe: 'Recipes',
+      faq: 'FAQ',
+      page: 'Pages',
+      tool: 'Tools',
+      tradition: 'Traditions',
+      region: 'Regions',
+    },
+  },
+
+  // Common labels
+  common: {
+    majorMillet: 'Major Millet',
+    minorMillet: 'Minor Millet',
+    glutenFree: 'Gluten-Free',
+    nakedGrain: 'Naked Grain',
+    huskedGrain: 'Husked Grain',
+    viewAll: 'View All',
+    learnMore: 'Learn More',
+    readMore: 'Read More',
+    backToHome: 'Back to Home',
+    backToTop: 'Back to Top',
+    disclaimer: 'Disclaimer',
+    disclaimerText: 'This content is created with the assistance of AI and is based on published research, government sources, and traditional knowledge. While we strive for accuracy, always consult a healthcare professional for medical advice.',
+    loading: 'Loading...',
+    error: 'Something went wrong',
+    per100g: 'per 100g',
+    source: 'Source',
+    sources: 'Sources',
+  },
+
+  // Home page
+  home: {
+    heroTitle: 'Ancient Grains. Timeless Nourishment.',
+    heroSubtitle: 'Millets have been cultivated for over 5,000 years across Asia and Africa. These small-seeded, nutrient-dense grains are the original superfoods — gluten-free, drought-resistant, and packed with minerals. Rediscover what our ancestors always knew.',
+    exploreMillets: 'Explore Millets',
+    browseRecipes: 'Browse Recipes',
+    whatAreMillets: 'What Are Millets?',
+    whatAreMilletsP1: 'Millets are a group of small-seeded grasses that have been cultivated as cereal crops for thousands of years. They belong to the family Poaceae and include several distinct species — pearl millet, finger millet, sorghum, foxtail millet, and more.',
+    whatAreMilletsP2: 'What makes millets remarkable is their nutritional density and environmental resilience. They are naturally gluten-free, rich in protein, fiber, iron, and calcium, and have low glycemic indices — making them ideal for modern health-conscious diets.',
+    whatAreMilletsP3: 'India is the world\'s largest producer of millets, and 2023 was declared the International Year of Millets by the United Nations, championed by India. This website is a comprehensive, evidence-based resource to help you explore, cook, and benefit from these ancient grains.',
+    exploreAllMillets: 'Explore All 9 Millets',
+    whyMillets: 'Why Millets?',
+    nutrientDense: 'Nutrient Dense',
+    nutrientDenseDesc: 'Millets are rich in protein, fiber, iron, calcium, and B-vitamins. Many millets surpass rice and wheat in key micronutrients.',
+    glutenFreeTitle: 'Gluten Free',
+    glutenFreeDesc: 'All millets are naturally gluten-free, making them a safe and nutritious staple for people with celiac disease or gluten sensitivity.',
+    lowGI: 'Low Glycemic Index',
+    lowGIDesc: 'Most millets have a low to medium glycemic index, leading to slower glucose release and better blood sugar management.',
+    climateResilient: 'Climate Resilient',
+    climateResilientDesc: 'Millets thrive in arid and semi-arid conditions, requiring 70% less water than rice. They grow in poor soils where other crops fail.',
+    sustainable: 'Sustainable',
+    sustainableDesc: 'With a low carbon footprint, short growing cycles, and minimal input requirements, millets are among the most sustainable grains on Earth.',
+    whichMillet: 'Which Millet Should You Try?',
+    tryRecipes: 'Try These Recipes',
+    viewAllRecipes: 'View All Recipes',
+    startJourney: 'Start Your Millet Journey',
+    cookingGuideTitle: 'Cooking Guide',
+    cookingGuideDesc: 'Learn water ratios, soaking times, and techniques for every millet.',
+    nutritionTitle: 'Nutrition Comparison',
+    nutritionDesc: 'Compare the nutritional profiles of all 9 millets side by side.',
+    learnMoreTitle: 'Learn More',
+    learnMoreDesc: 'Explore the history, Ayurveda, and cultural significance of millets.',
+  },
+
+  // Millets listing page
+  milletsPage: {
+    title: 'All Millets',
+    description: 'Explore India\'s 9 major and minor millets — nutrition, recipes, history, and more.',
+    filterAll: 'All',
+    filterMajor: 'Major Millets',
+    filterMinor: 'Minor Millets',
+  },
+
+  // Recipes listing page
+  recipesPage: {
+    title: 'Millet Recipes',
+    description: 'Discover traditional and modern recipes featuring millets — from breakfast porridges to dinner rotis.',
+    filterAll: 'All',
+    filterBreakfast: 'Breakfast',
+    filterLunch: 'Lunch',
+    filterDinner: 'Dinner',
+    filterSnack: 'Snack',
+    filterDessert: 'Dessert',
+    filterDrink: 'Drink',
+    filterBread: 'Bread',
+  },
+
+  // Millet detail page
+  milletDetail: {
+    namesInLanguages: 'Names in Indian Languages',
+    nutritionProfile: 'Nutrition Profile',
+    nutritionPer100g: 'Nutrition per 100g',
+    healthBenefits: 'Health Benefits',
+    sideEffects: 'Side Effects & Precautions',
+    ayurvedicProperties: 'Ayurvedic Properties',
+    howToCook: 'How to Cook',
+    cookingTips: 'Cooking Tips',
+    waterRatio: 'Water Ratio',
+    soakingTime: 'Soaking Time',
+    cookingTime: 'Cooking Time',
+    texture: 'Texture',
+    flavorProfile: 'Flavor Profile',
+    bestSubstitute: 'Best Substitute For',
+    cultivation: 'Cultivation',
+    majorStates: 'Major States',
+    growingSeason: 'Growing Season',
+    waterRequirement: 'Water Requirement',
+    soilType: 'Soil Type',
+    harvestDays: 'Harvest Days',
+    history: 'History',
+    originRegion: 'Origin Region',
+    domesticationPeriod: 'Domestication Period',
+    recipes: 'Recipes',
+    relatedRecipes: 'Related Recipes',
+    glycemicIndex: 'Glycemic Index',
+    evidenceLevels: {
+      'well-established': 'Well Established',
+      'supported-by-research': 'Supported by Research',
+      'preliminary-evidence': 'Preliminary Evidence',
+      'traditional-knowledge': 'Traditional Knowledge',
+    },
+    severityLevels: {
+      mild: 'Mild',
+      moderate: 'Moderate',
+      'consult-doctor': 'Consult Doctor',
+    },
+    rasa: 'Rasa (Taste)',
+    guna: 'Guna (Quality)',
+    virya: 'Virya (Potency)',
+    vipaka: 'Vipaka (Post-digestive)',
+    doshaEffect: 'Dosha Effect',
+    therapeuticUses: 'Therapeutic Uses',
+    contraindications: 'Contraindications',
+    classicalReference: 'Classical Reference',
+    // Nutrition labels
+    calories: 'Calories',
+    protein: 'Protein',
+    fat: 'Fat',
+    carbohydrates: 'Carbohydrates',
+    fiber: 'Fiber',
+    calcium: 'Calcium',
+    iron: 'Iron',
+    zinc: 'Zinc',
+    phosphorus: 'Phosphorus',
+    magnesium: 'Magnesium',
+    potassium: 'Potassium',
+  },
+
+  // Recipe detail page
+  recipeDetail: {
+    prepTime: 'Prep Time',
+    cookTime: 'Cook Time',
+    servings: 'Servings',
+    difficulty: 'Difficulty',
+    ingredients: 'Ingredients',
+    instructions: 'Instructions',
+    tips: 'Tips',
+    nutritionPerServing: 'Nutrition Per Serving',
+    milletUsed: 'Millet Used',
+    category: 'Category',
+    cuisine: 'Cuisine',
+    tags: 'Tags',
+    optional: 'optional',
+    difficulties: {
+      easy: 'Easy',
+      medium: 'Medium',
+      advanced: 'Advanced',
+    },
+    categories: {
+      breakfast: 'Breakfast',
+      lunch: 'Lunch',
+      dinner: 'Dinner',
+      snack: 'Snack',
+      dessert: 'Dessert',
+      drink: 'Drink',
+      bread: 'Bread',
+    },
+    step: 'Step',
+    print: 'Print Recipe',
+    share: 'Share',
+  },
+
+  // Millet Quiz
+  quiz: {
+    title: 'Which Millet Should You Try?',
+    subtitle: 'Answer a few questions to find your perfect millet match.',
+    q1: 'What\'s your primary health goal?',
+    q1o1: 'Strong bones & calcium',
+    q1o2: 'Iron & energy boost',
+    q1o3: 'Diabetes management',
+    q1o4: 'Weight management',
+    q1o5: 'Overall nutrition',
+    q2: 'What texture do you prefer?',
+    q2o1: 'Rice-like and fluffy',
+    q2o2: 'Smooth porridge',
+    q2o3: 'Flatbread (roti/bhakri)',
+    q2o4: 'Couscous-like',
+    q3: 'How much time do you have to cook?',
+    q3o1: 'Quick (under 20 minutes)',
+    q3o2: 'Moderate (20-30 minutes)',
+    q3o3: 'I can spend time',
+    q4: 'What meal are you planning?',
+    q4o1: 'Breakfast',
+    q4o2: 'Lunch/Dinner',
+    q4o3: 'Snack',
+    q4o4: 'Any meal',
+    yourResult: 'Your Perfect Millet Match',
+    tryAgain: 'Try Again',
+    next: 'Next',
+    previous: 'Previous',
+  },
+
+  // 404 page
+  notFound: {
+    title: '404',
+    heading: 'Page Not Found',
+    message: 'Looks like this grain got lost in the field...',
+    backHome: 'Back to Home',
+    explore: 'Or explore:',
+  },
+
+  // Nutrition comparison
+  comparison: {
+    title: 'Nutrition Comparison',
+    selectMillet: 'Select a millet to compare...',
+    vsRice: 'vs Rice',
+    vsWheat: 'vs Wheat',
+    compareWith: 'Compare with',
+  },
+
+  // Language
+  langName: 'English',
+  langNameNative: 'English',
+  switchLang: 'తెలుగు',
+
+  // Dosha names
+  doshas: {
+    vata: 'Vata',
+    pitta: 'Pitta',
+    kapha: 'Kapha',
+    increases: 'Increases',
+    decreases: 'Decreases',
+    neutral: 'Neutral',
+  },
+
+  // Meal plan page
+  mealPlan: {
+    title: 'Meal Plans',
+    days: {
+      monday: 'Monday',
+      tuesday: 'Tuesday',
+      wednesday: 'Wednesday',
+      thursday: 'Thursday',
+      friday: 'Friday',
+      saturday: 'Saturday',
+      sunday: 'Sunday',
+    },
+    breakfast: 'Breakfast',
+    lunch: 'Lunch',
+    snack: 'Snack',
+    dinner: 'Dinner',
+    goal: 'Goal',
+    duration: 'Duration',
+  },
+
+  // Buying guide
+  buyingGuidePage: {
+    title: 'Buying Guide',
+    formsAvailable: 'Forms Available',
+    whatToLookFor: 'What to Look For',
+    storage: 'Storage Instructions',
+    shelfLife: 'Shelf Life',
+    priceRange: 'Price Range',
+    availability: 'Online Availability',
+  },
+
+  // Fermentation page
+  fermentationPage: {
+    title: 'Traditional Fermented Millet Foods',
+    process: 'Process',
+    duration: 'Duration',
+    benefit: 'Nutritional Benefit',
+    culturalContext: 'Cultural Context',
+  },
+
+  // Sustainability page
+  sustainabilityPage: {
+    title: 'Sustainability & Millets',
+  },
+
+  // Ancient references page
+  ancientRefsPage: {
+    title: 'Ancient References to Millets',
+    originalQuote: 'Original Quote',
+    translation: 'Translation',
+    significance: 'Significance',
+    period: 'Period',
+  },
+
+  // Glossary page
+  glossaryPage: {
+    title: 'Millet Glossary',
+  },
+
+  // History page
+  historyPage: {
+    title: 'History of Millets',
+  },
+
+  // Ayurveda page
+  ayurvedaPage: {
+    title: 'Millets in Ayurveda',
+    doshaGuide: 'Dosha Guide',
+    seasonalGuide: 'Seasonal Guide',
+    recommended: 'Recommended',
+    moderate: 'Use in Moderation',
+    avoid: 'Avoid or Limit',
+  },
+
+  // FAQ page
+  faqPage: {
+    title: 'Frequently Asked Questions',
+    categories: {
+      general: 'General',
+      nutrition: 'Nutrition',
+      cooking: 'Cooking',
+      health: 'Health',
+      history: 'History',
+      sustainability: 'Sustainability',
+      ayurveda: 'Ayurveda',
+    },
+  },
+
+  // Myths page
+  mythsPage: {
+    title: 'Millet Myths vs Facts',
+    myth: 'Myth',
+    fact: 'Fact',
+  },
+
+  // Regional traditions
+  regionalPage: {
+    title: 'Regional Millet Traditions',
+    iconicDishes: 'Iconic Dishes',
+    festivals: 'Festivals',
+    culturalSignificance: 'Cultural Significance',
+    traditionalPractices: 'Traditional Practices',
+  },
+
+  // Global millets
+  globalPage: {
+    title: 'Millets Around the World',
+    iconicFoods: 'Iconic Foods',
+    historicalHighlights: 'Historical Highlights',
+    modernStatus: 'Modern Status',
+    keyFact: 'Key Fact',
+  },
+
+  // Substitution calculator
+  substitutionPage: {
+    title: 'Millet Substitution Calculator',
+    selectGrain: 'Select grain to replace',
+    ratio: 'Substitution Ratio',
+    notes: 'Notes',
+    bestFor: 'Best For',
+    difficulty: 'Difficulty',
+  },
+
+  // Cooking timer
+  cookingTimerPage: {
+    title: 'Cooking Timer',
+    start: 'Start',
+    pause: 'Pause',
+    reset: 'Reset',
+    done: 'Done!',
+  },
+} as const;
+
+// Recursively widen string literals to string so other locale files can conform
+type DeepStringify<T> = {
+  [K in keyof T]: T[K] extends string ? string : DeepStringify<T[K]>;
+};
+
+export type TranslationKeys = DeepStringify<typeof en>;

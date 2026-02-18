@@ -5,7 +5,11 @@ import Link from 'next/link';
 import { ArrowRight, Scale } from 'lucide-react';
 import { Card, CardBody } from '@/components/ui/Card';
 import Badge from '@/components/ui/Badge';
-import { substitutionEntries } from '@/data/substitution-data';
+import { substitutionEntries as defaultEntries } from '@/data/substitution-data';
+import type { Locale } from '@/lib/i18n';
+import { localePath } from '@/lib/i18n';
+import type { SubstitutionEntry } from '@/lib/types';
+import type { Millet } from '@/lib/types';
 
 const difficultyVariant: Record<string, 'green' | 'orange' | 'red'> = {
   easy: 'green',
@@ -13,11 +17,19 @@ const difficultyVariant: Record<string, 'green' | 'orange' | 'red'> = {
   advanced: 'red',
 };
 
-export default function SubstitutionCalculator() {
+export default function SubstitutionCalculator({
+  locale = 'en',
+  substitutionEntries,
+}: {
+  locale?: Locale;
+  substitutionEntries?: SubstitutionEntry[];
+  millets?: Millet[];
+}) {
+  const entries = substitutionEntries ?? defaultEntries;
   const [selectedGrain, setSelectedGrain] = useState('');
   const [quantity, setQuantity] = useState(1);
 
-  const entry = substitutionEntries.find(
+  const entry = entries.find(
     (e) => e.conventionalGrain === selectedGrain,
   );
 
@@ -47,7 +59,7 @@ export default function SubstitutionCalculator() {
             className="w-full px-4 py-3 bg-white dark:bg-earth-800 border border-earth-200 dark:border-earth-700 rounded-lg text-earth-800 dark:text-earth-100 focus:outline-none focus:ring-2 focus:ring-earth-500 transition-colors"
           >
             <option value="">Choose a grain...</option>
-            {substitutionEntries.map((e) => (
+            {entries.map((e) => (
               <option key={e.conventionalGrain} value={e.conventionalGrain}>
                 {e.conventionalGrain}
               </option>
@@ -94,7 +106,7 @@ export default function SubstitutionCalculator() {
                   <CardBody>
                     <div className="flex items-start justify-between gap-2 mb-3">
                       <Link
-                        href={`/millets/${sub.millet}`}
+                        href={localePath(locale, `/millets/${sub.millet}`)}
                         className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 hover:text-earth-500 dark:hover:text-earth-300 transition-colors"
                       >
                         {sub.milletName}

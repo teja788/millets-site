@@ -4,6 +4,8 @@ import { useState, useCallback, useMemo } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronRight, RotateCcw, Sparkles } from 'lucide-react';
+import type { Locale } from '@/lib/i18n';
+import { getTranslations, localePath } from '@/lib/i18n';
 
 // ---- Types ----
 
@@ -25,60 +27,92 @@ interface MilletInfo {
 
 // ---- Data ----
 
-const milletInfo: Record<string, MilletInfo> = {
-  'finger-millet': { slug: 'finger-millet', name: 'Finger Millet (Ragi)', tagline: 'The calcium champion among cereals' },
-  'pearl-millet': { slug: 'pearl-millet', name: 'Pearl Millet (Bajra)', tagline: 'The iron-rich powerhouse grain' },
-  'sorghum': { slug: 'sorghum', name: 'Sorghum (Jowar)', tagline: 'The versatile everyday millet' },
-  'foxtail-millet': { slug: 'foxtail-millet', name: 'Foxtail Millet (Kangni)', tagline: 'The quick-cooking, protein-rich grain' },
-  'little-millet': { slug: 'little-millet', name: 'Little Millet (Samai)', tagline: 'The mild, easy rice alternative' },
-  'kodo-millet': { slug: 'kodo-millet', name: 'Kodo Millet (Kodon)', tagline: 'The high-fiber, low-GI grain' },
-  'barnyard-millet': { slug: 'barnyard-millet', name: 'Barnyard Millet (Sanwa)', tagline: 'The low-calorie fasting grain' },
-  'proso-millet': { slug: 'proso-millet', name: 'Proso Millet (Chena)', tagline: 'The protein-packed quick grower' },
-  'browntop-millet': { slug: 'browntop-millet', name: 'Browntop Millet (Korle)', tagline: 'The fiber king of millets' },
+const milletInfo: Record<string, Record<Locale, MilletInfo>> = {
+  'finger-millet': {
+    en: { slug: 'finger-millet', name: 'Finger Millet (Ragi)', tagline: 'The calcium champion among cereals' },
+    te: { slug: 'finger-millet', name: 'రాగులు (Ragi)', tagline: 'తృణధాన్యాలలో కాల్షియం ఛాంపియన్' },
+  },
+  'pearl-millet': {
+    en: { slug: 'pearl-millet', name: 'Pearl Millet (Bajra)', tagline: 'The iron-rich powerhouse grain' },
+    te: { slug: 'pearl-millet', name: 'సజ్జలు (Bajra)', tagline: 'ఇనుము అధికంగా ఉన్న శక్తి ధాన్యం' },
+  },
+  'sorghum': {
+    en: { slug: 'sorghum', name: 'Sorghum (Jowar)', tagline: 'The versatile everyday millet' },
+    te: { slug: 'sorghum', name: 'జొన్నలు (Jowar)', tagline: 'బహుముఖ రోజువారీ చిరుధాన్యం' },
+  },
+  'foxtail-millet': {
+    en: { slug: 'foxtail-millet', name: 'Foxtail Millet (Kangni)', tagline: 'The quick-cooking, protein-rich grain' },
+    te: { slug: 'foxtail-millet', name: 'కొర్రలు (Kangni)', tagline: 'త్వరగా వండే, ప్రోటీన్ అధిక ధాన్యం' },
+  },
+  'little-millet': {
+    en: { slug: 'little-millet', name: 'Little Millet (Samai)', tagline: 'The mild, easy rice alternative' },
+    te: { slug: 'little-millet', name: 'సామలు (Samai)', tagline: 'సులభమైన బియ్యం ప్రత్యామ్నాయం' },
+  },
+  'kodo-millet': {
+    en: { slug: 'kodo-millet', name: 'Kodo Millet (Kodon)', tagline: 'The high-fiber, low-GI grain' },
+    te: { slug: 'kodo-millet', name: 'అరికెలు (Kodon)', tagline: 'అధిక ఫైబర్, తక్కువ GI ధాన్యం' },
+  },
+  'barnyard-millet': {
+    en: { slug: 'barnyard-millet', name: 'Barnyard Millet (Sanwa)', tagline: 'The low-calorie fasting grain' },
+    te: { slug: 'barnyard-millet', name: 'ఊదలు (Sanwa)', tagline: 'తక్కువ కేలరీల ఉపవాస ధాన్యం' },
+  },
+  'proso-millet': {
+    en: { slug: 'proso-millet', name: 'Proso Millet (Chena)', tagline: 'The protein-packed quick grower' },
+    te: { slug: 'proso-millet', name: 'వరిగెలు (Chena)', tagline: 'ప్రోటీన్ అధికంగా ఉన్న వేగంగా పెరిగే ధాన్యం' },
+  },
+  'browntop-millet': {
+    en: { slug: 'browntop-millet', name: 'Browntop Millet (Korle)', tagline: 'The fiber king of millets' },
+    te: { slug: 'browntop-millet', name: 'అండుకొర్రలు (Korle)', tagline: 'చిరుధాన్యాలలో ఫైబర్ రాజు' },
+  },
 };
 
-const questions: QuizQuestion[] = [
-  {
-    question: "What's your primary health goal?",
-    options: [
-      { label: 'Stronger bones & calcium', millets: ['finger-millet'] },
-      { label: 'Better blood sugar control', millets: ['barnyard-millet', 'foxtail-millet'] },
-      { label: 'More protein & energy', millets: ['foxtail-millet', 'proso-millet', 'pearl-millet'] },
-      { label: 'Weight management & fiber', millets: ['browntop-millet', 'barnyard-millet'] },
-      { label: 'General wellness', millets: ['little-millet', 'kodo-millet', 'sorghum'] },
-    ],
-  },
-  {
-    question: 'What texture do you prefer?',
-    options: [
-      { label: 'Smooth, like porridge', millets: ['finger-millet'] },
-      { label: 'Fluffy, like rice', millets: ['little-millet', 'foxtail-millet', 'barnyard-millet'] },
-      { label: 'Dense, like flatbread dough', millets: ['pearl-millet', 'sorghum'] },
-      { label: 'Light & dry', millets: ['kodo-millet', 'proso-millet', 'browntop-millet'] },
-    ],
-  },
-  {
-    question: 'How much time do you have to cook?',
-    options: [
-      { label: '15 minutes or less', millets: ['little-millet', 'foxtail-millet'] },
-      { label: '20-30 minutes', millets: ['barnyard-millet', 'kodo-millet', 'proso-millet', 'sorghum'] },
-      { label: "I don't mind longer prep", millets: ['pearl-millet', 'finger-millet', 'browntop-millet'] },
-    ],
-  },
-  {
-    question: 'What meal are you planning?',
-    options: [
-      { label: 'Breakfast', millets: ['finger-millet', 'pearl-millet'] },
-      { label: 'Lunch / Dinner main', millets: ['foxtail-millet', 'little-millet', 'sorghum'] },
-      { label: 'Snack or dessert', millets: ['finger-millet', 'sorghum'] },
-      { label: 'A drink', millets: ['finger-millet', 'pearl-millet'] },
-    ],
-  },
-];
+function getQuestions(t: ReturnType<typeof getTranslations>): QuizQuestion[] {
+  return [
+    {
+      question: t.quiz.q1,
+      options: [
+        { label: t.quiz.q1o1, millets: ['finger-millet'] },
+        { label: t.quiz.q1o2, millets: ['pearl-millet', 'foxtail-millet'] },
+        { label: t.quiz.q1o3, millets: ['barnyard-millet', 'foxtail-millet'] },
+        { label: t.quiz.q1o4, millets: ['browntop-millet', 'barnyard-millet'] },
+        { label: t.quiz.q1o5, millets: ['little-millet', 'kodo-millet', 'sorghum'] },
+      ],
+    },
+    {
+      question: t.quiz.q2,
+      options: [
+        { label: t.quiz.q2o1, millets: ['little-millet', 'foxtail-millet', 'barnyard-millet'] },
+        { label: t.quiz.q2o2, millets: ['finger-millet'] },
+        { label: t.quiz.q2o3, millets: ['pearl-millet', 'sorghum'] },
+        { label: t.quiz.q2o4, millets: ['kodo-millet', 'proso-millet', 'browntop-millet'] },
+      ],
+    },
+    {
+      question: t.quiz.q3,
+      options: [
+        { label: t.quiz.q3o1, millets: ['little-millet', 'foxtail-millet'] },
+        { label: t.quiz.q3o2, millets: ['barnyard-millet', 'kodo-millet', 'proso-millet', 'sorghum'] },
+        { label: t.quiz.q3o3, millets: ['pearl-millet', 'finger-millet', 'browntop-millet'] },
+      ],
+    },
+    {
+      question: t.quiz.q4,
+      options: [
+        { label: t.quiz.q4o1, millets: ['finger-millet', 'pearl-millet'] },
+        { label: t.quiz.q4o2, millets: ['foxtail-millet', 'little-millet', 'sorghum'] },
+        { label: t.quiz.q4o3, millets: ['finger-millet', 'sorghum'] },
+        { label: t.quiz.q4o4, millets: ['finger-millet', 'pearl-millet'] },
+      ],
+    },
+  ];
+}
 
 // ---- Component ----
 
-export default function MilletQuiz() {
+export default function MilletQuiz({ locale = 'en' }: { locale?: Locale }) {
+  const t = getTranslations(locale);
+  const questions = useMemo(() => getQuestions(t), [t]);
+
   const [currentStep, setCurrentStep] = useState(0);
   const [answers, setAnswers] = useState<number[]>([]);
   const [showResults, setShowResults] = useState(false);
@@ -94,7 +128,7 @@ export default function MilletQuiz() {
         setShowResults(true);
       }
     },
-    [answers, currentStep],
+    [answers, currentStep, questions.length],
   );
 
   const recommendations = useMemo(() => {
@@ -113,9 +147,9 @@ export default function MilletQuiz() {
     return Object.entries(scores)
       .sort(([, a], [, b]) => b - a)
       .slice(0, 3)
-      .map(([slug, score]) => ({ ...milletInfo[slug], score }))
+      .map(([slug, score]) => ({ ...milletInfo[slug][locale], score }))
       .filter(Boolean);
-  }, [showResults, answers]);
+  }, [showResults, answers, questions, locale]);
 
   const resetQuiz = useCallback(() => {
     setCurrentStep(0);
@@ -162,7 +196,7 @@ export default function MilletQuiz() {
             >
               {/* Step label */}
               <p className="text-sm font-medium text-forest-600 dark:text-forest-300 mb-2 text-center">
-                Step {currentStep + 1} of {questions.length}
+                {currentStep + 1} / {questions.length}
               </p>
 
               {/* Question */}
@@ -199,10 +233,10 @@ export default function MilletQuiz() {
               <div className="text-center mb-6">
                 <Sparkles className="w-8 h-8 text-forest-500 mx-auto mb-2" />
                 <h3 className="font-heading text-xl md:text-2xl font-bold text-earth-800 dark:text-earth-100 mb-1">
-                  Your Millet Matches
+                  {t.quiz.yourResult}
                 </h3>
                 <p className="text-sm text-earth-500 dark:text-earth-400">
-                  Based on your preferences, here are our top recommendations.
+                  {t.quiz.subtitle}
                 </p>
               </div>
 
@@ -216,7 +250,7 @@ export default function MilletQuiz() {
                     transition={{ delay: index * 0.15, duration: 0.35 }}
                   >
                     <Link
-                      href={`/millets/${millet.slug}`}
+                      href={localePath(locale, `/millets/${millet.slug}`)}
                       className="flex items-center gap-4 px-5 py-4 rounded-xl border border-earth-200 dark:border-earth-700 bg-white dark:bg-earth-800 hover:border-forest-400 hover:shadow-md dark:hover:border-forest-500 transition-all group"
                     >
                       {/* Rank badge */}
@@ -252,7 +286,7 @@ export default function MilletQuiz() {
                   className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium border border-earth-200 dark:border-earth-700 text-earth-600 dark:text-earth-300 hover:bg-earth-100 dark:hover:bg-earth-800 transition-colors"
                 >
                   <RotateCcw className="w-4 h-4" />
-                  Retake Quiz
+                  {t.quiz.tryAgain}
                 </button>
               </div>
             </motion.div>
