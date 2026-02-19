@@ -43,6 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/tools/cooking-timer',
     '/tools/millet-quiz',
     '/tools/substitution-calculator',
+    '/privacy-policy',
   ];
 
   for (const route of staticRoutes) {

@@ -33,6 +33,7 @@ export default function Footer({ locale }: { locale: Locale }) {
     { href: localePath(locale, '/tools/substitution-calculator'), label: t.nav.substitutionCalculator },
     { href: localePath(locale, '/tools/cooking-timer'), label: t.nav.cookingTimer },
     ...(locale === 'en' ? [{ href: localePath(locale, '/about'), label: t.nav.about }] : []),
+    { href: localePath(locale, '/privacy-policy'), label: t.nav.privacyPolicy },
   ];
 
   return (
