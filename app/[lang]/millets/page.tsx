@@ -7,8 +7,7 @@ import MilletGrid from '@/components/sections/MilletGrid';
 import Button from '@/components/ui/Button';
 import type { Locale } from '@/lib/i18n';
 import { getTranslations } from '@/lib/i18n';
-import { millets as enMillets } from '@/data/millets';
-import { millets as teMillets } from '@/data/te/millets';
+import { getMillets } from '@/lib/i18n-data';
 
 type FilterType = 'all' | 'major' | 'minor';
 
@@ -16,7 +15,7 @@ export default function MilletsPage() {
   const params = useParams();
   const locale = (params.lang as Locale) || 'en';
   const t = getTranslations(locale);
-  const millets = locale === 'te' ? teMillets : enMillets;
+  const millets = getMillets(locale);
 
   const [filter, setFilter] = useState<FilterType>('all');
 

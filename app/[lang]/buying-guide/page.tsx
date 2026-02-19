@@ -6,11 +6,11 @@ import Breadcrumb from '@/components/layout/Breadcrumb';
 import { Card, CardBody } from '@/components/ui/Card';
 import Badge from '@/components/ui/Badge';
 import type { Locale } from '@/lib/i18n';
-import { localePath, getTranslations, isValidLocale } from '@/lib/i18n';
+import { localePath, getTranslations, isValidLocale, localeParams } from '@/lib/i18n';
 import { getBuyingGuideItems } from '@/lib/i18n-data';
 
 export function generateStaticParams() {
-  return [{ lang: 'en' }, { lang: 'te' }];
+  return localeParams();
 }
 
 export async function generateMetadata({

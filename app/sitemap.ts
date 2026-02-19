@@ -7,10 +7,20 @@ import { locales } from '@/lib/i18n';
 
 const BASE_URL = 'https://simplymillets.com';
 
+/** Build hreflang alternates object for a given path */
+function alternatesFor(path: string) {
+  return {
+    languages: {
+      ...Object.fromEntries(locales.map((l) => [l, `${BASE_URL}/${l}${path}`])),
+      'x-default': `${BASE_URL}/en${path}`,
+    },
+  };
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
 
-  // Static pages (both locales, except /about which is en-only)
+  // Static pages (all locales, except /about which is en-only)
   const staticRoutes = [
     '',
     '/millets',
@@ -42,13 +52,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: new Date(),
         changeFrequency: 'monthly',
         priority: route === '' ? 1.0 : 0.8,
-        alternates: {
-          languages: {
-            en: `${BASE_URL}/en${route}`,
-            te: `${BASE_URL}/te${route}`,
-            'x-default': `${BASE_URL}/en${route}`,
-          },
-        },
+        alternates: alternatesFor(route),
       });
     }
   }
@@ -61,7 +65,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   });
 
-  // Dynamic millet pages (both locales)
+  // Dynamic millet pages (all locales)
   for (const millet of millets) {
     for (const locale of locales) {
       entries.push({
@@ -69,18 +73,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: new Date(),
         changeFrequency: 'monthly',
         priority: 0.9,
-        alternates: {
-          languages: {
-            en: `${BASE_URL}/en/millets/${millet.slug}`,
-            te: `${BASE_URL}/te/millets/${millet.slug}`,
-            'x-default': `${BASE_URL}/en/millets/${millet.slug}`,
-          },
-        },
+        alternates: alternatesFor(`/millets/${millet.slug}`),
       });
     }
   }
 
-  // Dynamic recipe pages (both locales)
+  // Dynamic recipe pages (all locales)
   for (const recipe of recipes) {
     for (const locale of locales) {
       entries.push({
@@ -88,18 +86,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: new Date(),
         changeFrequency: 'monthly',
         priority: 0.9,
-        alternates: {
-          languages: {
-            en: `${BASE_URL}/en/recipes/${recipe.slug}`,
-            te: `${BASE_URL}/te/recipes/${recipe.slug}`,
-            'x-default': `${BASE_URL}/en/recipes/${recipe.slug}`,
-          },
-        },
+        alternates: alternatesFor(`/recipes/${recipe.slug}`),
       });
     }
   }
 
-  // Dynamic global millets region pages (both locales)
+  // Dynamic global millets region pages (all locales)
   for (const region of globalMilletRegions) {
     for (const locale of locales) {
       entries.push({
@@ -107,18 +99,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: new Date(),
         changeFrequency: 'monthly',
         priority: 0.7,
-        alternates: {
-          languages: {
-            en: `${BASE_URL}/en/global-millets/${region.slug}`,
-            te: `${BASE_URL}/te/global-millets/${region.slug}`,
-            'x-default': `${BASE_URL}/en/global-millets/${region.slug}`,
-          },
-        },
+        alternates: alternatesFor(`/global-millets/${region.slug}`),
       });
     }
   }
 
-  // Dynamic regional traditions state pages (both locales)
+  // Dynamic regional traditions state pages (all locales)
   for (const state of regionalTraditions) {
     for (const locale of locales) {
       entries.push({
@@ -126,13 +112,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: new Date(),
         changeFrequency: 'monthly',
         priority: 0.7,
-        alternates: {
-          languages: {
-            en: `${BASE_URL}/en/regional-traditions/${state.slug}`,
-            te: `${BASE_URL}/te/regional-traditions/${state.slug}`,
-            'x-default': `${BASE_URL}/en/regional-traditions/${state.slug}`,
-          },
-        },
+        alternates: alternatesFor(`/regional-traditions/${state.slug}`),
       });
     }
   }

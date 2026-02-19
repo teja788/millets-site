@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ChevronRight } from 'lucide-react';
 import type { Locale } from '@/lib/i18n';
-import { localePath, getTranslations } from '@/lib/i18n';
+import { localePath, getTranslations, localePattern } from '@/lib/i18n';
 
 function formatSegment(segment: string, slugMap: Record<string, string>): string {
   if (slugMap[segment]) return slugMap[segment];
@@ -19,7 +19,7 @@ export default function Breadcrumb({ locale }: { locale: Locale }) {
   const t = getTranslations(locale);
 
   // Strip locale prefix and don't render on homepage
-  const pathWithoutLocale = pathname.replace(/^\/(en|te)/, '') || '/';
+  const pathWithoutLocale = pathname.replace(localePattern, '') || '/';
   if (pathWithoutLocale === '/') return null;
 
   const segments = pathWithoutLocale.split('/').filter(Boolean);
@@ -44,7 +44,7 @@ export default function Breadcrumb({ locale }: { locale: Locale }) {
         </li>
         {crumbs.map((crumb) => (
           <li key={crumb.href} className="flex items-center">
-            <ChevronRight className="w-3.5 h-3.5 text-earth-400 dark:text-earth-300 mx-1 flex-shrink-0" />
+            <ChevronRight className="w-3.5 h-3.5 text-earth-400 dark:text-earth-300 mx-1 flex-shrink-0 rtl:rotate-180" />
             {crumb.isLast ? (
               <span className="text-earth-600 dark:text-earth-300 font-medium">
                 {crumb.label}

@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
-import { Playfair_Display, Source_Sans_3, Noto_Sans_Telugu } from 'next/font/google';
+import { Playfair_Display, Source_Sans_3, Noto_Sans_Telugu, Noto_Sans_Arabic } from 'next/font/google';
+import { hreflangAlternates } from '@/lib/i18n';
 import '@/styles/globals.css';
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
@@ -26,15 +27,18 @@ const notoTelugu = Noto_Sans_Telugu({
   weight: ['400', '500', '600', '700'],
 });
 
+const notoArabic = Noto_Sans_Arabic({
+  subsets: ['arabic'],
+  variable: '--font-arabic',
+  display: 'swap',
+  weight: ['400', '500', '600', '700'],
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://simplymillets.com'),
   alternates: {
     canonical: '/',
-    languages: {
-      en: '/en',
-      te: '/te',
-      'x-default': '/en',
-    },
+    languages: hreflangAlternates(''),
   },
   title: {
     default: 'Millets Guide - Ancient Grains, Timeless Nourishment',
@@ -80,7 +84,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${playfair.variable} ${sourceSans.variable} ${notoTelugu.variable}`}
+      className={`${playfair.variable} ${sourceSans.variable} ${notoTelugu.variable} ${notoArabic.variable}`}
       suppressHydrationWarning
     >
       {GA_ID && (

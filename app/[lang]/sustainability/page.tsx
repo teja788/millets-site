@@ -6,10 +6,10 @@ import QuickFactBox from '@/components/ui/QuickFactBox';
 import SourceCitation from '@/components/ui/SourceCitation';
 import { sources } from '@/data/sources';
 import type { Locale } from '@/lib/i18n';
-import { localePath, getTranslations, isValidLocale } from '@/lib/i18n';
+import { localePath, getTranslations, isValidLocale, localeParams } from '@/lib/i18n';
 
 export function generateStaticParams() {
-  return [{ lang: 'en' }, { lang: 'te' }];
+  return localeParams();
 }
 
 export async function generateMetadata({

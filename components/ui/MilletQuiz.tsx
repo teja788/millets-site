@@ -31,38 +31,47 @@ const milletInfo: Record<string, Record<Locale, MilletInfo>> = {
   'finger-millet': {
     en: { slug: 'finger-millet', name: 'Finger Millet (Ragi)', tagline: 'The calcium champion among cereals' },
     te: { slug: 'finger-millet', name: 'రాగులు (Ragi)', tagline: 'తృణధాన్యాలలో కాల్షియం ఛాంపియన్' },
+    ar: { slug: 'finger-millet', name: 'دخن الإصبع (راغي)', tagline: 'بطل الكالسيوم بين الحبوب' },
   },
   'pearl-millet': {
     en: { slug: 'pearl-millet', name: 'Pearl Millet (Bajra)', tagline: 'The iron-rich powerhouse grain' },
     te: { slug: 'pearl-millet', name: 'సజ్జలు (Bajra)', tagline: 'ఇనుము అధికంగా ఉన్న శక్తి ధాన్యం' },
+    ar: { slug: 'pearl-millet', name: 'الدخن اللؤلؤي (باجرا)', tagline: 'حبوب غنية بالحديد وعالية الطاقة' },
   },
   'sorghum': {
     en: { slug: 'sorghum', name: 'Sorghum (Jowar)', tagline: 'The versatile everyday millet' },
     te: { slug: 'sorghum', name: 'జొన్నలు (Jowar)', tagline: 'బహుముఖ రోజువారీ చిరుధాన్యం' },
+    ar: { slug: 'sorghum', name: 'الذرة الرفيعة (جوار)', tagline: 'الدخن اليومي متعدد الاستخدامات' },
   },
   'foxtail-millet': {
     en: { slug: 'foxtail-millet', name: 'Foxtail Millet (Kangni)', tagline: 'The quick-cooking, protein-rich grain' },
     te: { slug: 'foxtail-millet', name: 'కొర్రలు (Kangni)', tagline: 'త్వరగా వండే, ప్రోటీన్ అధిక ధాన్యం' },
+    ar: { slug: 'foxtail-millet', name: 'دخن ذيل الثعلب (كانغني)', tagline: 'حبوب سريعة الطهي وغنية بالبروتين' },
   },
   'little-millet': {
     en: { slug: 'little-millet', name: 'Little Millet (Samai)', tagline: 'The mild, easy rice alternative' },
     te: { slug: 'little-millet', name: 'సామలు (Samai)', tagline: 'సులభమైన బియ్యం ప్రత్యామ్నాయం' },
+    ar: { slug: 'little-millet', name: 'الدخن الصغير (ساماي)', tagline: 'بديل الأرز السهل واللطيف' },
   },
   'kodo-millet': {
     en: { slug: 'kodo-millet', name: 'Kodo Millet (Kodon)', tagline: 'The high-fiber, low-GI grain' },
     te: { slug: 'kodo-millet', name: 'అరికెలు (Kodon)', tagline: 'అధిక ఫైబర్, తక్కువ GI ధాన్యం' },
+    ar: { slug: 'kodo-millet', name: 'دخن كودو (كودون)', tagline: 'حبوب عالية الألياف ومنخفضة المؤشر الجلايسيمي' },
   },
   'barnyard-millet': {
     en: { slug: 'barnyard-millet', name: 'Barnyard Millet (Sanwa)', tagline: 'The low-calorie fasting grain' },
     te: { slug: 'barnyard-millet', name: 'ఊదలు (Sanwa)', tagline: 'తక్కువ కేలరీల ఉపవాస ధాన్యం' },
+    ar: { slug: 'barnyard-millet', name: 'دخن الحظيرة (سانوا)', tagline: 'حبوب الصيام منخفضة السعرات' },
   },
   'proso-millet': {
     en: { slug: 'proso-millet', name: 'Proso Millet (Chena)', tagline: 'The protein-packed quick grower' },
     te: { slug: 'proso-millet', name: 'వరిగెలు (Chena)', tagline: 'ప్రోటీన్ అధికంగా ఉన్న వేగంగా పెరిగే ధాన్యం' },
+    ar: { slug: 'proso-millet', name: 'الدخن العادي (تشينا)', tagline: 'حبوب سريعة النمو وغنية بالبروتين' },
   },
   'browntop-millet': {
     en: { slug: 'browntop-millet', name: 'Browntop Millet (Korle)', tagline: 'The fiber king of millets' },
     te: { slug: 'browntop-millet', name: 'అండుకొర్రలు (Korle)', tagline: 'చిరుధాన్యాలలో ఫైబర్ రాజు' },
+    ar: { slug: 'browntop-millet', name: 'دخن القمة البنية (كورلي)', tagline: 'ملك الألياف بين أنواع الدخن' },
   },
 };
 

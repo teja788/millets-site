@@ -8,7 +8,7 @@ import ImageWithFallback from '@/components/ui/ImageWithFallback';
 import PrintButton from '@/components/ui/PrintButton';
 import ShareButton, { FloatingShareButton } from '@/components/ui/ShareButton';
 import type { Locale } from '@/lib/i18n';
-import { localePath, getTranslations, isValidLocale } from '@/lib/i18n';
+import { localePath, getTranslations, isValidLocale, locales } from '@/lib/i18n';
 import { getRecipes, getRecipeBySlugLocale, getMilletBySlugLocale } from '@/lib/i18n-data';
 
 interface PageProps {
@@ -19,7 +19,7 @@ export async function generateStaticParams() {
   // Use English recipes for slug list (slugs are the same in both locales)
   const enRecipes = getRecipes('en');
   const params: { lang: string; slug: string }[] = [];
-  for (const lang of ['en', 'te']) {
+  for (const lang of locales) {
     for (const recipe of enRecipes) {
       params.push({ lang, slug: recipe.slug });
     }

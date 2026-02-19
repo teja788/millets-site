@@ -48,6 +48,7 @@
   --font-heading: var(--font-playfair), "Georgia", "Times New Roman", serif;
   --font-body: var(--font-source-sans), "Segoe UI", "Helvetica Neue", sans-serif;
   --font-telugu: var(--font-telugu), "Noto Sans Telugu", "Segoe UI", sans-serif;
+  --font-arabic: var(--font-arabic), "Noto Sans Arabic", "Segoe UI", sans-serif;
   --font-mono: "JetBrains Mono", "Fira Code", "Consolas", monospace;
 
   /* === Spacing === */
@@ -288,4 +289,34 @@
 
 .dark .wave-divider .shape-fill {
   fill: #2a2a2a;
+}
+
+/* ========================================
+   RTL SUPPORT (Arabic)
+   ======================================== */
+
+/* Use Arabic font for body and headings in RTL */
+[dir="rtl"] body {
+  font-family: var(--font-arabic);
+}
+
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] h5,
+[dir="rtl"] h6 {
+  font-family: var(--font-arabic);
+}
+
+/* Content wrapper uses logical properties for RTL compatibility */
+[dir="rtl"] .content-wrapper {
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  padding-inline-start: 1.5rem;
+  padding-inline-end: 1.5rem;
+  margin-left: unset;
+  margin-right: unset;
+  padding-left: unset;
+  padding-right: unset;
 }

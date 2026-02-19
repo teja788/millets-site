@@ -50,17 +50,45 @@ import { substitutionEntries as teSubstitutionEntries } from '@/data/te/substitu
 import { ancientReferences as teAncientReferences } from '@/data/te/ancient-references';
 import { searchIndex as teSearchIndex } from '@/data/te/search-index';
 
+// Arabic data
+import { millets as arMillets, getMilletBySlug as arGetMilletBySlug } from '@/data/ar/millets';
+import { recipes as arRecipes } from '@/data/ar/recipes';
+import { faqItems as arFaqItems } from '@/data/ar/faq';
+import { timelineEvents as arTimelineEvents } from '@/data/ar/history-timeline';
+import { myths as arMyths } from '@/data/ar/myths';
+import { ayurvedaPageData as arAyurvedaData } from '@/data/ar/ayurveda';
+import { regionalTraditions as arRegionalTraditions, getRegionalTraditionBySlug as arGetRegionalTraditionBySlug } from '@/data/ar/regional-traditions';
+import { globalMilletRegions as arGlobalMilletRegions, getGlobalMilletRegionBySlug as arGetGlobalMilletRegionBySlug } from '@/data/ar/global-millets';
+import { fermentedProducts as arFermentedProducts } from '@/data/ar/fermentation';
+import { buyingGuideItems as arBuyingGuideItems } from '@/data/ar/buying-guide';
+import { mealPlans as arMealPlans, getMealPlanBySlug as arGetMealPlanBySlug } from '@/data/ar/meal-plans';
+import { substitutionEntries as arSubstitutionEntries } from '@/data/ar/substitution-data';
+import { ancientReferences as arAncientReferences } from '@/data/ar/ancient-references';
+import { searchIndex as arSearchIndex } from '@/data/ar/search-index';
+
 // Locale-aware getters
 export function getMillets(locale: Locale): Millet[] {
-  return locale === 'te' ? teMillets : enMillets;
+  switch (locale) {
+    case 'te': return teMillets;
+    case 'ar': return arMillets;
+    default: return enMillets;
+  }
 }
 
 export function getMilletBySlugLocale(slug: string, locale: Locale): Millet | undefined {
-  return locale === 'te' ? teGetMilletBySlug(slug) : enGetMilletBySlug(slug);
+  switch (locale) {
+    case 'te': return teGetMilletBySlug(slug);
+    case 'ar': return arGetMilletBySlug(slug);
+    default: return enGetMilletBySlug(slug);
+  }
 }
 
 export function getRecipes(locale: Locale): Recipe[] {
-  return locale === 'te' ? teRecipes : enRecipes;
+  switch (locale) {
+    case 'te': return teRecipes;
+    case 'ar': return arRecipes;
+    default: return enRecipes;
+  }
 }
 
 export function getRecipeBySlugLocale(slug: string, locale: Locale): Recipe | undefined {
@@ -74,69 +102,129 @@ export function getRecipesByMilletLocale(milletSlug: string, locale: Locale): Re
 }
 
 export function getSources(locale: Locale) {
-  // Sources are academic references, same for both locales
+  // Sources are academic references, same for all locales
   return enSources;
 }
 
 export function getFaqItems(locale: Locale): FAQItem[] {
-  return locale === 'te' ? teFaqItems : enFaqItems;
+  switch (locale) {
+    case 'te': return teFaqItems;
+    case 'ar': return arFaqItems;
+    default: return enFaqItems;
+  }
 }
 
 export function getTimelineEvents(locale: Locale): TimelineEvent[] {
-  return locale === 'te' ? teTimelineEvents : enTimelineEvents;
+  switch (locale) {
+    case 'te': return teTimelineEvents;
+    case 'ar': return arTimelineEvents;
+    default: return enTimelineEvents;
+  }
 }
 
 export function getMyths(locale: Locale): Myth[] {
-  return locale === 'te' ? teMyths : enMyths;
+  switch (locale) {
+    case 'te': return teMyths;
+    case 'ar': return arMyths;
+    default: return enMyths;
+  }
 }
 
 export function getAyurvedaData(locale: Locale): AyurvedaPageData {
-  return locale === 'te' ? teAyurvedaData : enAyurvedaData;
+  switch (locale) {
+    case 'te': return teAyurvedaData;
+    case 'ar': return arAyurvedaData;
+    default: return enAyurvedaData;
+  }
 }
 
 export function getRegionalTraditions(locale: Locale): RegionalTradition[] {
-  return locale === 'te' ? teRegionalTraditions : enRegionalTraditions;
+  switch (locale) {
+    case 'te': return teRegionalTraditions;
+    case 'ar': return arRegionalTraditions;
+    default: return enRegionalTraditions;
+  }
 }
 
 export function getRegionalTraditionBySlugLocale(slug: string, locale: Locale): RegionalTradition | undefined {
-  return locale === 'te' ? teGetRegionalTraditionBySlug(slug) : enGetRegionalTraditionBySlug(slug);
+  switch (locale) {
+    case 'te': return teGetRegionalTraditionBySlug(slug);
+    case 'ar': return arGetRegionalTraditionBySlug(slug);
+    default: return enGetRegionalTraditionBySlug(slug);
+  }
 }
 
 export function getGlobalMilletRegions(locale: Locale): GlobalMilletRegion[] {
-  return locale === 'te' ? teGlobalMilletRegions : enGlobalMilletRegions;
+  switch (locale) {
+    case 'te': return teGlobalMilletRegions;
+    case 'ar': return arGlobalMilletRegions;
+    default: return enGlobalMilletRegions;
+  }
 }
 
 export function getGlobalMilletRegionBySlugLocale(slug: string, locale: Locale): GlobalMilletRegion | undefined {
-  return locale === 'te' ? teGetGlobalMilletRegionBySlug(slug) : enGetGlobalMilletRegionBySlug(slug);
+  switch (locale) {
+    case 'te': return teGetGlobalMilletRegionBySlug(slug);
+    case 'ar': return arGetGlobalMilletRegionBySlug(slug);
+    default: return enGetGlobalMilletRegionBySlug(slug);
+  }
 }
 
 export function getFermentedProducts(locale: Locale): FermentedProduct[] {
-  return locale === 'te' ? teFermentedProducts : enFermentedProducts;
+  switch (locale) {
+    case 'te': return teFermentedProducts;
+    case 'ar': return arFermentedProducts;
+    default: return enFermentedProducts;
+  }
 }
 
 export function getBuyingGuideItems(locale: Locale): BuyingGuideItem[] {
-  return locale === 'te' ? teBuyingGuideItems : enBuyingGuideItems;
+  switch (locale) {
+    case 'te': return teBuyingGuideItems;
+    case 'ar': return arBuyingGuideItems;
+    default: return enBuyingGuideItems;
+  }
 }
 
 export function getMealPlans(locale: Locale): MealPlan[] {
-  return locale === 'te' ? teMealPlans : enMealPlans;
+  switch (locale) {
+    case 'te': return teMealPlans;
+    case 'ar': return arMealPlans;
+    default: return enMealPlans;
+  }
 }
 
 export function getMealPlanBySlugLocale(slug: string, locale: Locale): MealPlan | undefined {
-  return locale === 'te' ? teGetMealPlanBySlug(slug) : enGetMealPlanBySlug(slug);
+  switch (locale) {
+    case 'te': return teGetMealPlanBySlug(slug);
+    case 'ar': return arGetMealPlanBySlug(slug);
+    default: return enGetMealPlanBySlug(slug);
+  }
 }
 
 export function getSubstitutionEntries(locale: Locale): SubstitutionEntry[] {
-  return locale === 'te' ? teSubstitutionEntries : enSubstitutionEntries;
+  switch (locale) {
+    case 'te': return teSubstitutionEntries;
+    case 'ar': return arSubstitutionEntries;
+    default: return enSubstitutionEntries;
+  }
 }
 
 export function getAncientReferences(locale: Locale): AncientReference[] {
-  return locale === 'te' ? teAncientReferences : enAncientReferences;
+  switch (locale) {
+    case 'te': return teAncientReferences;
+    case 'ar': return arAncientReferences;
+    default: return enAncientReferences;
+  }
 }
 
 export function getSearchIndex(locale: Locale): SearchableItem[] {
-  return locale === 'te' ? teSearchIndex : enSearchIndex;
+  switch (locale) {
+    case 'te': return teSearchIndex;
+    case 'ar': return arSearchIndex;
+    default: return enSearchIndex;
+  }
 }
 
-// Nutrition data is the same for both locales (numeric only)
+// Nutrition data is the same for all locales (numeric only)
 export { riceNutrition, wheatNutrition, dailyValues };

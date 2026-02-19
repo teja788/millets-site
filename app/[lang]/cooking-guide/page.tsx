@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import type { Locale } from '@/lib/i18n';
-import { localePath, getTranslations, isValidLocale, locales } from '@/lib/i18n';
+import { localePath, getTranslations, isValidLocale, locales, localeParams } from '@/lib/i18n';
 import { getMillets } from '@/lib/i18n-data';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import {
@@ -38,7 +38,7 @@ export async function generateMetadata({
 }
 
 export function generateStaticParams() {
-  return [{ lang: 'en' }, { lang: 'te' }];
+  return localeParams();
 }
 
 export default async function CookingGuidePage({

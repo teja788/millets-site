@@ -16,7 +16,7 @@ import Hero from '@/components/sections/Hero';
 import MilletGrid from '@/components/sections/MilletGrid';
 import { Card, CardBody } from '@/components/ui/Card';
 import Breadcrumb from '@/components/layout/Breadcrumb';
-import { localePath, getTranslations, isValidLocale } from '@/lib/i18n';
+import { localePath, getTranslations, isValidLocale, localeParams, hreflangAlternates } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
 import { getMillets, getRecipes } from '@/lib/i18n-data';
 
@@ -25,7 +25,7 @@ const FeaturedRecipes = dynamic(() => import('@/components/sections/FeaturedReci
 const MilletQuiz = dynamic(() => import('@/components/ui/MilletQuiz'));
 
 export function generateStaticParams() {
-  return [{ lang: 'en' }, { lang: 'te' }];
+  return localeParams();
 }
 
 export async function generateMetadata({
@@ -42,11 +42,7 @@ export async function generateMetadata({
     description: t.site.description,
     alternates: {
       canonical: `/${locale}`,
-      languages: {
-        'en': '/en',
-        'te': '/te',
-        'x-default': '/en',
-      },
+      languages: hreflangAlternates(''),
     },
   };
 }

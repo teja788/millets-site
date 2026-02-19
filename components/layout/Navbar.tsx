@@ -8,7 +8,7 @@ import { useTheme } from 'next-themes';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Sun, Moon } from 'lucide-react';
 import type { Locale } from '@/lib/i18n';
-import { localePath, getTranslations } from '@/lib/i18n';
+import { localePath, getTranslations, localePattern, isRTL } from '@/lib/i18n';
 import LanguageSwitcher from '@/components/ui/LanguageSwitcher';
 
 /* ------------------------------------------------------------------ */
@@ -103,8 +103,8 @@ export default function Navbar({ locale }: { locale: Locale }) {
 
   const isActive = useCallback(
     (href: string) => {
-      const pathWithoutLocale = pathname.replace(/^\/(en|te)/, '');
-      const hrefWithoutLocale = href.replace(/^\/(en|te)/, '');
+      const pathWithoutLocale = pathname.replace(localePattern, '');
+      const hrefWithoutLocale = href.replace(localePattern, '');
       if (hrefWithoutLocale === '/' || hrefWithoutLocale === '') return pathWithoutLocale === '/' || pathWithoutLocale === '';
       return pathWithoutLocale.startsWith(hrefWithoutLocale);
     },
@@ -389,11 +389,11 @@ export default function Navbar({ locale }: { locale: Locale }) {
 
             {/* Drawer */}
             <motion.div
-              initial={{ x: '100%' }}
+              initial={{ x: isRTL(locale) ? '-100%' : '100%' }}
               animate={{ x: 0 }}
-              exit={{ x: '100%' }}
+              exit={{ x: isRTL(locale) ? '-100%' : '100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-              className="fixed top-0 right-0 h-full w-72 bg-white dark:bg-earth-900 shadow-xl z-50 lg:hidden overflow-y-auto"
+              className={`fixed top-0 ${isRTL(locale) ? 'left-0' : 'right-0'} h-full w-72 bg-white dark:bg-earth-900 shadow-xl z-50 lg:hidden overflow-y-auto`}
             >
               <div className="flex items-center justify-between p-4 border-b border-earth-200 dark:border-earth-700">
                 <span className="font-heading text-lg font-bold text-earth-800 dark:text-forest-200">

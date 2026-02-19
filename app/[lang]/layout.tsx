@@ -5,11 +5,11 @@ import Footer from '@/components/layout/Footer';
 import ScrollProgress from '@/components/ui/ScrollProgress';
 import BackToTop from '@/components/ui/BackToTop';
 import LangSetter from '@/components/ui/LangSetter';
-import { isValidLocale } from '@/lib/i18n';
+import { isValidLocale, localeParams } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
 
 export function generateStaticParams() {
-  return [{ lang: 'en' }, { lang: 'te' }];
+  return localeParams();
 }
 
 export default async function LocaleLayout({
@@ -32,7 +32,7 @@ export default async function LocaleLayout({
       <LangSetter lang={locale} />
       <ScrollProgress />
       <Navbar locale={locale} />
-      <main className={`pt-16 md:pt-18${locale === 'te' ? ' font-telugu' : ''}`}>
+      <main className={`pt-16 md:pt-18${locale === 'te' ? ' font-telugu' : locale === 'ar' ? ' font-arabic' : ''}`}>
         {children}
       </main>
       <Footer locale={locale} />

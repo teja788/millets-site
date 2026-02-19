@@ -34,7 +34,7 @@ import FeaturedRecipes from '@/components/sections/FeaturedRecipes';
 import TestimonialOrQuote from '@/components/sections/TestimonialOrQuote';
 import ImageWithFallback from '@/components/ui/ImageWithFallback';
 import type { Locale } from '@/lib/i18n';
-import { localePath, getTranslations, isValidLocale } from '@/lib/i18n';
+import { localePath, getTranslations, isValidLocale, locales } from '@/lib/i18n';
 import { getMillets, getMilletBySlugLocale, getRecipesByMilletLocale, getSources, riceNutrition } from '@/lib/i18n-data';
 import type { EvidenceLevel } from '@/lib/types';
 
@@ -46,7 +46,7 @@ export function generateStaticParams() {
   // English millets used for slugs (slugs are the same in both locales)
   const enMillets = getMillets('en');
   const params: { lang: string; slug: string }[] = [];
-  for (const lang of ['en', 'te']) {
+  for (const lang of locales) {
     for (const m of enMillets) {
       params.push({ lang, slug: m.slug });
     }

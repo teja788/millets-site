@@ -6,9 +6,7 @@ import Breadcrumb from '@/components/layout/Breadcrumb';
 import RecipeCard from '@/components/ui/RecipeCard';
 import type { Locale } from '@/lib/i18n';
 import { getTranslations } from '@/lib/i18n';
-import { recipes as enRecipes } from '@/data/recipes';
-import { millets as enMillets } from '@/data/millets';
-import { millets as teMillets } from '@/data/te/millets';
+import { getRecipes, getMillets } from '@/lib/i18n-data';
 import type { RecipeCategory } from '@/lib/types';
 
 export default function RecipesPage() {
@@ -16,10 +14,8 @@ export default function RecipesPage() {
   const locale = (params.lang as Locale) || 'en';
   const t = getTranslations(locale);
 
-  // Recipes: use English for now (Telugu recipes data may not exist yet)
-  // When Telugu recipe data becomes available, switch to locale-aware import
-  const recipes = enRecipes;
-  const millets = locale === 'te' ? teMillets : enMillets;
+  const recipes = getRecipes(locale);
+  const millets = getMillets(locale);
 
   const categories: { label: string; value: RecipeCategory | 'all' }[] = [
     { label: t.recipesPage.filterAll, value: 'all' },
