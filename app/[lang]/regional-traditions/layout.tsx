@@ -16,7 +16,9 @@ export async function generateMetadata({
     description:
       lang === 'te'
         ? 'భారతదేశంలోని వివిధ రాష్ట్రాల చిరుధాన్యాల సంప్రదాయాలు, ప్రసిద్ధ వంటకాలు మరియు పండుగలు.'
-        : 'Explore the iconic dishes, festivals, and living practices that keep millet traditions alive across India.',
+        : lang === 'fr'
+          ? 'Découvrez les plats emblématiques, les festivals et les traditions vivantes qui perpétuent la culture des millets à travers le monde.'
+          : 'Explore the iconic dishes, festivals, and living practices that keep millet traditions alive across India.',
     alternates: {
       canonical: `/${lang}/regional-traditions`,
       languages: hreflangAlternates('/regional-traditions'),

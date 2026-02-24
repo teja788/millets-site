@@ -7,32 +7,21 @@ import Fuse from 'fuse.js';
 import Link from 'next/link';
 import type { SearchableItem } from '@/lib/types';
 import type { Locale } from '@/lib/i18n';
-import { localePath, isValidLocale } from '@/lib/i18n';
+import { localePath, isValidLocale, getTranslations } from '@/lib/i18n';
 import { getSearchIndex } from '@/lib/i18n-data';
 
 interface SearchBarProps {
-  placeholder?: string;
   className?: string;
 }
-
-const TYPE_LABELS: Record<SearchableItem['type'], string> = {
-  millet: 'Millets',
-  recipe: 'Recipes',
-  faq: 'FAQ',
-  page: 'Pages',
-  tool: 'Tools',
-  tradition: 'Traditions',
-  region: 'Regions',
-};
 
 const TYPE_ORDER: SearchableItem['type'][] = ['millet', 'recipe', 'tradition', 'region', 'tool', 'page', 'faq'];
 
 export default function SearchBar({
-  placeholder = 'Search millets, recipes, and more...',
   className = '',
 }: SearchBarProps) {
   const params = useParams();
   const locale: Locale = isValidLocale(params.lang as string) ? (params.lang as Locale) : 'en';
+  const t = getTranslations(locale);
   const searchIndex = useMemo(() => getSearchIndex(locale), [locale]);
 
   const [query, setQuery] = useState('');
@@ -144,8 +133,8 @@ export default function SearchBar({
             if (results.length > 0) setIsOpen(true);
           }}
           onKeyDown={handleKeyDown}
-          placeholder={placeholder}
-          aria-label="Search"
+          placeholder={t.search.placeholder}
+          aria-label={t.nav.search}
           aria-expanded={isOpen}
           aria-haspopup="listbox"
           className="
@@ -177,7 +166,7 @@ export default function SearchBar({
             return (
               <div key={type}>
                 <div className="px-4 py-2 text-xs font-semibold uppercase tracking-wider text-earth-500 dark:text-earth-400 bg-earth-50 dark:bg-earth-900">
-                  {TYPE_LABELS[type]}
+                  {t.search.typeLabels[type]}
                 </div>
                 {items.map((item) => (
                   <Link

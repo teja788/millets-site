@@ -21,7 +21,9 @@ export async function generateMetadata({
     description:
       lang === 'te'
         ? 'చిరుధాన్యాల గురించి తరచుగా అడిగే ప్రశ్నలకు సమాధానాలు: పోషణ, వంట, ఆరోగ్య ప్రయోజనాలు, ఆయుర్వేద గుణాలు మరియు మరిన్ని.'
-        : 'Find answers to common questions about millets: nutrition, cooking, health benefits, Ayurvedic properties, and more.',
+        : lang === 'fr'
+          ? 'Réponses aux questions fréquentes sur les millets : nutrition, cuisson, bienfaits pour la santé et plus encore.'
+          : 'Find answers to common questions about millets: nutrition, cooking, health benefits, Ayurvedic properties, and more.',
     alternates: {
       canonical: `/${lang}/faq`,
       languages: hreflangAlternates('/faq'),

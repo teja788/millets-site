@@ -18,7 +18,7 @@ export async function generateMetadata({
   return {
     title: 'Nutrition et santé des millets | Simply Millets',
     description:
-      'Découvrez les bienfaits nutritionnels des millets fondés sur la science : santé cardiovasculaire, gestion du diabète, richesse en minéraux, sans gluten. Données ANSES et études cliniques.',
+      'Bienfaits nutritionnels des millets fondés sur la science : santé cardiovasculaire, diabète, minéraux, sans gluten. Données ANSES.',
     alternates: {
       canonical: '/fr/nutrition-et-sante',
       languages: { fr: '/fr/nutrition-et-sante' },

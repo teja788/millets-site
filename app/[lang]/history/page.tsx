@@ -22,7 +22,9 @@ export async function generateMetadata({
     description:
       lang === 'te'
         ? '10,000 సంవత్సరాల చిరుధాన్యాల ప్రయాణాన్ని తెలుసుకోండి — చైనాలో తొలి సాగు నుండి 2023 అంతర్జాతీయ చిరుధాన్యాల సంవత్సరం వరకు.'
-        : 'Trace the fascinating 10,000-year journey of millets from the earliest cultivated crops in China to the 2023 International Year of Millets. Discover archaeological evidence, Vedic references, and the modern millet revival.',
+        : lang === 'fr'
+          ? 'Découvrez 10 000 ans d\'histoire des millets : premières cultures en Chine, gaudes de France, mil du Sahel, et renaissance mondiale au XXIe siècle.'
+          : 'Trace the fascinating 10,000-year journey of millets from the earliest cultivated crops in China to the 2023 International Year of Millets. Discover archaeological evidence, Vedic references, and the modern millet revival.',
     alternates: {
       canonical: `/${lang}/history`,
       languages: hreflangAlternates('/history'),
@@ -95,6 +97,34 @@ export default async function HistoryPage({
                 వాటిని శుష్క భూమి వ్యవసాయ సమాజాలకు అత్యంత అవసరమైనవిగా చేసింది.
               </p>
             </>
+          ) : locale === 'fr' ? (
+            <>
+              <p>
+                Les millets comptent parmi les plus anciennes céréales cultivées de l&apos;histoire humaine.
+                Les preuves archéologiques du site de Cishan, dans le nord de la Chine, datent la culture
+                du millet des oiseaux d&apos;environ 8 700 ans avant notre ère, ce qui en fait l&apos;un des
+                premiers grains délibérément cultivés par l&apos;humanité — plusieurs millénaires avant le
+                riz. De manière indépendante, le mil à chandelle a été domestiqué dans la région du Sahel
+                en Afrique de l&apos;Ouest vers 4 500 av. J.-C., et l&apos;éleusine est apparue dans les
+                hauts plateaux éthiopiens vers 5 000 av. J.-C.
+              </p>
+              <p>
+                En Europe, le millet commun (Panicum miliaceum) a joué un rôle fondamental dans
+                l&apos;alimentation depuis l&apos;âge du bronze. En France, il était une céréale de premier
+                plan jusqu&apos;au XVIII<sup>e</sup> siècle : les « gaudes » de Franche-Comté, le
+                « millas » du Sud-Ouest et les bouillies de Bresse témoignent d&apos;un patrimoine
+                céréalier longtemps central dans les campagnes françaises. En Afrique de l&apos;Ouest,
+                le mil nourrit quotidiennement plus de 100 millions de personnes du Sénégal au Tchad.
+              </p>
+              <p>
+                Pendant des millénaires, les millets ont été le pain quotidien de millions de personnes
+                à travers l&apos;Asie, l&apos;Afrique et l&apos;Europe. Leur résilience extraordinaire —
+                prospérant dans les sols arides, résistant à la sécheresse et mûrissant en seulement
+                60 jours — les a rendus indispensables aux communautés agricoles des zones sèches.
+                Cependant, le XX<sup>e</sup> siècle a entraîné des changements profonds qui ont
+                marginalisé les millets dans l&apos;agriculture mondiale.
+              </p>
+            </>
           ) : (
             <>
               <p>
@@ -141,7 +171,9 @@ export default async function HistoryPage({
           <h2 className="font-heading text-2xl font-bold text-earth-800 dark:text-earth-100 mb-8 text-center">
             {locale === 'te'
               ? 'టైమ్‌లైన్: 10,000 సంవత్సరాల చిరుధాన్యాలు'
-              : 'Timeline: 10,000 Years of Millets'}
+              : locale === 'fr'
+                ? 'Chronologie : 10 000 ans de millets'
+                : 'Timeline: 10,000 Years of Millets'}
           </h2>
           <TimelineSection events={timelineEvents} />
         </section>
@@ -151,7 +183,9 @@ export default async function HistoryPage({
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-earth-800 dark:text-earth-100 mb-4">
             {locale === 'te'
               ? 'హరిత విప్లవం & క్షీణత'
-              : 'The Green Revolution & Decline'}
+              : locale === 'fr'
+                ? 'La Révolution verte et le déclin'
+                : 'The Green Revolution & Decline'}
           </h2>
           <div className="max-w-3xl space-y-4 text-earth-800 dark:text-earth-200 leading-relaxed">
             {locale === 'te' ? (
@@ -172,6 +206,30 @@ export default async function HistoryPage({
                   సుమారు 37% ఉన్న చిరుధాన్యాలు 2000ల ప్రారంభంలో 20% కంటే తక్కువకు తగ్గిపోయాయి.
                   చిరుధాన్యాలు &ldquo;ముతక ధాన్యాలు&rdquo; మరియు &ldquo;పేదవారి ఆహారం&rdquo;గా
                   ముద్ర వేయబడ్డాయి.
+                </p>
+              </>
+            ) : locale === 'fr' ? (
+              <>
+                <p>
+                  La Révolution verte des années 1960-1970 a transformé l&apos;agriculture mondiale.
+                  En Inde, les variétés de riz et de blé à haut rendement de Norman Borlaug ont
+                  permis d&apos;éviter des famines massives, mais au prix d&apos;une marginalisation
+                  des millets. Les politiques agricoles — prix de soutien, achats publics, distribution
+                  subventionnée — ont systématiquement favorisé le riz et le blé.
+                </p>
+                <p>
+                  En Afrique, les programmes internationaux de développement ont également privilégié
+                  le riz et le maïs importés au détriment des céréales locales. En Europe, le millet
+                  avait déjà été supplanté par le blé et le maïs dès le XVIII<sup>e</sup> siècle.
+                  En France, les gaudes de millet ont cédé la place aux gaudes de maïs, et le millas
+                  a suivi le même destin dans le Sud-Ouest.
+                </p>
+                <p>
+                  Les conséquences ont été considérables. En Inde, les millets sont passés d&apos;environ
+                  37 % de la surface céréalière dans les années 1960 à moins de 20 % au début des
+                  années 2000. Les millets ont été stigmatisés comme « céréales grossières » et
+                  « nourriture des pauvres », tandis qu&apos;une génération entière a grandi sans
+                  connaître ces grains ancestraux.
                 </p>
               </>
             ) : (
@@ -208,7 +266,7 @@ export default async function HistoryPage({
         {/* The Revival */}
         <section className="mb-12">
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-earth-800 dark:text-earth-100 mb-4">
-            {locale === 'te' ? 'పునరుజ్జీవనం' : 'The Revival'}
+            {locale === 'te' ? 'పునరుజ్జీవనం' : locale === 'fr' ? 'La renaissance' : 'The Revival'}
           </h2>
           <div className="max-w-3xl space-y-4 text-earth-800 dark:text-earth-200 leading-relaxed">
             {locale === 'te' ? (
@@ -236,6 +294,40 @@ export default async function HistoryPage({
                 <p>
                   నేడు, చిరుధాన్యాలు ఆహార భద్రత, పోషకాహార లోపం, వాతావరణ మార్పు మరియు సుస్థిర
                   వ్యవసాయం వంటి అత్యంత ఒత్తిడి చేసే ప్రపంచ సవాళ్ల కూడలిలో నిలబడి ఉన్నాయి.
+                </p>
+              </>
+            ) : locale === 'fr' ? (
+              <>
+                <p>
+                  Le XXI<sup>e</sup> siècle a vu une remarquable renaissance des millets, portée par
+                  une prise de conscience croissante autour de la nutrition, de la durabilité et des
+                  limites de l&apos;agriculture intensive monospécifique.
+                </p>
+                <p>
+                  En <strong>2018</strong>, le gouvernement indien a reclassé les millets en
+                  « Nutri-Céréales », reconnaissant officiellement leur profil nutritionnel supérieur.
+                  L&apos;Inde a déclaré 2018 Année nationale des millets, avec des campagnes de
+                  sensibilisation et l&apos;intégration des millets dans les programmes alimentaires
+                  scolaires.
+                </p>
+                <p>
+                  En <strong>2021</strong>, l&apos;Inde a proposé à l&apos;Assemblée générale des
+                  Nations unies de déclarer 2023 Année internationale des millets. La résolution a
+                  été adoptée avec le soutien de 72 pays.
+                </p>
+                <p>
+                  L&apos;<strong>Année internationale des millets (2023)</strong> a marqué un tournant.
+                  Des événements ont été organisés dans plus de 100 pays, des menus à base de millets
+                  sont apparus dans les cafétérias de l&apos;ONU. En France, des chefs et nutritionnistes
+                  ont redécouvert le millet, le fonio et le sorgho, contribuant à un regain d&apos;intérêt
+                  pour ces céréales oubliées. Des start-ups innovent avec des pâtes, bières artisanales
+                  et céréales pour petit-déjeuner à base de millets.
+                </p>
+                <p>
+                  Aujourd&apos;hui, les millets se trouvent au carrefour des défis mondiaux les plus
+                  pressants : sécurité alimentaire, malnutrition, changement climatique et agriculture
+                  durable. Leur résilience ancestrale est devenue profondément pertinente pour le
+                  monde moderne.
                 </p>
               </>
             ) : (
@@ -278,7 +370,7 @@ export default async function HistoryPage({
         {/* Sources */}
         <section className="border-t border-earth-200 dark:border-earth-700 pt-8">
           <h2 className="font-heading text-xl font-bold text-earth-800 dark:text-earth-100 mb-4">
-            {locale === 'te' ? 'మూలాలు & సూచనలు' : 'Sources & References'}
+            {locale === 'te' ? 'మూలాలు & సూచనలు' : locale === 'fr' ? 'Sources et références' : 'Sources & References'}
           </h2>
           <ol className="space-y-3 list-decimal list-inside">
             {relevantSources.map((source) => (

@@ -105,7 +105,7 @@ export default function CookingTimer({ locale = 'en', millets }: { locale?: Loca
           htmlFor="millet-select"
           className="block text-sm font-medium text-earth-700 dark:text-earth-300 mb-2"
         >
-          Select a millet
+          {t.cookingTimerPage.selectMillet}
         </label>
         <select
           id="millet-select"
@@ -113,7 +113,7 @@ export default function CookingTimer({ locale = 'en', millets }: { locale?: Loca
           onChange={(e) => setSelectedMillet(e.target.value)}
           className="w-full px-4 py-3 bg-white dark:bg-earth-800 border border-earth-200 dark:border-earth-700 rounded-lg text-earth-800 dark:text-earth-100 focus:outline-none focus:ring-2 focus:ring-earth-500 transition-colors"
         >
-          <option value="">Choose a millet...</option>
+          <option value="">{t.cookingTimerPage.chooseMillet}</option>
           {milletList.map((m) => (
             <option key={m.slug} value={m.slug}>
               {m.name}
@@ -128,14 +128,14 @@ export default function CookingTimer({ locale = 'en', millets }: { locale?: Loca
           <Card variant="outlined">
             <CardBody>
               <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-4">
-                {millet.name} — Cooking Info
+                {millet.name} — {t.cookingTimerPage.cookingInfo}
               </h3>
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
                   <Droplets className="w-5 h-5 text-warm-gray dark:text-earth-400 flex-shrink-0" />
                   <div>
                     <p className="text-xs text-warm-gray dark:text-earth-400 uppercase tracking-wider">
-                      Water Ratio
+                      {t.cookingTimerPage.waterRatio}
                     </p>
                     <p className="text-earth-800 dark:text-earth-100 font-medium">
                       {millet.cooking.waterRatio}
@@ -146,7 +146,7 @@ export default function CookingTimer({ locale = 'en', millets }: { locale?: Loca
                   <Timer className="w-5 h-5 text-warm-gray dark:text-earth-400 flex-shrink-0" />
                   <div>
                     <p className="text-xs text-warm-gray dark:text-earth-400 uppercase tracking-wider">
-                      Soaking Time
+                      {t.cookingTimerPage.soakingTime}
                     </p>
                     <p className="text-earth-800 dark:text-earth-100 font-medium">
                       {millet.cooking.soakingTime}
@@ -157,7 +157,7 @@ export default function CookingTimer({ locale = 'en', millets }: { locale?: Loca
                   <CookingPot className="w-5 h-5 text-warm-gray dark:text-earth-400 flex-shrink-0" />
                   <div>
                     <p className="text-xs text-warm-gray dark:text-earth-400 uppercase tracking-wider">
-                      Cooking Time
+                      {t.cookingTimerPage.cookingTime}
                     </p>
                     <p className="text-earth-800 dark:text-earth-100 font-medium">
                       {millet.cooking.cookingTime}
@@ -173,14 +173,14 @@ export default function CookingTimer({ locale = 'en', millets }: { locale?: Loca
                   size="sm"
                   onClick={() => setTimerMode('cooking')}
                 >
-                  Cooking
+                  {t.cookingTimerPage.cooking}
                 </Button>
                 <Button
                   variant={timerMode === 'soaking' ? 'primary' : 'secondary'}
                   size="sm"
                   onClick={() => setTimerMode('soaking')}
                 >
-                  Soaking
+                  {t.cookingTimerPage.soaking}
                 </Button>
               </div>
             </CardBody>
@@ -224,14 +224,14 @@ export default function CookingTimer({ locale = 'en', millets }: { locale?: Loca
                   {formatTime(remainingSeconds)}
                 </span>
                 <span className="text-xs text-warm-gray dark:text-earth-400 uppercase tracking-wider mt-1">
-                  {timerMode === 'cooking' ? 'Cooking' : 'Soaking'}
+                  {timerMode === 'cooking' ? t.cookingTimerPage.cooking : t.cookingTimerPage.soaking}
                 </span>
               </div>
             </div>
 
             {isComplete && (
               <p className="text-forest-400 font-medium mb-4">
-                Done! Your {millet.name} is ready.
+                {t.cookingTimerPage.done} {t.cookingTimerPage.doneMessage.replace('{name}', millet.name)}
               </p>
             )}
 
@@ -241,7 +241,7 @@ export default function CookingTimer({ locale = 'en', millets }: { locale?: Loca
                 onClick={toggleRunning}
                 disabled={totalSeconds === 0}
                 className="w-14 h-14 rounded-full bg-earth-200 dark:bg-earth-700 hover:bg-earth-300 dark:hover:bg-earth-600 text-earth-800 dark:text-earth-100 flex items-center justify-center transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
-                aria-label={isRunning ? 'Pause' : 'Play'}
+                aria-label={isRunning ? t.cookingTimerPage.pause : t.cookingTimerPage.play}
               >
                 {isRunning ? (
                   <Pause className="w-6 h-6" />
@@ -252,7 +252,7 @@ export default function CookingTimer({ locale = 'en', millets }: { locale?: Loca
               <button
                 onClick={resetTimer}
                 className="w-10 h-10 rounded-full bg-earth-100 dark:bg-earth-800 hover:bg-earth-200 dark:hover:bg-earth-700 text-earth-700 dark:text-earth-300 flex items-center justify-center transition-colors"
-                aria-label="Reset"
+                aria-label={t.cookingTimerPage.reset}
               >
                 <RotateCcw className="w-5 h-5" />
               </button>
@@ -263,7 +263,7 @@ export default function CookingTimer({ locale = 'en', millets }: { locale?: Loca
         <div className="text-center py-12">
           <Timer className="w-12 h-12 text-earth-600 mx-auto mb-4" />
           <p className="text-warm-gray dark:text-earth-400">
-            Select a millet above to see cooking info and start the timer.
+            {t.cookingTimerPage.selectMilletHint}
           </p>
         </div>
       )}

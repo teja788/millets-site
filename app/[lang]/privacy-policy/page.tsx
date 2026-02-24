@@ -23,7 +23,9 @@ export async function generateMetadata({
       ? 'సింప్లీ మిల్లెట్స్ గోప్యతా విధానం — మేము మీ సమాచారాన్ని ఎలా సేకరిస్తాము, ఉపయోగిస్తాము మరియు భద్రపరుస్తాము.'
       : lang === 'ar'
         ? 'سياسة خصوصية سيمبلي ميليتس — كيف نجمع معلوماتك ونستخدمها ونحميها.'
-        : 'Simply Millets privacy policy — how we collect, use, and protect your information.',
+        : lang === 'fr'
+          ? 'Politique de confidentialité de Simply Millets — comment nous collectons, utilisons et protégeons vos informations.'
+          : 'Simply Millets privacy policy — how we collect, use, and protect your information.',
     alternates: {
       canonical: `/${lang}/privacy-policy`,
       languages: hreflangAlternates('/privacy-policy'),

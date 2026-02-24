@@ -329,7 +329,7 @@ export default function Navbar({ locale }: { locale: Locale }) {
             <button
               onClick={toggleTheme}
               className="ml-2 p-2 rounded-md text-earth-800 dark:text-earth-300 hover:text-forest-600 dark:hover:text-forest-300 hover:bg-earth-100 dark:hover:bg-earth-800/40 transition-colors"
-              aria-label={resolvedTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+              aria-label={resolvedTheme === 'dark' ? t.common.switchToLightMode : t.common.switchToDarkMode}
             >
               {resolvedTheme === 'dark' ? (
                 <Sun className="w-5 h-5" />
@@ -352,7 +352,7 @@ export default function Navbar({ locale }: { locale: Locale }) {
             <button
               onClick={toggleTheme}
               className="p-2 rounded-md text-earth-800 dark:text-earth-300 hover:text-forest-600 dark:hover:text-forest-300 hover:bg-earth-100 dark:hover:bg-earth-800/40 transition-colors"
-              aria-label={resolvedTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+              aria-label={resolvedTheme === 'dark' ? t.common.switchToLightMode : t.common.switchToDarkMode}
             >
               {resolvedTheme === 'dark' ? (
                 <Sun className="w-5 h-5" />
@@ -365,7 +365,7 @@ export default function Navbar({ locale }: { locale: Locale }) {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="p-2 rounded-md text-earth-800 dark:text-earth-300 hover:text-forest-600 dark:hover:text-forest-300 hover:bg-earth-100 dark:hover:bg-earth-800/40 transition-colors"
-            aria-label={isOpen ? 'Close menu' : 'Open menu'}
+            aria-label={isOpen ? t.common.closeMenu : t.common.openMenu}
             aria-expanded={isOpen}
           >
             {isOpen ? (
@@ -408,7 +408,7 @@ export default function Navbar({ locale }: { locale: Locale }) {
                 <button
                   onClick={() => setIsOpen(false)}
                   className="p-2 rounded-md text-earth-800 dark:text-earth-300 hover:text-forest-600 dark:hover:text-forest-300 hover:bg-earth-100 dark:hover:bg-earth-800/40 transition-colors"
-                  aria-label="Close menu"
+                  aria-label={t.common.closeMenu}
                 >
                   <X className="w-5 h-5" />
                 </button>

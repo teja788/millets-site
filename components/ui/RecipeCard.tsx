@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 import { Clock, Users } from 'lucide-react';
 import type { Recipe } from '@/lib/types';
 import type { Locale } from '@/lib/i18n';
-import { localePath, isValidLocale } from '@/lib/i18n';
+import { localePath, isValidLocale, getTranslations } from '@/lib/i18n';
 import Badge from '@/components/ui/Badge';
 
 interface RecipeCardProps {
@@ -36,6 +36,7 @@ const defaultGradient = 'from-earth-400 via-earth-500 to-earth-700';
 export default function RecipeCard({ recipe }: RecipeCardProps) {
   const params = useParams();
   const locale: Locale = isValidLocale(params.lang as string) ? (params.lang as Locale) : 'en';
+  const t = getTranslations(locale);
   const [imgError, setImgError] = useState(false);
   const gradient = categoryGradients[recipe.category] || defaultGradient;
   const hasImage = recipe.imageFile && !imgError;
@@ -81,7 +82,7 @@ export default function RecipeCard({ recipe }: RecipeCardProps) {
             {/* Category badge overlay */}
             <div className="absolute top-3 right-3">
               <Badge variant="default" size="sm">
-                {recipe.category}
+                {t.recipeDetail.categories[recipe.category as keyof typeof t.recipeDetail.categories] || recipe.category}
               </Badge>
             </div>
           </div>
@@ -103,14 +104,14 @@ export default function RecipeCard({ recipe }: RecipeCardProps) {
               </span>
               <span className="inline-flex items-center gap-1">
                 <Users size={14} />
-                {recipe.servings} servings
+                {recipe.servings} {t.recipeDetail.servings.toLowerCase()}
               </span>
             </div>
 
             {/* Difficulty badge */}
             <div>
               <Badge variant={difficultyVariant[recipe.difficulty]} size="sm">
-                {recipe.difficulty}
+                {t.recipeDetail.difficulties[recipe.difficulty] || recipe.difficulty}
               </Badge>
             </div>
           </div>

@@ -1,7 +1,10 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useParams } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
+import type { Locale } from '@/lib/i18n';
+import { isValidLocale, getTranslations } from '@/lib/i18n';
 
 interface ShareButtonProps {
   title: string;
@@ -12,15 +15,12 @@ function isMobile() {
   return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 }
 
-function handleRecipeShare(title: string, slug: string) {
+function handleRecipeShare(title: string, slug: string, shareText: string) {
   const url = `${window.location.origin}/recipes/${slug}`;
-  const text = `Check out this ${title} recipe on Simply Millets!\n${url}`;
+  const text = shareText.replace('{title}', title) + `\n${url}`;
 
-  // Only use native share on mobile — on desktop go straight to WhatsApp
   if (isMobile() && navigator.share) {
-    navigator.share({ title, text, url }).catch(() => {
-      // User cancelled — do nothing
-    });
+    navigator.share({ title, text, url }).catch(() => {});
   } else {
     window.open(
       `https://wa.me/?text=${encodeURIComponent(text)}`,
@@ -31,18 +31,25 @@ function handleRecipeShare(title: string, slug: string) {
 }
 
 export default function ShareButton({ title, slug }: ShareButtonProps) {
+  const params = useParams();
+  const locale: Locale = isValidLocale(params.lang as string) ? (params.lang as Locale) : 'en';
+  const t = getTranslations(locale);
+
   return (
     <button
-      onClick={() => handleRecipeShare(title, slug)}
+      onClick={() => handleRecipeShare(title, slug, t.common.shareText)}
       className="inline-flex items-center justify-center gap-2 w-full px-5 py-2.5 rounded-lg border-2 border-forest-600 text-forest-400 hover:bg-forest-600 hover:text-white transition font-medium cursor-pointer"
     >
       <ShareIcon size={16} />
-      Share Recipe
+      {t.common.shareRecipe}
     </button>
   );
 }
 
 export function FloatingShareButton({ title, slug }: ShareButtonProps) {
+  const params = useParams();
+  const locale: Locale = isValidLocale(params.lang as string) ? (params.lang as Locale) : 'en';
+  const t = getTranslations(locale);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -64,10 +71,10 @@ export function FloatingShareButton({ title, slug }: ShareButtonProps) {
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.8 }}
           transition={{ duration: 0.2, ease: 'easeOut' }}
-          onClick={() => handleRecipeShare(title, slug)}
+          onClick={() => handleRecipeShare(title, slug, t.common.shareText)}
           className="fixed bottom-20 right-6 z-50 w-11 h-11 flex items-center justify-center rounded-full bg-forest-600 hover:bg-forest-700 text-white shadow-lg hover:shadow-xl transition-colors cursor-pointer"
-          aria-label="Share this recipe"
-          title="Share this recipe"
+          aria-label={t.common.shareRecipe}
+          title={t.common.shareRecipe}
         >
           <ShareIcon size={20} />
         </motion.button>

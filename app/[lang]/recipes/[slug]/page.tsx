@@ -98,8 +98,40 @@ export default async function RecipeDetailPage({ params }: PageProps) {
   const categoryLabel = t.recipeDetail.categories[recipe.category] ||
     recipe.category.charAt(0).toUpperCase() + recipe.category.slice(1);
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Recipe',
+    name: recipe.title,
+    description: recipe.description,
+    inLanguage: locale,
+    ...(recipe.imageFile && { image: `https://simplymillets.com${recipe.imageFile}` }),
+    prepTime: recipe.prepTime,
+    cookTime: recipe.cookTime,
+    recipeYield: `${recipe.servings}`,
+    recipeCategory: recipe.category,
+    recipeCuisine: recipe.cuisine,
+    recipeIngredient: recipe.ingredients.map((i) => `${i.item} — ${i.quantity}`),
+    recipeInstructions: recipe.instructions.map((step, i) => ({
+      '@type': 'HowToStep',
+      position: i + 1,
+      text: step,
+    })),
+    ...(recipe.nutritionPerServing && {
+      nutrition: {
+        '@type': 'NutritionInformation',
+        calories: `${recipe.nutritionPerServing.calories} cal`,
+        proteinContent: `${recipe.nutritionPerServing.protein_g} g`,
+        fiberContent: `${recipe.nutritionPerServing.fiber_g} g`,
+      },
+    }),
+  };
+
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <FloatingShareButton title={recipe.title} slug={recipe.slug} />
       <Breadcrumb locale={locale} />
 

@@ -1,6 +1,9 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
+import { useParams } from 'next/navigation';
+import type { Locale } from '@/lib/i18n';
+import { isValidLocale, getTranslations } from '@/lib/i18n';
 
 interface Section {
   id: string;
@@ -12,6 +15,9 @@ interface SidebarProps {
 }
 
 export default function Sidebar({ sections }: SidebarProps) {
+  const params = useParams();
+  const locale: Locale = isValidLocale(params.lang as string) ? (params.lang as Locale) : 'en';
+  const t = getTranslations(locale);
   const [activeId, setActiveId] = useState<string>('');
 
   useEffect(() => {
@@ -70,7 +76,7 @@ export default function Sidebar({ sections }: SidebarProps) {
     <aside className="hidden md:block sticky top-24 self-start w-56 lg:w-64 shrink-0">
       <nav aria-label="Table of contents">
         <h4 className="font-heading text-sm font-semibold text-earth-800 dark:text-earth-200 uppercase tracking-wider mb-3">
-          On This Page
+          {t.common.onThisPage}
         </h4>
         <ul className="space-y-0.5">
           {sections.map((section) => {

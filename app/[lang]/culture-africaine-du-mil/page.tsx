@@ -18,7 +18,7 @@ export async function generateMetadata({
   return {
     title: 'Culture africaine du mil | Simply Millets',
     description:
-      'Le mil en Afrique de l\'Ouest : traditions culinaires du Sahel, rôle dans la sécurité alimentaire, variétés régionales, cérémonies et importance économique pour 100 millions de personnes.',
+      'Le mil en Afrique de l\'Ouest : traditions culinaires du Sahel, sécurité alimentaire, variétés régionales et importance économique.',
     alternates: {
       canonical: '/fr/culture-africaine-du-mil',
       languages: { fr: '/fr/culture-africaine-du-mil' },

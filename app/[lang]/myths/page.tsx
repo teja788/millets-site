@@ -19,7 +19,9 @@ export async function generateMetadata({
     description:
       lang === 'te'
         ? 'చిరుధాన్యాల గురించి సాధారణ అపోహలు మరియు వాస్తవాలు. ఆధారాల ఆధారంగా నిజాలతో అపోహలను తొలగించండి.'
-        : 'Myths & Facts About Millets. Debunk common misconceptions with evidence-based facts.',
+        : lang === 'fr'
+          ? 'Mythes et réalités sur les millets. Déconstruisez les idées reçues grâce à des faits fondés sur la science.'
+          : 'Myths & Facts About Millets. Debunk common misconceptions with evidence-based facts.',
     alternates: {
       canonical: `/${lang}/myths`,
       languages: hreflangAlternates('/myths'),

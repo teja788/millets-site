@@ -169,14 +169,14 @@ export const globalMilletRegions: GlobalMilletRegion[] = [
         country: 'Inde',
         millet: 'Éleusine (Ragi)',
         description:
-          'Boule de farine d\'éleusine cuite, dense et légèrement élastique, servie en accompagnement des sambar et rasam dans le Karnataka et le Tamil Nadu. Le ragi mudde est pétri à la main jusqu\'à obtenir une consistance lisse et se consomme en morceaux trempés dans la sauce. Riche en calcium et en fer, c\'est un aliment de base apprécié des populations rurales et urbaines, devenu symbole de la fierté culinaire du Deccan.',
+          'Boule de farine d\'éleusine cuite, dense et légèrement élastique, servie en accompagnement de bouillons épicés de lentilles et de sauces poivrées dans le sud de l\'Inde. Le ragi mudde est pétri à la main jusqu\'à obtenir une consistance lisse et se consomme en morceaux trempés dans la sauce. Riche en calcium et en fer, c\'est un aliment de base apprécié des populations rurales et urbaines du sud de l\'Inde.',
       },
       {
         name: 'Bajra Roti',
         country: 'Inde',
         millet: 'Mil à chandelle (Bajra)',
         description:
-          'Pain plat non levé à base de farine de mil à chandelle, traditionnel du Rajasthan et du Gujarat. Le bajra roti est généralement cuit sur un tava (plaque chauffante) et servi enduit de ghee, accompagné de légumes épicés ou de dal. Sa saveur légèrement sucrée et sa texture rustique en font un compagnon idéal des repas d\'hiver, saison pendant laquelle le mil à chandelle est réputé réchauffer le corps selon l\'Ayurveda.',
+          'Pain plat non levé à base de farine de mil à chandelle, traditionnel du nord-ouest de l\'Inde. Le bajra roti est généralement cuit sur une plaque chauffante et servi enduit de beurre clarifié, accompagné de légumes épicés ou de lentilles. Sa saveur légèrement sucrée et sa texture rustique en font un compagnon idéal des repas d\'hiver, saison pendant laquelle le mil à chandelle est réputé réchauffer le corps.',
       },
       {
         name: 'Ragi Porridge (Kanji)',
@@ -197,7 +197,7 @@ export const globalMilletRegions: GlobalMilletRegion[] = [
         country: 'Inde',
         millet: 'Sorgho (Jowar)',
         description:
-          'Pain plat épais et sans levain, confectionné à la main à partir de farine de sorgho, aliment quotidien au Maharashtra et au Karnataka. Le jowar bhakri est façonné entre les paumes et cuit directement sur la flamme, développant une croûte croustillante et un intérieur moelleux. Accompagné de thecha (condiment pimenté) et de curd, il incarne la cuisine rustique et nourrissante du plateau du Deccan.',
+          'Pain plat épais et sans levain, confectionné à la main à partir de farine de sorgho, aliment quotidien dans le centre de l\'Inde. Le jowar bhakri est façonné entre les paumes et cuit directement sur la flamme, développant une croûte croustillante et un intérieur moelleux. Accompagné de condiment pimenté et de yaourt, il incarne la cuisine rustique et nourrissante du plateau du Deccan.',
       },
     ],
     historicalHighlights: [

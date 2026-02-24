@@ -16,7 +16,9 @@ export async function generateMetadata({
     description:
       lang === 'te'
         ? 'వివిధ ఆహార లక్ష్యాల కోసం చిరుధాన్యాల ఆధారిత 7-రోజుల భోజన ప్రణాళికలు.'
-        : 'Ready-to-follow 7-day meal plans designed around millets for different dietary goals.',
+        : lang === 'fr'
+          ? 'Plans de repas sur 7 jours à base de millets pour différents objectifs alimentaires.'
+          : 'Ready-to-follow 7-day meal plans designed around millets for different dietary goals.',
     alternates: {
       canonical: `/${lang}/meal-plans`,
       languages: hreflangAlternates('/meal-plans'),

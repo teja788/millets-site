@@ -16,7 +16,9 @@ export async function generateMetadata({
     description:
       lang === 'te'
         ? 'ప్రపంచవ్యాప్తంగా చిరుధాన్యాల చరిత్ర మరియు సంస్కృతిని అన్వేషించండి.'
-        : 'Explore how different cultures across the world have cultivated, cooked, and celebrated millets throughout history.',
+        : lang === 'fr'
+          ? 'Découvrez comment différentes cultures à travers le monde ont cultivé, cuisiné et célébré les millets au fil de l\'histoire.'
+          : 'Explore how different cultures across the world have cultivated, cooked, and celebrated millets throughout history.',
     alternates: {
       canonical: `/${lang}/global-millets`,
       languages: hreflangAlternates('/global-millets'),

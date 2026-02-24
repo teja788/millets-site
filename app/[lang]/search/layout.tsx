@@ -16,7 +16,9 @@ export async function generateMetadata({
     description:
       lang === 'te'
         ? 'చిరుధాన్యాలు, వంటకాలు, FAQ మరియు మరిన్నింటిలో శోధించండి.'
-        : 'Search across all millets, recipes, FAQ, and pages.',
+        : lang === 'fr'
+          ? 'Recherchez parmi tous les millets, recettes, FAQ et pages du site.'
+          : 'Search across all millets, recipes, FAQ, and pages.',
     alternates: {
       canonical: `/${lang}/search`,
       languages: hreflangAlternates('/search'),

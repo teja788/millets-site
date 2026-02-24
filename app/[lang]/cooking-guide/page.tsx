@@ -27,7 +27,9 @@ export async function generateMetadata({
     description:
       lang === 'te'
         ? 'చిరుధాన్యాలను వండడానికి సంపూర్ణ గైడ్: నీటి నిష్పత్తులు, నానబెట్టే సమయాలు, వంట పద్ధతులు, యాంటీన్యూట్రియెంట్లను తగ్గించడం, నిల్వ మరియు ప్రత్యామ్నాయ చిట్కాలు.'
-        : 'Complete guide to cooking millets: water ratios, soaking times, cooking methods (stovetop, pressure cooker, rice cooker), reducing antinutrients, storage, and substitution tips.',
+        : lang === 'fr'
+          ? 'Guide complet de cuisson des millets : proportions d\'eau, temps de trempage, méthodes de cuisson, réduction des antinutriments, conservation et substitutions.'
+          : 'Complete guide to cooking millets: water ratios, soaking times, cooking methods (stovetop, pressure cooker, rice cooker), reducing antinutrients, storage, and substitution tips.',
     alternates: {
       canonical: `/${lang}/cooking-guide`,
       languages: hreflangAlternates('/cooking-guide'),
@@ -63,24 +65,28 @@ export default async function CookingGuidePage({
         <p className="text-lg text-earth-700 dark:text-earth-300 max-w-3xl mb-12 leading-relaxed">
           {locale === 'te'
             ? 'ఇంట్లో చిరుధాన్యాలను తయారు చేయడం గురించి మీరు తెలుసుకోవలసిన ప్రతిదీ -- నీటి నిష్పత్తులు మరియు నానబెట్టే సమయాల నుండి వంట పద్ధతులు మరియు నిల్వ వరకు. మీరు మొదటిసారి చిరుధాన్యాల వంట చేసేవారైనా లేదా మీ టెక్నిక్‌ను మెరుగుపరచుకోవాలనుకున్నా, ఈ గైడ్ అన్ని అవసరాలను కవర్ చేస్తుంది.'
-            : 'Everything you need to know about preparing millets at home -- from water ratios and soaking times to cooking methods and storage. Whether you are a first-time millet cook or looking to refine your technique, this guide covers all the essentials.'}
+            : locale === 'fr'
+              ? 'Tout ce qu\'il faut savoir pour préparer les millets chez vous — proportions d\'eau, temps de trempage, méthodes de cuisson et conservation. Que vous cuisiniez les millets pour la première fois ou souhaitiez perfectionner votre technique, ce guide couvre l\'essentiel.'
+              : 'Everything you need to know about preparing millets at home -- from water ratios and soaking times to cooking methods and storage. Whether you are a first-time millet cook or looking to refine your technique, this guide covers all the essentials.'}
         </p>
 
         {/* Water-to-Millet Ratios */}
         <section className="mb-14">
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-earth-800 dark:text-earth-100 mb-4">
-            {locale === 'te' ? 'నీరు-చిరుధాన్యం నిష్పత్తులు' : 'Water-to-Millet Ratios'}
+            {locale === 'te' ? 'నీరు-చిరుధాన్యం నిష్పత్తులు' : locale === 'fr' ? 'Proportions eau/millet' : 'Water-to-Millet Ratios'}
           </h2>
           <p className="text-earth-800 dark:text-earth-200 leading-relaxed mb-6 max-w-3xl">
             {locale === 'te'
               ? 'చిరుధాన్యాలు వండడంలో నీటి నిష్పత్తి సరిగ్గా ఉండటం అత్యంత ముఖ్యమైన దశ. ఎక్కువ నీరు వాటిని మెత్తగా చేస్తుంది; తక్కువ నీరు వాటిని గట్టిగా ఉంచుతుంది.'
-              : 'Getting the water ratio right is the most important step in cooking millets. Too much water makes them mushy; too little leaves them crunchy.'}
+              : locale === 'fr'
+                ? 'La bonne proportion d\'eau est l\'étape la plus importante dans la cuisson des millets. Trop d\'eau les rend pâteux ; pas assez les laisse croquants.'
+                : 'Getting the water ratio right is the most important step in cooking millets. Too much water makes them mushy; too little leaves them crunchy.'}
           </p>
           <Table>
             <TableHead>
               <TableRow>
                 <TableHeaderCell>
-                  {locale === 'te' ? 'చిరుధాన్యం' : 'Millet'}
+                  {locale === 'te' ? 'చిరుధాన్యం' : locale === 'fr' ? 'Millet' : 'Millet'}
                 </TableHeaderCell>
                 <TableHeaderCell>{t.milletDetail.waterRatio}</TableHeaderCell>
                 <TableHeaderCell>{t.milletDetail.soakingTime}</TableHeaderCell>
@@ -105,7 +111,7 @@ export default async function CookingGuidePage({
         {/* Soaking Guide */}
         <section className="mb-14">
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-earth-800 dark:text-earth-100 mb-4">
-            {locale === 'te' ? 'నానబెట్టే గైడ్' : 'Soaking Guide'}
+            {locale === 'te' ? 'నానబెట్టే గైడ్' : locale === 'fr' ? 'Guide de trempage' : 'Soaking Guide'}
           </h2>
           <div className="max-w-3xl space-y-4 text-earth-800 dark:text-earth-200 leading-relaxed mb-6">
             <p>
@@ -115,6 +121,10 @@ export default async function CookingGuidePage({
                   ఉద్దేశ్యాలను నెరవేరుస్తుంది: ఇది వ్యతిరేక పోషక కారకాలను (ముఖ్యంగా ఫైటిక్
                   ఆమ్లం, సరైన నానబెట్టడంతో 20-50% తగ్గించవచ్చు) తగ్గిస్తుంది మరియు వేగవంతమైన,
                   సమానమైన వంటకు ధాన్యాన్ని మెత్తగా చేస్తుంది.
+                </>
+              ) : locale === 'fr' ? (
+                <>
+                  <strong>Pourquoi tremper les millets ?</strong> Le trempage remplit deux fonctions importantes : il réduit les facteurs antinutritionnels (notamment l&apos;acide phytique, réduit de 20 à 50 % par un bon trempage) et il ramollit le grain pour une cuisson plus rapide et plus uniforme. L&apos;acide phytique se lie aux minéraux comme le fer, le calcium et le zinc, réduisant leur biodisponibilité. Le trempage libère ces minéraux pour une meilleure absorption.
                 </>
               ) : (
                 <>
@@ -130,47 +140,57 @@ export default async function CookingGuidePage({
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
             <div className="bg-forest-50 dark:bg-earth-800 rounded-xl p-6">
               <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-2">
-                {locale === 'te' ? 'త్వరిత నానబెట్టడం (30 ని - 2 గంటలు)' : 'Quick Soak (30 min - 2 hours)'}
+                {locale === 'te' ? 'త్వరిత నానబెట్టడం (30 ని - 2 గంటలు)' : locale === 'fr' ? 'Trempage rapide (30 min - 2 h)' : 'Quick Soak (30 min - 2 hours)'}
               </h3>
               <p className="text-earth-800 dark:text-earth-200 text-sm leading-relaxed mb-3">
                 {locale === 'te'
                   ? 'చాలా చిన్న చిరుధాన్యాలకు అనుకూలం: కొర్రలు, సామలు, ఆరికెలు, ఊదలు, అండు కొర్రలు మరియు వరిగలు. బాగా కడిగి, గది ఉష్ణోగ్రత నీటిలో నానబెట్టి, వంట చేయడానికి ముందు నీరు వంపేయండి.'
-                  : 'Suitable for most small millets: foxtail, little, kodo, barnyard, browntop, and proso millet. Rinse thoroughly, soak in room temperature water, then drain before cooking.'}
+                  : locale === 'fr'
+                    ? 'Convient à la plupart des petits millets : millet des oiseaux, petit mil, kodo, millet japonais, browntop et millet commun. Rincez soigneusement, trempez dans de l\'eau à température ambiante, puis égouttez avant la cuisson.'
+                    : 'Suitable for most small millets: foxtail, little, kodo, barnyard, browntop, and proso millet. Rinse thoroughly, soak in room temperature water, then drain before cooking.'}
               </p>
             </div>
             <div className="bg-forest-50 dark:bg-earth-800 rounded-xl p-6">
               <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-2">
-                {locale === 'te' ? 'దీర్ఘకాలం నానబెట్టడం (6-8 గంటలు / రాత్రంతా)' : 'Long Soak (6-8 hours / overnight)'}
+                {locale === 'te' ? 'దీర్ఘకాలం నానబెట్టడం (6-8 గంటలు / రాత్రంతా)' : locale === 'fr' ? 'Trempage long (6-8 h / une nuit)' : 'Long Soak (6-8 hours / overnight)'}
               </h3>
               <p className="text-earth-800 dark:text-earth-200 text-sm leading-relaxed mb-3">
                 {locale === 'te'
                   ? 'మొత్తం ధాన్యంగా వండేటప్పుడు జొన్నలు మరియు సజ్జలకు సిఫార్సు చేయబడింది. గరిష్ట ఫైటిక్ ఆమ్లం తగ్గింపు కోరుకుంటే కూడా సిఫార్సు చేయబడింది. రాత్రంతా నానబెట్టి, నీరు వంపేసి, వంట చేయడానికి ముందు కడగండి.'
-                  : 'Recommended for whole grain sorghum and pearl millet when cooking as whole grains (not flour). Also recommended if you want maximum phytic acid reduction. Soak overnight, drain, and rinse before cooking.'}
+                  : locale === 'fr'
+                    ? 'Recommandé pour le sorgho et le mil à chandelle lorsqu\'ils sont cuisinés en grains entiers. Également recommandé pour une réduction maximale de l\'acide phytique. Trempez toute la nuit, égouttez et rincez avant la cuisson.'
+                    : 'Recommended for whole grain sorghum and pearl millet when cooking as whole grains (not flour). Also recommended if you want maximum phytic acid reduction. Soak overnight, drain, and rinse before cooking.'}
               </p>
             </div>
           </div>
           <div className="mt-4 max-w-3xl">
             <h4 className="font-semibold text-earth-800 dark:text-earth-100 mb-2">
-              {locale === 'te' ? 'నానబెట్టే చిట్కాలు' : 'Soaking Tips'}
+              {locale === 'te' ? 'నానబెట్టే చిట్కాలు' : locale === 'fr' ? 'Conseils de trempage' : 'Soaking Tips'}
             </h4>
             <ul className="space-y-2 text-earth-800 dark:text-earth-200 text-sm">
               <li className="flex items-start gap-3">
                 <span className="text-warm-gray dark:text-earth-400 flex-shrink-0">&#8226;</span>
                 {locale === 'te'
                   ? 'ఎల్లప్పుడూ నానబెట్టిన నీటిని పారేసి, వంట చేయడానికి ముందు చిరుధాన్యాన్ని కడగండి.'
-                  : 'Always discard the soaking water and rinse the millet before cooking.'}
+                  : locale === 'fr'
+                    ? 'Jetez toujours l\'eau de trempage et rincez le millet avant la cuisson.'
+                    : 'Always discard the soaking water and rinse the millet before cooking.'}
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-warm-gray dark:text-earth-400 flex-shrink-0">&#8226;</span>
                 {locale === 'te'
                   ? 'నానబెట్టే నీటికి ఒక టేబుల్ స్పూన్ నిమ్మరసం లేదా ఆపిల్ సైడర్ వెనిగర్ కలపడం ఫైటిక్ ఆమ్లం తగ్గింపును మరింత మెరుగుపరుస్తుంది.'
-                  : 'Adding a tablespoon of lemon juice or apple cider vinegar to the soaking water can further enhance phytic acid reduction.'}
+                  : locale === 'fr'
+                    ? 'Ajouter une cuillère à soupe de jus de citron ou de vinaigre de cidre à l\'eau de trempage peut renforcer la réduction de l\'acide phytique.'
+                    : 'Adding a tablespoon of lemon juice or apple cider vinegar to the soaking water can further enhance phytic acid reduction.'}
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-warm-gray dark:text-earth-400 flex-shrink-0">&#8226;</span>
                 {locale === 'te'
                   ? 'వేడి వాతావరణంలో, పులియడం నిరోధించడానికి ఫ్రిజ్‌లో నానబెట్టండి (దోస పిండికి పులియడం కావాలంటే తప్ప).'
-                  : 'In hot weather, soak in the refrigerator to prevent fermentation (unless fermentation is desired, as for dosa batter).'}
+                  : locale === 'fr'
+                    ? 'Par temps chaud, trempez au réfrigérateur pour éviter la fermentation (sauf si la fermentation est souhaitée, comme pour la pâte à dosa).'
+                    : 'In hot weather, soak in the refrigerator to prevent fermentation (unless fermentation is desired, as for dosa batter).'}
               </li>
             </ul>
           </div>
@@ -179,12 +199,12 @@ export default async function CookingGuidePage({
         {/* Cooking Methods */}
         <section className="mb-14">
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-earth-800 dark:text-earth-100 mb-4">
-            {locale === 'te' ? 'వంట పద్ధతులు' : 'Cooking Methods'}
+            {locale === 'te' ? 'వంట పద్ధతులు' : locale === 'fr' ? 'Méthodes de cuisson' : 'Cooking Methods'}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-cream dark:bg-earth-800 rounded-xl card-shadow p-6">
               <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-3">
-                {locale === 'te' ? 'స్టవ్ టాప్' : 'Stovetop'}
+                {locale === 'te' ? 'స్టవ్ టాప్' : locale === 'fr' ? 'Sur la cuisinière' : 'Stovetop'}
               </h3>
               <ol className="space-y-2 text-earth-800 dark:text-earth-200 text-sm list-decimal list-inside">
                 {locale === 'te' ? (
@@ -195,6 +215,15 @@ export default async function CookingGuidePage({
                     <li>వేడిని అతి తక్కువకు తగ్గించి గట్టిగా మూత పెట్టండి.</li>
                     <li>సిఫార్సు చేసిన సమయం వరకు మూత తీయకుండా వండండి.</li>
                     <li>వేడి ఆపి, 5 నిమిషాలు మూత తీయకుండా ఉంచి, ఫోర్క్‌తో తేలికగా విప్పండి.</li>
+                  </>
+                ) : locale === 'fr' ? (
+                  <>
+                    <li>Rincez et égouttez soigneusement le millet.</li>
+                    <li>Portez la quantité d&apos;eau appropriée à ébullition dans une casserole à fond épais.</li>
+                    <li>Ajoutez le millet et une pincée de sel. Remuez une fois.</li>
+                    <li>Réduisez le feu au minimum et couvrez hermétiquement.</li>
+                    <li>Cuisez pendant le temps recommandé sans soulever le couvercle.</li>
+                    <li>Éteignez le feu, laissez reposer couvert 5 minutes, puis égrainez à la fourchette.</li>
                   </>
                 ) : (
                   <>
@@ -210,7 +239,7 @@ export default async function CookingGuidePage({
             </div>
             <div className="bg-cream dark:bg-earth-800 rounded-xl card-shadow p-6">
               <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-3">
-                {locale === 'te' ? 'ప్రెషర్ కుక్కర్' : 'Pressure Cooker'}
+                {locale === 'te' ? 'ప్రెషర్ కుక్కర్' : locale === 'fr' ? 'Autocuiseur' : 'Pressure Cooker'}
               </h3>
               <ol className="space-y-2 text-earth-800 dark:text-earth-200 text-sm list-decimal list-inside">
                 {locale === 'te' ? (
@@ -220,6 +249,14 @@ export default async function CookingGuidePage({
                     <li>మూత మూసి మధ్యస్థ వేడిపై 2-3 విజిల్స్ వండండి.</li>
                     <li>వేడి ఆపి ఒత్తిడి సహజంగా తగ్గనివ్వండి (బలవంతంగా తెరవకండి).</li>
                     <li>మూత తెరిచి ఫోర్క్‌తో తేలికగా విప్పండి.</li>
+                  </>
+                ) : locale === 'fr' ? (
+                  <>
+                    <li>Rincez et égouttez le millet.</li>
+                    <li>Ajoutez le millet, l&apos;eau (même proportion) et le sel dans l&apos;autocuiseur.</li>
+                    <li>Fermez le couvercle et cuisez à feu moyen pendant 2-3 sifflements.</li>
+                    <li>Éteignez le feu et laissez la pression se relâcher naturellement (ne pas forcer l&apos;ouverture).</li>
+                    <li>Ouvrez le couvercle et égrainez délicatement à la fourchette.</li>
                   </>
                 ) : (
                   <>
@@ -234,12 +271,14 @@ export default async function CookingGuidePage({
               <p className="text-xs text-warm-gray dark:text-earth-400 mt-3 italic">
                 {locale === 'te'
                   ? 'ప్రెషర్ వంట వేగవంతమైనది మరియు సజ్జలు మరియు జొన్నలకు ముఖ్యంగా బాగా పని చేస్తుంది.'
-                  : 'Pressure cooking is faster and works especially well for pearl millet and sorghum.'}
+                  : locale === 'fr'
+                    ? 'La cuisson sous pression est plus rapide et fonctionne particulièrement bien pour le mil à chandelle et le sorgho.'
+                    : 'Pressure cooking is faster and works especially well for pearl millet and sorghum.'}
               </p>
             </div>
             <div className="bg-cream dark:bg-earth-800 rounded-xl card-shadow p-6">
               <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-3">
-                {locale === 'te' ? 'రైస్ కుక్కర్' : 'Rice Cooker'}
+                {locale === 'te' ? 'రైస్ కుక్కర్' : locale === 'fr' ? 'Cuiseur à riz' : 'Rice Cooker'}
               </h3>
               <ol className="space-y-2 text-earth-800 dark:text-earth-200 text-sm list-decimal list-inside">
                 {locale === 'te' ? (
@@ -250,6 +289,15 @@ export default async function CookingGuidePage({
                     <li>మూత మూసి సాధారణ వంట చక్రం ప్రారంభించండి.</li>
                     <li>కుక్కర్ &ldquo;వార్మ్&rdquo;కు మారిన తర్వాత, 10 నిమిషాలు ఉంచండి.</li>
                     <li>తెరిచి ఫోర్క్‌తో విప్పండి. వడ్డించండి.</li>
+                  </>
+                ) : locale === 'fr' ? (
+                  <>
+                    <li>Rincez et égouttez le millet.</li>
+                    <li>Ajoutez le millet et l&apos;eau dans le bol du cuiseur à riz selon la proportion recommandée.</li>
+                    <li>Ajoutez une pincée de sel et une cuillère à café d&apos;huile ou de beurre clarifié.</li>
+                    <li>Fermez le couvercle et lancez le cycle de cuisson normal.</li>
+                    <li>Une fois que le cuiseur passe en mode &laquo;&nbsp;maintien au chaud&nbsp;&raquo;, laissez reposer 10 minutes.</li>
+                    <li>Ouvrez et égrainez à la fourchette. Servez.</li>
                   </>
                 ) : (
                   <>
@@ -265,7 +313,9 @@ export default async function CookingGuidePage({
               <p className="text-xs text-warm-gray dark:text-earth-400 mt-3 italic">
                 {locale === 'te'
                   ? 'కొర్రలు, సామలు, ఊదలు మరియు ఆరికెలకు బాగా పని చేస్తుంది.'
-                  : 'Works well for foxtail, little, barnyard, and kodo millets.'}
+                  : locale === 'fr'
+                    ? 'Fonctionne bien pour le millet des oiseaux, le petit mil, le millet japonais et le kodo.'
+                    : 'Works well for foxtail, little, barnyard, and kodo millets.'}
               </p>
             </div>
           </div>
@@ -274,32 +324,38 @@ export default async function CookingGuidePage({
         {/* Reducing Antinutrients */}
         <section className="mb-14">
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-earth-800 dark:text-earth-100 mb-4">
-            {locale === 'te' ? 'యాంటీన్యూట్రియెంట్లను తగ్గించడం' : 'Reducing Antinutrients'}
+            {locale === 'te' ? 'యాంటీన్యూట్రియెంట్లను తగ్గించడం' : locale === 'fr' ? 'Réduire les antinutriments' : 'Reducing Antinutrients'}
           </h2>
           <p className="text-earth-800 dark:text-earth-200 leading-relaxed mb-6 max-w-3xl">
             {locale === 'te'
               ? 'చిరుధాన్యాలలో ఫైటిక్ ఆమ్లం మరియు టానిన్లు ఉంటాయి, ఇవి ఖనిజాల శోషణను తగ్గిస్తాయి. ఈ సాధారణ సాంప్రదాయ ప్రాసెసింగ్ పద్ధతులు ఈ సమ్మేళనాలను గణనీయంగా తగ్గిస్తాయి:'
-              : 'Millets contain phytic acid and tannins that can reduce mineral absorption. These simple traditional processing methods significantly reduce these compounds:'}
+              : locale === 'fr'
+                ? 'Les millets contiennent de l\'acide phytique et des tanins qui peuvent réduire l\'absorption des minéraux. Ces méthodes de transformation traditionnelles réduisent significativement ces composés :'
+                : 'Millets contain phytic acid and tannins that can reduce mineral absorption. These simple traditional processing methods significantly reduce these compounds:'}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
             <div className="bg-forest-50 dark:bg-earth-800 rounded-xl p-6">
               <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-2">
-                {locale === 'te' ? 'నానబెట్టడం' : 'Soaking'}
+                {locale === 'te' ? 'నానబెట్టడం' : locale === 'fr' ? 'Trempage' : 'Soaking'}
               </h3>
               <p className="text-earth-800 dark:text-earth-200 text-sm leading-relaxed">
                 {locale === 'te'
                   ? '6-8 గంటలు చిరుధాన్యాలను నానబెట్టడం ఫైటిక్ ఆమ్లాన్ని 20-50% తగ్గిస్తుంది. నీరు ధాన్యం స్వంత ఫైటేజ్ ఎంజైమ్‌లను ఉత్తేజపరుస్తుంది. ఎల్లప్పుడూ నానబెట్టిన నీటిని పారేయండి.'
-                  : 'Soaking millets for 6-8 hours reduces phytic acid content by 20-50%. The water activates the grain\'s own phytase enzymes, which break down phytic acid. Always discard the soaking water.'}
+                  : locale === 'fr'
+                    ? 'Tremper les millets pendant 6 à 8 heures réduit la teneur en acide phytique de 20 à 50 %. L\'eau active les propres enzymes phytases du grain, qui décomposent l\'acide phytique. Jetez toujours l\'eau de trempage.'
+                    : 'Soaking millets for 6-8 hours reduces phytic acid content by 20-50%. The water activates the grain\'s own phytase enzymes, which break down phytic acid. Always discard the soaking water.'}
               </p>
             </div>
             <div className="bg-forest-50 dark:bg-earth-800 rounded-xl p-6">
               <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-2">
-                {locale === 'te' ? 'మొలకెత్తించడం' : 'Germination / Sprouting'}
+                {locale === 'te' ? 'మొలకెత్తించడం' : locale === 'fr' ? 'Germination' : 'Germination / Sprouting'}
               </h3>
               <p className="text-earth-800 dark:text-earth-200 text-sm leading-relaxed">
                 {locale === 'te'
                   ? '24-48 గంటలు చిరుధాన్యాలను మొలకెత్తించడం అత్యంత ప్రభావవంతమైన పద్ధతులలో ఒకటి. ఇది ఫైటిక్ ఆమ్లాన్ని 60-70% వరకు తగ్గిస్తుంది, అదే సమయంలో విటమిన్ C, B విటమిన్లు మరియు మొత్తం ప్రోటీన్ జీర్ణసామర్థ్యాన్ని పెంచుతుంది.'
-                  : 'Sprouting millets for 24-48 hours is one of the most effective methods. It can reduce phytic acid by up to 60-70% while also increasing vitamin C, B vitamins, and overall protein digestibility. Finger millet (ragi) sprouts particularly well.'}
+                  : locale === 'fr'
+                    ? 'Faire germer les millets pendant 24 à 48 heures est l\'une des méthodes les plus efficaces. Cela peut réduire l\'acide phytique jusqu\'à 60-70 % tout en augmentant la vitamine C, les vitamines B et la digestibilité globale des protéines. L\'éleusine (ragi) germe particulièrement bien.'
+                    : 'Sprouting millets for 24-48 hours is one of the most effective methods. It can reduce phytic acid by up to 60-70% while also increasing vitamin C, B vitamins, and overall protein digestibility. Finger millet (ragi) sprouts particularly well.'}
               </p>
             </div>
             <div className="bg-forest-50 dark:bg-earth-800 rounded-xl p-6">
