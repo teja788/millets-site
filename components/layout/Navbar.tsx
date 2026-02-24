@@ -59,13 +59,19 @@ export default function Navbar({ locale }: { locale: Locale }) {
         { href: localePath(locale, '/faq'), label: t.nav.faq },
         { href: localePath(locale, '/myths'), label: t.nav.mythsFacts },
         { href: localePath(locale, '/buying-guide'), label: t.nav.buyingGuide },
+        ...(locale === 'fr' ? [
+          { href: localePath(locale, '/nutrition-et-sante'), label: 'Nutrition et santé' },
+          { href: localePath(locale, '/millet-vs-quinoa'), label: 'Millet vs Quinoa' },
+          { href: localePath(locale, '/ou-acheter-du-millet'), label: 'Où acheter du millet' },
+        ] : []),
       ],
     },
     {
       label: t.nav.culture,
       links: [
         { href: localePath(locale, '/history'), label: t.nav.history },
-        { href: localePath(locale, '/ayurveda'), label: t.nav.ayurveda },
+        ...(locale !== 'fr' ? [{ href: localePath(locale, '/ayurveda'), label: t.nav.ayurveda }] : []),
+        ...(locale === 'fr' ? [{ href: localePath(locale, '/culture-africaine-du-mil'), label: 'Culture africaine du mil' }] : []),
         { href: localePath(locale, '/regional-traditions'), label: t.nav.regionalTraditions },
         { href: localePath(locale, '/global-millets'), label: t.nav.globalMillets },
         { href: localePath(locale, '/fermentation'), label: t.nav.fermentation },

@@ -86,7 +86,7 @@ export const faqItems: FAQItem[] = [
     id: 'most-calcium-millet',
     question: 'Quel millet contient le plus de calcium ?',
     answer:
-      'L\u2019éleusine (mil rouge, ou ragi en Inde) détient le record de calcium parmi toutes les céréales couramment consommées, avec environ 344 mg pour 100 g selon les tables de composition alimentaire de l\u2019ICMR-NIN. C\u2019est plus de 30 fois la teneur du riz blanc (10 mg/100 g) et environ 8 fois celle du blé complet (41 mg/100 g). À titre de comparaison, un verre de lait (200 ml) apporte environ 240 mg de calcium. L\u2019éleusine est donc particulièrement recommandée pour les enfants en croissance, les femmes enceintes, les personnes âgées et celles qui suivent un régime végétalien pour couvrir leurs besoins en calcium.',
+      'L\u2019éleusine (mil rouge, ou ragi en Inde) détient le record de calcium parmi toutes les céréales couramment consommées, avec environ 344 mg pour 100 g selon les tables de composition alimentaire (ANSES/USDA). C\u2019est plus de 30 fois la teneur du riz blanc (10 mg/100 g) et environ 8 fois celle du blé complet (41 mg/100 g). À titre de comparaison, un verre de lait (200 ml) apporte environ 240 mg de calcium. L\u2019éleusine est donc particulièrement recommandée pour les enfants en croissance, les femmes enceintes, les personnes âgées et celles qui suivent un régime végétalien pour couvrir leurs besoins en calcium.',
     category: 'Nutrition',
     relatedMillets: ['finger-millet'],
   },

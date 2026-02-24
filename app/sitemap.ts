@@ -74,6 +74,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   });
 
+  // French-only pages
+  const frenchOnlyRoutes = ['/nutrition-et-sante', '/millet-vs-quinoa', '/culture-africaine-du-mil', '/ou-acheter-du-millet'];
+  for (const route of frenchOnlyRoutes) {
+    entries.push({
+      url: `${BASE_URL}/fr${route}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    });
+  }
+
   // Dynamic millet pages (all locales)
   for (const millet of millets) {
     for (const locale of locales) {

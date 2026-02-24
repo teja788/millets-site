@@ -81,6 +81,7 @@ import { mealPlans as frMealPlans, getMealPlanBySlug as frGetMealPlanBySlug } fr
 import { substitutionEntries as frSubstitutionEntries } from '@/data/fr/substitution-data';
 import { ancientReferences as frAncientReferences } from '@/data/fr/ancient-references';
 import { searchIndex as frSearchIndex } from '@/data/fr/search-index';
+import { sources as frSources } from '@/data/fr/sources';
 
 // Locale-aware getters
 export function getMillets(locale: Locale): Millet[] {
@@ -121,8 +122,10 @@ export function getRecipesByMilletLocale(milletSlug: string, locale: Locale): Re
 }
 
 export function getSources(locale: Locale) {
-  // Sources are academic references, same for all locales
-  return enSources;
+  switch (locale) {
+    case 'fr': return frSources;
+    default: return enSources;
+  }
 }
 
 export function getFaqItems(locale: Locale): FAQItem[] {

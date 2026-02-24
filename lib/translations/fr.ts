@@ -75,6 +75,10 @@ export const fr: TranslationKeys = {
     'substitution-calculator': 'Calculateur de substitution',
     'cooking-timer': 'Minuteur de cuisson',
     'privacy-policy': 'Politique de confidentialité',
+    'nutrition-et-sante': 'Nutrition et santé',
+    'millet-vs-quinoa': 'Millet vs Quinoa',
+    'culture-africaine-du-mil': 'Culture africaine du mil',
+    'ou-acheter-du-millet': 'Où acheter du millet',
     contact: 'Contact',
     search: 'Rechercher',
   },
@@ -418,7 +422,7 @@ export const fr: TranslationKeys = {
   // Ayurveda page
   ayurvedaPage: {
     title: 'Millets et nutrition traditionnelle',
-    doshaGuide: 'Guide des Doshas',
+    doshaGuide: 'Profils santé',
     seasonalGuide: 'Guide saisonnier',
     recommended: 'Recommandé',
     moderate: 'À consommer avec modération',

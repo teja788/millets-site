@@ -16,7 +16,8 @@ export default function Footer({ locale }: { locale: Locale }) {
 
   const learnMoreLinks = [
     { href: localePath(locale, '/history'), label: t.nav.history },
-    { href: localePath(locale, '/ayurveda'), label: t.nav.ayurveda },
+    ...(locale !== 'fr' ? [{ href: localePath(locale, '/ayurveda'), label: t.nav.ayurveda }] : []),
+    ...(locale === 'fr' ? [{ href: localePath(locale, '/culture-africaine-du-mil'), label: 'Culture africaine du mil' }] : []),
     { href: localePath(locale, '/regional-traditions'), label: t.nav.regionalTraditions },
     { href: localePath(locale, '/global-millets'), label: t.nav.globalMillets },
     { href: localePath(locale, '/fermentation'), label: t.nav.fermentation },
@@ -35,6 +36,11 @@ export default function Footer({ locale }: { locale: Locale }) {
     ...(locale === 'en' ? [{ href: localePath(locale, '/about'), label: t.nav.about }] : []),
     { href: localePath(locale, '/privacy-policy'), label: t.nav.privacyPolicy },
     ...(locale === 'en' ? [{ href: localePath(locale, '/contact'), label: t.nav.contact }] : []),
+    ...(locale === 'fr' ? [
+      { href: localePath(locale, '/nutrition-et-sante'), label: 'Nutrition et santé' },
+      { href: localePath(locale, '/millet-vs-quinoa'), label: 'Millet vs Quinoa' },
+      { href: localePath(locale, '/ou-acheter-du-millet'), label: 'Où acheter du millet' },
+    ] : []),
   ];
 
   return (

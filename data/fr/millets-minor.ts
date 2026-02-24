@@ -49,14 +49,14 @@ export const minorMillets: Millet[] = [
       phosphorus_mg: 188,
       magnesium_mg: 122,
       potassium_mg: 144,
-      source: 'ICMR-NIN IFCT 2017 / USDA FoodData Central',
-      sourceDetail: 'Indian Food Composition Tables (NIN, Hyderabad) et USDA FoodData Central',
+      source: 'ANSES Table Ciqual / USDA FoodData Central',
+      sourceDetail: 'Table Ciqual (ANSES) et USDA FoodData Central',
     },
 
     glycemicIndex: {
       value: 48,
       category: 'low',
-      source: 'Gopalan et al., Nutritive Value of Indian Foods, NIN',
+      source: 'International Tables of Glycemic Index and Glycemic Load Values, 2021',
     },
 
     ayurveda: {
@@ -95,9 +95,9 @@ export const minorMillets: Millet[] = [
     },
 
     cultivation: {
-      majorStates: ['Tamil Nadu', 'Madhya Pradesh', 'Chhattisgarh', 'Maharashtra', 'Karnataka'],
+      majorStates: ['Inde (centre et sud)', 'Asie du Sud-Est', 'Afrique de l\'Ouest'],
       globalRegions: ['Asie du Sud (Inde)', 'Asie du Sud-Est', 'Afrique de l\'Ouest'],
-      growingSeason: 'Kharif (juin-octobre) / Saison des pluies',
+      growingSeason: 'Saison des pluies (juin-octobre)',
       waterRequirement: '400-500 mm de pluie',
       soilType: 'Sols graveleux, latéritiques et peu profonds ; pousse bien en sols pauvres',
       harvestDays: '90-120 jours',
@@ -132,14 +132,14 @@ export const minorMillets: Millet[] = [
         description:
           'Avec 9,0 g de fibres pour 100 g, le millet kodo favorise un transit intestinal régulier, soutient la santé du microbiote et peut contribuer au maintien d\'un taux de cholestérol sain.',
         evidenceLevel: 'well-established',
-        source: 'ICMR-NIN IFCT 2017',
+        source: 'ANSES Table Ciqual / USDA FoodData Central',
       },
       {
         benefit: 'Faible apport calorique',
         description:
           'A 309 calories pour 100 g, le millet kodo présente la valeur énergétique la plus basse parmi les millets couramment consommés, ce qui le rend particulièrement adapté aux régimes de gestion du poids.',
         evidenceLevel: 'well-established',
-        source: 'ICMR-NIN IFCT 2017',
+        source: 'ANSES Table Ciqual / USDA FoodData Central',
       },
       {
         benefit: 'Indice glycémique bas favorable au contrôle de la glycémie',
@@ -170,10 +170,10 @@ export const minorMillets: Millet[] = [
       'galettes-croustillantes-millet',
     ],
     sources: [
-      'icmr-nin-ifct-2017',
-      'charaka-samhita',
-      'gopalan-nutritive-value-indian-foods',
-      'icar-small-millets-handbook',
+      'anses-ciqual',
+      'usda-fdc',
+      'fao-millets-nutrition',
+      'ren-millets-polyphenols-2016',
     ],
   },
 
@@ -226,7 +226,7 @@ export const minorMillets: Millet[] = [
       magnesium_mg: 82,
       potassium_mg: 180,
       source: 'Littérature scientifique publiée',
-      sourceDetail: 'Données ICMR-NIN complétées par la littérature de recherche publiée',
+      sourceDetail: 'Données ANSES/USDA complétées par la littérature de recherche publiée',
     },
 
     glycemicIndex: {
@@ -271,9 +271,9 @@ export const minorMillets: Millet[] = [
     },
 
     cultivation: {
-      majorStates: ['Uttarakhand', 'Tamil Nadu', 'Madhya Pradesh', 'Chhattisgarh'],
+      majorStates: ['Inde (Uttarakhand)', 'Japon', 'Népal', 'Asie du Sud-Est'],
       globalRegions: ['Asie du Sud (Inde, Népal)', 'Japon', 'Asie du Sud-Est'],
-      growingSeason: 'Kharif (juin-septembre) / Saison des pluies',
+      growingSeason: 'Saison des pluies (juin-septembre)',
       waterRequirement: '350-500 mm de pluie',
       soilType: 'Pousse dans les sols marginaux, inondables et même salins',
       harvestDays: '60-90 jours (le millet à croissance la plus rapide)',
@@ -301,7 +301,7 @@ export const minorMillets: Millet[] = [
         description:
           'Le millet japonais contient 9,8 g de fibres pour 100 g, la teneur la plus élevée parmi les millets couramment disponibles. Cette richesse en fibres soutient la santé digestive, favorise la satiété et contribue au maintien d\'un bon taux de cholestérol.',
         evidenceLevel: 'well-established',
-        source: 'ICMR-NIN / published literature',
+        source: 'USDA FoodData Central / littérature scientifique publiée',
       },
       {
         benefit: 'Indice glycémique le plus bas parmi les millets',
@@ -315,7 +315,7 @@ export const minorMillets: Millet[] = [
         description:
           'Avec 5,0 mg de fer pour 100 g, le millet japonais constitue une source végétale appréciable de fer, contribuant à la prévention de l\'anémie, particulièrement importante dans les régimes végétariens et végétaliens.',
         evidenceLevel: 'well-established',
-        source: 'ICMR-NIN / published literature',
+        source: 'USDA FoodData Central / littérature scientifique publiée',
       },
       {
         benefit: 'Céréale légère et digestible',
@@ -345,10 +345,10 @@ export const minorMillets: Millet[] = [
       'risotto-de-millet',
     ],
     sources: [
-      'icmr-nin-ifct-2017',
-      'bhavaprakasha-nighantu',
-      'gopalan-nutritive-value-indian-foods',
-      'icar-small-millets-handbook',
+      'anses-ciqual',
+      'usda-fdc',
+      'fao-millets-nutrition',
+      'ren-millets-polyphenols-2016',
     ],
   },
 
@@ -400,14 +400,14 @@ export const minorMillets: Millet[] = [
       phosphorus_mg: 206,
       magnesium_mg: 153,
       potassium_mg: 113,
-      source: 'ICMR-NIN IFCT 2017 / USDA FoodData Central',
-      sourceDetail: 'Indian Food Composition Tables (NIN, Hyderabad) et USDA FoodData Central',
+      source: 'ANSES Table Ciqual / USDA FoodData Central',
+      sourceDetail: 'Table Ciqual (ANSES) et USDA FoodData Central',
     },
 
     glycemicIndex: {
       value: 56,
       category: 'low',
-      source: 'Gopalan et al., Nutritive Value of Indian Foods, NIN',
+      source: 'International Tables of Glycemic Index and Glycemic Load Values, 2021',
     },
 
     ayurveda: {
@@ -446,7 +446,7 @@ export const minorMillets: Millet[] = [
     },
 
     cultivation: {
-      majorStates: ['Madhya Pradesh', 'Chhattisgarh', 'Tamil Nadu', 'Karnataka', 'Uttarakhand'],
+      majorStates: ['Chine', 'Russie', 'Ukraine', 'États-Unis', 'Inde'],
       globalRegions: [
         'Chine',
         'Russie',
@@ -454,7 +454,7 @@ export const minorMillets: Millet[] = [
         'Europe (historique)',
         'Amérique du Nord (culture pour oiseaux)',
       ],
-      growingSeason: 'Kharif (juin-septembre) / Été',
+      growingSeason: 'Été (juin-septembre) ; saison chaude',
       waterRequirement: '250-400 mm de pluie',
       soilType: 'Sols légers et bien drainés ; tolère les sols pauvres',
       harvestDays: '60-75 jours (la saison la plus courte parmi les millets)',
@@ -483,7 +483,7 @@ export const minorMillets: Millet[] = [
         description:
           'Le millet commun contient 12,5 g de protéines pour 100 g, la teneur la plus élevée parmi les millets mineurs. C\'est une excellente source de protéines végétales, particulièrement précieuse dans les régimes végétariens et végétaliens.',
         evidenceLevel: 'well-established',
-        source: 'ICMR-NIN IFCT 2017',
+        source: 'ANSES Table Ciqual / USDA FoodData Central',
       },
       {
         benefit: 'Lécithine bénéfique pour la santé hépatique',
@@ -497,7 +497,7 @@ export const minorMillets: Millet[] = [
         description:
           'Avec la saison de croissance la plus courte parmi les millets (60-75 jours) et des besoins en eau très faibles (250-400 mm), le millet commun est l\'une des céréales les plus respectueuses du climat, un atout majeur dans le contexte du changement climatique.',
         evidenceLevel: 'well-established',
-        source: 'ICAR Crop Science Division',
+        source: 'FAO / Division des cultures durables',
       },
       {
         benefit: 'Riche en vitamines du groupe B, notamment la niacine',
@@ -529,11 +529,11 @@ export const minorMillets: Millet[] = [
       'boules-energie-millet',
     ],
     sources: [
-      'icmr-nin-ifct-2017',
-      'sushruta-samhita',
-      'gopalan-nutritive-value-indian-foods',
-      'cishan-archaeological-studies',
-      'icar-small-millets-handbook',
+      'anses-ciqual',
+      'usda-fdc',
+      'saleh-millets-review-2013',
+      'lu-cishan-2009',
+      'ren-millets-polyphenols-2016',
     ],
   },
 
@@ -587,7 +587,7 @@ export const minorMillets: Millet[] = [
       potassium_mg: 0,
       source: 'Littérature scientifique publiée',
       sourceDetail:
-        'Données ICMR limitées. Valeurs dérivées de la littérature scientifique publiée. Données de magnésium et potassium non disponibles.',
+        'Données nutritionnelles limitées. Valeurs dérivées de la littérature scientifique publiée. Données de magnésium et potassium non disponibles.',
     },
 
     glycemicIndex: {
@@ -632,9 +632,9 @@ export const minorMillets: Millet[] = [
     },
 
     cultivation: {
-      majorStates: ['Karnataka (principalement les districts de Tumkur et Chitradurga)', 'Andhra Pradesh (limite)'],
+      majorStates: ['Karnataka (Inde)', 'Régions limitées d\'Asie du Sud-Est'],
       globalRegions: ['Asie du Sud (principalement l\'Inde)', 'Asie du Sud-Est'],
-      growingSeason: 'Kharif (juin-octobre) / Saison des pluies',
+      growingSeason: 'Saison des pluies (juin-octobre)',
       waterRequirement: '300-400 mm de pluie',
       soilType: 'Sols rouges graveleux et latéritiques ; pousse en terrains pauvres et vallonnés',
       harvestDays: '90-100 jours',
@@ -705,10 +705,10 @@ export const minorMillets: Millet[] = [
     isGlutenFree: true,
     relatedRecipes: [],
     sources: [
-      'published-millet-nutrition-literature',
-      'icar-small-millets-handbook',
-      'karnataka-agriculture-department',
-      'gopalan-nutritive-value-indian-foods',
+      'chandrasekara-phenolics-2012',
+      'ren-millets-polyphenols-2016',
+      'kam-millets-diabetes-2016',
+      'usda-fdc',
     ],
   },
 ];

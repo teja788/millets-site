@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { notFound } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
 import { AlertTriangle } from 'lucide-react';
 import type { Locale } from '@/lib/i18n';
 import { localePath, getTranslations, isValidLocale, locales, localeParams, hreflangAlternates } from '@/lib/i18n';
@@ -57,7 +57,7 @@ const doshaBadgeVariant: Record<string, 'blue' | 'red' | 'green'> = {
   Kapha: 'green',
 };
 
-const relevantSourceKeys = [
+const ayurvedicSourceKeys = [
   'charaka-samhita',
   'sushruta-samhita',
   'bhavaprakasha',
@@ -73,10 +73,14 @@ export default async function AyurvedaPage({
   const { lang } = await params;
   if (!isValidLocale(lang)) notFound();
 
+  // French users should use the science-based /fr/nutrition-et-sante/ page instead
+  if (lang === 'fr') redirect('/fr/nutrition-et-sante');
+
   const locale: Locale = lang;
   const t = getTranslations(locale);
   const ayurvedaPageData = getAyurvedaData(locale);
-  const relevantSources = sources.filter((s) => relevantSourceKeys.includes(s.key));
+  const sourceKeys = ayurvedicSourceKeys;
+  const relevantSources = sources.filter((s) => sourceKeys.includes(s.key));
 
   function MilletLink({ slug }: { slug: string }) {
     const millet = getMilletBySlugLocale(slug, locale);
@@ -138,8 +142,7 @@ export default async function AyurvedaPage({
                     {guide.dosha}
                   </Badge>
                   <h3 className="font-heading text-xl font-bold text-earth-800 dark:text-earth-100">
-                    {guide.dosha}{' '}
-                    {locale === 'te' ? 'దోషం' : 'Dosha'}
+                    {`${guide.dosha} ${locale === 'te' ? 'దోషం' : 'Dosha'}`}
                   </h3>
                 </div>
 

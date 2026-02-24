@@ -49,14 +49,14 @@ export const majorMillets: Millet[] = [
       phosphorus_mg: 296,
       magnesium_mg: 137,
       potassium_mg: 307,
-      source: 'ICMR-NIN IFCT 2017 / USDA FoodData Central',
-      sourceDetail: 'Tables de composition ICMR-NIN et USDA FoodData Central',
+      source: 'ANSES Table Ciqual / USDA FoodData Central',
+      sourceDetail: 'Table Ciqual (ANSES) et USDA FoodData Central',
     },
 
     glycemicIndex: {
       value: 55,
       category: 'low',
-      source: 'Gopalan et al., Nutritive Value of Indian Foods, NIN',
+      source: 'International Tables of Glycemic Index and Glycemic Load Values, 2021',
     },
 
     ayurveda: {
@@ -95,9 +95,9 @@ export const majorMillets: Millet[] = [
     },
 
     cultivation: {
-      majorStates: ['Rajasthan', 'Maharashtra', 'Gujarat', 'Uttar Pradesh', 'Haryana'],
+      majorStates: ['Niger', 'Mali', 'Sénégal', 'Burkina Faso', 'Tchad'],
       globalRegions: ['Afrique de l\'Ouest (Sahel)', 'Afrique de l\'Est', 'Asie du Sud'],
-      growingSeason: 'Saison des pluies (juin-octobre en Afrique) / Kharif (juillet-octobre en Inde)',
+      growingSeason: 'Saison des pluies (juin-octobre) ; saison chaude et humide',
       waterRequirement: '350-500 mm de pluie',
       soilType: 'Sols sablonneux et limoneux ; tolère les sols pauvres et secs',
       harvestDays: '65-85 jours',
@@ -125,7 +125,7 @@ export const majorMillets: Millet[] = [
         description:
           'Le mil à chandelle contient 8,0 mg de fer pour 100 g, ce qui en fait l\'une des meilleures sources végétales de fer parmi les céréales. Cela aide à lutter contre l\'anémie ferriprive, un problème de santé majeur en Afrique subsaharienne et dans de nombreuses régions du monde.',
         evidenceLevel: 'well-established',
-        source: 'ICMR-NIN IFCT 2017',
+        source: 'ANSES Table Ciqual / USDA FoodData Central',
       },
       {
         benefit: 'Soutient la santé cardiovasculaire',
@@ -146,7 +146,7 @@ export const majorMillets: Millet[] = [
         description:
           'Avec 361 calories pour 100 g, une bonne teneur en protéines (11,6 g) et en lipides (5,0 g), le mil à chandelle est une excellente source d\'énergie, particulièrement pour les personnes physiquement actives.',
         evidenceLevel: 'well-established',
-        source: 'ICMR-NIN IFCT 2017',
+        source: 'ANSES Table Ciqual / USDA FoodData Central',
       },
     ],
 
@@ -172,10 +172,10 @@ export const majorMillets: Millet[] = [
       'beignets-de-mil',
     ],
     sources: [
-      'icmr-nin-ifct-2017',
-      'bhavaprakasha-nighantu',
-      'gopalan-nutritive-value-indian-foods',
-      'icar-pearl-millet-handbook',
+      'anses-ciqual',
+      'usda-fdc',
+      'fao-millets-nutrition',
+      'icrisat-pearl-millet',
     ],
   },
 
@@ -227,14 +227,14 @@ export const majorMillets: Millet[] = [
       phosphorus_mg: 283,
       magnesium_mg: 137,
       potassium_mg: 408,
-      source: 'ICMR-NIN IFCT 2017 / USDA FoodData Central',
-      sourceDetail: 'Tables de composition ICMR-NIN et USDA FoodData Central',
+      source: 'ANSES Table Ciqual / USDA FoodData Central',
+      sourceDetail: 'Table Ciqual (ANSES) et USDA FoodData Central',
     },
 
     glycemicIndex: {
       value: 61,
       category: 'medium',
-      source: 'Gopalan et al., Nutritive Value of Indian Foods, NIN',
+      source: 'International Tables of Glycemic Index and Glycemic Load Values, 2021',
     },
 
     ayurveda: {
@@ -273,7 +273,7 @@ export const majorMillets: Millet[] = [
     },
 
     cultivation: {
-      majorStates: ['Karnataka', 'Tamil Nadu', 'Andhra Pradesh', 'Uttarakhand', 'Maharashtra'],
+      majorStates: ['Éthiopie', 'Ouganda', 'Kenya', 'Tanzanie', 'Népal'],
       globalRegions: ['Afrique de l\'Est (Éthiopie, Ouganda, Kenya)', 'Asie du Sud', 'Népal'],
       growingSeason: 'Saison des pluies (juin-octobre)',
       waterRequirement: '500-750 mm de pluie',
@@ -303,7 +303,7 @@ export const majorMillets: Millet[] = [
         description:
           'L\'éleusine contient 344 mg de calcium pour 100 g, la teneur la plus élevée de toutes les céréales et comparable au lait. Elle est inestimable pour la santé osseuse, surtout pour les personnes intolérantes au lactose.',
         evidenceLevel: 'well-established',
-        source: 'ICMR-NIN IFCT 2017',
+        source: 'ANSES Table Ciqual / USDA FoodData Central',
       },
       {
         benefit: 'Prévention de l\'ostéoporose',
@@ -358,11 +358,11 @@ export const majorMillets: Millet[] = [
       'smoothie-millet-banane',
     ],
     sources: [
-      'icmr-nin-ifct-2017',
-      'charaka-samhita',
-      'gopalan-nutritive-value-indian-foods',
-      'icar-finger-millet-handbook',
-      'hallur-archaeological-report',
+      'anses-ciqual',
+      'usda-fdc',
+      'devi-finger-millet-2014',
+      'fao-millets-nutrition',
+      'fuller-ag-origins-2006',
     ],
   },
 
@@ -414,14 +414,14 @@ export const majorMillets: Millet[] = [
       phosphorus_mg: 222,
       magnesium_mg: 171,
       potassium_mg: 340,
-      source: 'ICMR-NIN IFCT 2017 / USDA FoodData Central',
-      sourceDetail: 'Tables de composition ICMR-NIN et USDA FoodData Central',
+      source: 'ANSES Table Ciqual / USDA FoodData Central',
+      sourceDetail: 'Table Ciqual (ANSES) et USDA FoodData Central',
     },
 
     glycemicIndex: {
       value: 62,
       category: 'medium',
-      source: 'Gopalan et al., Nutritive Value of Indian Foods, NIN',
+      source: 'International Tables of Glycemic Index and Glycemic Load Values, 2021',
     },
 
     ayurveda: {
@@ -459,7 +459,7 @@ export const majorMillets: Millet[] = [
     },
 
     cultivation: {
-      majorStates: ['Maharashtra', 'Karnataka', 'Madhya Pradesh', 'Rajasthan', 'Tamil Nadu'],
+      majorStates: ['Nigéria', 'Burkina Faso', 'Mali', 'Soudan', 'Éthiopie'],
       globalRegions: ['Afrique subsaharienne', 'Asie du Sud', 'Amériques', 'Australie', 'Europe du Sud'],
       growingSeason: 'Saison des pluies et saison sèche (culture possible sur deux cycles)',
       waterRequirement: '400-600 mm de pluie',
@@ -489,7 +489,7 @@ export const majorMillets: Millet[] = [
         description:
           'Le sorgho contient 9,7 g de fibres pour 100 g, parmi les teneurs les plus élevées de toutes les céréales. Cela favorise une digestion saine, un transit régulier et soutient la diversité du microbiote intestinal.',
         evidenceLevel: 'well-established',
-        source: 'ICMR-NIN IFCT 2017',
+        source: 'ANSES Table Ciqual / USDA FoodData Central',
       },
       {
         benefit: 'Riche en composés phénoliques et antioxydants',
@@ -536,10 +536,10 @@ export const majorMillets: Millet[] = [
       'pain-millet-sans-gluten',
     ],
     sources: [
-      'icmr-nin-ifct-2017',
-      'bhavaprakasha-nighantu',
-      'gopalan-nutritive-value-indian-foods',
-      'icar-sorghum-handbook',
+      'anses-ciqual',
+      'usda-fdc',
+      'fao-millets-nutrition',
+      'fao-sorghum-millets-1995',
     ],
   },
 
@@ -591,14 +591,14 @@ export const majorMillets: Millet[] = [
       phosphorus_mg: 290,
       magnesium_mg: 81,
       potassium_mg: 250,
-      source: 'ICMR-NIN IFCT 2017 / USDA FoodData Central',
-      sourceDetail: 'Tables de composition ICMR-NIN et USDA FoodData Central',
+      source: 'ANSES Table Ciqual / USDA FoodData Central',
+      sourceDetail: 'Table Ciqual (ANSES) et USDA FoodData Central',
     },
 
     glycemicIndex: {
       value: 50,
       category: 'low',
-      source: 'Gopalan et al., Nutritive Value of Indian Foods, NIN',
+      source: 'International Tables of Glycemic Index and Glycemic Load Values, 2021',
     },
 
     ayurveda: {
@@ -638,11 +638,11 @@ export const majorMillets: Millet[] = [
 
     cultivation: {
       majorStates: [
-        'Andhra Pradesh',
-        'Karnataka',
-        'Tamil Nadu',
-        'Rajasthan',
-        'Madhya Pradesh',
+        'Chine (nord)',
+        'Europe (historique)',
+        'Asie centrale',
+        'Inde',
+        'Myanmar',
       ],
       globalRegions: ['Chine', 'Asie du Sud-Est', 'Asie du Sud', 'Europe (historique et renaissance actuelle)'],
       growingSeason: 'Saison des pluies (juin-octobre)',
@@ -673,7 +673,7 @@ export const majorMillets: Millet[] = [
         description:
           'Le millet des oiseaux contient 12,3 g de protéines pour 100 g, l\'une des teneurs les plus élevées parmi les millets, ce qui en fait une excellente source de protéines végétales.',
         evidenceLevel: 'well-established',
-        source: 'ICMR-NIN IFCT 2017',
+        source: 'ANSES Table Ciqual / USDA FoodData Central',
       },
       {
         benefit: 'Faible indice glycémique adapté aux diabétiques',
@@ -687,7 +687,7 @@ export const majorMillets: Millet[] = [
         description:
           'Contient 8,0 g de fibres pour 100 g, favorisant la santé digestive, la sensation de satiété et le maintien d\'un taux de cholestérol sain.',
         evidenceLevel: 'well-established',
-        source: 'ICMR-NIN IFCT 2017',
+        source: 'ANSES Table Ciqual / USDA FoodData Central',
       },
       {
         benefit: 'Bonne source de vitamines du groupe B',
@@ -718,10 +718,10 @@ export const majorMillets: Millet[] = [
       'taboule-de-millet',
     ],
     sources: [
-      'icmr-nin-ifct-2017',
-      'ashtanga-hridaya',
-      'gopalan-nutritive-value-indian-foods',
-      'cishan-archaeological-studies',
+      'anses-ciqual',
+      'usda-fdc',
+      'amadou-millets-2013',
+      'lu-cishan-2009',
     ],
   },
 
@@ -773,14 +773,14 @@ export const majorMillets: Millet[] = [
       phosphorus_mg: 220,
       magnesium_mg: 133,
       potassium_mg: 129,
-      source: 'ICMR-NIN IFCT 2017 / USDA FoodData Central',
-      sourceDetail: 'Tables de composition ICMR-NIN et USDA FoodData Central',
+      source: 'ANSES Table Ciqual / USDA FoodData Central',
+      sourceDetail: 'Table Ciqual (ANSES) et USDA FoodData Central',
     },
 
     glycemicIndex: {
       value: 52,
       category: 'low',
-      source: 'Gopalan et al., Nutritive Value of Indian Foods, NIN',
+      source: 'International Tables of Glycemic Index and Glycemic Load Values, 2021',
     },
 
     ayurveda: {
@@ -819,7 +819,7 @@ export const majorMillets: Millet[] = [
     },
 
     cultivation: {
-      majorStates: ['Madhya Pradesh', 'Chhattisgarh', 'Karnataka', 'Tamil Nadu', 'Odisha'],
+      majorStates: ['Inde (centre et sud)', 'Myanmar', 'Sri Lanka'],
       globalRegions: ['Asie du Sud (principalement Inde)', 'Asie du Sud-Est (Myanmar, Sri Lanka)'],
       growingSeason: 'Saison des pluies (juin-octobre)',
       waterRequirement: '300-500 mm de pluie',
@@ -849,14 +849,14 @@ export const majorMillets: Millet[] = [
         description:
           'Le petit millet contient 9,3 mg de fer pour 100 g, l\'une des teneurs les plus élevées parmi tous les millets et céréales. Cela en fait un allié précieux dans la prévention et la gestion de l\'anémie ferriprive.',
         evidenceLevel: 'well-established',
-        source: 'ICMR-NIN IFCT 2017',
+        source: 'ANSES Table Ciqual / USDA FoodData Central',
       },
       {
         benefit: 'Bonne source de fibres pour la santé digestive',
         description:
           'Avec 7,6 g de fibres pour 100 g, le petit millet soutient une digestion saine, un transit régulier et peut aider à réduire le taux de cholestérol.',
         evidenceLevel: 'well-established',
-        source: 'ICMR-NIN IFCT 2017',
+        source: 'ANSES Table Ciqual / USDA FoodData Central',
       },
       {
         benefit: 'Faible indice glycémique adapté aux diabétiques',
@@ -894,10 +894,10 @@ export const majorMillets: Millet[] = [
       'soupe-millet-legumes',
     ],
     sources: [
-      'icmr-nin-ifct-2017',
-      'bhavaprakasha-nighantu',
-      'gopalan-nutritive-value-indian-foods',
-      'icar-small-millets-handbook',
+      'anses-ciqual',
+      'usda-fdc',
+      'fao-millets-nutrition',
+      'ren-millets-polyphenols-2016',
     ],
   },
 ];

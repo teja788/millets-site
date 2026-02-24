@@ -640,7 +640,7 @@ export default async function MilletDetailPage({ params }: PageProps) {
                     <MapPin className="w-5 h-5 text-earth-500 dark:text-earth-400 mt-0.5 flex-shrink-0" />
                     <div>
                       <p className="text-xs text-earth-600 dark:text-earth-400 uppercase tracking-wider font-semibold mb-1">
-                        {t.milletDetail.majorStates} (India)
+                        {t.milletDetail.majorStates}{locale === 'fr' ? '' : ' (India)'}
                       </p>
                       <p className="text-sm text-earth-700 dark:text-earth-200">
                         {millet.cultivation.majorStates.join(', ')}
