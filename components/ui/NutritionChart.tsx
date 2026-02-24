@@ -2,6 +2,8 @@
 
 import { useMemo } from 'react';
 import dynamic from 'next/dynamic';
+import type { Locale } from '@/lib/i18n';
+import { getTranslations } from '@/lib/i18n';
 
 const ResponsiveContainer = dynamic(
   () => import('recharts').then((mod) => mod.ResponsiveContainer),
@@ -70,6 +72,7 @@ interface NutritionDataItem {
 interface NutritionChartProps {
   data: NutritionDataItem[];
   chartType: 'bar' | 'radar';
+  locale?: Locale;
 }
 
 const CHART_COLORS = ['#5B8C5A', '#2D5016', '#D4A843', '#C17E5A', '#4A7C3E'];
@@ -103,25 +106,27 @@ function CustomTooltip({
   );
 }
 
-export default function NutritionChart({ data, chartType }: NutritionChartProps) {
+export default function NutritionChart({ data, chartType, locale = 'en' }: NutritionChartProps) {
+  const t = getTranslations(locale);
+
   const macroKeys = useMemo(
     () =>
       [
-        { key: 'protein_g', label: 'Protein (g)' },
-        { key: 'fat_g', label: 'Fat (g)' },
-        { key: 'carbohydrates_g', label: 'Carbs (g)' },
-        { key: 'fiber_g', label: 'Fiber (g)' },
-        { key: 'calories', label: 'Calories (kcal)' },
+        { key: 'protein_g', label: `${t.milletDetail.protein} (g)` },
+        { key: 'fat_g', label: `${t.milletDetail.fat} (g)` },
+        { key: 'carbohydrates_g', label: `${t.milletDetail.carbohydrates} (g)` },
+        { key: 'fiber_g', label: `${t.milletDetail.fiber} (g)` },
+        { key: 'calories', label: `${t.milletDetail.calories} (kcal)` },
       ] as const,
-    []
+    [t]
   );
 
   const radarData = useMemo(() => {
     const microKeys = [
-      { key: 'calcium_mg' as const, label: 'Calcium (mg)' },
-      { key: 'iron_mg' as const, label: 'Iron (mg)' },
-      { key: 'protein_g' as const, label: 'Protein (g)' },
-      { key: 'fiber_g' as const, label: 'Fiber (g)' },
+      { key: 'calcium_mg' as const, label: `${t.milletDetail.calcium} (mg)` },
+      { key: 'iron_mg' as const, label: `${t.milletDetail.iron} (mg)` },
+      { key: 'protein_g' as const, label: `${t.milletDetail.protein} (g)` },
+      { key: 'fiber_g' as const, label: `${t.milletDetail.fiber} (g)` },
     ];
 
     return microKeys.map((micro) => {
@@ -131,7 +136,7 @@ export default function NutritionChart({ data, chartType }: NutritionChartProps)
       });
       return point;
     });
-  }, [data]);
+  }, [data, t]);
 
   if (chartType === 'radar') {
     return (

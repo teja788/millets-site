@@ -65,7 +65,7 @@ export default async function NutritionPage({
       iron_mg: m.nutrition.iron_mg,
     })),
     {
-      name: locale === 'te' ? 'తెల్ల బియ్యం' : locale === 'fr' ? 'Riz blanc' : 'White Rice',
+      name: t.comparison.whiteRice,
       calories: riceNutrition.calories,
       protein_g: riceNutrition.protein_g,
       fat_g: riceNutrition.fat_g,
@@ -196,7 +196,7 @@ export default async function NutritionPage({
                 ? 'Diagramme en barres comparant protéines, lipides, glucides, fibres et calories pour 100 g de chaque millet et du riz blanc.'
                 : 'Bar chart comparing protein, fat, carbohydrates, fiber, and calories per 100 g across all millets and white rice.'}
           </p>
-          <NutritionChart data={proteinChartData} chartType="bar" />
+          <NutritionChart data={proteinChartData} chartType="bar" locale={locale} />
         </section>
 
         {/* Source Citation */}

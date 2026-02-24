@@ -346,6 +346,7 @@ export const en = {
     reset: 'Reset',
     nutrientPer100g: 'Nutrient (per 100g)',
     selectAtLeast2: 'Select at least 2 millets to compare their nutritional profiles.',
+    whiteRice: 'White Rice',
   },
 
   // Language

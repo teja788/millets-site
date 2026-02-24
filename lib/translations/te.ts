@@ -333,6 +333,7 @@ export const te: TranslationKeys = {
     reset: 'రీసెట్',
     nutrientPer100g: 'పోషకం (100 గ్రా.కి)',
     selectAtLeast2: 'పోషక విలువలను పోల్చడానికి కనీసం 2 చిరుధాన్యాలను ఎంచుకోండి.',
+    whiteRice: 'తెల్ల బియ్యం',
   },
 
   langName: 'Telugu',

@@ -157,7 +157,7 @@ export default async function MilletDetailPage({ params }: PageProps) {
       iron_mg: millet.nutrition.iron_mg,
     },
     {
-      name: 'White Rice',
+      name: t.comparison.whiteRice,
       calories: riceNutrition.calories,
       protein_g: riceNutrition.protein_g,
       fat_g: riceNutrition.fat_g,
@@ -333,9 +333,9 @@ export default async function MilletDetailPage({ params }: PageProps) {
 
             {/* Bar Chart: Millet vs Rice */}
             <h3 className="font-heading text-lg font-semibold text-earth-800 dark:text-earth-100 mb-3">
-              {millet.name} vs. White Rice
+              {millet.name} vs. {t.comparison.whiteRice}
             </h3>
-            <NutritionChart data={chartData} chartType="bar" />
+            <NutritionChart data={chartData} chartType="bar" locale={locale} />
           </section>
 
           {/* ===== Health Benefits ===== */}

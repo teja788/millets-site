@@ -348,6 +348,7 @@ export const fr: TranslationKeys = {
     reset: 'Réinitialiser',
     nutrientPer100g: 'Nutriment (pour 100 g)',
     selectAtLeast2: 'Sélectionnez au moins 2 millets pour comparer leurs profils nutritionnels.',
+    whiteRice: 'Riz blanc',
   },
 
   // Language

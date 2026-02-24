@@ -348,6 +348,7 @@ export const ar: TranslationKeys = {
     reset: 'إعادة تعيين',
     nutrientPer100g: 'المغذيات (لكل 100 غ)',
     selectAtLeast2: 'اختر نوعين من الدخن على الأقل لمقارنة قيمهما الغذائية.',
+    whiteRice: 'أرز أبيض',
   },
 
   // Language
