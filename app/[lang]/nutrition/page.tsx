@@ -159,7 +159,7 @@ export default async function NutritionPage({
           <h2 className="font-heading text-2xl font-bold text-earth-800 dark:text-earth-100 mb-4">
             {locale === 'te' ? 'చిరుధాన్యాలను పోల్చండి' : locale === 'fr' ? 'Comparer les millets' : 'Compare Millets'}
           </h2>
-          <ComparisonTable millets={millets} />
+          <ComparisonTable millets={millets} locale={locale} />
         </section>
 
         {/* Key Insights */}

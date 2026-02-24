@@ -343,6 +343,11 @@ export const fr: TranslationKeys = {
     vsRice: 'vs Riz',
     vsWheat: 'vs Blé',
     compareWith: 'Comparer avec',
+    millet: 'Millet',
+    addMillet: '+ Ajouter un millet',
+    reset: 'Réinitialiser',
+    nutrientPer100g: 'Nutriment (pour 100 g)',
+    selectAtLeast2: 'Sélectionnez au moins 2 millets pour comparer leurs profils nutritionnels.',
   },
 
   // Language

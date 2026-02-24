@@ -341,6 +341,11 @@ export const en = {
     vsRice: 'vs Rice',
     vsWheat: 'vs Wheat',
     compareWith: 'Compare with',
+    millet: 'Millet',
+    addMillet: '+ Add Millet',
+    reset: 'Reset',
+    nutrientPer100g: 'Nutrient (per 100g)',
+    selectAtLeast2: 'Select at least 2 millets to compare their nutritional profiles.',
   },
 
   // Language

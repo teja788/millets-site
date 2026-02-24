@@ -328,6 +328,11 @@ export const te: TranslationKeys = {
     vsRice: 'vs బియ్యం',
     vsWheat: 'vs గోధుమ',
     compareWith: 'దీనితో పోల్చండి',
+    millet: 'చిరుధాన్యం',
+    addMillet: '+ చిరుధాన్యం జోడించు',
+    reset: 'రీసెట్',
+    nutrientPer100g: 'పోషకం (100 గ్రా.కి)',
+    selectAtLeast2: 'పోషక విలువలను పోల్చడానికి కనీసం 2 చిరుధాన్యాలను ఎంచుకోండి.',
   },
 
   langName: 'Telugu',

@@ -343,6 +343,11 @@ export const ar: TranslationKeys = {
     vsRice: 'مقارنةً بالأرز',
     vsWheat: 'مقارنةً بالقمح',
     compareWith: 'قارن مع',
+    millet: 'دخن',
+    addMillet: '+ إضافة دخن',
+    reset: 'إعادة تعيين',
+    nutrientPer100g: 'المغذيات (لكل 100 غ)',
+    selectAtLeast2: 'اختر نوعين من الدخن على الأقل لمقارنة قيمهما الغذائية.',
   },
 
   // Language

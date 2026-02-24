@@ -10,7 +10,7 @@ export default function FrenchNamesTable({ slug }: FrenchNamesTableProps) {
 
   const rows: { label: string; value: string }[] = [
     { label: 'Français', value: names.french },
-    { label: 'English', value: names.english },
+    { label: 'Anglais', value: names.english },
     { label: 'Nom scientifique', value: names.scientificName },
   ];
 
