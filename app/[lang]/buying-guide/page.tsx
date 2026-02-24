@@ -6,7 +6,7 @@ import Breadcrumb from '@/components/layout/Breadcrumb';
 import { Card, CardBody } from '@/components/ui/Card';
 import Badge from '@/components/ui/Badge';
 import type { Locale } from '@/lib/i18n';
-import { localePath, getTranslations, isValidLocale, localeParams } from '@/lib/i18n';
+import { localePath, getTranslations, isValidLocale, localeParams, hreflangAlternates } from '@/lib/i18n';
 import { getBuyingGuideItems } from '@/lib/i18n-data';
 
 export function generateStaticParams() {
@@ -27,10 +27,7 @@ export async function generateMetadata({
       'How to select, store, and buy millets. Forms available, shelf life, and storage tips for all 9 millets.',
     alternates: {
       canonical: `/${lang}/buying-guide`,
-      languages: {
-        en: '/en/buying-guide',
-        te: '/te/buying-guide',
-      },
+      languages: hreflangAlternates('/buying-guide'),
     },
   };
 }

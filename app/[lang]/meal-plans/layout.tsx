@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import type { Locale } from '@/lib/i18n';
-import { localePath, getTranslations, isValidLocale, locales } from '@/lib/i18n';
+import { localePath, getTranslations, isValidLocale, locales, hreflangAlternates } from '@/lib/i18n';
 
 export async function generateMetadata({
   params,
@@ -19,9 +19,7 @@ export async function generateMetadata({
         : 'Ready-to-follow 7-day meal plans designed around millets for different dietary goals.',
     alternates: {
       canonical: `/${lang}/meal-plans`,
-      languages: Object.fromEntries(
-        locales.map((l) => [l, localePath(l, '/meal-plans')])
-      ),
+      languages: hreflangAlternates('/meal-plans'),
     },
   };
 }

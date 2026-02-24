@@ -1,0 +1,1 @@
+export { myths } from '../myths';

@@ -27,6 +27,7 @@ import {
   TableHeaderCell,
 } from '@/components/ui/Table';
 import LanguageTable from '@/components/ui/LanguageTable';
+import FrenchNamesTable from '@/components/ui/FrenchNamesTable';
 import NutritionChart from '@/components/ui/NutritionChart';
 import SourceCitation from '@/components/ui/SourceCitation';
 import NutritionHighlight from '@/components/sections/NutritionHighlight';
@@ -34,7 +35,7 @@ import FeaturedRecipes from '@/components/sections/FeaturedRecipes';
 import TestimonialOrQuote from '@/components/sections/TestimonialOrQuote';
 import ImageWithFallback from '@/components/ui/ImageWithFallback';
 import type { Locale } from '@/lib/i18n';
-import { localePath, getTranslations, isValidLocale, locales } from '@/lib/i18n';
+import { localePath, getTranslations, isValidLocale, locales, hreflangAlternates } from '@/lib/i18n';
 import { getMillets, getMilletBySlugLocale, getRecipesByMilletLocale, getSources, riceNutrition } from '@/lib/i18n-data';
 import type { EvidenceLevel } from '@/lib/types';
 
@@ -71,11 +72,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: `${millet.tagline} Learn about ${millet.name} nutrition, health benefits, Ayurvedic properties, recipes, and more.`,
     alternates: {
       canonical: `/${locale}/millets/${slug}`,
-      languages: {
-        en: `/en/millets/${slug}`,
-        te: `/te/millets/${slug}`,
-        'x-default': `/en/millets/${slug}`,
-      },
+      languages: hreflangAlternates(`/millets/${slug}`),
     },
   };
 }
@@ -135,10 +132,10 @@ export default async function MilletDetailPage({ params }: PageProps) {
   const milletSources = sources.filter((s) => millet.sources.includes(s.key));
 
   const sidebarSections = [
-    { id: 'names', title: t.milletDetail.namesInLanguages },
+    { id: 'names', title: locale === 'fr' ? t.milletDetail.namesMultilingual : t.milletDetail.namesInLanguages },
     { id: 'nutrition', title: t.milletDetail.nutritionProfile },
     { id: 'health-benefits', title: t.milletDetail.healthBenefits },
-    { id: 'ayurveda', title: t.milletDetail.ayurvedicProperties },
+    { id: 'ayurveda', title: locale === 'fr' ? t.milletDetail.nutritionAndHealth : t.milletDetail.ayurvedicProperties },
     { id: 'cooking', title: t.milletDetail.howToCook },
     { id: 'cultivation', title: t.milletDetail.cultivation },
     { id: 'history', title: t.milletDetail.history },
@@ -285,12 +282,16 @@ export default async function MilletDetailPage({ params }: PageProps) {
       <div className="content-wrapper flex gap-10 pb-16">
         {/* Main Content */}
         <div className="flex-1 min-w-0 space-y-14">
-          {/* ===== Names in Indian Languages ===== */}
+          {/* ===== Names in Languages ===== */}
           <section id="names">
             <h2 className="font-heading text-2xl font-bold text-earth-800 dark:text-earth-100 mb-4">
-              {t.milletDetail.namesInLanguages}
+              {locale === 'fr' ? t.milletDetail.namesMultilingual : t.milletDetail.namesInLanguages}
             </h2>
-            <LanguageTable names={millet.names} />
+            {locale === 'fr' ? (
+              <FrenchNamesTable slug={millet.slug} />
+            ) : (
+              <LanguageTable names={millet.names} />
+            )}
           </section>
 
           {/* ===== Nutrition Profile ===== */}
@@ -371,118 +372,165 @@ export default async function MilletDetailPage({ params }: PageProps) {
             </div>
           </section>
 
-          {/* ===== Ayurvedic Properties ===== */}
+          {/* ===== Ayurvedic Properties / Nutrition & Health (French) ===== */}
           <section id="ayurveda">
             <h2 className="font-heading text-2xl font-bold text-earth-800 dark:text-earth-100 mb-4">
-              {t.milletDetail.ayurvedicProperties}
+              {locale === 'fr' ? t.milletDetail.nutritionAndHealth : t.milletDetail.ayurvedicProperties}
             </h2>
 
-            {/* Properties Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-              <Card variant="outlined">
-                <CardBody className="text-center">
-                  <p className="text-xs text-earth-600 dark:text-earth-400 uppercase tracking-wider font-semibold mb-1">
-                    {t.milletDetail.rasa}
-                  </p>
-                  <p className="font-heading text-base font-semibold text-earth-800 dark:text-earth-100">
-                    {millet.ayurveda.rasa.join(', ')}
-                  </p>
-                </CardBody>
-              </Card>
-              <Card variant="outlined">
-                <CardBody className="text-center">
-                  <p className="text-xs text-earth-600 dark:text-earth-400 uppercase tracking-wider font-semibold mb-1">
-                    {t.milletDetail.virya}
-                  </p>
-                  <p className="font-heading text-base font-semibold text-earth-800 dark:text-earth-100">
-                    {millet.ayurveda.virya}
-                  </p>
-                </CardBody>
-              </Card>
-              <Card variant="outlined">
-                <CardBody className="text-center">
-                  <p className="text-xs text-earth-600 dark:text-earth-400 uppercase tracking-wider font-semibold mb-1">
-                    {t.milletDetail.vipaka}
-                  </p>
-                  <p className="font-heading text-base font-semibold text-earth-800 dark:text-earth-100">
-                    {millet.ayurveda.vipaka}
-                  </p>
-                </CardBody>
-              </Card>
-              <Card variant="outlined">
-                <CardBody className="text-center">
-                  <p className="text-xs text-earth-600 dark:text-earth-400 uppercase tracking-wider font-semibold mb-1">
-                    {t.milletDetail.guna}
-                  </p>
-                  <p className="font-heading text-base font-semibold text-earth-800 dark:text-earth-100">
-                    {millet.ayurveda.guna.join(', ')}
-                  </p>
-                </CardBody>
-              </Card>
-            </div>
-
-            {/* Dosha Effects */}
-            <h3 className="font-heading text-lg font-semibold text-earth-800 dark:text-earth-100 mb-3">
-              {t.milletDetail.doshaEffect}
-            </h3>
-            <div className="grid grid-cols-3 gap-4 mb-6">
-              {(['vata', 'pitta', 'kapha'] as const).map((dosha) => (
-                <Card key={dosha} variant="outlined">
-                  <CardBody className="text-center">
-                    <p className="text-sm font-medium text-earth-700 dark:text-earth-200 capitalize mb-1">
-                      {t.doshas[dosha]}
-                    </p>
-                    <p
-                      className={`font-heading text-base font-semibold ${doshaColor(
-                        millet.ayurveda.doshaEffect[dosha]
-                      )}`}
-                    >
-                      {doshaArrow(millet.ayurveda.doshaEffect[dosha])}
-                    </p>
-                  </CardBody>
-                </Card>
-              ))}
-            </div>
-
-            {/* Therapeutic Uses */}
-            <h3 className="font-heading text-lg font-semibold text-earth-800 dark:text-earth-100 mb-3">
-              {t.milletDetail.therapeuticUses}
-            </h3>
-            <ul className="list-disc list-inside space-y-1 text-earth-600 dark:text-earth-300 text-sm mb-6">
-              {millet.ayurveda.therapeuticUses.map((use, i) => (
-                <li key={i}>{use}</li>
-              ))}
-            </ul>
-
-            {/* Classical Reference */}
-            <p className="text-sm text-earth-500 dark:text-earth-400 mb-4 flex items-start gap-2">
-              <ScrollText className="w-4 h-4 mt-0.5 flex-shrink-0" />
-              <span>
-                <strong>{t.milletDetail.classicalReference}:</strong>{' '}
-                {millet.ayurveda.classicalReference}
-              </span>
-            </p>
-
-            {/* Contraindications */}
-            {millet.ayurveda.contraindications.length > 0 && (
+            {locale === 'fr' ? (
               <>
+                {/* French: Evidence-based benefits */}
                 <h3 className="font-heading text-lg font-semibold text-earth-800 dark:text-earth-100 mb-3">
-                  {t.milletDetail.contraindications}
+                  {t.milletDetail.evidenceBasedBenefits}
                 </h3>
                 <ul className="list-disc list-inside space-y-1 text-earth-600 dark:text-earth-300 text-sm mb-6">
-                  {millet.ayurveda.contraindications.map((c, i) => (
-                    <li key={i}>{c}</li>
+                  {millet.ayurveda.therapeuticUses.map((use, i) => (
+                    <li key={i}>{use}</li>
                   ))}
                 </ul>
+
+                {/* French: Source reference */}
+                <p className="text-sm text-earth-500 dark:text-earth-400 mb-4 flex items-start gap-2">
+                  <BookOpen className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                  <span>
+                    <strong>{t.common.source} :</strong>{' '}
+                    {millet.ayurveda.classicalReference}
+                  </span>
+                </p>
+
+                {/* French: Precautions */}
+                {millet.ayurveda.contraindications.length > 0 && (
+                  <>
+                    <h3 className="font-heading text-lg font-semibold text-earth-800 dark:text-earth-100 mb-3">
+                      {t.milletDetail.precautions}
+                    </h3>
+                    <ul className="list-disc list-inside space-y-1 text-earth-600 dark:text-earth-300 text-sm mb-6">
+                      {millet.ayurveda.contraindications.map((c, i) => (
+                        <li key={i}>{c}</li>
+                      ))}
+                    </ul>
+                  </>
+                )}
+
+                {/* French: Disclaimer */}
+                <TestimonialOrQuote
+                  quote="Les informations nutritionnelles présentées ici sont à titre éducatif uniquement. Elles ne constituent pas un avis médical. Consultez toujours un professionnel de santé avant de modifier votre alimentation."
+                  attribution={t.common.disclaimer}
+                  source="Simply Millets"
+                />
+              </>
+            ) : (
+              <>
+                {/* Non-French: Full Ayurvedic Properties */}
+                {/* Properties Grid */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                  <Card variant="outlined">
+                    <CardBody className="text-center">
+                      <p className="text-xs text-earth-600 dark:text-earth-400 uppercase tracking-wider font-semibold mb-1">
+                        {t.milletDetail.rasa}
+                      </p>
+                      <p className="font-heading text-base font-semibold text-earth-800 dark:text-earth-100">
+                        {millet.ayurveda.rasa.join(', ')}
+                      </p>
+                    </CardBody>
+                  </Card>
+                  <Card variant="outlined">
+                    <CardBody className="text-center">
+                      <p className="text-xs text-earth-600 dark:text-earth-400 uppercase tracking-wider font-semibold mb-1">
+                        {t.milletDetail.virya}
+                      </p>
+                      <p className="font-heading text-base font-semibold text-earth-800 dark:text-earth-100">
+                        {millet.ayurveda.virya}
+                      </p>
+                    </CardBody>
+                  </Card>
+                  <Card variant="outlined">
+                    <CardBody className="text-center">
+                      <p className="text-xs text-earth-600 dark:text-earth-400 uppercase tracking-wider font-semibold mb-1">
+                        {t.milletDetail.vipaka}
+                      </p>
+                      <p className="font-heading text-base font-semibold text-earth-800 dark:text-earth-100">
+                        {millet.ayurveda.vipaka}
+                      </p>
+                    </CardBody>
+                  </Card>
+                  <Card variant="outlined">
+                    <CardBody className="text-center">
+                      <p className="text-xs text-earth-600 dark:text-earth-400 uppercase tracking-wider font-semibold mb-1">
+                        {t.milletDetail.guna}
+                      </p>
+                      <p className="font-heading text-base font-semibold text-earth-800 dark:text-earth-100">
+                        {millet.ayurveda.guna.join(', ')}
+                      </p>
+                    </CardBody>
+                  </Card>
+                </div>
+
+                {/* Dosha Effects */}
+                <h3 className="font-heading text-lg font-semibold text-earth-800 dark:text-earth-100 mb-3">
+                  {t.milletDetail.doshaEffect}
+                </h3>
+                <div className="grid grid-cols-3 gap-4 mb-6">
+                  {(['vata', 'pitta', 'kapha'] as const).map((dosha) => (
+                    <Card key={dosha} variant="outlined">
+                      <CardBody className="text-center">
+                        <p className="text-sm font-medium text-earth-700 dark:text-earth-200 capitalize mb-1">
+                          {t.doshas[dosha]}
+                        </p>
+                        <p
+                          className={`font-heading text-base font-semibold ${doshaColor(
+                            millet.ayurveda.doshaEffect[dosha]
+                          )}`}
+                        >
+                          {doshaArrow(millet.ayurveda.doshaEffect[dosha])}
+                        </p>
+                      </CardBody>
+                    </Card>
+                  ))}
+                </div>
+
+                {/* Therapeutic Uses */}
+                <h3 className="font-heading text-lg font-semibold text-earth-800 dark:text-earth-100 mb-3">
+                  {t.milletDetail.therapeuticUses}
+                </h3>
+                <ul className="list-disc list-inside space-y-1 text-earth-600 dark:text-earth-300 text-sm mb-6">
+                  {millet.ayurveda.therapeuticUses.map((use, i) => (
+                    <li key={i}>{use}</li>
+                  ))}
+                </ul>
+
+                {/* Classical Reference */}
+                <p className="text-sm text-earth-500 dark:text-earth-400 mb-4 flex items-start gap-2">
+                  <ScrollText className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                  <span>
+                    <strong>{t.milletDetail.classicalReference}:</strong>{' '}
+                    {millet.ayurveda.classicalReference}
+                  </span>
+                </p>
+
+                {/* Contraindications */}
+                {millet.ayurveda.contraindications.length > 0 && (
+                  <>
+                    <h3 className="font-heading text-lg font-semibold text-earth-800 dark:text-earth-100 mb-3">
+                      {t.milletDetail.contraindications}
+                    </h3>
+                    <ul className="list-disc list-inside space-y-1 text-earth-600 dark:text-earth-300 text-sm mb-6">
+                      {millet.ayurveda.contraindications.map((c, i) => (
+                        <li key={i}>{c}</li>
+                      ))}
+                    </ul>
+                  </>
+                )}
+
+                {/* Disclaimer */}
+                <TestimonialOrQuote
+                  quote="Ayurvedic information presented here is derived from classical texts for educational purposes. It is not medical advice. Always consult a qualified Ayurvedic practitioner or healthcare provider before making dietary changes based on Ayurvedic principles."
+                  attribution={t.common.disclaimer}
+                  source="This website"
+                />
               </>
             )}
-
-            {/* Disclaimer */}
-            <TestimonialOrQuote
-              quote="Ayurvedic information presented here is derived from classical texts for educational purposes. It is not medical advice. Always consult a qualified Ayurvedic practitioner or healthcare provider before making dietary changes based on Ayurvedic principles."
-              attribution={t.common.disclaimer}
-              source="This website"
-            />
           </section>
 
           {/* ===== How to Cook ===== */}

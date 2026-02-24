@@ -1,8 +1,9 @@
 import { en } from './translations/en';
 import { te } from './translations/te';
 import { ar } from './translations/ar';
+import { fr } from './translations/fr';
 
-export const locales = ['en', 'te', 'ar'] as const;
+export const locales = ['en', 'te', 'ar', 'fr'] as const;
 export type Locale = (typeof locales)[number];
 export const defaultLocale: Locale = 'en';
 
@@ -27,6 +28,7 @@ export function getTranslations(locale: Locale) {
   switch (locale) {
     case 'te': return te;
     case 'ar': return ar;
+    case 'fr': return fr;
     default: return en;
   }
 }
@@ -36,10 +38,22 @@ export function localeParams() {
   return locales.map((lang) => ({ lang }));
 }
 
-/** Build hreflang alternates object for metadata */
+/**
+ * Build hreflang alternates object for metadata.
+ * Always use this (or pageAlternates) in every page's generateMetadata.
+ * Never manually construct the languages object.
+ */
 export function hreflangAlternates(path: string) {
   return {
     ...Object.fromEntries(locales.map((l) => [l, `/${l}${path}`])),
     'x-default': `/en${path}`,
+  };
+}
+
+/** Build complete alternates object (canonical + hreflang) for a page */
+export function pageAlternates(locale: Locale, path: string) {
+  return {
+    canonical: `/${locale}${path}`,
+    languages: hreflangAlternates(path),
   };
 }

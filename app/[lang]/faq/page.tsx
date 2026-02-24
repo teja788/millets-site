@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Locale } from '@/lib/i18n';
-import { localePath, getTranslations, isValidLocale, locales, localeParams } from '@/lib/i18n';
+import { localePath, getTranslations, isValidLocale, locales, localeParams, hreflangAlternates } from '@/lib/i18n';
 import { getFaqItems } from '@/lib/i18n-data';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import Accordion from '@/components/ui/Accordion';
@@ -24,9 +24,7 @@ export async function generateMetadata({
         : 'Find answers to common questions about millets: nutrition, cooking, health benefits, Ayurvedic properties, and more.',
     alternates: {
       canonical: `/${lang}/faq`,
-      languages: Object.fromEntries(
-        locales.map((l) => [l, localePath(l, '/faq')])
-      ),
+      languages: hreflangAlternates('/faq'),
     },
   };
 }

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import type { Locale } from '@/lib/i18n';
-import { localePath, getTranslations, isValidLocale, locales } from '@/lib/i18n';
+import { localePath, getTranslations, isValidLocale, locales, hreflangAlternates } from '@/lib/i18n';
 
 export async function generateMetadata({
   params,
@@ -19,9 +19,7 @@ export async function generateMetadata({
         : 'Search across all millets, recipes, FAQ, and pages.',
     alternates: {
       canonical: `/${lang}/search`,
-      languages: Object.fromEntries(
-        locales.map((l) => [l, localePath(l, '/search')])
-      ),
+      languages: hreflangAlternates('/search'),
     },
     robots: {
       index: false,

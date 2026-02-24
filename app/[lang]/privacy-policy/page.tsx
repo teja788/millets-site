@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import type { Locale } from '@/lib/i18n';
-import { localePath, getTranslations, isValidLocale, locales, localeParams } from '@/lib/i18n';
+import { localePath, getTranslations, isValidLocale, locales, localeParams, hreflangAlternates } from '@/lib/i18n';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 
 export function generateStaticParams() {
@@ -26,9 +26,7 @@ export async function generateMetadata({
         : 'Simply Millets privacy policy — how we collect, use, and protect your information.',
     alternates: {
       canonical: `/${lang}/privacy-policy`,
-      languages: Object.fromEntries(
-        locales.map((l) => [l, localePath(l, '/privacy-policy')])
-      ),
+      languages: hreflangAlternates('/privacy-policy'),
     },
   };
 }

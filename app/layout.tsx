@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
 import { Playfair_Display, Source_Sans_3, Noto_Sans_Telugu, Noto_Sans_Arabic } from 'next/font/google';
-import { hreflangAlternates } from '@/lib/i18n';
 import '@/styles/globals.css';
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
@@ -36,10 +35,6 @@ const notoArabic = Noto_Sans_Arabic({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://simplymillets.com'),
-  alternates: {
-    canonical: '/',
-    languages: hreflangAlternates(''),
-  },
   title: {
     default: 'Millets Guide - Ancient Grains, Timeless Nourishment',
     template: '%s | Millets Guide',

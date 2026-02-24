@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import type { Locale } from '@/lib/i18n';
-import { localePath, getTranslations, isValidLocale, locales, localeParams } from '@/lib/i18n';
+import { localePath, getTranslations, isValidLocale, locales, localeParams, hreflangAlternates } from '@/lib/i18n';
 import { getMillets, riceNutrition } from '@/lib/i18n-data';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import ComparisonTable from '@/components/ui/ComparisonTable';
@@ -27,9 +27,7 @@ export async function generateMetadata({
         : 'Compare the nutritional profiles of all 9 millets side by side. See how millets compare to rice and wheat in protein, calcium, iron, fiber, and more.',
     alternates: {
       canonical: `/${lang}/nutrition`,
-      languages: Object.fromEntries(
-        locales.map((l) => [l, localePath(l, '/nutrition')])
-      ),
+      languages: hreflangAlternates('/nutrition'),
     },
   };
 }

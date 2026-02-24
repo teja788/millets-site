@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { AlertTriangle } from 'lucide-react';
 import type { Locale } from '@/lib/i18n';
-import { localePath, getTranslations, isValidLocale, locales, localeParams } from '@/lib/i18n';
+import { localePath, getTranslations, isValidLocale, locales, localeParams, hreflangAlternates } from '@/lib/i18n';
 import { getAyurvedaData, getMilletBySlugLocale } from '@/lib/i18n-data';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import TestimonialOrQuote from '@/components/sections/TestimonialOrQuote';
@@ -36,9 +36,7 @@ export async function generateMetadata({
         : 'Explore the Ayurvedic classification of millets as Trina Dhanya, dosha-specific recommendations, seasonal eating guidelines (Ritucharya), and traditional preparation methods.',
     alternates: {
       canonical: `/${lang}/ayurveda`,
-      languages: Object.fromEntries(
-        locales.map((l) => [l, localePath(l, '/ayurveda')])
-      ),
+      languages: hreflangAlternates('/ayurveda'),
     },
   };
 }

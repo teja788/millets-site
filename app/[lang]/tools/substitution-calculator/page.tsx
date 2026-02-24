@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import SubstitutionCalculator from '@/components/ui/SubstitutionCalculator';
 import type { Locale } from '@/lib/i18n';
-import { getTranslations, isValidLocale } from '@/lib/i18n';
+import { getTranslations, isValidLocale, hreflangAlternates } from '@/lib/i18n';
 import { locales } from '@/lib/i18n';
 import { getSubstitutionEntries, getMillets } from '@/lib/i18n-data';
 
@@ -31,9 +31,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: 'Find the right millet to replace rice, wheat, or other grains in your recipes. Get exact ratios and cooking tips.',
     alternates: {
       canonical: `/${lang}/tools/substitution-calculator`,
-      languages: Object.fromEntries(
-        locales.map((l) => [l, `/${l}/tools/substitution-calculator`])
-      ),
+      languages: hreflangAlternates('/tools/substitution-calculator'),
     },
   };
 }

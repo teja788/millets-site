@@ -1,0 +1,519 @@
+import type { TranslationKeys } from './en';
+
+export const fr: TranslationKeys = {
+  // Site metadata
+  site: {
+    title: 'Guide des Millets — Céréales Anciennes, Nutrition Intemporelle',
+    titleTemplate: '%s | Guide des Millets',
+    description: 'Un guide complet et fondé sur la science des millets — nutrition, recettes, histoire et agriculture durable. Chaque fait vérifié et sourcé.',
+    siteName: 'Simply Millets',
+  },
+
+  // Navigation
+  nav: {
+    home: 'Accueil',
+    millets: 'Millets',
+    recipes: 'Recettes',
+    learn: 'Apprendre',
+    culture: 'Culture',
+    tools: 'Outils',
+    about: 'À propos',
+    nutrition: 'Nutrition',
+    cookingGuide: 'Guide de cuisson',
+    glossary: 'Glossaire',
+    faq: 'FAQ',
+    mythsFacts: 'Mythes et réalités',
+    buyingGuide: 'Guide d\'achat',
+    history: 'Histoire',
+    ayurveda: 'Nutrition et Santé',
+    regionalTraditions: 'Traditions régionales',
+    globalMillets: 'Millets dans le monde',
+    fermentation: 'Fermentation',
+    ancientReferences: 'Références anciennes',
+    sustainability: 'Durabilité',
+    milletQuiz: 'Quiz Millet',
+    substitutionCalculator: 'Calculateur de substitution',
+    cookingTimer: 'Minuteur de cuisson',
+    mealPlans: 'Plans de repas',
+    privacyPolicy: 'Politique de confidentialité',
+    contact: 'Contact',
+    menu: 'Menu',
+    search: 'Rechercher',
+  },
+
+  // Footer
+  footer: {
+    quickLinks: 'Liens rapides',
+    learnMore: 'En savoir plus',
+    resources: 'Ressources',
+    disclaimer: 'Données nutritionnelles issues des tables ICMR-NIN Indian Food Composition Tables (2017) et USDA FoodData Central.',
+    copyright: '© 2026 Guide des Millets.',
+  },
+
+  // Breadcrumb slug-to-name mapping
+  breadcrumb: {
+    home: 'Accueil',
+    about: 'À propos',
+    millets: 'Millets',
+    recipes: 'Recettes',
+    nutrition: 'Nutrition',
+    'cooking-guide': 'Guide de cuisson',
+    glossary: 'Glossaire',
+    faq: 'FAQ',
+    myths: 'Mythes et réalités',
+    'buying-guide': 'Guide d\'achat',
+    history: 'Histoire',
+    ayurveda: 'Nutrition et Santé',
+    'regional-traditions': 'Traditions régionales',
+    'global-millets': 'Millets dans le monde',
+    fermentation: 'Fermentation',
+    'ancient-references': 'Références anciennes',
+    sustainability: 'Durabilité',
+    'meal-plans': 'Plans de repas',
+    tools: 'Outils',
+    'millet-quiz': 'Quiz Millet',
+    'substitution-calculator': 'Calculateur de substitution',
+    'cooking-timer': 'Minuteur de cuisson',
+    'privacy-policy': 'Politique de confidentialité',
+    contact: 'Contact',
+    search: 'Rechercher',
+  },
+
+  // Search
+  search: {
+    placeholder: 'Rechercher millets, recettes et plus...',
+    noResults: 'Aucun résultat trouvé',
+    typeLabels: {
+      millet: 'Millets',
+      recipe: 'Recettes',
+      faq: 'FAQ',
+      page: 'Pages',
+      tool: 'Outils',
+      tradition: 'Traditions',
+      region: 'Régions',
+    },
+  },
+
+  // Common labels
+  common: {
+    majorMillet: 'Millet majeur',
+    minorMillet: 'Millet mineur',
+    glutenFree: 'Sans gluten',
+    nakedGrain: 'Grain nu',
+    huskedGrain: 'Grain vêtu',
+    viewAll: 'Voir tout',
+    learnMore: 'En savoir plus',
+    readMore: 'Lire la suite',
+    backToHome: 'Retour à l\'accueil',
+    backToTop: 'Retour en haut',
+    disclaimer: 'Avertissement',
+    disclaimerText: 'Ce contenu est créé avec l\'aide de l\'IA et se base sur des recherches publiées, des sources gouvernementales et des savoirs traditionnels. Bien que nous visions l\'exactitude, consultez toujours un professionnel de santé pour un avis médical.',
+    loading: 'Chargement...',
+    error: 'Une erreur est survenue',
+    per100g: 'pour 100 g',
+    source: 'Source',
+    sources: 'Sources',
+  },
+
+  // Home page
+  home: {
+    heroTitle: 'Céréales Anciennes. Nutrition Intemporelle.',
+    heroSubtitle: 'Les millets sont cultivés depuis plus de 5 000 ans en Asie et en Afrique. Ces petites graines riches en nutriments sont les superaliments originels — sans gluten, résistants à la sécheresse et gorgés de minéraux. Redécouvrez ce que nos ancêtres ont toujours su.',
+    exploreMillets: 'Explorer les millets',
+    browseRecipes: 'Parcourir les recettes',
+    whatAreMillets: 'Que sont les millets ?',
+    whatAreMilletsP1: 'Les millets sont un groupe diversifié de petites céréales de la famille des Poaceae, cultivées depuis des millénaires. Ils comprennent plusieurs espèces distinctes — mil à chandelle, éleusine, sorgho, millet des oiseaux et d\'autres encore. La plupart des millets sont des plantes en C4 dotées d\'une voie photosynthétique très efficace, leur permettant de prospérer dans des conditions chaudes et arides.',
+    whatAreMilletsP2: 'Ce qui rend les millets remarquables, c\'est leur densité nutritionnelle et leur résilience environnementale. Ils sont naturellement sans gluten, riches en protéines, fibres, fer et calcium, et possèdent un indice glycémique bas — idéaux pour une alimentation moderne soucieuse de la santé.',
+    whatAreMilletsP3: 'L\'Inde est le premier producteur mondial de millets, et 2023 a été déclarée Année internationale du millet par les Nations Unies, à l\'initiative de l\'Inde. Ce site est une ressource complète et fondée sur la science pour vous aider à découvrir, cuisiner et profiter de ces céréales ancestrales.',
+    exploreAllMillets: 'Explorer les 9 millets',
+    exploreAllMilletsDesc: 'Cliquez sur un millet pour découvrir sa nutrition, ses recettes, ses propriétés, ses méthodes de cuisson et bien plus.',
+    whyMillets: 'Pourquoi les millets ?',
+    whyMilletsDesc: 'De la santé personnelle à la durabilité planétaire, les millets offrent des bienfaits que peu d\'autres céréales peuvent égaler.',
+    nutrientDense: 'Riches en nutriments',
+    nutrientDenseDesc: 'Les millets sont riches en protéines, fibres, fer, calcium et vitamines B. De nombreux millets surpassent le riz et le blé en micronutriments clés.',
+    glutenFreeTitle: 'Sans gluten',
+    glutenFreeDesc: 'Tous les millets sont naturellement sans gluten, ce qui en fait un aliment de base sûr et nutritif pour les personnes atteintes de maladie cœliaque ou de sensibilité au gluten.',
+    lowGI: 'Indice glycémique bas',
+    lowGIDesc: 'La plupart des millets ont un indice glycémique bas à moyen, entraînant une libération plus lente du glucose et une meilleure gestion de la glycémie.',
+    climateResilient: 'Résilients au climat',
+    climateResilientDesc: 'Les millets prospèrent dans des conditions arides et semi-arides, nécessitant 70 % moins d\'eau que le riz. Ils poussent dans des sols pauvres où d\'autres cultures échouent.',
+    sustainable: 'Durables',
+    sustainableDesc: 'Avec une faible empreinte carbone, des cycles de croissance courts et des besoins minimaux en intrants, les millets comptent parmi les céréales les plus durables sur Terre.',
+    whichMillet: 'Quel millet devriez-vous essayer ?',
+    whichMilletDesc: 'Répondez à quelques questions et nous vous recommanderons le millet idéal pour vous.',
+    tryRecipes: 'Essayez ces recettes',
+    viewAllRecipes: 'Voir toutes les recettes',
+    startJourney: 'Commencez votre aventure millet',
+    startJourneyDesc: 'Que vous cherchiez à préparer votre premier repas de millet ou à comparer leurs profils nutritionnels, nous avons ce qu\'il vous faut avec des informations vérifiées et sourcées.',
+    cookingGuideTitle: 'Guide de cuisson',
+    cookingGuideDesc: 'Apprenez les ratios d\'eau, les temps de trempage et les techniques pour chaque millet.',
+    nutritionTitle: 'Comparaison nutritionnelle',
+    nutritionDesc: 'Comparez les profils nutritionnels des 9 millets côte à côte.',
+    learnMoreTitle: 'En savoir plus',
+    learnMoreDesc: 'Explorez l\'histoire et la signification culturelle des millets.',
+  },
+
+  // Millets listing page
+  milletsPage: {
+    title: 'Tous les millets',
+    description: 'Explorez les 9 millets majeurs et mineurs — nutrition, recettes, histoire et bien plus.',
+    filterAll: 'Tous',
+    filterMajor: 'Millets majeurs',
+    filterMinor: 'Millets mineurs',
+    majorVsMinorTitle: 'Millets majeurs vs. mineurs',
+    majorVsMinorIntro: 'Les millets sont classés en deux groupes selon la taille de leurs grains et leur importance commerciale :',
+    majorMilletsTitle: 'Millets majeurs',
+    majorMilletsDesc: 'Ce sont les millets les plus largement cultivés et commercialement significatifs. Ils ont des grains plus gros et des volumes de production plus élevés.',
+    minorMilletsTitle: 'Millets mineurs',
+    minorMilletsDesc: 'Ce sont des millets à petits grains, traditionnellement cultivés comme cultures de subsistance. Ils attirent un regain d\'attention pour leurs profils nutritionnels exceptionnels.',
+    nakedVsHuskedTitle: 'Grains nus vs. grains vêtus',
+    nakedVsHuskedIntro: 'Les millets peuvent aussi être classés selon leur structure de grain :',
+    nakedGrainsDesc: 'L\'enveloppe est faiblement attachée au grain et se sépare facilement lors du battage. Ces millets peuvent être consommés avec un minimum de transformation.',
+    huskedGrainsDesc: 'L\'enveloppe est fermement liée au grain et nécessite un décorticage mécanique avant consommation. Le manque de machines de décorticage abordables à petite échelle a historiquement freiné leur utilisation.',
+  },
+
+  // Recipes listing page
+  recipesPage: {
+    title: 'Recettes de millets',
+    description: 'Découvrez des recettes traditionnelles et modernes à base de millets — du porridge du matin aux galettes du soir.',
+    filterAll: 'Toutes',
+    filterBreakfast: 'Petit-déjeuner',
+    filterLunch: 'Déjeuner',
+    filterDinner: 'Dîner',
+    filterSnack: 'En-cas',
+    filterDessert: 'Dessert',
+    filterDrink: 'Boisson',
+    filterBread: 'Pain',
+  },
+
+  // Millet detail page
+  milletDetail: {
+    namesInLanguages: 'Noms dans les langues indiennes',
+    nutritionProfile: 'Profil nutritionnel',
+    nutritionPer100g: 'Nutrition pour 100 g',
+    healthBenefits: 'Bienfaits pour la santé',
+    sideEffects: 'Effets secondaires et précautions',
+    ayurvedicProperties: 'Propriétés nutritionnelles',
+    howToCook: 'Comment le cuisiner',
+    cookingTips: 'Conseils de cuisson',
+    waterRatio: 'Ratio d\'eau',
+    soakingTime: 'Temps de trempage',
+    cookingTime: 'Temps de cuisson',
+    texture: 'Texture',
+    flavorProfile: 'Profil de saveur',
+    bestSubstitute: 'Meilleur substitut pour',
+    cultivation: 'Culture',
+    majorStates: 'Principales régions',
+    growingSeason: 'Saison de culture',
+    waterRequirement: 'Besoin en eau',
+    soilType: 'Type de sol',
+    harvestDays: 'Jours de récolte',
+    history: 'Histoire',
+    originRegion: 'Région d\'origine',
+    domesticationPeriod: 'Période de domestication',
+    recipes: 'Recettes',
+    relatedRecipes: 'Recettes associées',
+    glycemicIndex: 'Indice glycémique',
+    evidenceLevels: {
+      'well-established': 'Bien établi',
+      'supported-by-research': 'Soutenu par la recherche',
+      'preliminary-evidence': 'Preuves préliminaires',
+      'traditional-knowledge': 'Savoir traditionnel',
+    },
+    severityLevels: {
+      mild: 'Léger',
+      moderate: 'Modéré',
+      'consult-doctor': 'Consultez un médecin',
+    },
+    rasa: 'Rasa (Saveur)',
+    guna: 'Guna (Qualité)',
+    virya: 'Virya (Puissance)',
+    vipaka: 'Vipaka (Post-digestion)',
+    doshaEffect: 'Effet Dosha',
+    therapeuticUses: 'Usages thérapeutiques',
+    contraindications: 'Contre-indications',
+    classicalReference: 'Référence classique',
+    namesMultilingual: 'Noms dans différentes langues',
+    nutritionAndHealth: 'Nutrition et santé',
+    evidenceBasedBenefits: 'Bienfaits fondés sur la recherche',
+    precautions: 'Précautions',
+    // Nutrition labels
+    calories: 'Calories',
+    protein: 'Protéines',
+    fat: 'Lipides',
+    carbohydrates: 'Glucides',
+    fiber: 'Fibres',
+    calcium: 'Calcium',
+    iron: 'Fer',
+    zinc: 'Zinc',
+    phosphorus: 'Phosphore',
+    magnesium: 'Magnésium',
+    potassium: 'Potassium',
+  },
+
+  // Recipe detail page
+  recipeDetail: {
+    prepTime: 'Temps de préparation',
+    cookTime: 'Temps de cuisson',
+    servings: 'Portions',
+    difficulty: 'Difficulté',
+    ingredients: 'Ingrédients',
+    instructions: 'Instructions',
+    tips: 'Conseils',
+    nutritionPerServing: 'Nutrition par portion',
+    milletUsed: 'Millet utilisé',
+    category: 'Catégorie',
+    cuisine: 'Cuisine',
+    tags: 'Tags',
+    optional: 'optionnel',
+    difficulties: {
+      easy: 'Facile',
+      medium: 'Moyen',
+      advanced: 'Avancé',
+    },
+    categories: {
+      breakfast: 'Petit-déjeuner',
+      lunch: 'Déjeuner',
+      dinner: 'Dîner',
+      snack: 'En-cas',
+      dessert: 'Dessert',
+      drink: 'Boisson',
+      bread: 'Pain',
+    },
+    step: 'Étape',
+    print: 'Imprimer la recette',
+    share: 'Partager',
+  },
+
+  // Millet Quiz
+  quiz: {
+    title: 'Quel millet devriez-vous essayer ?',
+    subtitle: 'Répondez à quelques questions pour trouver le millet idéal pour vous.',
+    q1: 'Quel est votre objectif de santé principal ?',
+    q1o1: 'Os solides et calcium',
+    q1o2: 'Fer et énergie',
+    q1o3: 'Gestion du diabète',
+    q1o4: 'Gestion du poids',
+    q1o5: 'Nutrition globale',
+    q2: 'Quelle texture préférez-vous ?',
+    q2o1: 'Comme du riz, léger et aéré',
+    q2o2: 'Porridge onctueux',
+    q2o3: 'Galette ou pain plat',
+    q2o4: 'Comme du couscous',
+    q3: 'Combien de temps avez-vous pour cuisiner ?',
+    q3o1: 'Rapide (moins de 20 minutes)',
+    q3o2: 'Modéré (20-30 minutes)',
+    q3o3: 'J\'ai le temps',
+    q4: 'Quel repas préparez-vous ?',
+    q4o1: 'Petit-déjeuner',
+    q4o2: 'Déjeuner/Dîner',
+    q4o3: 'En-cas',
+    q4o4: 'N\'importe quel repas',
+    yourResult: 'Votre millet idéal',
+    tryAgain: 'Recommencer',
+    next: 'Suivant',
+    previous: 'Précédent',
+  },
+
+  // 404 page
+  notFound: {
+    title: '404',
+    heading: 'Page introuvable',
+    message: 'On dirait que ce grain s\'est perdu dans le champ...',
+    backHome: 'Retour à l\'accueil',
+    explore: 'Ou explorez :',
+  },
+
+  // Nutrition comparison
+  comparison: {
+    title: 'Comparaison nutritionnelle',
+    selectMillet: 'Sélectionnez un millet à comparer...',
+    vsRice: 'vs Riz',
+    vsWheat: 'vs Blé',
+    compareWith: 'Comparer avec',
+  },
+
+  // Language
+  langName: 'Français',
+  langNameNative: 'Français',
+  switchLang: 'English',
+
+  // Dosha names
+  doshas: {
+    vata: 'Vata',
+    pitta: 'Pitta',
+    kapha: 'Kapha',
+    increases: 'Augmente',
+    decreases: 'Diminue',
+    neutral: 'Neutre',
+  },
+
+  // Meal plan page
+  mealPlan: {
+    title: 'Plans de repas',
+    days: {
+      monday: 'Lundi',
+      tuesday: 'Mardi',
+      wednesday: 'Mercredi',
+      thursday: 'Jeudi',
+      friday: 'Vendredi',
+      saturday: 'Samedi',
+      sunday: 'Dimanche',
+    },
+    breakfast: 'Petit-déjeuner',
+    lunch: 'Déjeuner',
+    snack: 'En-cas',
+    dinner: 'Dîner',
+    goal: 'Objectif',
+    duration: 'Durée',
+  },
+
+  // Buying guide
+  buyingGuidePage: {
+    title: 'Guide d\'achat',
+    formsAvailable: 'Formes disponibles',
+    whatToLookFor: 'À quoi faire attention',
+    storage: 'Instructions de conservation',
+    shelfLife: 'Durée de conservation',
+    priceRange: 'Gamme de prix',
+    availability: 'Disponibilité en ligne',
+  },
+
+  // Fermentation page
+  fermentationPage: {
+    title: 'Aliments fermentés traditionnels à base de millets',
+    process: 'Procédé',
+    duration: 'Durée',
+    benefit: 'Bienfait nutritionnel',
+    culturalContext: 'Contexte culturel',
+  },
+
+  // Sustainability page
+  sustainabilityPage: {
+    title: 'Durabilité et millets',
+  },
+
+  // Ancient references page
+  ancientRefsPage: {
+    title: 'Références anciennes aux millets',
+    originalQuote: 'Citation originale',
+    translation: 'Traduction',
+    significance: 'Signification',
+    period: 'Période',
+  },
+
+  // Glossary page
+  glossaryPage: {
+    title: 'Glossaire des millets',
+  },
+
+  // History page
+  historyPage: {
+    title: 'Histoire des millets',
+    indiaProducerTitle: 'L\'Inde : premier producteur mondial de millets',
+    indiaProducerP1: 'L\'Inde est le premier producteur mondial de millets, représentant environ 20 % de la production mondiale et environ 80 % de la production asiatique. Le gouvernement indien a officiellement renommé les millets « Nutri-Cereals » en avril 2018, par notification officielle du ministère de l\'Agriculture, reconnaissant leur valeur nutritionnelle supérieure par rapport aux céréales de base comme le riz et le blé.',
+    indiaProducerP2: 'Les principaux États producteurs de millets comprennent le Rajasthan, le Maharashtra, le Karnataka, l\'Andhra Pradesh, le Tamil Nadu, le Madhya Pradesh, le Gujarat et l\'Uttarakhand. Chaque région possède ses propres variétés traditionnelles de millets et son patrimoine culinaire.',
+  },
+
+  // Ayurveda page
+  ayurvedaPage: {
+    title: 'Millets et nutrition traditionnelle',
+    doshaGuide: 'Guide des Doshas',
+    seasonalGuide: 'Guide saisonnier',
+    recommended: 'Recommandé',
+    moderate: 'À consommer avec modération',
+    avoid: 'À éviter ou limiter',
+  },
+
+  // FAQ page
+  faqPage: {
+    title: 'Questions fréquentes',
+    categories: {
+      general: 'Général',
+      nutrition: 'Nutrition',
+      cooking: 'Cuisson',
+      health: 'Santé',
+      history: 'Histoire',
+      sustainability: 'Durabilité',
+      ayurveda: 'Nutrition traditionnelle',
+    },
+  },
+
+  // Myths page
+  mythsPage: {
+    title: 'Mythes et réalités sur les millets',
+    myth: 'Mythe',
+    fact: 'Réalité',
+  },
+
+  // Regional traditions
+  regionalPage: {
+    title: 'Traditions régionales des millets',
+    iconicDishes: 'Plats emblématiques',
+    festivals: 'Fêtes et festivals',
+    culturalSignificance: 'Signification culturelle',
+    traditionalPractices: 'Pratiques traditionnelles',
+  },
+
+  // Global millets
+  globalPage: {
+    title: 'Les millets dans le monde',
+    iconicFoods: 'Plats emblématiques',
+    historicalHighlights: 'Points historiques marquants',
+    modernStatus: 'Situation actuelle',
+    keyFact: 'Fait clé',
+  },
+
+  // Substitution calculator
+  substitutionPage: {
+    title: 'Calculateur de substitution des millets',
+    selectGrain: 'Sélectionnez la céréale à remplacer',
+    ratio: 'Ratio de substitution',
+    notes: 'Notes',
+    bestFor: 'Idéal pour',
+    difficulty: 'Difficulté',
+  },
+
+  // Cooking timer
+  cookingTimerPage: {
+    title: 'Minuteur de cuisson',
+    start: 'Démarrer',
+    pause: 'Pause',
+    reset: 'Réinitialiser',
+    done: 'Terminé !',
+  },
+
+  // Privacy Policy page
+  privacyPolicy: {
+    title: 'Politique de confidentialité',
+    lastUpdated: 'Dernière mise à jour : février 2026',
+    intro: 'Simply Millets (« nous ») s\'engage à protéger votre vie privée. Cette politique de confidentialité explique comment nous collectons, utilisons et protégeons les informations lorsque vous visitez simplymillets.com.',
+    informationWeCollectTitle: 'Informations que nous collectons',
+    informationWeCollectText: 'Nous ne collectons aucune information personnelle telle que noms, adresses e-mail ou numéros de téléphone. Notre site est purement informatif et ne nécessite ni inscription ni connexion. Nous pouvons collecter des données d\'utilisation anonymes via des outils d\'analyse, notamment les pages visitées, le temps passé sur les pages, le type de navigateur, le type d\'appareil et la localisation géographique approximative.',
+    howWeUseTitle: 'Comment nous utilisons les informations',
+    howWeUseText: 'Toute donnée anonyme que nous collectons est utilisée uniquement pour comprendre comment les visiteurs interagissent avec notre contenu, améliorer la qualité et la pertinence de nos articles et recettes, identifier les sujets populaires pour créer un contenu plus utile, et garantir le bon fonctionnement du site sur tous les appareils et navigateurs.',
+    cookiesTitle: 'Cookies',
+    cookiesText: 'Notre site peut utiliser des cookies et technologies similaires à des fins d\'analyse, pour mémoriser votre préférence de langue et activer les préférences de mode sombre. Vous pouvez contrôler les cookies via les paramètres de votre navigateur. La désactivation des cookies n\'affectera pas les fonctionnalités essentielles de notre site.',
+    thirdPartyTitle: 'Services tiers',
+    thirdPartyText: 'Nous pouvons utiliser des services tiers tels que Vercel pour l\'hébergement et Google Analytics pour comprendre les tendances de trafic. Ces services peuvent collecter des données anonymes comme décrit dans leurs politiques de confidentialité respectives. Nous ne vendons, n\'échangeons ni ne partageons aucune donnée avec des tiers à des fins publicitaires.',
+    dataSecurityTitle: 'Sécurité des données',
+    dataSecurityText: 'Notre site est servi via HTTPS pour garantir une communication sécurisée. Comme nous ne collectons pas de données personnelles, le risque pour votre vie privée est minimal. Nous prenons des mesures raisonnables pour protéger l\'intégrité de notre site et de toute donnée traitée par nos outils d\'analyse.',
+    yourRightsTitle: 'Vos droits',
+    yourRightsText: 'Comme nous ne collectons pas de données personnelles, il n\'y a généralement aucune information personnelle à consulter, modifier ou supprimer. Si vous avez des préoccupations concernant les données collectées par nos fournisseurs d\'analyse tiers, vous pouvez désactiver le suivi en utilisant des extensions de navigateur telles que le module complémentaire de désactivation Google Analytics ou en activant « Ne pas suivre » dans les paramètres de votre navigateur.',
+    childrenTitle: 'Vie privée des enfants',
+    childrenText: 'Notre site ne s\'adresse pas aux enfants de moins de 13 ans. Nous ne collectons sciemment aucune information personnelle sur les enfants. Notre contenu sur les millets, la nutrition et les recettes est de nature éducative et convient à tous les âges.',
+    changesTitle: 'Modifications de cette politique',
+    changesText: 'Nous pouvons mettre à jour cette politique de confidentialité de temps en temps. Toute modification sera publiée sur cette page avec une date de révision mise à jour. Nous vous encourageons à consulter cette page régulièrement.',
+    contactTitle: 'Nous contacter',
+    contactText: 'Si vous avez des questions concernant cette politique de confidentialité, n\'hésitez pas à nous contacter à se3ker.of.truth@gmail.com.',
+  },
+
+  // Contact page
+  contactPage: {
+    title: 'Nous contacter',
+    description: 'Vous avez une question, une suggestion ou un retour ? Nous serions ravis de vous entendre.',
+    emailLabel: 'E-mail',
+    email: 'se3ker.of.truth@gmail.com',
+    message: 'N\'hésitez pas à nous contacter pour toute question relative aux millets, suggestions de recettes, corrections ou retours généraux. Nous répondons généralement sous quelques jours.',
+  },
+};

@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import MilletQuiz from '@/components/ui/MilletQuiz';
 import type { Locale } from '@/lib/i18n';
-import { getTranslations, isValidLocale } from '@/lib/i18n';
+import { getTranslations, isValidLocale, hreflangAlternates } from '@/lib/i18n';
 import { locales } from '@/lib/i18n';
 
 // ---------------------------------------------------------------------------
@@ -30,9 +30,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: t.quiz.subtitle,
     alternates: {
       canonical: `/${lang}/tools/millet-quiz`,
-      languages: Object.fromEntries(
-        locales.map((l) => [l, `/${l}/tools/millet-quiz`])
-      ),
+      languages: hreflangAlternates('/tools/millet-quiz'),
     },
   };
 }

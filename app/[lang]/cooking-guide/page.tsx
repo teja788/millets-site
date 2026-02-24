@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import type { Locale } from '@/lib/i18n';
-import { localePath, getTranslations, isValidLocale, locales, localeParams } from '@/lib/i18n';
+import { localePath, getTranslations, isValidLocale, locales, localeParams, hreflangAlternates } from '@/lib/i18n';
 import { getMillets } from '@/lib/i18n-data';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import {
@@ -30,9 +30,7 @@ export async function generateMetadata({
         : 'Complete guide to cooking millets: water ratios, soaking times, cooking methods (stovetop, pressure cooker, rice cooker), reducing antinutrients, storage, and substitution tips.',
     alternates: {
       canonical: `/${lang}/cooking-guide`,
-      languages: Object.fromEntries(
-        locales.map((l) => [l, localePath(l, '/cooking-guide')])
-      ),
+      languages: hreflangAlternates('/cooking-guide'),
     },
   };
 }

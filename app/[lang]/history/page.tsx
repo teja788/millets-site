@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import type { Locale } from '@/lib/i18n';
-import { localePath, getTranslations, isValidLocale, locales, localeParams } from '@/lib/i18n';
+import { localePath, getTranslations, isValidLocale, locales, localeParams, hreflangAlternates } from '@/lib/i18n';
 import { getTimelineEvents } from '@/lib/i18n-data';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import TimelineSection from '@/components/sections/TimelineSection';
@@ -25,9 +25,7 @@ export async function generateMetadata({
         : 'Trace the fascinating 10,000-year journey of millets from the earliest cultivated crops in China to the 2023 International Year of Millets. Discover archaeological evidence, Vedic references, and the modern millet revival.',
     alternates: {
       canonical: `/${lang}/history`,
-      languages: Object.fromEntries(
-        locales.map((l) => [l, localePath(l, '/history')])
-      ),
+      languages: hreflangAlternates('/history'),
     },
   };
 }
@@ -126,6 +124,17 @@ export default async function HistoryPage({
             </>
           )}
         </div>
+
+        {/* India: Largest Producer */}
+        <section className="mb-12">
+          <h2 className="font-heading text-2xl md:text-3xl font-bold text-earth-800 dark:text-earth-100 mb-4">
+            {t.historyPage.indiaProducerTitle}
+          </h2>
+          <div className="max-w-3xl space-y-4 text-earth-800 dark:text-earth-200 leading-relaxed">
+            <p>{t.historyPage.indiaProducerP1}</p>
+            <p>{t.historyPage.indiaProducerP2}</p>
+          </div>
+        </section>
 
         {/* Timeline */}
         <section className="mb-16">

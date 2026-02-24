@@ -5,6 +5,7 @@ import { useParams } from 'next/navigation';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import MilletGrid from '@/components/sections/MilletGrid';
 import Button from '@/components/ui/Button';
+import { Card, CardBody } from '@/components/ui/Card';
 import type { Locale } from '@/lib/i18n';
 import { getTranslations } from '@/lib/i18n';
 import { getMillets } from '@/lib/i18n-data';
@@ -64,6 +65,74 @@ export default function MilletsPage() {
 
         {/* Millet Grid */}
         <MilletGrid millets={filteredMillets} columns={3} />
+
+        {/* Major vs Minor Millets */}
+        <section className="mt-16">
+          <h2 className="font-heading text-2xl font-bold text-earth-800 dark:text-earth-100 mb-4">
+            {t.milletsPage.majorVsMinorTitle}
+          </h2>
+          <div className="max-w-3xl space-y-4 text-earth-600 dark:text-earth-300 leading-relaxed">
+            <p>{t.milletsPage.majorVsMinorIntro}</p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <Card variant="outlined">
+                <CardBody>
+                  <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-2">
+                    {t.milletsPage.majorMilletsTitle}
+                  </h3>
+                  <p className="text-sm text-earth-600 dark:text-earth-300">
+                    {t.milletsPage.majorMilletsDesc}
+                  </p>
+                </CardBody>
+              </Card>
+
+              <Card variant="outlined">
+                <CardBody>
+                  <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-2">
+                    {t.milletsPage.minorMilletsTitle}
+                  </h3>
+                  <p className="text-sm text-earth-600 dark:text-earth-300">
+                    {t.milletsPage.minorMilletsDesc}
+                  </p>
+                </CardBody>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Naked vs Husked Grains */}
+        <section className="mt-12">
+          <h2 className="font-heading text-2xl font-bold text-earth-800 dark:text-earth-100 mb-4">
+            {t.milletsPage.nakedVsHuskedTitle}
+          </h2>
+          <div className="max-w-3xl space-y-4 text-earth-600 dark:text-earth-300 leading-relaxed">
+            <p>{t.milletsPage.nakedVsHuskedIntro}</p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <Card variant="outlined">
+                <CardBody>
+                  <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-2">
+                    {t.common.nakedGrain}
+                  </h3>
+                  <p className="text-sm text-earth-600 dark:text-earth-300">
+                    {t.milletsPage.nakedGrainsDesc}
+                  </p>
+                </CardBody>
+              </Card>
+
+              <Card variant="outlined">
+                <CardBody>
+                  <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-2">
+                    {t.common.huskedGrain}
+                  </h3>
+                  <p className="text-sm text-earth-600 dark:text-earth-300">
+                    {t.milletsPage.huskedGrainsDesc}
+                  </p>
+                </CardBody>
+              </Card>
+            </div>
+          </div>
+        </section>
       </div>
 
       {/* Disclaimer */}

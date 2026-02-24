@@ -6,7 +6,7 @@ import Sidebar from '@/components/layout/Sidebar';
 import Badge from '@/components/ui/Badge';
 import { Card, CardBody } from '@/components/ui/Card';
 import type { Locale } from '@/lib/i18n';
-import { getTranslations, isValidLocale } from '@/lib/i18n';
+import { getTranslations, isValidLocale, hreflangAlternates } from '@/lib/i18n';
 import { locales } from '@/lib/i18n';
 import {
   getGlobalMilletRegions,
@@ -48,9 +48,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: `${data.tagline} Explore the millet heritage of ${data.region}, including iconic foods, history, and cultural significance.`,
     alternates: {
       canonical: `/${lang}/global-millets/${region}`,
-      languages: Object.fromEntries(
-        locales.map((l) => [l, `/${l}/global-millets/${region}`])
-      ),
+      languages: hreflangAlternates(`/global-millets/${region}`),
     },
   };
 }

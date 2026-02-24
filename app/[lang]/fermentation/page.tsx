@@ -5,7 +5,7 @@ import Breadcrumb from '@/components/layout/Breadcrumb';
 import { Card, CardBody } from '@/components/ui/Card';
 import Badge from '@/components/ui/Badge';
 import type { Locale } from '@/lib/i18n';
-import { localePath, getTranslations, isValidLocale, localeParams } from '@/lib/i18n';
+import { localePath, getTranslations, isValidLocale, localeParams, hreflangAlternates } from '@/lib/i18n';
 import { getFermentedProducts } from '@/lib/i18n-data';
 
 export function generateStaticParams() {
@@ -26,10 +26,7 @@ export async function generateMetadata({
       'Traditional fermented millet beverages and foods from around the world.',
     alternates: {
       canonical: `/${lang}/fermentation`,
-      languages: {
-        en: '/en/fermentation',
-        te: '/te/fermentation',
-      },
+      languages: hreflangAlternates('/fermentation'),
     },
   };
 }

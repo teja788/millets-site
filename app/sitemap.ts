@@ -66,6 +66,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   });
 
+  // Contact page (English only)
+  entries.push({
+    url: `${BASE_URL}/en/contact`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.5,
+  });
+
   // Dynamic millet pages (all locales)
   for (const millet of millets) {
     for (const locale of locales) {

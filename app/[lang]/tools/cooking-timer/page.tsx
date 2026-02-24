@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import CookingTimer from '@/components/ui/CookingTimer';
 import type { Locale } from '@/lib/i18n';
-import { getTranslations, isValidLocale } from '@/lib/i18n';
+import { getTranslations, isValidLocale, hreflangAlternates } from '@/lib/i18n';
 import { locales } from '@/lib/i18n';
 import { getMillets } from '@/lib/i18n-data';
 
@@ -31,9 +31,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: 'Interactive cooking timer with presets for each millet variety. Includes water ratios and soaking times.',
     alternates: {
       canonical: `/${lang}/tools/cooking-timer`,
-      languages: Object.fromEntries(
-        locales.map((l) => [l, `/${l}/tools/cooking-timer`])
-      ),
+      languages: hreflangAlternates('/tools/cooking-timer'),
     },
   };
 }

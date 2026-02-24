@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import type { Locale } from '@/lib/i18n';
-import { localePath, getTranslations, isValidLocale, locales, localeParams } from '@/lib/i18n';
+import { localePath, getTranslations, isValidLocale, locales, localeParams, hreflangAlternates } from '@/lib/i18n';
 import { getMillets } from '@/lib/i18n-data';
 import GlossaryPageClient from './GlossaryPageClient';
 
@@ -22,9 +22,7 @@ export async function generateMetadata({
         : 'Find your local name for any millet. Millets are known by different names across India\'s diverse languages.',
     alternates: {
       canonical: `/${lang}/glossary`,
-      languages: Object.fromEntries(
-        locales.map((l) => [l, localePath(l, '/glossary')])
-      ),
+      languages: hreflangAlternates('/glossary'),
     },
   };
 }

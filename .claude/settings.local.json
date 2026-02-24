@@ -34,7 +34,14 @@
       "WebFetch(domain:serwist.pages.dev)",
       "WebFetch(domain:github.com)",
       "Bash(npx --yes svg2png-cli:*)",
-      "Bash(npx lighthouse:*)"
+      "Bash(npx lighthouse:*)",
+      "Bash(git stash:*)",
+      "Bash(ls:*)",
+      "Bash(git -C \"D:/Ravi/Experiments/Websites/Milllets_Site\" ls-files)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(wc:*)",
+      "Bash(npx tsc:*)",
+      "Bash(python3:*)"
     ]
   }
 }

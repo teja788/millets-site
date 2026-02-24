@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import type { Locale } from '@/lib/i18n';
-import { localePath, getTranslations, isValidLocale, locales } from '@/lib/i18n';
+import { localePath, getTranslations, isValidLocale, locales, hreflangAlternates } from '@/lib/i18n';
 
 export async function generateMetadata({
   params,
@@ -19,9 +19,7 @@ export async function generateMetadata({
         : 'Explore how different cultures across the world have cultivated, cooked, and celebrated millets throughout history.',
     alternates: {
       canonical: `/${lang}/global-millets`,
-      languages: Object.fromEntries(
-        locales.map((l) => [l, localePath(l, '/global-millets')])
-      ),
+      languages: hreflangAlternates('/global-millets'),
     },
   };
 }

@@ -8,7 +8,7 @@ import ImageWithFallback from '@/components/ui/ImageWithFallback';
 import PrintButton from '@/components/ui/PrintButton';
 import ShareButton, { FloatingShareButton } from '@/components/ui/ShareButton';
 import type { Locale } from '@/lib/i18n';
-import { localePath, getTranslations, isValidLocale, locales } from '@/lib/i18n';
+import { localePath, getTranslations, isValidLocale, locales, hreflangAlternates } from '@/lib/i18n';
 import { getRecipes, getRecipeBySlugLocale, getMilletBySlugLocale } from '@/lib/i18n-data';
 
 interface PageProps {
@@ -16,11 +16,11 @@ interface PageProps {
 }
 
 export async function generateStaticParams() {
-  // Use English recipes for slug list (slugs are the same in both locales)
-  const enRecipes = getRecipes('en');
+  // Collect unique slugs from all locales (each locale may have different recipes)
   const params: { lang: string; slug: string }[] = [];
   for (const lang of locales) {
-    for (const recipe of enRecipes) {
+    const localeRecipes = getRecipes(lang);
+    for (const recipe of localeRecipes) {
       params.push({ lang, slug: recipe.slug });
     }
   }
@@ -41,11 +41,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: recipe.description,
     alternates: {
       canonical: `/${locale}/recipes/${slug}`,
-      languages: {
-        en: `/en/recipes/${slug}`,
-        te: `/te/recipes/${slug}`,
-        'x-default': `/en/recipes/${slug}`,
-      },
+      languages: hreflangAlternates(`/recipes/${slug}`),
     },
     openGraph: {
       title: recipe.title,

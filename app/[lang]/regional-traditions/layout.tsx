@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import type { Locale } from '@/lib/i18n';
-import { localePath, getTranslations, isValidLocale, locales } from '@/lib/i18n';
+import { localePath, getTranslations, isValidLocale, locales, hreflangAlternates } from '@/lib/i18n';
 
 export async function generateMetadata({
   params,
@@ -19,9 +19,7 @@ export async function generateMetadata({
         : 'Explore the iconic dishes, festivals, and living practices that keep millet traditions alive across India.',
     alternates: {
       canonical: `/${lang}/regional-traditions`,
-      languages: Object.fromEntries(
-        locales.map((l) => [l, localePath(l, '/regional-traditions')])
-      ),
+      languages: hreflangAlternates('/regional-traditions'),
     },
   };
 }

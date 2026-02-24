@@ -7,7 +7,7 @@ import Sidebar from '@/components/layout/Sidebar';
 import Badge from '@/components/ui/Badge';
 import { Card, CardBody } from '@/components/ui/Card';
 import type { Locale } from '@/lib/i18n';
-import { localePath, getTranslations, isValidLocale } from '@/lib/i18n';
+import { localePath, getTranslations, isValidLocale, hreflangAlternates } from '@/lib/i18n';
 import { locales } from '@/lib/i18n';
 import {
   getRegionalTraditions,
@@ -49,9 +49,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: `${tradition.tagline} Explore the iconic millet dishes, festivals, and cultural practices of ${tradition.state}.`,
     alternates: {
       canonical: `/${lang}/regional-traditions/${state}`,
-      languages: Object.fromEntries(
-        locales.map((l) => [l, `/${l}/regional-traditions/${state}`])
-      ),
+      languages: hreflangAlternates(`/regional-traditions/${state}`),
     },
   };
 }

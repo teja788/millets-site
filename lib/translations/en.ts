@@ -34,6 +34,7 @@ export const en = {
     cookingTimer: 'Cooking Timer',
     mealPlans: 'Meal Plans',
     privacyPolicy: 'Privacy Policy',
+    contact: 'Contact',
     menu: 'Menu',
     search: 'Search',
   },
@@ -72,6 +73,7 @@ export const en = {
     'substitution-calculator': 'Substitution Calculator',
     'cooking-timer': 'Cooking Timer',
     'privacy-policy': 'Privacy Policy',
+    contact: 'Contact',
     search: 'Search',
   },
 
@@ -118,11 +120,13 @@ export const en = {
     exploreMillets: 'Explore Millets',
     browseRecipes: 'Browse Recipes',
     whatAreMillets: 'What Are Millets?',
-    whatAreMilletsP1: 'Millets are a group of small-seeded grasses that have been cultivated as cereal crops for thousands of years. They belong to the family Poaceae and include several distinct species — pearl millet, finger millet, sorghum, foxtail millet, and more.',
+    whatAreMilletsP1: 'Millets are a diverse group of small-seeded cereal grains belonging to the family Poaceae, cultivated for thousands of years. They include several distinct species — pearl millet, finger millet, sorghum, foxtail millet, and more. Most millets are C4 plants with a highly efficient photosynthetic pathway, allowing them to thrive in hot, dry conditions.',
     whatAreMilletsP2: 'What makes millets remarkable is their nutritional density and environmental resilience. They are naturally gluten-free, rich in protein, fiber, iron, and calcium, and have low glycemic indices — making them ideal for modern health-conscious diets.',
     whatAreMilletsP3: 'India is the world\'s largest producer of millets, and 2023 was declared the International Year of Millets by the United Nations, championed by India. This website is a comprehensive, evidence-based resource to help you explore, cook, and benefit from these ancient grains.',
     exploreAllMillets: 'Explore All 9 Millets',
+    exploreAllMilletsDesc: 'Click on any millet to discover its nutrition, recipes, Ayurvedic properties, cooking methods, and more.',
     whyMillets: 'Why Millets?',
+    whyMilletsDesc: 'From personal health to planetary sustainability, millets offer benefits that few other grains can match.',
     nutrientDense: 'Nutrient Dense',
     nutrientDenseDesc: 'Millets are rich in protein, fiber, iron, calcium, and B-vitamins. Many millets surpass rice and wheat in key micronutrients.',
     glutenFreeTitle: 'Gluten Free',
@@ -134,9 +138,11 @@ export const en = {
     sustainable: 'Sustainable',
     sustainableDesc: 'With a low carbon footprint, short growing cycles, and minimal input requirements, millets are among the most sustainable grains on Earth.',
     whichMillet: 'Which Millet Should You Try?',
+    whichMilletDesc: "Answer a few questions and we'll recommend the perfect millet for you.",
     tryRecipes: 'Try These Recipes',
     viewAllRecipes: 'View All Recipes',
     startJourney: 'Start Your Millet Journey',
+    startJourneyDesc: 'Whether you are looking to cook your first millet meal or compare their nutritional profiles, we have you covered with verified, sourced information.',
     cookingGuideTitle: 'Cooking Guide',
     cookingGuideDesc: 'Learn water ratios, soaking times, and techniques for every millet.',
     nutritionTitle: 'Nutrition Comparison',
@@ -152,6 +158,16 @@ export const en = {
     filterAll: 'All',
     filterMajor: 'Major Millets',
     filterMinor: 'Minor Millets',
+    majorVsMinorTitle: 'Major vs. Minor Millets',
+    majorVsMinorIntro: 'Millets are broadly classified into two groups based on their grain size and commercial importance:',
+    majorMilletsTitle: 'Major Millets',
+    majorMilletsDesc: 'These are the most widely cultivated and commercially significant millets. They have larger grain sizes and higher production volumes.',
+    minorMilletsTitle: 'Minor Millets',
+    minorMilletsDesc: 'These are smaller-grained millets, traditionally cultivated as subsistence crops. They are gaining renewed attention for their exceptional nutritional profiles.',
+    nakedVsHuskedTitle: 'Naked Grains vs. Husked Grains',
+    nakedVsHuskedIntro: 'Millets can also be classified by their grain structure:',
+    nakedGrainsDesc: 'The husk is loosely attached to the grain and separates easily during threshing. These millets can be consumed with minimal processing.',
+    huskedGrainsDesc: 'The husk is tightly bound to the grain and requires mechanical dehulling before consumption. The lack of affordable small-scale dehulling machines was historically a barrier to their wider use.',
   },
 
   // Recipes listing page
@@ -215,6 +231,10 @@ export const en = {
     therapeuticUses: 'Therapeutic Uses',
     contraindications: 'Contraindications',
     classicalReference: 'Classical Reference',
+    namesMultilingual: 'Names in Different Languages',
+    nutritionAndHealth: 'Nutrition & Health Properties',
+    evidenceBasedBenefits: 'Evidence-Based Benefits',
+    precautions: 'Precautions',
     // Nutrition labels
     calories: 'Calories',
     protein: 'Protein',
@@ -388,6 +408,9 @@ export const en = {
   // History page
   historyPage: {
     title: 'History of Millets',
+    indiaProducerTitle: 'India: The World\'s Largest Millet Producer',
+    indiaProducerP1: 'India is the world\'s largest producer of millets, accounting for approximately 20% of global production and about 80% of Asia\'s millet output. The Government of India officially renamed millets as "Nutri-Cereals" in April 2018, through a gazette notification by the Ministry of Agriculture, recognizing their superior nutritional value compared to staple cereals like rice and wheat.',
+    indiaProducerP2: 'Major millet-producing states include Rajasthan, Maharashtra, Karnataka, Andhra Pradesh, Tamil Nadu, Madhya Pradesh, Gujarat, and Uttarakhand. Each region has its own traditional millet varieties and culinary heritage.',
   },
 
   // Ayurveda page
@@ -480,6 +503,14 @@ export const en = {
     changesText: 'We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date. We encourage you to review this page periodically.',
     contactTitle: 'Contact Us',
     contactText: 'If you have any questions about this Privacy Policy, please reach out to us at se3ker.of.truth@gmail.com.',
+  },
+  // Contact page
+  contactPage: {
+    title: 'Contact Us',
+    description: 'Have a question, suggestion, or feedback? We would love to hear from you.',
+    emailLabel: 'Email',
+    email: 'se3ker.of.truth@gmail.com',
+    message: 'Feel free to reach out to us for any queries related to millets, recipe suggestions, corrections, or general feedback. We typically respond within a few days.',
   },
 } as const;
 

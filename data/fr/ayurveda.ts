@@ -1,0 +1,1 @@
+export { ayurvedaPageData } from '../ayurveda';

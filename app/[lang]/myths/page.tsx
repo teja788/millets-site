@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import type { Locale } from '@/lib/i18n';
-import { localePath, getTranslations, isValidLocale, locales, localeParams } from '@/lib/i18n';
+import { localePath, getTranslations, isValidLocale, locales, localeParams, hreflangAlternates } from '@/lib/i18n';
 import { getMyths } from '@/lib/i18n-data';
 import MythsPageClient from './MythsPageClient';
 
@@ -22,9 +22,7 @@ export async function generateMetadata({
         : 'Myths & Facts About Millets. Debunk common misconceptions with evidence-based facts.',
     alternates: {
       canonical: `/${lang}/myths`,
-      languages: Object.fromEntries(
-        locales.map((l) => [l, localePath(l, '/myths')])
-      ),
+      languages: hreflangAlternates('/myths'),
     },
   };
 }

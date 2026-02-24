@@ -124,9 +124,7 @@ export default async function HomePage({
               {t.home.exploreAllMillets}
             </h2>
             <p className="text-earth-600 dark:text-earth-300 max-w-2xl mx-auto">
-              {locale === 'en'
-                ? 'Click on any millet to discover its nutrition, recipes, Ayurvedic properties, cooking methods, and more.'
-                : 'ఏదైనా చిరుధాన్యంపై క్లిక్ చేసి దాని పోషణ, రెసిపీలు, ఆయుర్వేద గుణాలు, వంట పద్ధతులు మరియు మరిన్ని తెలుసుకోండి.'}
+              {t.home.exploreAllMilletsDesc}
             </p>
           </div>
           <MilletGrid millets={allMillets} columns={3} />
@@ -141,9 +139,7 @@ export default async function HomePage({
               {t.home.whyMillets}
             </h2>
             <p className="text-earth-600 dark:text-earth-300 max-w-2xl mx-auto">
-              {locale === 'en'
-                ? 'From personal health to planetary sustainability, millets offer benefits that few other grains can match.'
-                : 'వ్యక్తిగత ఆరోగ్యం నుండి భూగోళ సుస్థిరత వరకు, చిరుధాన్యాలు ఇతర ధాన్యాలు సరిపోలలేని ప్రయోజనాలను అందిస్తాయి.'}
+              {t.home.whyMilletsDesc}
             </p>
           </div>
 
@@ -175,9 +171,7 @@ export default async function HomePage({
               {t.home.whichMillet}
             </h2>
             <p className="text-earth-600 dark:text-earth-300 max-w-2xl mx-auto">
-              {locale === 'en'
-                ? "Answer a few questions and we'll recommend the perfect millet for you."
-                : 'కొన్ని ప్రశ్నలకు సమాధానం ఇవ్వండి, మీకు సరైన చిరుధాన్యాన్ని సిఫార్సు చేస్తాం.'}
+              {t.home.whichMilletDesc}
             </p>
           </div>
           <MilletQuiz locale={locale} />
@@ -198,9 +192,7 @@ export default async function HomePage({
               {t.home.startJourney}
             </h2>
             <p className="text-earth-600 dark:text-earth-300 leading-relaxed">
-              {locale === 'en'
-                ? 'Whether you are looking to cook your first millet meal or compare their nutritional profiles, we have you covered with verified, sourced information.'
-                : 'మీరు మీ మొదటి చిరుధాన్యాల భోజనం వండాలనుకుంటున్నా లేదా వాటి పోషక విలువలను పోల్చాలనుకుంటున్నా, ధృవీకరించబడిన సమాచారంతో మీకు సహాయం చేస్తాం.'}
+              {t.home.startJourneyDesc}
             </p>
           </div>
 
