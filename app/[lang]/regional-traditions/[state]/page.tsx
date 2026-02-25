@@ -39,14 +39,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return { title: 'Tradition Not Found' };
   }
   const locale = lang as Locale;
+  const t = getTranslations(locale);
   const tradition = getRegionalTraditionBySlugLocale(state, locale);
   if (!tradition) {
-    return { title: 'Tradition Not Found' };
+    return { title: t.regionalPage.notFound };
   }
-  const t = getTranslations(locale);
   return {
     title: `${tradition.state} — ${t.regionalPage.title} | ${t.site.siteName}`,
-    description: `${tradition.tagline} Explore the iconic millet dishes, festivals, and cultural practices of ${tradition.state}.`,
+    description: tradition.tagline,
     alternates: {
       canonical: `/${lang}/regional-traditions/${state}`,
       languages: hreflangAlternates(`/regional-traditions/${state}`),

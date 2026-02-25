@@ -30,10 +30,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { lang, slug } = await params;
   const locale: Locale = isValidLocale(lang) ? lang : 'en';
-  const recipe = getRecipeBySlugLocale(slug, locale);
-  if (!recipe) return { title: 'Recipe Not Found' };
-
   const t = getTranslations(locale);
+  const recipe = getRecipeBySlugLocale(slug, locale);
+  if (!recipe) return { title: t.recipeDetail.notFound };
   const url = `/${locale}/recipes/${recipe.slug}`;
 
   return {

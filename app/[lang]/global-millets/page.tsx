@@ -36,12 +36,7 @@ export default function GlobalMilletsPage() {
           {t.globalPage.title}
         </h1>
         <p className="text-lg text-earth-700 dark:text-earth-300 max-w-3xl mb-10 leading-relaxed">
-          Millets are not just an Indian story. From the injera tables of
-          Ethiopia to the boza shops of Istanbul, from the ancient granaries of
-          China to the porridge pots of medieval Europe, millets have sustained
-          civilizations across every inhabited continent. Explore how different
-          cultures have cultivated, cooked, and celebrated these remarkable
-          grains throughout history.
+          {t.globalPage.intro}
         </p>
 
         {/* Grid */}
@@ -71,7 +66,7 @@ export default function GlobalMilletsPage() {
                     </p>
 
                     <p className="text-xs text-warm-gray dark:text-earth-400 mb-3">
-                      <span className="font-medium text-earth-700 dark:text-earth-300">Countries:</span>{' '}
+                      <span className="font-medium text-earth-700 dark:text-earth-300">{t.globalPage.countries}:</span>{' '}
                       {region.countries.join(', ')}
                     </p>
 
@@ -87,7 +82,7 @@ export default function GlobalMilletsPage() {
 
                     <div className="flex items-center justify-end">
                       <span className="text-xs text-warm-gray dark:text-earth-400 font-medium">
-                        Explore &rarr;
+                        {t.globalPage.explore} &rarr;
                       </span>
                     </div>
                   </CardBody>

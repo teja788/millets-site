@@ -7,7 +7,7 @@ import { Card, CardBody } from '@/components/ui/Card';
 import Badge from '@/components/ui/Badge';
 import { substitutionEntries as defaultEntries } from '@/data/substitution-data';
 import type { Locale } from '@/lib/i18n';
-import { localePath } from '@/lib/i18n';
+import { localePath, getTranslations } from '@/lib/i18n';
 import type { SubstitutionEntry } from '@/lib/types';
 import type { Millet } from '@/lib/types';
 
@@ -26,6 +26,7 @@ export default function SubstitutionCalculator({
   millets?: Millet[];
 }) {
   const entries = substitutionEntries ?? defaultEntries;
+  const t = getTranslations(locale);
   const [selectedGrain, setSelectedGrain] = useState('');
   const [quantity, setQuantity] = useState(1);
 
@@ -50,7 +51,7 @@ export default function SubstitutionCalculator({
             htmlFor="grain-select"
             className="block text-sm font-medium text-earth-700 dark:text-earth-300 mb-2"
           >
-            Select a grain to replace
+            {t.substitutionPage.selectGrainLabel}
           </label>
           <select
             id="grain-select"
@@ -58,7 +59,7 @@ export default function SubstitutionCalculator({
             onChange={(e) => setSelectedGrain(e.target.value)}
             className="w-full px-4 py-3 bg-white dark:bg-earth-800 border border-earth-200 dark:border-earth-700 rounded-lg text-earth-800 dark:text-earth-100 focus:outline-none focus:ring-2 focus:ring-earth-500 transition-colors"
           >
-            <option value="">Choose a grain...</option>
+            <option value="">{t.substitutionPage.chooseGrain}</option>
             {entries.map((e) => (
               <option key={e.conventionalGrain} value={e.conventionalGrain}>
                 {e.conventionalGrain}
@@ -72,7 +73,7 @@ export default function SubstitutionCalculator({
             htmlFor="quantity-input"
             className="block text-sm font-medium text-earth-700 dark:text-earth-300 mb-2"
           >
-            How many cups?
+            {t.substitutionPage.howManyCups}
           </label>
           <input
             id="quantity-input"
@@ -92,7 +93,7 @@ export default function SubstitutionCalculator({
         <div className="space-y-4">
           <h3 className="font-heading text-xl font-bold text-earth-800 dark:text-earth-100 flex items-center gap-2">
             <Scale className="w-5 h-5 text-warm-gray dark:text-earth-400" />
-            Millet substitutes for {quantity} cup{quantity !== 1 ? 's' : ''} of{' '}
+            {t.substitutionPage.substitutesFor} {quantity} {quantity !== 1 ? t.substitutionPage.cups : t.substitutionPage.cup} {t.substitutionPage.of}{' '}
             {entry.conventionalGrain}
           </h3>
 
@@ -115,18 +116,18 @@ export default function SubstitutionCalculator({
                         variant={difficultyVariant[sub.difficulty]}
                         size="sm"
                       >
-                        {sub.difficulty}
+                        {t.recipeDetail.difficulties[sub.difficulty as 'easy' | 'medium' | 'advanced'] || sub.difficulty}
                       </Badge>
                     </div>
 
                     {/* Conversion */}
                     <div className="flex items-center gap-3 mb-3 p-3 bg-earth-100/50 dark:bg-earth-800/50 rounded-lg">
                       <span className="text-earth-700 dark:text-earth-300 text-sm">
-                        {quantity} cup{quantity !== 1 ? 's' : ''}
+                        {quantity} {quantity !== 1 ? t.substitutionPage.cups : t.substitutionPage.cup}
                       </span>
                       <ArrowRight className="w-4 h-4 text-warm-gray dark:text-earth-400" />
                       <span className="text-earth-800 dark:text-earth-100 font-semibold">
-                        {milletAmount} cup{Number(milletAmount) !== 1 ? 's' : ''}{' '}
+                        {milletAmount} {Number(milletAmount) !== 1 ? t.substitutionPage.cups : t.substitutionPage.cup}{' '}
                         {sub.milletName}
                       </span>
                       <span className="text-warm-gray dark:text-earth-400 text-xs">
@@ -153,7 +154,7 @@ export default function SubstitutionCalculator({
         <div className="text-center py-12">
           <Scale className="w-12 h-12 text-earth-600 mx-auto mb-4" />
           <p className="text-warm-gray dark:text-earth-400">
-            Select a grain above to see millet substitution options.
+            {t.substitutionPage.selectGrainHint}
           </p>
         </div>
       )}

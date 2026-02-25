@@ -63,13 +63,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { lang, slug } = await params;
   const locale: Locale = isValidLocale(lang) ? lang : 'en';
   const millet = getMilletBySlugLocale(slug, locale);
-  if (!millet) {
-    return { title: 'Millet Not Found' };
-  }
   const t = getTranslations(locale);
+  if (!millet) {
+    return { title: t.milletDetail.notFound };
+  }
   return {
     title: millet.name,
-    description: `${millet.tagline} Learn about ${millet.name} nutrition, health benefits, Ayurvedic properties, recipes, and more.`,
+    description: millet.tagline,
     alternates: {
       canonical: `/${locale}/millets/${slug}`,
       languages: hreflangAlternates(`/millets/${slug}`),
@@ -184,13 +184,13 @@ export default async function MilletDetailPage({ params }: PageProps) {
   ];
 
   if (millet.nutrition.thiamine_mg !== undefined)
-    nutritionRows.push({ label: 'Thiamine (B1)', value: millet.nutrition.thiamine_mg, unit: 'mg' });
+    nutritionRows.push({ label: t.milletDetail.thiamine, value: millet.nutrition.thiamine_mg, unit: 'mg' });
   if (millet.nutrition.riboflavin_mg !== undefined)
-    nutritionRows.push({ label: 'Riboflavin (B2)', value: millet.nutrition.riboflavin_mg, unit: 'mg' });
+    nutritionRows.push({ label: t.milletDetail.riboflavin, value: millet.nutrition.riboflavin_mg, unit: 'mg' });
   if (millet.nutrition.niacin_mg !== undefined)
-    nutritionRows.push({ label: 'Niacin (B3)', value: millet.nutrition.niacin_mg, unit: 'mg' });
+    nutritionRows.push({ label: t.milletDetail.niacin, value: millet.nutrition.niacin_mg, unit: 'mg' });
   if (millet.nutrition.folate_mcg !== undefined)
-    nutritionRows.push({ label: 'Folate', value: millet.nutrition.folate_mcg, unit: 'mcg' });
+    nutritionRows.push({ label: t.milletDetail.folate, value: millet.nutrition.folate_mcg, unit: 'mcg' });
 
   // Dosha display helper
   const doshaArrow = (effect: 'increases' | 'decreases' | 'neutral') => {
@@ -314,8 +314,8 @@ export default async function MilletDetailPage({ params }: PageProps) {
               <Table>
                 <TableHead>
                   <TableRow>
-                    <TableHeaderCell>Nutrient</TableHeaderCell>
-                    <TableHeaderCell>Amount {t.common.per100g}</TableHeaderCell>
+                    <TableHeaderCell>{t.milletDetail.nutrient}</TableHeaderCell>
+                    <TableHeaderCell>{t.milletDetail.amount} {t.common.per100g}</TableHeaderCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
@@ -651,7 +651,7 @@ export default async function MilletDetailPage({ params }: PageProps) {
                     <MapPin className="w-5 h-5 text-earth-500 dark:text-earth-400 mt-0.5 flex-shrink-0" />
                     <div>
                       <p className="text-xs text-earth-600 dark:text-earth-400 uppercase tracking-wider font-semibold mb-1">
-                        Global Regions
+                        {t.milletDetail.globalRegions}
                       </p>
                       <p className="text-sm text-earth-700 dark:text-earth-200">
                         {millet.cultivation.globalRegions.join(', ')}
@@ -732,7 +732,7 @@ export default async function MilletDetailPage({ params }: PageProps) {
                 </div>
                 <div>
                   <p className="text-xs text-earth-600 dark:text-earth-400 uppercase tracking-wider font-semibold mb-1">
-                    Archaeological Evidence
+                    {t.milletDetail.archaeologicalEvidence}
                   </p>
                   <p className="text-sm text-earth-700 dark:text-earth-200 leading-relaxed">
                     {millet.history.archaeologicalEvidence}
@@ -740,7 +740,7 @@ export default async function MilletDetailPage({ params }: PageProps) {
                 </div>
                 <div>
                   <p className="text-xs text-earth-600 dark:text-earth-400 uppercase tracking-wider font-semibold mb-1">
-                    Spread Pattern
+                    {t.milletDetail.spreadPattern}
                   </p>
                   <p className="text-sm text-earth-700 dark:text-earth-200 leading-relaxed">
                     {millet.history.spreadPattern}
@@ -748,7 +748,7 @@ export default async function MilletDetailPage({ params }: PageProps) {
                 </div>
                 <div>
                   <p className="text-xs text-earth-600 dark:text-earth-400 uppercase tracking-wider font-semibold mb-1">
-                    Cultural Significance
+                    {t.milletDetail.culturalSignificanceLabel}
                   </p>
                   <p className="text-sm text-earth-700 dark:text-earth-200 leading-relaxed">
                     {millet.history.culturalSignificance}
@@ -804,7 +804,7 @@ export default async function MilletDetailPage({ params }: PageProps) {
               </div>
             ) : (
               <p className="text-earth-600 dark:text-earth-300 text-sm">
-                No significant side effects have been documented for this millet when consumed in normal dietary amounts.
+                {t.milletDetail.noSideEffects}
               </p>
             )}
           </section>
@@ -822,7 +822,7 @@ export default async function MilletDetailPage({ params }: PageProps) {
                   {t.milletDetail.relatedRecipes} - {millet.name}
                 </h2>
                 <p className="text-earth-600 dark:text-earth-300 text-sm">
-                  No recipes available for this millet yet.{' '}
+                  {t.milletDetail.noRecipes}{' '}
                   <Link
                     href={localePath(locale, '/recipes')}
                     className="text-earth-500 hover:text-earth-700 dark:text-earth-400 dark:hover:text-earth-200 underline"
@@ -849,7 +849,7 @@ export default async function MilletDetailPage({ params }: PageProps) {
             ) : (
               <p className="text-earth-600 dark:text-earth-300 text-sm flex items-center gap-2">
                 <BookOpen className="w-4 h-4" />
-                Source information is being compiled for this millet.
+                {t.milletDetail.sourcesCompiling}
               </p>
             )}
           </section>

@@ -38,7 +38,7 @@ function MealPlanContent({
       <Table>
         <TableHead>
           <TableRow>
-            <TableHeaderCell>Day</TableHeaderCell>
+            <TableHeaderCell>{t.mealPlan.day}</TableHeaderCell>
             <TableHeaderCell>{t.mealPlan.breakfast}</TableHeaderCell>
             <TableHeaderCell>{t.mealPlan.lunch}</TableHeaderCell>
             <TableHeaderCell>{t.mealPlan.snack}</TableHeaderCell>
@@ -108,9 +108,7 @@ export default function MealPlansPage() {
           {t.mealPlan.title}
         </h1>
         <p className="text-lg text-earth-700 dark:text-earth-300 max-w-3xl mb-10 leading-relaxed">
-          Ready-to-follow 7-day meal plans designed around millets for different dietary
-          goals. Each plan includes breakfast, lunch, snack, and dinner suggestions with
-          practical tips to help you incorporate millets into your routine.
+          {t.mealPlan.intro}
         </p>
 
         {/* Tabs */}

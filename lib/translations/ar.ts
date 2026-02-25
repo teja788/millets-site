@@ -87,6 +87,12 @@ export const ar: TranslationKeys = {
   search: {
     placeholder: 'ابحث عن الدخن والوصفات وغير ذلك...',
     noResults: 'لا توجد نتائج',
+    result: 'نتيجة',
+    results: 'نتائج',
+    for: 'لـ',
+    noResultsDescription: 'لم نعثر على أي شيء يطابق بحثك. جرّب كلمات مفتاحية أخرى أو تصفّح اقتراحاتنا أدناه.',
+    whatLookingFor: 'عمّا تبحث؟',
+    searchDescription: 'ابحث في جميع أنواع الدخن والوصفات والأسئلة الشائعة والصفحات. جرّب كتابة اسم دخن أو موضوع صحي أو وصفة.',
     typeLabels: {
       millet: 'الدخن',
       recipe: 'الوصفات',
@@ -125,6 +131,12 @@ export const ar: TranslationKeys = {
     per100g: 'لكل 100 غرام',
     source: 'المصدر',
     sources: 'المصادر',
+    showing: 'عرض',
+    milletSingular: 'دخن',
+    milletPlural: 'أنواع دخن',
+    recipeSingular: 'وصفة',
+    recipePlural: 'وصفات',
+    noRecipesFilter: 'لم يتم العثور على وصفات للمرشحات المحددة. جرّب مجموعة أخرى.',
   },
 
   // Home page
@@ -261,6 +273,20 @@ export const ar: TranslationKeys = {
     phosphorus: 'الفوسفور',
     magnesium: 'المغنيسيوم',
     potassium: 'البوتاسيوم',
+    thiamine: 'الثيامين (B1)',
+    riboflavin: 'الريبوفلافين (B2)',
+    niacin: 'النياسين (B3)',
+    folate: 'الفولات',
+    nutrient: 'المغذّي',
+    amount: 'الكمية',
+    globalRegions: 'المناطق العالمية',
+    archaeologicalEvidence: 'الأدلة الأثرية',
+    spreadPattern: 'نمط الانتشار',
+    culturalSignificanceLabel: 'الأهمية الثقافية',
+    noSideEffects: 'لم تُوثّق آثار جانبية مهمة لهذا الدخن عند استهلاكه بالكميات الغذائية الاعتيادية.',
+    noRecipes: 'لا تتوفر وصفات لهذا الدخن حتى الآن.',
+    sourcesCompiling: 'جارٍ تجميع معلومات المصادر لهذا الدخن.',
+    notFound: 'الدخن غير موجود',
   },
 
   // Recipe detail page
@@ -295,6 +321,7 @@ export const ar: TranslationKeys = {
     step: 'الخطوة',
     print: 'طباعة الوصفة',
     share: 'مشاركة',
+    notFound: 'الوصفة غير موجودة',
   },
 
   // Millet Quiz
@@ -369,6 +396,8 @@ export const ar: TranslationKeys = {
   // Meal plan page
   mealPlan: {
     title: 'خطط الوجبات',
+    intro: 'خطط وجبات جاهزة للتطبيق لمدة 7 أيام مصممة حول الدخن لأهداف غذائية مختلفة. تتضمن كل خطة اقتراحات للإفطار والغداء والوجبة الخفيفة والعشاء مع نصائح عملية لمساعدتك على دمج الدخن في روتينك.',
+    day: 'اليوم',
     days: {
       monday: 'الاثنين',
       tuesday: 'الثلاثاء',
@@ -471,6 +500,23 @@ export const ar: TranslationKeys = {
     festivals: 'المهرجانات',
     culturalSignificance: 'الأهمية الثقافية',
     traditionalPractices: 'الممارسات التقليدية',
+    filterAll: 'الكل',
+    filterSouth: 'جنوب الهند',
+    filterWest: 'غرب الهند',
+    filterNorth: 'شمال الهند',
+    filterEast: 'شرق الهند',
+    filterNortheast: 'شمال شرق الهند',
+    showing: 'عرض',
+    tradition: 'تقليد',
+    traditions: 'تقاليد',
+    noTraditions: 'لم يتم العثور على تقاليد للمنطقة المحددة. جرّب مرشحاً آخر.',
+    explore: 'استكشاف',
+    primaryMillets: 'أنواع الدخن الرئيسية',
+    dish: 'طبق',
+    dishes: 'أطباق',
+    featured: 'مميز',
+    intro: 'تراث الدخن في الهند هو نسيج من التقاليد الإقليمية، كلٌّ منها شكّله المناخ المحلي والتربة والثقافة وقرون من الابتكار في الطهي. من خبز الباجرا في صحاري راجستان إلى راغي مودّي في هضبة الدكن في كارناتاكا، لكل ولاية علاقتها الخاصة بهذه الحبوب القديمة.',
+    notFound: 'التقليد غير موجود',
   },
 
   // Global millets
@@ -480,6 +526,10 @@ export const ar: TranslationKeys = {
     historicalHighlights: 'أبرز الأحداث التاريخية',
     modernStatus: 'الوضع الراهن',
     keyFact: 'حقيقة رئيسية',
+    intro: 'الدخن ليس قصة هندية فحسب. من موائد الإنجيرا في إثيوبيا إلى محلات البوزا في إسطنبول، ومن مخازن الحبوب القديمة في الصين إلى أواني العصيدة في أوروبا في العصور الوسطى، أطعم الدخن الحضارات عبر كل قارة مأهولة.',
+    explore: 'استكشاف',
+    countries: 'الدول',
+    notFound: 'المنطقة غير موجودة',
   },
 
   // Substitution calculator
@@ -490,6 +540,14 @@ export const ar: TranslationKeys = {
     notes: 'ملاحظات',
     bestFor: 'الأنسب لـ',
     difficulty: 'مستوى الصعوبة',
+    selectGrainLabel: 'اختر حبة لاستبدالها',
+    chooseGrain: 'اختر حبة...',
+    howManyCups: 'كم كوباً؟',
+    substitutesFor: 'بدائل الدخن لـ',
+    cup: 'كوب',
+    cups: 'أكواب',
+    of: 'من',
+    selectGrainHint: 'اختر حبة أعلاه لرؤية خيارات إحلال الدخن.',
   },
 
   // Cooking timer

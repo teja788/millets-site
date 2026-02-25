@@ -1,6 +1,10 @@
 import type { Metadata } from 'next';
+import { isValidLocale, getTranslations, localeParams, pageAlternates } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
-import { localePath, getTranslations, isValidLocale, locales, hreflangAlternates } from '@/lib/i18n';
+
+export function generateStaticParams() {
+  return localeParams();
+}
 
 export async function generateMetadata({
   params,
@@ -8,28 +12,16 @@ export async function generateMetadata({
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = await params;
-  if (!isValidLocale(lang)) return {};
-  const t = getTranslations(lang);
+  const locale: Locale = isValidLocale(lang) ? lang : 'en';
+  const t = getTranslations(locale);
 
   return {
-    title: `${t.globalPage.title} | ${t.site.siteName}`,
-    description:
-      lang === 'te'
-        ? 'ప్రపంచవ్యాప్తంగా చిరుధాన్యాల చరిత్ర మరియు సంస్కృతిని అన్వేషించండి.'
-        : lang === 'fr'
-          ? 'Découvrez comment différentes cultures à travers le monde ont cultivé, cuisiné et célébré les millets au fil de l\'histoire.'
-          : 'Explore how different cultures across the world have cultivated, cooked, and celebrated millets throughout history.',
-    alternates: {
-      canonical: `/${lang}/global-millets`,
-      languages: hreflangAlternates('/global-millets'),
-    },
+    title: t.globalPage.title,
+    description: `${t.globalPage.title} — ${t.site.description}`,
+    alternates: pageAlternates(locale, '/global-millets'),
   };
 }
 
-export default function GlobalMilletsLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function GlobalMilletsLayout({ children }: { children: React.ReactNode }) {
   return children;
 }

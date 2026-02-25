@@ -92,7 +92,7 @@ export default function RecipesPage() {
 
         {/* Results count */}
         <p className="text-sm text-warm-gray dark:text-earth-400 mb-6">
-          Showing {filteredRecipes.length} {filteredRecipes.length === 1 ? 'recipe' : 'recipes'}
+          {t.common.showing} {filteredRecipes.length} {filteredRecipes.length === 1 ? t.common.recipeSingular : t.common.recipePlural}
         </p>
 
         {/* Recipe Grid */}
@@ -105,7 +105,7 @@ export default function RecipesPage() {
         ) : (
           <div className="text-center py-16">
             <p className="text-warm-gray dark:text-earth-400 text-lg">
-              No recipes found for the selected filters. Try a different combination.
+              {t.common.noRecipesFilter}
             </p>
           </div>
         )}

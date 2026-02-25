@@ -46,7 +46,7 @@ export const fr: TranslationKeys = {
     quickLinks: 'Liens rapides',
     learnMore: 'En savoir plus',
     resources: 'Ressources',
-    disclaimer: 'Données nutritionnelles issues des tables ICMR-NIN Indian Food Composition Tables (2017) et USDA FoodData Central.',
+    disclaimer: 'Données nutritionnelles issues des tables ANSES Ciqual et USDA FoodData Central.',
     copyright: '© 2026 Guide des Millets.',
   },
 
@@ -87,6 +87,12 @@ export const fr: TranslationKeys = {
   search: {
     placeholder: 'Rechercher millets, recettes et plus...',
     noResults: 'Aucun résultat trouvé',
+    result: 'résultat',
+    results: 'résultats',
+    for: 'pour',
+    noResultsDescription: 'Nous n\'avons rien trouvé correspondant à votre recherche. Essayez d\'autres mots-clés ou parcourez nos suggestions ci-dessous.',
+    whatLookingFor: 'Que recherchez-vous ?',
+    searchDescription: 'Recherchez parmi tous les millets, recettes, FAQ et pages. Essayez un nom de millet, un sujet de santé ou une recette.',
     typeLabels: {
       millet: 'Millets',
       recipe: 'Recettes',
@@ -125,6 +131,12 @@ export const fr: TranslationKeys = {
     per100g: 'pour 100 g',
     source: 'Source',
     sources: 'Sources',
+    showing: 'Affichage de',
+    milletSingular: 'millet',
+    milletPlural: 'millets',
+    recipeSingular: 'recette',
+    recipePlural: 'recettes',
+    noRecipesFilter: 'Aucune recette trouvée pour les filtres sélectionnés. Essayez une autre combinaison.',
   },
 
   // Home page
@@ -261,6 +273,20 @@ export const fr: TranslationKeys = {
     phosphorus: 'Phosphore',
     magnesium: 'Magnésium',
     potassium: 'Potassium',
+    thiamine: 'Thiamine (B1)',
+    riboflavin: 'Riboflavine (B2)',
+    niacin: 'Niacine (B3)',
+    folate: 'Folate',
+    nutrient: 'Nutriment',
+    amount: 'Quantité',
+    globalRegions: 'Régions mondiales',
+    archaeologicalEvidence: 'Preuves archéologiques',
+    spreadPattern: 'Schéma de diffusion',
+    culturalSignificanceLabel: 'Signification culturelle',
+    noSideEffects: 'Aucun effet secondaire significatif n\'a été documenté pour ce millet lorsqu\'il est consommé en quantités alimentaires normales.',
+    noRecipes: 'Aucune recette disponible pour ce millet pour le moment.',
+    sourcesCompiling: 'Les informations sur les sources sont en cours de compilation pour ce millet.',
+    notFound: 'Millet introuvable',
   },
 
   // Recipe detail page
@@ -295,6 +321,7 @@ export const fr: TranslationKeys = {
     step: 'Étape',
     print: 'Imprimer la recette',
     share: 'Partager',
+    notFound: 'Recette introuvable',
   },
 
   // Millet Quiz
@@ -369,6 +396,8 @@ export const fr: TranslationKeys = {
   // Meal plan page
   mealPlan: {
     title: 'Plans de repas',
+    intro: 'Des plans de repas sur 7 jours prêts à suivre, conçus autour des millets pour différents objectifs alimentaires. Chaque plan comprend des suggestions de petit-déjeuner, déjeuner, en-cas et dîner avec des conseils pratiques pour intégrer les millets à votre routine.',
+    day: 'Jour',
     days: {
       monday: 'Lundi',
       tuesday: 'Mardi',
@@ -471,6 +500,23 @@ export const fr: TranslationKeys = {
     festivals: 'Fêtes et festivals',
     culturalSignificance: 'Signification culturelle',
     traditionalPractices: 'Pratiques traditionnelles',
+    filterAll: 'Toutes',
+    filterSouth: 'Inde du Sud',
+    filterWest: 'Inde de l\'Ouest',
+    filterNorth: 'Inde du Nord',
+    filterEast: 'Inde de l\'Est',
+    filterNortheast: 'Nord-Est de l\'Inde',
+    showing: 'Affichage de',
+    tradition: 'tradition',
+    traditions: 'traditions',
+    noTraditions: 'Aucune tradition trouvée pour la région sélectionnée. Essayez un autre filtre.',
+    explore: 'Explorer',
+    primaryMillets: 'Millets principaux',
+    dish: 'plat',
+    dishes: 'plats',
+    featured: 'présentés',
+    intro: 'Le patrimoine millet de l\'Inde est une mosaïque de traditions régionales, chacune façonnée par le climat local, le sol, la culture et des siècles d\'innovation culinaire. Des rotis de bajra des déserts du Rajasthan au ragi mudde du plateau du Deccan au Karnataka, chaque État a sa propre relation avec ces céréales ancestrales. Découvrez les plats emblématiques, les festivals et les pratiques vivantes qui maintiennent les traditions du millet à travers le sous-continent.',
+    notFound: 'Tradition introuvable',
   },
 
   // Global millets
@@ -480,6 +526,10 @@ export const fr: TranslationKeys = {
     historicalHighlights: 'Points historiques marquants',
     modernStatus: 'Situation actuelle',
     keyFact: 'Fait clé',
+    intro: 'Les millets ne sont pas qu\'une histoire indienne. Des tables d\'injera en Éthiopie aux échoppes de boza d\'Istanbul, des anciens greniers de Chine aux marmites de porridge de l\'Europe médiévale, les millets ont nourri des civilisations sur tous les continents habités. Découvrez comment différentes cultures ont cultivé, cuisiné et célébré ces céréales remarquables à travers l\'histoire.',
+    explore: 'Explorer',
+    countries: 'Pays',
+    notFound: 'Région introuvable',
   },
 
   // Substitution calculator
@@ -490,6 +540,14 @@ export const fr: TranslationKeys = {
     notes: 'Notes',
     bestFor: 'Idéal pour',
     difficulty: 'Difficulté',
+    selectGrainLabel: 'Sélectionnez une céréale à remplacer',
+    chooseGrain: 'Choisir une céréale...',
+    howManyCups: 'Combien de tasses ?',
+    substitutesFor: 'Substituts de millet pour',
+    cup: 'tasse',
+    cups: 'tasses',
+    of: 'de',
+    selectGrainHint: 'Sélectionnez une céréale ci-dessus pour voir les options de substitution par des millets.',
   },
 
   // Cooking timer

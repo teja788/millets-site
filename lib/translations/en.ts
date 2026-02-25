@@ -85,6 +85,12 @@ export const en = {
   search: {
     placeholder: 'Search millets, recipes, and more...',
     noResults: 'No results found',
+    result: 'result',
+    results: 'results',
+    for: 'for',
+    noResultsDescription: 'We couldn\'t find anything matching your search. Try different keywords or browse our suggestions below.',
+    whatLookingFor: 'What are you looking for?',
+    searchDescription: 'Search across all millets, recipes, FAQ, and pages. Try typing a millet name, health topic, or recipe.',
     typeLabels: {
       millet: 'Millets',
       recipe: 'Recipes',
@@ -123,6 +129,12 @@ export const en = {
     per100g: 'per 100g',
     source: 'Source',
     sources: 'Sources',
+    showing: 'Showing',
+    milletSingular: 'millet',
+    milletPlural: 'millets',
+    recipeSingular: 'recipe',
+    recipePlural: 'recipes',
+    noRecipesFilter: 'No recipes found for the selected filters. Try a different combination.',
   },
 
   // Home page
@@ -259,6 +271,20 @@ export const en = {
     phosphorus: 'Phosphorus',
     magnesium: 'Magnesium',
     potassium: 'Potassium',
+    thiamine: 'Thiamine (B1)',
+    riboflavin: 'Riboflavin (B2)',
+    niacin: 'Niacin (B3)',
+    folate: 'Folate',
+    nutrient: 'Nutrient',
+    amount: 'Amount',
+    globalRegions: 'Global Regions',
+    archaeologicalEvidence: 'Archaeological Evidence',
+    spreadPattern: 'Spread Pattern',
+    culturalSignificanceLabel: 'Cultural Significance',
+    noSideEffects: 'No significant side effects have been documented for this millet when consumed in normal dietary amounts.',
+    noRecipes: 'No recipes available for this millet yet.',
+    sourcesCompiling: 'Source information is being compiled for this millet.',
+    notFound: 'Millet Not Found',
   },
 
   // Recipe detail page
@@ -293,6 +319,7 @@ export const en = {
     step: 'Step',
     print: 'Print Recipe',
     share: 'Share',
+    notFound: 'Recipe Not Found',
   },
 
   // Millet Quiz
@@ -367,6 +394,8 @@ export const en = {
   // Meal plan page
   mealPlan: {
     title: 'Meal Plans',
+    intro: 'Ready-to-follow 7-day meal plans designed around millets for different dietary goals. Each plan includes breakfast, lunch, snack, and dinner suggestions with practical tips to help you incorporate millets into your routine.',
+    day: 'Day',
     days: {
       monday: 'Monday',
       tuesday: 'Tuesday',
@@ -469,6 +498,23 @@ export const en = {
     festivals: 'Festivals',
     culturalSignificance: 'Cultural Significance',
     traditionalPractices: 'Traditional Practices',
+    filterAll: 'All',
+    filterSouth: 'South India',
+    filterWest: 'Western India',
+    filterNorth: 'Northern India',
+    filterEast: 'Eastern India',
+    filterNortheast: 'Northeast India',
+    showing: 'Showing',
+    tradition: 'tradition',
+    traditions: 'traditions',
+    noTraditions: 'No traditions found for the selected region. Try a different filter.',
+    explore: 'Explore',
+    primaryMillets: 'Primary millets',
+    dish: 'dish',
+    dishes: 'dishes',
+    featured: 'featured',
+    intro: 'India\'s millet heritage is a tapestry of regional traditions, each shaped by local climate, soil, culture, and centuries of culinary innovation. From the bajra rotis of Rajasthan\'s deserts to the ragi mudde of Karnataka\'s Deccan plateau, every state has its own relationship with these ancient grains. Explore the iconic dishes, festivals, and living practices that keep millet traditions alive across the subcontinent.',
+    notFound: 'Tradition Not Found',
   },
 
   // Global millets
@@ -478,6 +524,10 @@ export const en = {
     historicalHighlights: 'Historical Highlights',
     modernStatus: 'Modern Status',
     keyFact: 'Key Fact',
+    intro: 'Millets are not just an Indian story. From the injera tables of Ethiopia to the boza shops of Istanbul, from the ancient granaries of China to the porridge pots of medieval Europe, millets have sustained civilizations across every inhabited continent. Explore how different cultures have cultivated, cooked, and celebrated these remarkable grains throughout history.',
+    explore: 'Explore',
+    countries: 'Countries',
+    notFound: 'Region Not Found',
   },
 
   // Substitution calculator
@@ -488,6 +538,14 @@ export const en = {
     notes: 'Notes',
     bestFor: 'Best For',
     difficulty: 'Difficulty',
+    selectGrainLabel: 'Select a grain to replace',
+    chooseGrain: 'Choose a grain...',
+    howManyCups: 'How many cups?',
+    substitutesFor: 'Millet substitutes for',
+    cup: 'cup',
+    cups: 'cups',
+    of: 'of',
+    selectGrainHint: 'Select a grain above to see millet substitution options.',
   },
 
   // Cooking timer

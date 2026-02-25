@@ -1,6 +1,10 @@
 import type { Metadata } from 'next';
+import { isValidLocale, getTranslations, localeParams, pageAlternates } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
-import { localePath, getTranslations, isValidLocale, locales, hreflangAlternates } from '@/lib/i18n';
+
+export function generateStaticParams() {
+  return localeParams();
+}
 
 export async function generateMetadata({
   params,
@@ -8,28 +12,16 @@ export async function generateMetadata({
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = await params;
-  if (!isValidLocale(lang)) return {};
-  const t = getTranslations(lang);
+  const locale: Locale = isValidLocale(lang) ? lang : 'en';
+  const t = getTranslations(locale);
 
   return {
-    title: `${t.regionalPage.title} | ${t.site.siteName}`,
-    description:
-      lang === 'te'
-        ? 'భారతదేశంలోని వివిధ రాష్ట్రాల చిరుధాన్యాల సంప్రదాయాలు, ప్రసిద్ధ వంటకాలు మరియు పండుగలు.'
-        : lang === 'fr'
-          ? 'Découvrez les plats emblématiques, les festivals et les traditions vivantes qui perpétuent la culture des millets à travers le monde.'
-          : 'Explore the iconic dishes, festivals, and living practices that keep millet traditions alive across India.',
-    alternates: {
-      canonical: `/${lang}/regional-traditions`,
-      languages: hreflangAlternates('/regional-traditions'),
-    },
+    title: t.regionalPage.title,
+    description: `${t.regionalPage.title} — ${t.site.description}`,
+    alternates: pageAlternates(locale, '/regional-traditions'),
   };
 }
 
-export default function RegionalTraditionsLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RegionalTraditionsLayout({ children }: { children: React.ReactNode }) {
   return children;
 }

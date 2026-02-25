@@ -1,6 +1,10 @@
 import type { Metadata } from 'next';
+import { isValidLocale, getTranslations, localeParams, pageAlternates } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
-import { localePath, getTranslations, isValidLocale, locales, hreflangAlternates } from '@/lib/i18n';
+
+export function generateStaticParams() {
+  return localeParams();
+}
 
 export async function generateMetadata({
   params,
@@ -8,23 +12,16 @@ export async function generateMetadata({
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = await params;
-  if (!isValidLocale(lang)) return {};
-  const t = getTranslations(lang);
+  const locale: Locale = isValidLocale(lang) ? lang : 'en';
+  const t = getTranslations(locale);
 
   return {
-    title: `${t.milletsPage.title} | ${t.site.siteName}`,
+    title: t.milletsPage.title,
     description: t.milletsPage.description,
-    alternates: {
-      canonical: `/${lang}/millets`,
-      languages: hreflangAlternates('/millets'),
-    },
+    alternates: pageAlternates(locale, '/millets'),
   };
 }
 
-export default function MilletsLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function MilletsLayout({ children }: { children: React.ReactNode }) {
   return children;
 }

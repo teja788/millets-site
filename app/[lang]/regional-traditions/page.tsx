@@ -19,14 +19,16 @@ type RegionFilter =
   | 'Eastern India'
   | 'Northeast India';
 
-const regionFilters: { label: string; value: RegionFilter }[] = [
-  { label: 'All', value: 'all' },
-  { label: 'South India', value: 'South India' },
-  { label: 'Western India', value: 'Western India' },
-  { label: 'Northern India', value: 'Northern India' },
-  { label: 'Eastern India', value: 'Eastern India' },
-  { label: 'Northeast India', value: 'Northeast India' },
-];
+function getRegionFilters(t: ReturnType<typeof getTranslations>): { label: string; value: RegionFilter }[] {
+  return [
+    { label: t.regionalPage.filterAll, value: 'all' },
+    { label: t.regionalPage.filterSouth, value: 'South India' },
+    { label: t.regionalPage.filterWest, value: 'Western India' },
+    { label: t.regionalPage.filterNorth, value: 'Northern India' },
+    { label: t.regionalPage.filterEast, value: 'Eastern India' },
+    { label: t.regionalPage.filterNortheast, value: 'Northeast India' },
+  ];
+}
 
 const regionBadgeVariant: Record<string, 'green' | 'orange' | 'blue' | 'red' | 'default'> = {
   'South India': 'green',
@@ -43,6 +45,7 @@ export default function RegionalTraditionsPage() {
   const t = getTranslations(locale);
 
   const regionalTraditions = useMemo(() => getRegionalTraditions(locale), [locale]);
+  const regionFilters = useMemo(() => getRegionFilters(t), [t]);
 
   const [activeRegion, setActiveRegion] = useState<RegionFilter>('all');
 
@@ -61,13 +64,7 @@ export default function RegionalTraditionsPage() {
           {t.regionalPage.title}
         </h1>
         <p className="text-lg text-earth-700 dark:text-earth-300 max-w-3xl mb-10 leading-relaxed">
-          India&apos;s millet heritage is a tapestry of regional traditions, each
-          shaped by local climate, soil, culture, and centuries of culinary
-          innovation. From the bajra rotis of Rajasthan&apos;s deserts to the ragi
-          mudde of Karnataka&apos;s Deccan plateau, every state has its own
-          relationship with these ancient grains. Explore the iconic dishes,
-          festivals, and living practices that keep millet traditions alive across
-          the subcontinent.
+          {t.regionalPage.intro}
         </p>
 
         {/* Filter Buttons */}
@@ -89,8 +86,8 @@ export default function RegionalTraditionsPage() {
 
         {/* Results Count */}
         <p className="text-sm text-warm-gray dark:text-earth-400 mb-6">
-          Showing {filteredTraditions.length}{' '}
-          {filteredTraditions.length === 1 ? 'tradition' : 'traditions'}
+          {t.regionalPage.showing} {filteredTraditions.length}{' '}
+          {filteredTraditions.length === 1 ? t.regionalPage.tradition : t.regionalPage.traditions}
         </p>
 
         {/* Grid */}
@@ -121,7 +118,7 @@ export default function RegionalTraditionsPage() {
                       </p>
 
                       <p className="text-xs text-warm-gray dark:text-earth-400 mb-3">
-                        <span className="font-medium text-earth-700 dark:text-earth-300">Primary millets:</span>{' '}
+                        <span className="font-medium text-earth-700 dark:text-earth-300">{t.regionalPage.primaryMillets}:</span>{' '}
                         {tradition.primaryMillets
                           .map((slug) =>
                             slug
@@ -135,10 +132,10 @@ export default function RegionalTraditionsPage() {
                       <div className="flex items-center justify-between">
                         <span className="text-xs text-warm-gray dark:text-earth-400">
                           {tradition.iconicDishes.length}{' '}
-                          {tradition.iconicDishes.length === 1 ? 'dish' : 'dishes'} featured
+                          {tradition.iconicDishes.length === 1 ? t.regionalPage.dish : t.regionalPage.dishes} {t.regionalPage.featured}
                         </span>
                         <span className="text-xs text-earth-400 font-medium">
-                          Explore &rarr;
+                          {t.regionalPage.explore} &rarr;
                         </span>
                       </div>
                     </CardBody>
@@ -150,7 +147,7 @@ export default function RegionalTraditionsPage() {
         ) : (
           <div className="text-center py-16">
             <p className="text-warm-gray dark:text-earth-400 text-lg">
-              No traditions found for the selected region. Try a different filter.
+              {t.regionalPage.noTraditions}
             </p>
           </div>
         )}

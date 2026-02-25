@@ -1,6 +1,10 @@
 import type { Metadata } from 'next';
+import { isValidLocale, getTranslations, localeParams, pageAlternates } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
-import { localePath, getTranslations, isValidLocale, locales, hreflangAlternates } from '@/lib/i18n';
+
+export function generateStaticParams() {
+  return localeParams();
+}
 
 export async function generateMetadata({
   params,
@@ -8,32 +12,16 @@ export async function generateMetadata({
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = await params;
-  if (!isValidLocale(lang)) return {};
-  const t = getTranslations(lang);
+  const locale: Locale = isValidLocale(lang) ? lang : 'en';
+  const t = getTranslations(locale);
 
   return {
-    title: `${t.nav.search} | ${t.site.siteName}`,
-    description:
-      lang === 'te'
-        ? 'చిరుధాన్యాలు, వంటకాలు, FAQ మరియు మరిన్నింటిలో శోధించండి.'
-        : lang === 'fr'
-          ? 'Recherchez parmi tous les millets, recettes, FAQ et pages du site.'
-          : 'Search across all millets, recipes, FAQ, and pages.',
-    alternates: {
-      canonical: `/${lang}/search`,
-      languages: hreflangAlternates('/search'),
-    },
-    robots: {
-      index: false,
-      follow: true,
-    },
+    title: t.nav.search,
+    robots: { index: false, follow: true },
+    alternates: pageAlternates(locale, '/search'),
   };
 }
 
-export default function SearchLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function SearchLayout({ children }: { children: React.ReactNode }) {
   return children;
 }

@@ -60,7 +60,7 @@ export default function MilletsPage() {
 
         {/* Results Count */}
         <p className="text-sm text-earth-500 dark:text-earth-400 mb-6">
-          Showing {filteredMillets.length} millet{filteredMillets.length !== 1 ? 's' : ''}
+          {t.common.showing} {filteredMillets.length} {filteredMillets.length !== 1 ? t.common.milletPlural : t.common.milletSingular}
         </p>
 
         {/* Millet Grid */}

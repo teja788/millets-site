@@ -360,22 +360,26 @@ export default async function CookingGuidePage({
             </div>
             <div className="bg-forest-50 dark:bg-earth-800 rounded-xl p-6">
               <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-2">
-                {locale === 'te' ? 'పులియబెట్టడం' : 'Fermentation'}
+                {locale === 'te' ? 'పులియబెట్టడం' : locale === 'fr' ? 'Fermentation' : 'Fermentation'}
               </h3>
               <p className="text-earth-800 dark:text-earth-200 text-sm leading-relaxed">
                 {locale === 'te'
                   ? 'దోస/ఇడ్లీ పిండి, అంబలి మరియు కూజ్ వంటి సాంప్రదాయ పులియబెట్టిన వంటకాలు యాంటీన్యూట్రియెంట్లను గణనీయంగా తగ్గిస్తాయి. 12-24 గంటల పులియబెట్టడం ఫైటిక్ ఆమ్లాన్ని 50-75% తగ్గిస్తుంది.'
-                  : 'Traditional fermented preparations like dosa/idli batter (using millet instead of rice), ambali, and koozh dramatically reduce antinutrients. Fermentation for 12-24 hours can reduce phytic acid by 50-75% while adding beneficial probiotics.'}
+                  : locale === 'fr'
+                    ? 'Les préparations fermentées traditionnelles comme la pâte à dosa/idli (en utilisant du millet au lieu du riz), l\'ambali et le koozh réduisent considérablement les antinutriments. La fermentation pendant 12 à 24 heures peut réduire l\'acide phytique de 50 à 75 % tout en apportant des probiotiques bénéfiques.'
+                    : 'Traditional fermented preparations like dosa/idli batter (using millet instead of rice), ambali, and koozh dramatically reduce antinutrients. Fermentation for 12-24 hours can reduce phytic acid by 50-75% while adding beneficial probiotics.'}
               </p>
             </div>
             <div className="bg-forest-50 dark:bg-earth-800 rounded-xl p-6">
               <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-2">
-                {locale === 'te' ? 'వేయించడం / పొడి వేయించడం' : 'Roasting / Dry Toasting'}
+                {locale === 'te' ? 'వేయించడం / పొడి వేయించడం' : locale === 'fr' ? 'Torréfaction / Grillage à sec' : 'Roasting / Dry Toasting'}
               </h3>
               <p className="text-earth-800 dark:text-earth-200 text-sm leading-relaxed">
                 {locale === 'te'
                   ? 'వంట చేయడానికి ముందు చిరుధాన్యాలను పొడిగా వేయించడం టానిన్లను తగ్గిస్తుంది మరియు వాటి గోధుమ రుచిని పెంచుతుంది. ఇది అనేక సాంప్రదాయ రెసిపీలలో (ఉదా., కొర్రలతో ఉప్మా లేదా బిర్యానీ చేయడానికి ముందు వేయించడం) సాధారణ పద్ధతి.'
-                  : 'Dry roasting millets before cooking reduces tannins and also enhances their nutty flavor. This is a common practice in many traditional recipes (e.g., roasting foxtail millet before making upma or biryani).'}
+                  : locale === 'fr'
+                    ? 'Griller les millets à sec avant la cuisson réduit les tanins et rehausse leur saveur de noisette. C\'est une pratique courante dans de nombreuses recettes traditionnelles (par exemple, griller le millet des oiseaux avant de préparer un upma ou un biryani).'
+                    : 'Dry roasting millets before cooking reduces tannins and also enhances their nutty flavor. This is a common practice in many traditional recipes (e.g., roasting foxtail millet before making upma or biryani).'}
               </p>
             </div>
           </div>
@@ -384,46 +388,52 @@ export default async function CookingGuidePage({
         {/* Storage Guide */}
         <section className="mb-14">
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-earth-800 dark:text-earth-100 mb-4">
-            {locale === 'te' ? 'నిల్వ గైడ్' : 'Storage Guide'}
+            {locale === 'te' ? 'నిల్వ గైడ్' : locale === 'fr' ? 'Guide de conservation' : 'Storage Guide'}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-cream dark:bg-earth-800 rounded-xl card-shadow p-6">
               <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-2">
-                {locale === 'te' ? 'వండని చిరుధాన్యాలు' : 'Uncooked Millets'}
+                {locale === 'te' ? 'వండని చిరుధాన్యాలు' : locale === 'fr' ? 'Millets non cuits' : 'Uncooked Millets'}
               </h3>
               <p className="text-earth-800 dark:text-earth-200 text-sm leading-relaxed mb-2">
                 {locale === 'te'
                   ? 'సూర్యరశ్మికి దూరంగా చల్లని, పొడి ప్రదేశంలో గాలి చొరబడని కంటైనర్‌లలో నిల్వ చేయండి.'
-                  : 'Store in airtight containers in a cool, dry place away from direct sunlight.'}
+                  : locale === 'fr'
+                    ? 'Conservez dans des récipients hermétiques, dans un endroit frais et sec, à l\'abri de la lumière directe du soleil.'
+                    : 'Store in airtight containers in a cool, dry place away from direct sunlight.'}
               </p>
               <p className="font-medium text-earth-800 dark:text-earth-100">
-                {locale === 'te' ? 'షెల్ఫ్ లైఫ్: 6-12 నెలలు' : 'Shelf life: 6-12 months'}
+                {locale === 'te' ? 'షెల్ఫ్ లైఫ్: 6-12 నెలలు' : locale === 'fr' ? 'Durée de conservation : 6-12 mois' : 'Shelf life: 6-12 months'}
               </p>
             </div>
             <div className="bg-cream dark:bg-earth-800 rounded-xl card-shadow p-6">
               <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-2">
-                {locale === 'te' ? 'వండిన చిరుధాన్యాలు' : 'Cooked Millets'}
+                {locale === 'te' ? 'వండిన చిరుధాన్యాలు' : locale === 'fr' ? 'Millets cuits' : 'Cooked Millets'}
               </h3>
               <p className="text-earth-800 dark:text-earth-200 text-sm leading-relaxed mb-2">
                 {locale === 'te'
                   ? 'ఫ్రిజ్‌లో మూసిన కంటైనర్‌లలో నిల్వ చేయండి. ఎక్కువ కాలం నిల్వ కోసం భాగాల పరిమాణ బ్యాగ్‌లలో ఫ్రీజ్ చేయవచ్చు.'
-                  : 'Store in sealed containers in the refrigerator. Can also be frozen in portion-sized bags for longer storage.'}
+                  : locale === 'fr'
+                    ? 'Conservez dans des récipients fermés au réfrigérateur. Peut aussi être congelé en portions pour une conservation plus longue.'
+                    : 'Store in sealed containers in the refrigerator. Can also be frozen in portion-sized bags for longer storage.'}
               </p>
               <p className="font-medium text-earth-800 dark:text-earth-100">
-                {locale === 'te' ? 'ఫ్రిజ్: 3-5 రోజులు / ఫ్రీజర్: 3 నెలల వరకు' : 'Fridge: 3-5 days / Freezer: up to 3 months'}
+                {locale === 'te' ? 'ఫ్రిజ్: 3-5 రోజులు / ఫ్రీజర్: 3 నెలల వరకు' : locale === 'fr' ? 'Réfrigérateur : 3-5 jours / Congélateur : jusqu\'à 3 mois' : 'Fridge: 3-5 days / Freezer: up to 3 months'}
               </p>
             </div>
             <div className="bg-cream dark:bg-earth-800 rounded-xl card-shadow p-6">
               <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-2">
-                {locale === 'te' ? 'చిరుధాన్యం పిండి' : 'Millet Flour'}
+                {locale === 'te' ? 'చిరుధాన్యం పిండి' : locale === 'fr' ? 'Farine de millet' : 'Millet Flour'}
               </h3>
               <p className="text-earth-800 dark:text-earth-200 text-sm leading-relaxed mb-2">
                 {locale === 'te'
                   ? 'ఫ్రిజ్‌లో గాలి చొరబడని కంటైనర్‌లలో నిల్వ చేయండి, ఎందుకంటే పిండిలోని బహిర్గత నూనెలు మొత్తం ధాన్యాల కంటే వేగంగా చెడిపోతాయి.'
-                  : 'Store in airtight containers in the refrigerator, as the exposed oils in flour can turn rancid faster than whole grains.'}
+                  : locale === 'fr'
+                    ? 'Conservez dans des récipients hermétiques au réfrigérateur, car les huiles exposées dans la farine rancissent plus vite que dans les grains entiers.'
+                    : 'Store in airtight containers in the refrigerator, as the exposed oils in flour can turn rancid faster than whole grains.'}
               </p>
               <p className="font-medium text-earth-800 dark:text-earth-100">
-                {locale === 'te' ? 'షెల్ఫ్ లైఫ్: 2-3 నెలలు (ఫ్రిజ్‌లో)' : 'Shelf life: 2-3 months (refrigerated)'}
+                {locale === 'te' ? 'షెల్ఫ్ లైఫ్: 2-3 నెలలు (ఫ్రిజ్‌లో)' : locale === 'fr' ? 'Durée de conservation : 2-3 mois (au réfrigérateur)' : 'Shelf life: 2-3 months (refrigerated)'}
               </p>
             </div>
           </div>
@@ -432,92 +442,106 @@ export default async function CookingGuidePage({
         {/* Substitution Guide */}
         <section className="mb-14">
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-earth-800 dark:text-earth-100 mb-4">
-            {locale === 'te' ? 'ప్రత్యామ్నాయ గైడ్' : 'Substitution Guide'}
+            {locale === 'te' ? 'ప్రత్యామ్నాయ గైడ్' : locale === 'fr' ? 'Guide de substitution' : 'Substitution Guide'}
           </h2>
           <p className="text-earth-800 dark:text-earth-200 leading-relaxed mb-6 max-w-3xl">
             {locale === 'te'
               ? 'చిరుధాన్యాలు అనేక వంటకాలలో సాధారణ ధాన్యాలను భర్తీ చేయగలవు. ఏ చిరుధాన్యాలు ఉత్తమ ప్రత్యామ్నాయాలుగా పని చేస్తాయో ఈ గైడ్ చూడండి:'
-              : 'Millets can replace common grains in many dishes. Here is a guide to which millets work best as substitutes:'}
+              : locale === 'fr'
+                ? 'Les millets peuvent remplacer les céréales courantes dans de nombreux plats. Voici un guide des millets qui fonctionnent le mieux comme substituts :'
+                : 'Millets can replace common grains in many dishes. Here is a guide to which millets work best as substitutes:'}
           </p>
           <Table>
             <TableHead>
               <TableRow>
                 <TableHeaderCell>
-                  {locale === 'te' ? 'చిరుధాన్యం' : 'Millet'}
+                  {locale === 'te' ? 'చిరుధాన్యం' : locale === 'fr' ? 'Millet' : 'Millet'}
                 </TableHeaderCell>
                 <TableHeaderCell>
-                  {locale === 'te' ? 'దీనికి ఉత్తమ ప్రత్యామ్నాయం' : 'Best Substitute For'}
+                  {locale === 'te' ? 'దీనికి ఉత్తమ ప్రత్యామ్నాయం' : locale === 'fr' ? 'Meilleur substitut pour' : 'Best Substitute For'}
                 </TableHeaderCell>
                 <TableHeaderCell className="hidden md:table-cell">
-                  {locale === 'te' ? 'గమనికలు' : 'Notes'}
+                  {locale === 'te' ? 'గమనికలు' : locale === 'fr' ? 'Notes' : 'Notes'}
                 </TableHeaderCell>
               </TableRow>
             </TableHead>
             <TableBody>
               <TableRow>
                 <TableCell className="font-medium">
-                  {locale === 'te' ? 'కొర్రలు' : 'Foxtail Millet'}
+                  {locale === 'te' ? 'కొర్రలు' : locale === 'fr' ? 'Millet des oiseaux' : 'Foxtail Millet'}
                 </TableCell>
-                <TableCell>{locale === 'te' ? 'బియ్యం' : 'Rice'}</TableCell>
+                <TableCell>{locale === 'te' ? 'బియ్యం' : locale === 'fr' ? 'Riz' : 'Rice'}</TableCell>
                 <TableCell className="hidden md:table-cell text-sm">
                   {locale === 'te'
                     ? 'ఆకృతిలో బియ్యానికి అత్యంత సమీపం. బిర్యానీ, ఫ్రైడ్ రైస్, ఉప్మా, పులావ్‌లో వాడండి.'
-                    : 'Closest to rice in texture. Use in biryani, fried rice, upma, pulao.'}
+                    : locale === 'fr'
+                      ? 'Texture la plus proche du riz. Utilisez dans le biryani, le riz sauté, l\'upma, le pulao.'
+                      : 'Closest to rice in texture. Use in biryani, fried rice, upma, pulao.'}
                 </TableCell>
               </TableRow>
               <TableRow>
                 <TableCell className="font-medium">
-                  {locale === 'te' ? 'సామలు' : 'Little Millet'}
+                  {locale === 'te' ? 'సామలు' : locale === 'fr' ? 'Petit mil' : 'Little Millet'}
                 </TableCell>
-                <TableCell>{locale === 'te' ? 'బియ్యం' : 'Rice'}</TableCell>
+                <TableCell>{locale === 'te' ? 'బియ్యం' : locale === 'fr' ? 'Riz' : 'Rice'}</TableCell>
                 <TableCell className="hidden md:table-cell text-sm">
                   {locale === 'te'
                     ? 'చాలా తేలికపాటి, తటస్థ రుచి. ఉత్తమ రోజువారీ బియ్యం ప్రత్యామ్నాయం. పొంగల్, పెరుగన్నంలో అద్భుతం.'
-                    : 'Very mild, neutral flavor. Best everyday rice replacement. Excellent in pongal, curd rice.'}
+                    : locale === 'fr'
+                      ? 'Saveur très douce et neutre. Meilleur substitut quotidien du riz. Excellent dans le pongal, le riz au yaourt.'
+                      : 'Very mild, neutral flavor. Best everyday rice replacement. Excellent in pongal, curd rice.'}
                 </TableCell>
               </TableRow>
               <TableRow>
                 <TableCell className="font-medium">
-                  {locale === 'te' ? 'ఊదలు' : 'Barnyard Millet'}
+                  {locale === 'te' ? 'ఊదలు' : locale === 'fr' ? 'Millet japonais' : 'Barnyard Millet'}
                 </TableCell>
-                <TableCell>{locale === 'te' ? 'బియ్యం' : 'Rice'}</TableCell>
+                <TableCell>{locale === 'te' ? 'బియ్యం' : locale === 'fr' ? 'Riz' : 'Rice'}</TableCell>
                 <TableCell className="hidden md:table-cell text-sm">
                   {locale === 'te'
                     ? 'అతి తక్కువ కేలరీల చిరుధాన్యం. సాధారణ ఉపవాస ఆహార ప్రత్యామ్నాయం. ఖిచ్డి మరియు పులావ్‌లో పని చేస్తుంది.'
-                    : 'Lowest calorie millet. Common fasting food substitute. Works in khichdi and pulao.'}
+                    : locale === 'fr'
+                      ? 'Millet le moins calorique. Substitut courant pour les jours de jeûne. Fonctionne dans le khichdi et le pulao.'
+                      : 'Lowest calorie millet. Common fasting food substitute. Works in khichdi and pulao.'}
                 </TableCell>
               </TableRow>
               <TableRow>
                 <TableCell className="font-medium">
-                  {locale === 'te' ? 'సజ్జల పిండి' : 'Pearl Millet (flour)'}
+                  {locale === 'te' ? 'సజ్జల పిండి' : locale === 'fr' ? 'Mil à chandelle (farine)' : 'Pearl Millet (flour)'}
                 </TableCell>
-                <TableCell>{locale === 'te' ? 'గోధుమ పిండి (రొట్టెలు)' : 'Wheat flour (rotis)'}</TableCell>
+                <TableCell>{locale === 'te' ? 'గోధుమ పిండి (రొట్టెలు)' : locale === 'fr' ? 'Farine de blé (galettes)' : 'Wheat flour (rotis)'}</TableCell>
                 <TableCell className="hidden md:table-cell text-sm">
                   {locale === 'te'
                     ? 'మట్టి వాసనతో వెచ్చని రొట్టెలు చేస్తుంది. సజ్జ రొట్టెకు ఉత్తమం. మొదట్లో గోధుమ పిండితో కలపండి.'
-                    : 'Makes earthy, warming flatbreads. Best for bajra roti. Combine with wheat flour initially.'}
+                    : locale === 'fr'
+                      ? 'Donne des galettes rustiques et réconfortantes. Idéal pour le bajra roti. Mélangez avec de la farine de blé au début.'
+                      : 'Makes earthy, warming flatbreads. Best for bajra roti. Combine with wheat flour initially.'}
                 </TableCell>
               </TableRow>
               <TableRow>
                 <TableCell className="font-medium">
-                  {locale === 'te' ? 'జొన్న పిండి' : 'Sorghum (flour)'}
+                  {locale === 'te' ? 'జొన్న పిండి' : locale === 'fr' ? 'Sorgho (farine)' : 'Sorghum (flour)'}
                 </TableCell>
-                <TableCell>{locale === 'te' ? 'గోధుమ పిండి (రొట్టెలు, బ్రెడ్‌లు)' : 'Wheat flour (rotis, breads)'}</TableCell>
+                <TableCell>{locale === 'te' ? 'గోధుమ పిండి (రొట్టెలు, బ్రెడ్‌లు)' : locale === 'fr' ? 'Farine de blé (galettes, pains)' : 'Wheat flour (rotis, breads)'}</TableCell>
                 <TableCell className="hidden md:table-cell text-sm">
                   {locale === 'te'
                     ? 'తేలికపాటి, గోధుమ రుచి. అద్భుతమైన భాకరీ, దోస చేస్తుంది మరియు బేకింగ్‌లో వాడవచ్చు.'
-                    : 'Mild, nutty flavor. Makes excellent bhakri, dosa, and can be used in baking.'}
+                    : locale === 'fr'
+                      ? 'Saveur douce et noisettée. Excellent pour le bhakri, le dosa, et utilisable en pâtisserie.'
+                      : 'Mild, nutty flavor. Makes excellent bhakri, dosa, and can be used in baking.'}
                 </TableCell>
               </TableRow>
               <TableRow>
                 <TableCell className="font-medium">
-                  {locale === 'te' ? 'రాగి పిండి' : 'Finger Millet (flour)'}
+                  {locale === 'te' ? 'రాగి పిండి' : locale === 'fr' ? 'Éleusine (farine)' : 'Finger Millet (flour)'}
                 </TableCell>
-                <TableCell>{locale === 'te' ? 'గోధుమ / బియ్యం పిండి' : 'Wheat / rice flour'}</TableCell>
+                <TableCell>{locale === 'te' ? 'గోధుమ / బియ్యం పిండి' : locale === 'fr' ? 'Farine de blé / de riz' : 'Wheat / rice flour'}</TableCell>
                 <TableCell className="hidden md:table-cell text-sm">
                   {locale === 'te'
                     ? 'ముదురు, ప్రత్యేక రుచి. గంజి, ముద్ద, దోస, కుకీలు మరియు హల్వాకు ఉత్తమం.'
-                    : 'Dark, distinctive flavor. Best for porridge, mudde, dosa, cookies, and halwa.'}
+                    : locale === 'fr'
+                      ? 'Saveur sombre et distinctive. Idéal pour la bouillie, le mudde, le dosa, les biscuits et le halwa.'
+                      : 'Dark, distinctive flavor. Best for porridge, mudde, dosa, cookies, and halwa.'}
                 </TableCell>
               </TableRow>
             </TableBody>
@@ -527,7 +551,7 @@ export default async function CookingGuidePage({
         {/* Pro Tips */}
         <section className="mb-12">
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-earth-800 dark:text-earth-100 mb-4">
-            {locale === 'te' ? 'ప్రో చిట్కాలు' : 'Pro Tips'}
+            {locale === 'te' ? 'ప్రో చిట్కాలు' : locale === 'fr' ? 'Astuces de pro' : 'Pro Tips'}
           </h2>
           <div className="bg-forest-50 dark:bg-earth-800 rounded-xl p-6 max-w-3xl">
             <ul className="space-y-4">
@@ -541,6 +565,13 @@ export default async function CookingGuidePage({
                       <strong>రెసిస్టెంట్ స్టార్చ్ కోసం వండిన చిరుధాన్యాన్ని చల్లబరచండి:</strong> వండిన
                       చిరుధాన్యాన్ని తినడానికి ముందు చల్లబరచడం రెసిస్టెంట్ స్టార్చ్ కంటెంట్‌ను
                       పెంచుతుంది, ఇది ప్రభావవంతమైన గ్లైసెమిక్ ఇండెక్స్‌ను తగ్గిస్తుంది.
+                    </>
+                  ) : locale === 'fr' ? (
+                    <>
+                      <strong>Laissez refroidir le millet cuit pour l&apos;amidon résistant :</strong> Laisser
+                      refroidir le millet cuit avant de le consommer augmente la teneur en amidon résistant,
+                      ce qui abaisse l&apos;index glycémique effectif et nourrit les bactéries intestinales
+                      bénéfiques. Particulièrement utile pour les personnes gérant leur glycémie.
                     </>
                   ) : (
                     <>
@@ -563,6 +594,13 @@ export default async function CookingGuidePage({
                       ముందు 3-4 నిమిషాలు చిరుధాన్యాలను పొడిగా వేయించండి. ఇది ఆహ్లాదకరమైన, గోధుమ వాసనను
                       తీసుకువస్తుంది మరియు ధాన్యాలు వేరు వేరుగా ఉండటానికి సహాయపడుతుంది.
                     </>
+                  ) : locale === 'fr' ? (
+                    <>
+                      <strong>Grillez avant de cuire pour plus de saveur :</strong> Faites griller les
+                      millets à sec dans une poêle pendant 3-4 minutes avant d&apos;ajouter l&apos;eau. Cela fait
+                      ressortir un agréable arôme de noisette et aide les grains à rester séparés plutôt
+                      que de devenir pâteux.
+                    </>
                   ) : (
                     <>
                       <strong>Toast before cooking for nuttier flavor:</strong> Dry roast millets in a
@@ -582,6 +620,12 @@ export default async function CookingGuidePage({
                       <strong>వంట చేసేటప్పుడు కొద్దిగా నూనె వేయండి:</strong> వంట నీటికి అర టీస్పూన్
                       నెయ్యి లేదా నూనె కలపడం చిరుధాన్యాలు అంటుకోకుండా ఉండటానికి మరియు ఆహ్లాదకరమైన
                       మెరుపును ఇవ్వడానికి సహాయపడుతుంది.
+                    </>
+                  ) : locale === 'fr' ? (
+                    <>
+                      <strong>Ajoutez un filet d&apos;huile pendant la cuisson :</strong> Ajouter une demi-cuillère
+                      à café de beurre clarifié ou d&apos;huile à l&apos;eau de cuisson empêche les millets de coller
+                      et leur donne un bel éclat. Particulièrement utile pour le millet des oiseaux et le petit mil.
                     </>
                   ) : (
                     <>

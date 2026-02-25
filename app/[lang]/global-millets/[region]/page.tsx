@@ -38,14 +38,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return { title: 'Region Not Found' };
   }
   const locale = lang as Locale;
+  const t = getTranslations(locale);
   const data = getGlobalMilletRegionBySlugLocale(region, locale);
   if (!data) {
-    return { title: 'Region Not Found' };
+    return { title: t.globalPage.notFound };
   }
-  const t = getTranslations(locale);
   return {
     title: `${data.region} — ${t.globalPage.title} | ${t.site.siteName}`,
-    description: `${data.tagline} Explore the millet heritage of ${data.region}, including iconic foods, history, and cultural significance.`,
+    description: data.tagline,
     alternates: {
       canonical: `/${lang}/global-millets/${region}`,
       languages: hreflangAlternates(`/global-millets/${region}`),

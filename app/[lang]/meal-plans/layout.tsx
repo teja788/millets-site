@@ -1,6 +1,10 @@
 import type { Metadata } from 'next';
+import { isValidLocale, getTranslations, localeParams, pageAlternates } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
-import { localePath, getTranslations, isValidLocale, locales, hreflangAlternates } from '@/lib/i18n';
+
+export function generateStaticParams() {
+  return localeParams();
+}
 
 export async function generateMetadata({
   params,
@@ -8,28 +12,16 @@ export async function generateMetadata({
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = await params;
-  if (!isValidLocale(lang)) return {};
-  const t = getTranslations(lang);
+  const locale: Locale = isValidLocale(lang) ? lang : 'en';
+  const t = getTranslations(locale);
 
   return {
-    title: `${t.mealPlan.title} | ${t.site.siteName}`,
-    description:
-      lang === 'te'
-        ? 'వివిధ ఆహార లక్ష్యాల కోసం చిరుధాన్యాల ఆధారిత 7-రోజుల భోజన ప్రణాళికలు.'
-        : lang === 'fr'
-          ? 'Plans de repas sur 7 jours à base de millets pour différents objectifs alimentaires.'
-          : 'Ready-to-follow 7-day meal plans designed around millets for different dietary goals.',
-    alternates: {
-      canonical: `/${lang}/meal-plans`,
-      languages: hreflangAlternates('/meal-plans'),
-    },
+    title: t.mealPlan.title,
+    description: `${t.mealPlan.title} — ${t.site.description}`,
+    alternates: pageAlternates(locale, '/meal-plans'),
   };
 }
 
-export default function MealPlansLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function MealPlansLayout({ children }: { children: React.ReactNode }) {
   return children;
 }

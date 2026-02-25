@@ -112,7 +112,7 @@ export default function MilletCard({ millet }: MilletCardProps) {
             <div className="flex flex-wrap gap-2">
               {millet.isGlutenFree && (
                 <Badge variant="blue" size="sm">
-                  Gluten-Free
+                  {t.common.glutenFree}
                 </Badge>
               )}
             </div>

@@ -128,7 +128,7 @@ function SearchResults() {
           </form>
           {query.trim() && (
             <p className="text-sm text-earth-500 dark:text-earth-400 mt-3 text-center">
-              {results.length} {results.length === 1 ? 'result' : 'results'} for &ldquo;{query.trim()}&rdquo;
+              {results.length} {results.length === 1 ? t.search.result : t.search.results} {t.search.for} &ldquo;{query.trim()}&rdquo;
             </p>
           )}
         </div>
@@ -206,7 +206,7 @@ function SearchResults() {
                   {t.search.noResults}
                 </h2>
                 <p className="text-earth-500 dark:text-earth-400 mb-6 max-w-md mx-auto">
-                  We couldn&apos;t find anything matching &ldquo;{query.trim()}&rdquo;. Try different keywords or browse our suggestions below.
+                  {t.search.noResultsDescription}
                 </p>
                 <div className="flex flex-wrap justify-center gap-3">
                   {['Ragi', 'Jowar', 'Bajra', 'Gluten free', 'Breakfast', 'Calcium', 'Ayurveda'].map(
@@ -235,10 +235,10 @@ function SearchResults() {
               >
                 <Search className="w-12 h-12 text-earth-300 dark:text-earth-600 mx-auto mb-4" />
                 <h2 className="font-heading text-xl font-bold text-earth-700 dark:text-earth-200 mb-2">
-                  What are you looking for?
+                  {t.search.whatLookingFor}
                 </h2>
                 <p className="text-earth-500 dark:text-earth-400 mb-6 max-w-md mx-auto">
-                  Search across all millets, recipes, FAQ, and pages. Try typing a millet name, health topic, or recipe.
+                  {t.search.searchDescription}
                 </p>
                 <div className="flex flex-wrap justify-center gap-3">
                   {['Finger Millet', 'Protein', 'Biryani', 'Diabetes', 'Cooking Guide', 'Foxtail'].map(
