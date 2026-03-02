@@ -4,6 +4,7 @@ import { notFound, redirect } from 'next/navigation';
 import { AlertTriangle } from 'lucide-react';
 import type { Locale } from '@/lib/i18n';
 import { localePath, getTranslations, isValidLocale, locales, localeParams, hreflangAlternates } from '@/lib/i18n';
+import { localeFeatures } from '@/lib/locale-config';
 import { getAyurvedaData, getMilletBySlugLocale } from '@/lib/i18n-data';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import TestimonialOrQuote from '@/components/sections/TestimonialOrQuote';
@@ -73,12 +74,9 @@ export default async function AyurvedaPage({
   const { lang } = await params;
   if (!isValidLocale(lang)) notFound();
 
-  // German users should use the science-based /de/ernaehrung-und-gesundheit page instead
-  if (lang === 'de') redirect('/de/ernaehrung-und-gesundheit');
-  // French users should use the science-based /fr/nutrition-et-sante/ page instead
-  if (lang === 'fr') redirect('/fr/nutrition-et-sante');
-
   const locale: Locale = lang;
+  const { healthPageRedirect } = localeFeatures[locale];
+  if (healthPageRedirect) redirect(healthPageRedirect);
   const t = getTranslations(locale);
   const ayurvedaPageData = getAyurvedaData(locale);
   const sourceKeys = ayurvedicSourceKeys;

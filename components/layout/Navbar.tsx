@@ -8,7 +8,8 @@ import { useTheme } from 'next-themes';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Sun, Moon } from 'lucide-react';
 import type { Locale } from '@/lib/i18n';
-import { localePath, getTranslations, localePattern, isRTL } from '@/lib/i18n';
+import { localePath, getTranslations, localePattern } from '@/lib/i18n';
+import { localeFeatures } from '@/lib/locale-config';
 import LanguageSwitcher from '@/components/ui/LanguageSwitcher';
 
 /* ------------------------------------------------------------------ */
@@ -41,6 +42,7 @@ export default function Navbar({ locale }: { locale: Locale }) {
   const [mounted, setMounted] = useState(false);
 
   const t = getTranslations(locale);
+  const features = localeFeatures[locale];
 
   /* ---------------------------------------------------------------- */
   /*  Navigation data (depends on locale & translations)               */
@@ -59,25 +61,19 @@ export default function Navbar({ locale }: { locale: Locale }) {
         { href: localePath(locale, '/faq'), label: t.nav.faq },
         { href: localePath(locale, '/myths'), label: t.nav.mythsFacts },
         { href: localePath(locale, '/buying-guide'), label: t.nav.buyingGuide },
-        ...(locale === 'fr' ? [
-          { href: localePath(locale, '/nutrition-et-sante'), label: 'Nutrition et santé' },
-          { href: localePath(locale, '/millet-vs-quinoa'), label: 'Millet vs Quinoa' },
-          { href: localePath(locale, '/ou-acheter-du-millet'), label: 'Où acheter du millet' },
-        ] : []),
-        ...(locale === 'de' ? [
-          { href: localePath(locale, '/ernaehrung-und-gesundheit'), label: 'Ernährung und Gesundheit' },
-          { href: localePath(locale, '/hirse-vs-quinoa'), label: 'Hirse vs Quinoa' },
-          { href: localePath(locale, '/wo-hirse-kaufen'), label: 'Wo Hirse kaufen' },
-        ] : []),
+        ...features.exclusiveNavItems
+          .filter(i => i.section === 'learn')
+          .map(i => ({ href: localePath(locale, i.href), label: i.label })),
       ],
     },
     {
       label: t.nav.culture,
       links: [
         { href: localePath(locale, '/history'), label: t.nav.history },
-        ...(!['fr', 'de'].includes(locale) ? [{ href: localePath(locale, '/ayurveda'), label: t.nav.ayurveda }] : []),
-        ...(locale === 'fr' ? [{ href: localePath(locale, '/culture-africaine-du-mil'), label: 'Culture africaine du mil' }] : []),
-        ...(locale === 'de' ? [{ href: localePath(locale, '/hirse-in-der-deutschen-kueche'), label: 'Hirse in der deutschen Küche' }] : []),
+        ...(features.hasAyurveda ? [{ href: localePath(locale, '/ayurveda'), label: t.nav.ayurveda }] : []),
+        ...features.exclusiveNavItems
+          .filter(i => i.section === 'culture')
+          .map(i => ({ href: localePath(locale, i.href), label: i.label })),
         { href: localePath(locale, '/regional-traditions'), label: t.nav.regionalTraditions },
         { href: localePath(locale, '/global-millets'), label: t.nav.globalMillets },
         { href: localePath(locale, '/fermentation'), label: t.nav.fermentation },
@@ -401,11 +397,11 @@ export default function Navbar({ locale }: { locale: Locale }) {
 
             {/* Drawer */}
             <motion.div
-              initial={{ x: isRTL(locale) ? '-100%' : '100%' }}
+              initial={{ x: features.isRTL ? '-100%' : '100%' }}
               animate={{ x: 0 }}
-              exit={{ x: isRTL(locale) ? '-100%' : '100%' }}
+              exit={{ x: features.isRTL ? '-100%' : '100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-              className={`fixed top-0 ${isRTL(locale) ? 'left-0' : 'right-0'} h-full w-72 bg-white dark:bg-earth-900 shadow-xl z-50 lg:hidden overflow-y-auto`}
+              className={`fixed top-0 ${features.isRTL ? 'left-0' : 'right-0'} h-full w-72 bg-white dark:bg-earth-900 shadow-xl z-50 lg:hidden overflow-y-auto`}
             >
               <div className="flex items-center justify-between p-4 border-b border-earth-200 dark:border-earth-700">
                 <span className="font-heading text-lg font-bold text-earth-800 dark:text-forest-200">

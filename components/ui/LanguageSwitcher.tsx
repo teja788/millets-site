@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { ChevronDown } from 'lucide-react';
 import { locales, localePattern } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
+import { localeFeatures } from '@/lib/locale-config';
 
 const localeLabels: Record<Locale, string> = {
   en: 'English',
@@ -33,8 +34,12 @@ export default function LanguageSwitcher({ currentLocale }: { currentLocale: Loc
     return () => document.removeEventListener('mousedown', handler);
   }, []);
 
-  // Hide on /en/about (no other locale equivalent)
-  if (pathname === '/en/about') return null;
+  // Hide on locale-exclusive pages (no equivalent in other locales)
+  const features = localeFeatures[currentLocale];
+  const isExclusivePage = features.exclusiveNavItems.some(
+    (item) => pathWithoutLocale === item.href
+  );
+  if (isExclusivePage || pathname === '/en/about') return null;
 
   const otherLocales = locales.filter((l) => l !== currentLocale);
 

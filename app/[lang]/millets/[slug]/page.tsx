@@ -37,6 +37,7 @@ import TestimonialOrQuote from '@/components/sections/TestimonialOrQuote';
 import ImageWithFallback from '@/components/ui/ImageWithFallback';
 import type { Locale } from '@/lib/i18n';
 import { localePath, getTranslations, isValidLocale, locales, hreflangAlternates } from '@/lib/i18n';
+import { localeFeatures } from '@/lib/locale-config';
 import { getMillets, getMilletBySlugLocale, getRecipesByMilletLocale, getSources, riceNutrition } from '@/lib/i18n-data';
 import type { EvidenceLevel } from '@/lib/types';
 
@@ -286,11 +287,11 @@ export default async function MilletDetailPage({ params }: PageProps) {
           {/* ===== Names in Languages ===== */}
           <section id="names">
             <h2 className="font-heading text-2xl font-bold text-earth-800 dark:text-earth-100 mb-4">
-              {['fr', 'de'].includes(locale) ? t.milletDetail.namesMultilingual : t.milletDetail.namesInLanguages}
+              {localeFeatures[locale].namesTable ? t.milletDetail.namesMultilingual : t.milletDetail.namesInLanguages}
             </h2>
-            {locale === 'fr' ? (
+            {localeFeatures[locale].namesTable === 'french' ? (
               <FrenchNamesTable slug={millet.slug} />
-            ) : locale === 'de' ? (
+            ) : localeFeatures[locale].namesTable === 'german' ? (
               <GermanNamesTable slug={millet.slug} />
             ) : (
               <LanguageTable names={millet.names} />
@@ -378,10 +379,10 @@ export default async function MilletDetailPage({ params }: PageProps) {
           {/* ===== Ayurvedic Properties / Nutrition & Health (French) ===== */}
           <section id="ayurveda">
             <h2 className="font-heading text-2xl font-bold text-earth-800 dark:text-earth-100 mb-4">
-              {['fr', 'de'].includes(locale) ? t.milletDetail.nutritionAndHealth : t.milletDetail.ayurvedicProperties}
+              {!localeFeatures[locale].hasAyurveda ? t.milletDetail.nutritionAndHealth : t.milletDetail.ayurvedicProperties}
             </h2>
 
-            {['fr', 'de'].includes(locale) ? (
+            {!localeFeatures[locale].hasAyurveda ? (
               <>
                 {/* French: Evidence-based benefits */}
                 <h3 className="font-heading text-lg font-semibold text-earth-800 dark:text-earth-100 mb-3">
