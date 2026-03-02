@@ -29,7 +29,9 @@ export async function generateMetadata({
         ? 'చిరుధాన్యాలను వండడానికి సంపూర్ణ గైడ్: నీటి నిష్పత్తులు, నానబెట్టే సమయాలు, వంట పద్ధతులు, యాంటీన్యూట్రియెంట్లను తగ్గించడం, నిల్వ మరియు ప్రత్యామ్నాయ చిట్కాలు.'
         : lang === 'fr'
           ? 'Guide complet de cuisson des millets : proportions d\'eau, temps de trempage, méthodes de cuisson, réduction des antinutriments, conservation et substitutions.'
-          : 'Complete guide to cooking millets: water ratios, soaking times, cooking methods (stovetop, pressure cooker, rice cooker), reducing antinutrients, storage, and substitution tips.',
+          : lang === 'de'
+            ? 'Vollständiger Leitfaden zur Zubereitung von Hirse: Wasser-Hirse-Verhältnis, Einweichen, Kochtechniken, Lagerung und Ersatztabellen.'
+            : 'Complete guide to cooking millets: water ratios, soaking times, cooking methods (stovetop, pressure cooker, rice cooker), reducing antinutrients, storage, and substitution tips.',
     alternates: {
       canonical: `/${lang}/cooking-guide`,
       languages: hreflangAlternates('/cooking-guide'),
@@ -67,26 +69,30 @@ export default async function CookingGuidePage({
             ? 'ఇంట్లో చిరుధాన్యాలను తయారు చేయడం గురించి మీరు తెలుసుకోవలసిన ప్రతిదీ -- నీటి నిష్పత్తులు మరియు నానబెట్టే సమయాల నుండి వంట పద్ధతులు మరియు నిల్వ వరకు. మీరు మొదటిసారి చిరుధాన్యాల వంట చేసేవారైనా లేదా మీ టెక్నిక్‌ను మెరుగుపరచుకోవాలనుకున్నా, ఈ గైడ్ అన్ని అవసరాలను కవర్ చేస్తుంది.'
             : locale === 'fr'
               ? 'Tout ce qu\'il faut savoir pour préparer les millets chez vous — proportions d\'eau, temps de trempage, méthodes de cuisson et conservation. Que vous cuisiniez les millets pour la première fois ou souhaitiez perfectionner votre technique, ce guide couvre l\'essentiel.'
-              : 'Everything you need to know about preparing millets at home -- from water ratios and soaking times to cooking methods and storage. Whether you are a first-time millet cook or looking to refine your technique, this guide covers all the essentials.'}
+              : locale === 'de'
+                ? 'Von Einweichtechniken bis zu Kochmethoden — alles Wissenswerte, um Hirse in Ihrer Küche perfekt zuzubereiten.'
+                : 'Everything you need to know about preparing millets at home -- from water ratios and soaking times to cooking methods and storage. Whether you are a first-time millet cook or looking to refine your technique, this guide covers all the essentials.'}
         </p>
 
         {/* Water-to-Millet Ratios */}
         <section className="mb-14">
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-earth-800 dark:text-earth-100 mb-4">
-            {locale === 'te' ? 'నీరు-చిరుధాన్యం నిష్పత్తులు' : locale === 'fr' ? 'Proportions eau/millet' : 'Water-to-Millet Ratios'}
+            {locale === 'te' ? 'నీరు-చిరుధాన్యం నిష్పత్తులు' : locale === 'fr' ? 'Proportions eau/millet' : locale === 'de' ? 'Wasser-Hirse-Verhältnis' : 'Water-to-Millet Ratios'}
           </h2>
           <p className="text-earth-800 dark:text-earth-200 leading-relaxed mb-6 max-w-3xl">
             {locale === 'te'
               ? 'చిరుధాన్యాలు వండడంలో నీటి నిష్పత్తి సరిగ్గా ఉండటం అత్యంత ముఖ్యమైన దశ. ఎక్కువ నీరు వాటిని మెత్తగా చేస్తుంది; తక్కువ నీరు వాటిని గట్టిగా ఉంచుతుంది.'
               : locale === 'fr'
                 ? 'La bonne proportion d\'eau est l\'étape la plus importante dans la cuisson des millets. Trop d\'eau les rend pâteux ; pas assez les laisse croquants.'
-                : 'Getting the water ratio right is the most important step in cooking millets. Too much water makes them mushy; too little leaves them crunchy.'}
+                : locale === 'de'
+                  ? 'Verwenden Sie diese Verhältnisse als Ausgangspunkt. Passen Sie die Wassermenge je nach gewünschter Konsistenz an.'
+                  : 'Getting the water ratio right is the most important step in cooking millets. Too much water makes them mushy; too little leaves them crunchy.'}
           </p>
           <Table>
             <TableHead>
               <TableRow>
                 <TableHeaderCell>
-                  {locale === 'te' ? 'చిరుధాన్యం' : locale === 'fr' ? 'Millet' : 'Millet'}
+                  {locale === 'te' ? 'చిరుధాన్యం' : locale === 'fr' ? 'Millet' : locale === 'de' ? 'Hirse' : 'Millet'}
                 </TableHeaderCell>
                 <TableHeaderCell>{t.milletDetail.waterRatio}</TableHeaderCell>
                 <TableHeaderCell>{t.milletDetail.soakingTime}</TableHeaderCell>
@@ -111,7 +117,7 @@ export default async function CookingGuidePage({
         {/* Soaking Guide */}
         <section className="mb-14">
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-earth-800 dark:text-earth-100 mb-4">
-            {locale === 'te' ? 'నానబెట్టే గైడ్' : locale === 'fr' ? 'Guide de trempage' : 'Soaking Guide'}
+            {locale === 'te' ? 'నానబెట్టే గైడ్' : locale === 'fr' ? 'Guide de trempage' : locale === 'de' ? 'Einweich-Ratgeber' : 'Soaking Guide'}
           </h2>
           <div className="max-w-3xl space-y-4 text-earth-800 dark:text-earth-200 leading-relaxed mb-6">
             <p>
@@ -125,6 +131,10 @@ export default async function CookingGuidePage({
               ) : locale === 'fr' ? (
                 <>
                   <strong>Pourquoi tremper les millets ?</strong> Le trempage remplit deux fonctions importantes : il réduit les facteurs antinutritionnels (notamment l&apos;acide phytique, réduit de 20 à 50 % par un bon trempage) et il ramollit le grain pour une cuisson plus rapide et plus uniforme. L&apos;acide phytique se lie aux minéraux comme le fer, le calcium et le zinc, réduisant leur biodisponibilité. Le trempage libère ces minéraux pour une meilleure absorption.
+                </>
+              ) : locale === 'de' ? (
+                <>
+                  <strong>Warum Hirse einweichen?</strong> Durch Einweichen werden Phytinsäure und Tannine reduziert und die Verdaulichkeit verbessert. Phytinsäure bindet Mineralstoffe wie Eisen, Kalzium und Zink und verringert deren Bioverfügbarkeit. Einweichen setzt diese Mineralstoffe für eine bessere Aufnahme frei.
                 </>
               ) : (
                 <>
@@ -140,32 +150,36 @@ export default async function CookingGuidePage({
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
             <div className="bg-forest-50 dark:bg-earth-800 rounded-xl p-6">
               <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-2">
-                {locale === 'te' ? 'త్వరిత నానబెట్టడం (30 ని - 2 గంటలు)' : locale === 'fr' ? 'Trempage rapide (30 min - 2 h)' : 'Quick Soak (30 min - 2 hours)'}
+                {locale === 'te' ? 'త్వరిత నానబెట్టడం (30 ని - 2 గంటలు)' : locale === 'fr' ? 'Trempage rapide (30 min - 2 h)' : locale === 'de' ? 'Schnelles Einweichen (30 Min. – 2 Stunden)' : 'Quick Soak (30 min - 2 hours)'}
               </h3>
               <p className="text-earth-800 dark:text-earth-200 text-sm leading-relaxed mb-3">
                 {locale === 'te'
                   ? 'చాలా చిన్న చిరుధాన్యాలకు అనుకూలం: కొర్రలు, సామలు, ఆరికెలు, ఊదలు, అండు కొర్రలు మరియు వరిగలు. బాగా కడిగి, గది ఉష్ణోగ్రత నీటిలో నానబెట్టి, వంట చేయడానికి ముందు నీరు వంపేయండి.'
                   : locale === 'fr'
                     ? 'Convient à la plupart des petits millets : millet des oiseaux, petit mil, kodo, millet japonais, browntop et millet commun. Rincez soigneusement, trempez dans de l\'eau à température ambiante, puis égouttez avant la cuisson.'
-                    : 'Suitable for most small millets: foxtail, little, kodo, barnyard, browntop, and proso millet. Rinse thoroughly, soak in room temperature water, then drain before cooking.'}
+                    : locale === 'de'
+                      ? 'Geeignet für die meisten kleinen Hirsearten: Kolbenhirse, Kleine Hirse, Kodo-Hirse, Japanische Hirse, Browntop- und Rispenhirse. Gründlich spülen, in Wasser bei Raumtemperatur einweichen, dann vor dem Kochen abgießen.'
+                      : 'Suitable for most small millets: foxtail, little, kodo, barnyard, browntop, and proso millet. Rinse thoroughly, soak in room temperature water, then drain before cooking.'}
               </p>
             </div>
             <div className="bg-forest-50 dark:bg-earth-800 rounded-xl p-6">
               <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-2">
-                {locale === 'te' ? 'దీర్ఘకాలం నానబెట్టడం (6-8 గంటలు / రాత్రంతా)' : locale === 'fr' ? 'Trempage long (6-8 h / une nuit)' : 'Long Soak (6-8 hours / overnight)'}
+                {locale === 'te' ? 'దీర్ఘకాలం నానబెట్టడం (6-8 గంటలు / రాత్రంతా)' : locale === 'fr' ? 'Trempage long (6-8 h / une nuit)' : locale === 'de' ? 'Langes Einweichen (6–8 Stunden / über Nacht)' : 'Long Soak (6-8 hours / overnight)'}
               </h3>
               <p className="text-earth-800 dark:text-earth-200 text-sm leading-relaxed mb-3">
                 {locale === 'te'
                   ? 'మొత్తం ధాన్యంగా వండేటప్పుడు జొన్నలు మరియు సజ్జలకు సిఫార్సు చేయబడింది. గరిష్ట ఫైటిక్ ఆమ్లం తగ్గింపు కోరుకుంటే కూడా సిఫార్సు చేయబడింది. రాత్రంతా నానబెట్టి, నీరు వంపేసి, వంట చేయడానికి ముందు కడగండి.'
                   : locale === 'fr'
                     ? 'Recommandé pour le sorgho et le mil à chandelle lorsqu\'ils sont cuisinés en grains entiers. Également recommandé pour une réduction maximale de l\'acide phytique. Trempez toute la nuit, égouttez et rincez avant la cuisson.'
-                    : 'Recommended for whole grain sorghum and pearl millet when cooking as whole grains (not flour). Also recommended if you want maximum phytic acid reduction. Soak overnight, drain, and rinse before cooking.'}
+                    : locale === 'de'
+                      ? 'Empfohlen für Sorghum und Perlhirse als ganzes Korn (nicht als Mehl). Auch empfohlen für maximale Phytinsäure-Reduktion. Über Nacht einweichen, abgießen und vor dem Kochen spülen.'
+                      : 'Recommended for whole grain sorghum and pearl millet when cooking as whole grains (not flour). Also recommended if you want maximum phytic acid reduction. Soak overnight, drain, and rinse before cooking.'}
               </p>
             </div>
           </div>
           <div className="mt-4 max-w-3xl">
             <h4 className="font-semibold text-earth-800 dark:text-earth-100 mb-2">
-              {locale === 'te' ? 'నానబెట్టే చిట్కాలు' : locale === 'fr' ? 'Conseils de trempage' : 'Soaking Tips'}
+              {locale === 'te' ? 'నానబెట్టే చిట్కాలు' : locale === 'fr' ? 'Conseils de trempage' : locale === 'de' ? 'Einweich-Tipps' : 'Soaking Tips'}
             </h4>
             <ul className="space-y-2 text-earth-800 dark:text-earth-200 text-sm">
               <li className="flex items-start gap-3">
@@ -174,7 +188,9 @@ export default async function CookingGuidePage({
                   ? 'ఎల్లప్పుడూ నానబెట్టిన నీటిని పారేసి, వంట చేయడానికి ముందు చిరుధాన్యాన్ని కడగండి.'
                   : locale === 'fr'
                     ? 'Jetez toujours l\'eau de trempage et rincez le millet avant la cuisson.'
-                    : 'Always discard the soaking water and rinse the millet before cooking.'}
+                    : locale === 'de'
+                      ? 'Durch Einweichen werden Phytinsäure und Tannine reduziert und die Verdaulichkeit verbessert.'
+                      : 'Always discard the soaking water and rinse the millet before cooking.'}
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-warm-gray dark:text-earth-400 flex-shrink-0">&#8226;</span>
@@ -182,7 +198,9 @@ export default async function CookingGuidePage({
                   ? 'నానబెట్టే నీటికి ఒక టేబుల్ స్పూన్ నిమ్మరసం లేదా ఆపిల్ సైడర్ వెనిగర్ కలపడం ఫైటిక్ ఆమ్లం తగ్గింపును మరింత మెరుగుపరుస్తుంది.'
                   : locale === 'fr'
                     ? 'Ajouter une cuillère à soupe de jus de citron ou de vinaigre de cidre à l\'eau de trempage peut renforcer la réduction de l\'acide phytique.'
-                    : 'Adding a tablespoon of lemon juice or apple cider vinegar to the soaking water can further enhance phytic acid reduction.'}
+                    : locale === 'de'
+                      ? 'Verwenden Sie frisches Wasser zum Kochen nach dem Einweichen — das Einweichwasser enthält ausgeschwemmte Antinährstoffe.'
+                      : 'Adding a tablespoon of lemon juice or apple cider vinegar to the soaking water can further enhance phytic acid reduction.'}
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-warm-gray dark:text-earth-400 flex-shrink-0">&#8226;</span>
@@ -190,7 +208,9 @@ export default async function CookingGuidePage({
                   ? 'వేడి వాతావరణంలో, పులియడం నిరోధించడానికి ఫ్రిజ్‌లో నానబెట్టండి (దోస పిండికి పులియడం కావాలంటే తప్ప).'
                   : locale === 'fr'
                     ? 'Par temps chaud, trempez au réfrigérateur pour éviter la fermentation (sauf si la fermentation est souhaitée, comme pour la pâte à dosa).'
-                    : 'In hot weather, soak in the refrigerator to prevent fermentation (unless fermentation is desired, as for dosa batter).'}
+                    : locale === 'de'
+                      ? 'Durch kurzes Anrösten vor dem Kochen wird der nussige Geschmack intensiviert.'
+                      : 'In hot weather, soak in the refrigerator to prevent fermentation (unless fermentation is desired, as for dosa batter).'}
               </li>
             </ul>
           </div>
@@ -199,12 +219,12 @@ export default async function CookingGuidePage({
         {/* Cooking Methods */}
         <section className="mb-14">
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-earth-800 dark:text-earth-100 mb-4">
-            {locale === 'te' ? 'వంట పద్ధతులు' : locale === 'fr' ? 'Méthodes de cuisson' : 'Cooking Methods'}
+            {locale === 'te' ? 'వంట పద్ధతులు' : locale === 'fr' ? 'Méthodes de cuisson' : locale === 'de' ? 'Kochmethoden' : 'Cooking Methods'}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-cream dark:bg-earth-800 rounded-xl card-shadow p-6">
               <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-3">
-                {locale === 'te' ? 'స్టవ్ టాప్' : locale === 'fr' ? 'Sur la cuisinière' : 'Stovetop'}
+                {locale === 'te' ? 'స్టవ్ టాప్' : locale === 'fr' ? 'Sur la cuisinière' : locale === 'de' ? 'Herd' : 'Stovetop'}
               </h3>
               <ol className="space-y-2 text-earth-800 dark:text-earth-200 text-sm list-decimal list-inside">
                 {locale === 'te' ? (
@@ -224,6 +244,14 @@ export default async function CookingGuidePage({
                     <li>Réduisez le feu au minimum et couvrez hermétiquement.</li>
                     <li>Cuisez pendant le temps recommandé sans soulever le couvercle.</li>
                     <li>Éteignez le feu, laissez reposer couvert 5 minutes, puis égrainez à la fourchette.</li>
+                  </>
+                ) : locale === 'de' ? (
+                  <>
+                    <li>Hirse gründlich spülen, bis das Wasser klar ist.</li>
+                    <li>Wasser im Verhältnis gemäß Tabelle zum Kochen bringen.</li>
+                    <li>Hirse hinzufügen und erneut aufkochen.</li>
+                    <li>Hitze reduzieren, abdecken und gemäß Tabelle köcheln lassen.</li>
+                    <li>Vom Herd nehmen und 5 Minuten zugedeckt ruhen lassen. Mit einer Gabel auflockern.</li>
                   </>
                 ) : (
                   <>

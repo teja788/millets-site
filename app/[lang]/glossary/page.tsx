@@ -21,7 +21,9 @@ export async function generateMetadata({
         ? 'ఏదైనా చిరుధాన్యానికి మీ స్థానిక పేరును కనుగొనండి. భారతదేశంలోని వివిధ భాషలలో చిరుధాన్యాల పేర్లు.'
         : lang === 'fr'
           ? 'Trouvez les noms locaux de chaque millet dans différentes langues et régions du monde.'
-          : 'Find your local name for any millet. Millets are known by different names across India\'s diverse languages.',
+          : lang === 'de'
+            ? 'Glossar der Hirsebegriffe: Fachbegriffe, Sorten, Kochtechniken und ernährungswissenschaftliche Begriffe verständlich erklärt.'
+            : 'Find your local name for any millet. Millets are known by different names across India\'s diverse languages.',
     alternates: {
       canonical: `/${lang}/glossary`,
       languages: hreflangAlternates('/glossary'),

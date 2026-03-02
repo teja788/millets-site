@@ -12,6 +12,7 @@ const localeLabels: Record<Locale, string> = {
   te: 'తెలుగు',
   ar: 'العربية',
   fr: 'Français',
+  de: 'Deutsch',
 };
 
 export default function LanguageSwitcher({ currentLocale }: { currentLocale: Locale }) {

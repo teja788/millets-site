@@ -2,8 +2,9 @@ import { en } from './translations/en';
 import { te } from './translations/te';
 import { ar } from './translations/ar';
 import { fr } from './translations/fr';
+import { de } from './translations/de';
 
-export const locales = ['en', 'te', 'ar', 'fr'] as const;
+export const locales = ['en', 'te', 'ar', 'fr', 'de'] as const;
 export type Locale = (typeof locales)[number];
 export const defaultLocale: Locale = 'en';
 
@@ -29,6 +30,7 @@ export function getTranslations(locale: Locale) {
     case 'te': return te;
     case 'ar': return ar;
     case 'fr': return fr;
+    case 'de': return de;
     default: return en;
   }
 }

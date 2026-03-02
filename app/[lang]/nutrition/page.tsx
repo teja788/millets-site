@@ -26,7 +26,9 @@ export async function generateMetadata({
         ? 'అన్ని 9 చిరుధాన్యాల పోషక విలువలను పక్కపక్కన పోల్చండి. ప్రోటీన్, కాల్షియం, ఇనుము, ఫైబర్ మరియు మరిన్నింటిలో చిరుధాన్యాలు బియ్యం మరియు గోధుమలతో ఎలా పోల్చబడతాయో చూడండి.'
         : lang === 'fr'
           ? 'Comparez les profils nutritionnels des 9 millets côte à côte. Protéines, calcium, fer, fibres face au riz et au blé.'
-          : 'Compare the nutritional profiles of all 9 millets side by side. See how millets compare to rice and wheat in protein, calcium, iron, fiber, and more.',
+          : lang === 'de'
+            ? 'Nährwertvergleich von 9 Hirsesorten mit Reis und Weizen: Protein, Ballaststoffe, Mineralien. Interaktive Tabellen und Grafiken.'
+            : 'Compare the nutritional profiles of all 9 millets side by side. See how millets compare to rice and wheat in protein, calcium, iron, fiber, and more.',
     alternates: {
       canonical: `/${lang}/nutrition`,
       languages: hreflangAlternates('/nutrition'),
@@ -119,23 +121,41 @@ export default async function NutritionPage({
             ? `Le sorgho est riche en polyphénols antioxydants et fournit ${sorghum.nutrition.potassium_mg} mg de potassium pour 100 g, favorisant la santé cardiaque et la régulation de la pression artérielle.`
             : null,
         ].filter(Boolean) as string[]
-      : [
-          fingerMillet
-            ? `Finger Millet (Ragi) contains ${fingerMillet.nutrition.calcium_mg} mg of calcium per 100 g — that is ${Math.round(fingerMillet.nutrition.calcium_mg / riceNutrition.calcium_mg)}x more calcium than white rice (${riceNutrition.calcium_mg} mg).`
-            : null,
-          pearlMillet
-            ? `Pearl Millet (Bajra) provides ${pearlMillet.nutrition.iron_mg} mg of iron per 100 g, making it one of the richest plant-based sources of iron among cereals.`
-            : null,
-          barnyardMillet
-            ? `Barnyard Millet has the highest fiber content among millets at ${barnyardMillet.nutrition.fiber_g} g per 100 g — compared to just ${riceNutrition.fiber_g} g in white rice.`
-            : null,
-          foxtailMillet
-            ? `Foxtail Millet offers ${foxtailMillet.nutrition.protein_g} g of protein per 100 g along with a low glycemic index, making it an excellent rice substitute for blood sugar management.`
-            : null,
-          sorghum
-            ? `Sorghum (Jowar) is rich in antioxidant polyphenols and provides ${sorghum.nutrition.potassium_mg} mg of potassium per 100 g, supporting heart health and blood pressure regulation.`
-            : null,
-        ].filter(Boolean) as string[];
+      : locale === 'de'
+        ? [
+            fingerMillet
+              ? `Fingerhirse (Ragi) enthält ${fingerMillet.nutrition.calcium_mg} mg Kalzium pro 100 g — das ist ${Math.round(fingerMillet.nutrition.calcium_mg / riceNutrition.calcium_mg)}x mehr als weißer Reis (${riceNutrition.calcium_mg} mg).`
+              : null,
+            pearlMillet
+              ? `Perlhirse (Bajra) liefert ${pearlMillet.nutrition.iron_mg} mg Eisen pro 100 g und ist damit eine der reichhaltigsten pflanzlichen Eisenquellen unter den Getreidearten.`
+              : null,
+            barnyardMillet
+              ? `Japanhirse hat mit ${barnyardMillet.nutrition.fiber_g} g pro 100 g den höchsten Ballaststoffgehalt unter den Hirsearten — im Vergleich zu nur ${riceNutrition.fiber_g} g in weißem Reis.`
+              : null,
+            foxtailMillet
+              ? `Kolbenhirse bietet ${foxtailMillet.nutrition.protein_g} g Protein pro 100 g bei niedrigem glykämischen Index — ein hervorragender Reisersatz zur Blutzuckerkontrolle.`
+              : null,
+            sorghum
+              ? `Sorghum (Jowar) ist reich an antioxidativen Polyphenolen und liefert ${sorghum.nutrition.potassium_mg} mg Kalium pro 100 g, was Herzgesundheit und Blutdruckregulierung unterstützt.`
+              : null,
+          ].filter(Boolean) as string[]
+        : [
+            fingerMillet
+              ? `Finger Millet (Ragi) contains ${fingerMillet.nutrition.calcium_mg} mg of calcium per 100 g — that is ${Math.round(fingerMillet.nutrition.calcium_mg / riceNutrition.calcium_mg)}x more calcium than white rice (${riceNutrition.calcium_mg} mg).`
+              : null,
+            pearlMillet
+              ? `Pearl Millet (Bajra) provides ${pearlMillet.nutrition.iron_mg} mg of iron per 100 g, making it one of the richest plant-based sources of iron among cereals.`
+              : null,
+            barnyardMillet
+              ? `Barnyard Millet has the highest fiber content among millets at ${barnyardMillet.nutrition.fiber_g} g per 100 g — compared to just ${riceNutrition.fiber_g} g in white rice.`
+              : null,
+            foxtailMillet
+              ? `Foxtail Millet offers ${foxtailMillet.nutrition.protein_g} g of protein per 100 g along with a low glycemic index, making it an excellent rice substitute for blood sugar management.`
+              : null,
+            sorghum
+              ? `Sorghum (Jowar) is rich in antioxidant polyphenols and provides ${sorghum.nutrition.potassium_mg} mg of potassium per 100 g, supporting heart health and blood pressure regulation.`
+              : null,
+          ].filter(Boolean) as string[];
 
   return (
     <>
@@ -151,13 +171,15 @@ export default async function NutritionPage({
             ? 'చిరుధాన్యాలు పోషక శక్తి కేంద్రాలు. క్రింద ఇంటరాక్టివ్ పోలిక పట్టికను ఉపయోగించి చిరుధాన్యాలను ఎంచుకుని వాటి పోషక విలువలను పక్కపక్కన చూడండి. అన్ని డేటా 100 గ్రాముల ముడి ధాన్యానికి, ICMR-NIN ఇండియన్ ఫుడ్ కంపోజిషన్ టేబుల్స్ (2017) నుండి సేకరించబడింది.'
             : locale === 'fr'
               ? 'Les millets sont des concentrés de nutriments. Utilisez le tableau comparatif interactif ci-dessous pour sélectionner des millets et voir leurs valeurs nutritionnelles côte à côte. Toutes les données sont pour 100 grammes de grain cru, issues des tables de composition alimentaire ICMR-NIN (2017).'
-              : 'Millets are nutritional powerhouses. Use the interactive comparison table below to select millets and see their nutritional values side by side. All data is per 100 grams of raw grain, sourced from the ICMR-NIN Indian Food Composition Tables (2017).'}
+              : locale === 'de'
+                ? 'Vergleichen Sie die Nährwerte von 9 Hirsesorten mit Reis und Weizen. Alle Daten pro 100 g, basierend auf DGE-Nährwerttabellen und USDA-Daten.'
+                : 'Millets are nutritional powerhouses. Use the interactive comparison table below to select millets and see their nutritional values side by side. All data is per 100 grams of raw grain, sourced from the ICMR-NIN Indian Food Composition Tables (2017).'}
         </p>
 
         {/* Comparison Table */}
         <section className="mb-14">
           <h2 className="font-heading text-2xl font-bold text-earth-800 dark:text-earth-100 mb-4">
-            {locale === 'te' ? 'చిరుధాన్యాలను పోల్చండి' : locale === 'fr' ? 'Comparer les millets' : 'Compare Millets'}
+            {locale === 'te' ? 'చిరుధాన్యాలను పోల్చండి' : locale === 'fr' ? 'Comparer les millets' : locale === 'de' ? 'Hirsesorten vergleichen' : 'Compare Millets'}
           </h2>
           <ComparisonTable millets={millets} locale={locale} />
         </section>
@@ -165,7 +187,7 @@ export default async function NutritionPage({
         {/* Key Insights */}
         <section className="mb-14">
           <h2 className="font-heading text-2xl font-bold text-earth-800 dark:text-earth-100 mb-6">
-            {locale === 'te' ? 'ముఖ్యమైన విశేషాలు' : locale === 'fr' ? 'Points clés' : 'Key Insights'}
+            {locale === 'te' ? 'ముఖ్యమైన విశేషాలు' : locale === 'fr' ? 'Points clés' : locale === 'de' ? 'Wichtige Erkenntnisse' : 'Key Insights'}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {insights.map((insight, index) => (
@@ -187,14 +209,18 @@ export default async function NutritionPage({
               ? 'అన్ని చిరుధాన్యాలు: మాక్రో న్యూట్రియెంట్ పోలిక'
               : locale === 'fr'
                 ? 'Tous les millets : comparaison des macronutriments'
-                : 'All Millets: Macro Nutrient Comparison'}
+                : locale === 'de'
+                  ? 'Alle Hirsearten: Makronährstoffvergleich'
+                  : 'All Millets: Macro Nutrient Comparison'}
           </h2>
           <p className="text-sm text-earth-500 dark:text-earth-400 mb-6">
             {locale === 'te'
               ? 'అన్ని చిరుధాన్యాలు మరియు తెల్ల బియ్యంలో 100 గ్రాములకు ప్రోటీన్, కొవ్వు, కార్బోహైడ్రేట్లు, ఫైబర్ మరియు కేలరీలను పోల్చే బార్ చార్ట్.'
               : locale === 'fr'
                 ? 'Diagramme en barres comparant protéines, lipides, glucides, fibres et calories pour 100 g de chaque millet et du riz blanc.'
-                : 'Bar chart comparing protein, fat, carbohydrates, fiber, and calories per 100 g across all millets and white rice.'}
+                : locale === 'de'
+                  ? 'Hirse übertrifft Reis in fast allen Nährstoffkategorien. Besonders hervorzuheben sind der höhere Protein- und Ballaststoffgehalt.'
+                  : 'Bar chart comparing protein, fat, carbohydrates, fiber, and calories per 100 g across all millets and white rice.'}
           </p>
           <NutritionChart data={proteinChartData} chartType="bar" locale={locale} />
         </section>
@@ -202,14 +228,16 @@ export default async function NutritionPage({
         {/* Source Citation */}
         <section>
           <h2 className="font-heading text-2xl font-bold text-earth-800 dark:text-earth-100 mb-4">
-            {locale === 'te' ? 'డేటా మూలం' : locale === 'fr' ? 'Source des données' : 'Data Source'}
+            {locale === 'te' ? 'డేటా మూలం' : locale === 'fr' ? 'Source des données' : locale === 'de' ? 'Datenquelle' : 'Data Source'}
           </h2>
           <p className="text-sm text-earth-600 dark:text-earth-300 mb-3">
             {locale === 'te'
               ? 'ఈ పేజీలోని అన్ని పోషణ డేటా ఈ క్రింది వనరు నుండి సేకరించబడింది:'
               : locale === 'fr'
                 ? 'Toutes les données nutritionnelles de cette page proviennent de :'
-                : 'All nutritional data on this page is sourced from:'}
+                : locale === 'de'
+                  ? 'Nährwertdaten: DGE-Nährwerttabelle, USDA FoodData Central (2019) und IIMR (Indian Institute of Millets Research).'
+                  : 'All nutritional data on this page is sourced from:'}
           </p>
           {icmrSource && (
             <ol className="list-decimal list-inside">
@@ -221,7 +249,9 @@ export default async function NutritionPage({
               ? 'విలువలు 100 గ్రాముల ముడి ధాన్యం కూర్పును సూచిస్తాయి. వాస్తవ పోషక లభ్యత ప్రాసెసింగ్, వంట మరియు జీవ లభ్యత కారకాల ఆధారంగా మారవచ్చు.'
               : locale === 'fr'
                 ? 'Les valeurs représentent la composition du grain cru pour 100 g. La disponibilité réelle des nutriments peut varier selon la transformation, la cuisson et les facteurs de biodisponibilité.'
-                : 'Values represent raw grain composition per 100 g. Actual nutrient availability may vary based on processing, cooking, and bioavailability factors.'}
+                : locale === 'de'
+                  ? 'Glykämischer Index: International Tables of Glycemic Index and Glycemic Load Values (2021).'
+                  : 'Values represent raw grain composition per 100 g. Actual nutrient availability may vary based on processing, cooking, and bioavailability factors.'}
           </p>
         </section>
       </div>

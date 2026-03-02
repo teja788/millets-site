@@ -25,7 +25,9 @@ export async function generateMetadata({
         ? 'سياسة خصوصية سيمبلي ميليتس — كيف نجمع معلوماتك ونستخدمها ونحميها.'
         : lang === 'fr'
           ? 'Politique de confidentialité de Simply Millets — comment nous collectons, utilisons et protégeons vos informations.'
-          : 'Simply Millets privacy policy — how we collect, use, and protect your information.',
+          : lang === 'de'
+            ? 'Datenschutzerklärung von Simply Millets — wie wir Ihre Daten schützen und verwenden.'
+            : 'Simply Millets privacy policy — how we collect, use, and protect your information.',
     alternates: {
       canonical: `/${lang}/privacy-policy`,
       languages: hreflangAlternates('/privacy-policy'),

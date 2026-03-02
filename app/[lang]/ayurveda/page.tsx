@@ -73,6 +73,8 @@ export default async function AyurvedaPage({
   const { lang } = await params;
   if (!isValidLocale(lang)) notFound();
 
+  // German users should use the science-based /de/ernaehrung-und-gesundheit page instead
+  if (lang === 'de') redirect('/de/ernaehrung-und-gesundheit');
   // French users should use the science-based /fr/nutrition-et-sante/ page instead
   if (lang === 'fr') redirect('/fr/nutrition-et-sante');
 

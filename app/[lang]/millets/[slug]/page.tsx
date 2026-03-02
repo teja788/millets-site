@@ -28,6 +28,7 @@ import {
 } from '@/components/ui/Table';
 import LanguageTable from '@/components/ui/LanguageTable';
 import FrenchNamesTable from '@/components/ui/FrenchNamesTable';
+import GermanNamesTable from '@/components/ui/GermanNamesTable';
 import NutritionChart from '@/components/ui/NutritionChart';
 import SourceCitation from '@/components/ui/SourceCitation';
 import NutritionHighlight from '@/components/sections/NutritionHighlight';
@@ -132,10 +133,10 @@ export default async function MilletDetailPage({ params }: PageProps) {
   const milletSources = sources.filter((s) => millet.sources.includes(s.key));
 
   const sidebarSections = [
-    { id: 'names', title: locale === 'fr' ? t.milletDetail.namesMultilingual : t.milletDetail.namesInLanguages },
+    { id: 'names', title: ['fr', 'de'].includes(locale) ? t.milletDetail.namesMultilingual : t.milletDetail.namesInLanguages },
     { id: 'nutrition', title: t.milletDetail.nutritionProfile },
     { id: 'health-benefits', title: t.milletDetail.healthBenefits },
-    { id: 'ayurveda', title: locale === 'fr' ? t.milletDetail.nutritionAndHealth : t.milletDetail.ayurvedicProperties },
+    { id: 'ayurveda', title: ['fr', 'de'].includes(locale) ? t.milletDetail.nutritionAndHealth : t.milletDetail.ayurvedicProperties },
     { id: 'cooking', title: t.milletDetail.howToCook },
     { id: 'cultivation', title: t.milletDetail.cultivation },
     { id: 'history', title: t.milletDetail.history },
@@ -285,10 +286,12 @@ export default async function MilletDetailPage({ params }: PageProps) {
           {/* ===== Names in Languages ===== */}
           <section id="names">
             <h2 className="font-heading text-2xl font-bold text-earth-800 dark:text-earth-100 mb-4">
-              {locale === 'fr' ? t.milletDetail.namesMultilingual : t.milletDetail.namesInLanguages}
+              {['fr', 'de'].includes(locale) ? t.milletDetail.namesMultilingual : t.milletDetail.namesInLanguages}
             </h2>
             {locale === 'fr' ? (
               <FrenchNamesTable slug={millet.slug} />
+            ) : locale === 'de' ? (
+              <GermanNamesTable slug={millet.slug} />
             ) : (
               <LanguageTable names={millet.names} />
             )}
@@ -375,10 +378,10 @@ export default async function MilletDetailPage({ params }: PageProps) {
           {/* ===== Ayurvedic Properties / Nutrition & Health (French) ===== */}
           <section id="ayurveda">
             <h2 className="font-heading text-2xl font-bold text-earth-800 dark:text-earth-100 mb-4">
-              {locale === 'fr' ? t.milletDetail.nutritionAndHealth : t.milletDetail.ayurvedicProperties}
+              {['fr', 'de'].includes(locale) ? t.milletDetail.nutritionAndHealth : t.milletDetail.ayurvedicProperties}
             </h2>
 
-            {locale === 'fr' ? (
+            {['fr', 'de'].includes(locale) ? (
               <>
                 {/* French: Evidence-based benefits */}
                 <h3 className="font-heading text-lg font-semibold text-earth-800 dark:text-earth-100 mb-3">
@@ -413,9 +416,11 @@ export default async function MilletDetailPage({ params }: PageProps) {
                   </>
                 )}
 
-                {/* French: Disclaimer */}
+                {/* French/German: Disclaimer */}
                 <TestimonialOrQuote
-                  quote="Les informations nutritionnelles présentées ici sont à titre éducatif uniquement. Elles ne constituent pas un avis médical. Consultez toujours un professionnel de santé avant de modifier votre alimentation."
+                  quote={locale === 'de'
+                    ? "Die hier dargestellten Ernährungsinformationen dienen ausschließlich Bildungszwecken. Sie stellen keine medizinische Beratung dar. Konsultieren Sie immer einen Arzt, bevor Sie Ihre Ernährung umstellen."
+                    : "Les informations nutritionnelles présentées ici sont à titre éducatif uniquement. Elles ne constituent pas un avis médical. Consultez toujours un professionnel de santé avant de modifier votre alimentation."}
                   attribution={t.common.disclaimer}
                   source="Simply Millets"
                 />
@@ -640,7 +645,7 @@ export default async function MilletDetailPage({ params }: PageProps) {
                     <MapPin className="w-5 h-5 text-earth-500 dark:text-earth-400 mt-0.5 flex-shrink-0" />
                     <div>
                       <p className="text-xs text-earth-600 dark:text-earth-400 uppercase tracking-wider font-semibold mb-1">
-                        {t.milletDetail.majorStates}{locale === 'fr' ? '' : ' (India)'}
+                        {t.milletDetail.majorStates}{['fr', 'de'].includes(locale) ? '' : ' (India)'}
                       </p>
                       <p className="text-sm text-earth-700 dark:text-earth-200">
                         {millet.cultivation.majorStates.join(', ')}

@@ -22,9 +22,11 @@ export async function generateMetadata({
     description:
       lang === 'te'
         ? '10,000 సంవత్సరాల చిరుధాన్యాల ప్రయాణాన్ని తెలుసుకోండి — చైనాలో తొలి సాగు నుండి 2023 అంతర్జాతీయ చిరుధాన్యాల సంవత్సరం వరకు.'
-        : lang === 'fr'
-          ? 'Découvrez 10 000 ans d\'histoire des millets : premières cultures en Chine, gaudes de France, mil du Sahel, et renaissance mondiale au XXIe siècle.'
-          : 'Trace the fascinating 10,000-year journey of millets from the earliest cultivated crops in China to the 2023 International Year of Millets. Discover archaeological evidence, Vedic references, and the modern millet revival.',
+        : lang === 'de'
+          ? 'Geschichte der Hirse: Von den frühesten Kultivierungen bis zur modernen Wiederentdeckung — 10.000 Jahre als Nahrungsgrundlage der Menschheit.'
+          : lang === 'fr'
+            ? 'Découvrez 10 000 ans d\'histoire des millets : premières cultures en Chine, gaudes de France, mil du Sahel, et renaissance mondiale au XXIe siècle.'
+            : 'Trace the fascinating 10,000-year journey of millets from the earliest cultivated crops in China to the 2023 International Year of Millets. Discover archaeological evidence, Vedic references, and the modern millet revival.',
     alternates: {
       canonical: `/${lang}/history`,
       languages: hreflangAlternates('/history'),
@@ -95,6 +97,30 @@ export default async function HistoryPage({
                 ప్రజలకు చిరుధాన్యాలు ప్రధాన ఆహారంగా ఉన్నాయి. వాటి అసాధారణ తట్టుకునే సామర్థ్యం --
                 శుష్క నేలల్లో బాగా పెరగడం, కరువును తట్టుకోవడం మరియు కేవలం 60 రోజుల్లో పండటం --
                 వాటిని శుష్క భూమి వ్యవసాయ సమాజాలకు అత్యంత అవసరమైనవిగా చేసింది.
+              </p>
+            </>
+          ) : locale === 'de' ? (
+            <>
+              <p>
+                Hirse gehört zu den ältesten Kulturpflanzen der Menschheitsgeschichte. Archäologische
+                Funde aus Cishan im Norden Chinas datieren den Anbau von Kolbenhirse auf etwa 8700 v. Chr.
+                — Jahrtausende vor dem Reisanbau. Unabhängig davon wurde Perlhirse in der Sahelzone
+                Westafrikas um 4500 v. Chr. domestiziert und Fingerhirse entstand im äthiopischen
+                Hochland um 5000 v. Chr.
+              </p>
+              <p>
+                Hirse war bis zum 17. Jahrhundert das wichtigste Getreide Mitteleuropas.
+                Archäologische Funde an Pfahlbauten am Bodensee und Zürichsee belegen den Anbau
+                seit der Bronzezeit. In Bayern und Schwaben war Hirsebrei das Grundnahrungsmittel
+                des Mittelalters. Erst die Einführung von Kartoffel und Mais verdrängte die Hirse.
+                Heute erlebt sie eine Renaissance in Bio-Läden und der bewussten Ernährung.
+              </p>
+              <p>
+                Jahrtausendelang war Hirse das tägliche Brot von Millionen Menschen in Asien, Afrika
+                und Teilen Europas. Ihre außergewöhnliche Widerstandsfähigkeit — Gedeihen auf trockenen
+                Böden, Dürreresistenz und Reifung in nur 60 Tagen — machte sie unverzichtbar für den
+                Trockenfeldbau. Das 20. Jahrhundert brachte jedoch tiefgreifende Veränderungen, die
+                Hirse an den Rand der globalen Landwirtschaft drängten.
               </p>
             </>
           ) : locale === 'fr' ? (
@@ -171,9 +197,11 @@ export default async function HistoryPage({
           <h2 className="font-heading text-2xl font-bold text-earth-800 dark:text-earth-100 mb-8 text-center">
             {locale === 'te'
               ? 'టైమ్‌లైన్: 10,000 సంవత్సరాల చిరుధాన్యాలు'
-              : locale === 'fr'
-                ? 'Chronologie : 10 000 ans de millets'
-                : 'Timeline: 10,000 Years of Millets'}
+              : locale === 'de'
+                ? 'Zeitleiste: 10.000 Jahre Hirse'
+                : locale === 'fr'
+                  ? 'Chronologie : 10 000 ans de millets'
+                  : 'Timeline: 10,000 Years of Millets'}
           </h2>
           <TimelineSection events={timelineEvents} />
         </section>
@@ -183,9 +211,11 @@ export default async function HistoryPage({
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-earth-800 dark:text-earth-100 mb-4">
             {locale === 'te'
               ? 'హరిత విప్లవం & క్షీణత'
-              : locale === 'fr'
-                ? 'La Révolution verte et le déclin'
-                : 'The Green Revolution & Decline'}
+              : locale === 'de'
+                ? 'Die Grüne Revolution & der Niedergang'
+                : locale === 'fr'
+                  ? 'La Révolution verte et le déclin'
+                  : 'The Green Revolution & Decline'}
           </h2>
           <div className="max-w-3xl space-y-4 text-earth-800 dark:text-earth-200 leading-relaxed">
             {locale === 'te' ? (
@@ -206,6 +236,29 @@ export default async function HistoryPage({
                   సుమారు 37% ఉన్న చిరుధాన్యాలు 2000ల ప్రారంభంలో 20% కంటే తక్కువకు తగ్గిపోయాయి.
                   చిరుధాన్యాలు &ldquo;ముతక ధాన్యాలు&rdquo; మరియు &ldquo;పేదవారి ఆహారం&rdquo;గా
                   ముద్ర వేయబడ్డాయి.
+                </p>
+              </>
+            ) : locale === 'de' ? (
+              <>
+                <p>
+                  Die Grüne Revolution der 1960er und 1970er Jahre veränderte die globale Landwirtschaft
+                  grundlegend. In Indien verhinderten die Hochertragssorten von Norman Borlaug massive
+                  Hungersnöte, doch der einseitige Fokus auf Reis und Weizen ging auf Kosten der Hirse.
+                  Staatliche Agrarpolitik — Mindestpreise, öffentliche Beschaffung und subventionierte
+                  Verteilung — begünstigte systematisch Reis und Weizen.
+                </p>
+                <p>
+                  In Europa hatte Hirse bereits im 18. Jahrhundert ihre Bedeutung verloren. Kartoffel
+                  und Mais verdrängten sie aus den Küchen Mitteleuropas. In Deutschland verschwand
+                  der einst allgegenwärtige Hirsebrei fast vollständig von den Speisekarten. Die
+                  Industrialisierung der Landwirtschaft beschleunigte diesen Prozess weiter.
+                </p>
+                <p>
+                  Die Folgen waren dramatisch. In Indien fiel der Anteil der Hirse an der
+                  Getreideanbaufläche von etwa 37 % in den 1960er Jahren auf unter 20 % Anfang der
+                  2000er Jahre. Hirse wurde als „grobes Getreide" und „Arme-Leute-Essen" abgestempelt,
+                  während eine ganze Generation ohne Hirse auf dem Teller aufwuchs und traditionelles
+                  Wissen über Anbau und Zubereitung verblasste.
                 </p>
               </>
             ) : locale === 'fr' ? (
@@ -266,7 +319,7 @@ export default async function HistoryPage({
         {/* The Revival */}
         <section className="mb-12">
           <h2 className="font-heading text-2xl md:text-3xl font-bold text-earth-800 dark:text-earth-100 mb-4">
-            {locale === 'te' ? 'పునరుజ్జీవనం' : locale === 'fr' ? 'La renaissance' : 'The Revival'}
+            {locale === 'te' ? 'పునరుజ్జీవనం' : locale === 'de' ? 'Die Renaissance' : locale === 'fr' ? 'La renaissance' : 'The Revival'}
           </h2>
           <div className="max-w-3xl space-y-4 text-earth-800 dark:text-earth-200 leading-relaxed">
             {locale === 'te' ? (
@@ -294,6 +347,38 @@ export default async function HistoryPage({
                 <p>
                   నేడు, చిరుధాన్యాలు ఆహార భద్రత, పోషకాహార లోపం, వాతావరణ మార్పు మరియు సుస్థిర
                   వ్యవసాయం వంటి అత్యంత ఒత్తిడి చేసే ప్రపంచ సవాళ్ల కూడలిలో నిలబడి ఉన్నాయి.
+                </p>
+              </>
+            ) : locale === 'de' ? (
+              <>
+                <p>
+                  Seit den 2000er Jahren erlebt Hirse in Deutschland und der DACH-Region eine
+                  bemerkenswerte Wiederentdeckung. Bio-Pioniere wie Alnatura und Rapunzel brachten
+                  Hirse in Reformhäuser und Biomärkte. Die DGE empfiehlt Vollkorngetreide als Teil
+                  einer ausgewogenen Ernährung, und die UN-Erklärung von 2023 als „Internationales
+                  Jahr der Hirse" hat das Interesse weiter gesteigert.
+                </p>
+                <p>
+                  In <strong>2018</strong> erklärte die indische Regierung Hirse offiziell zu
+                  „Nutri-Cereals" und rief das Nationale Jahr der Hirse aus. Indien trieb auch die
+                  internationale Anerkennung voran.
+                </p>
+                <p>
+                  <strong>2021</strong> schlug Indien der UN-Generalversammlung vor, 2023 zum
+                  Internationalen Jahr der Hirse zu erklären. Die Resolution wurde mit Unterstützung
+                  von 72 Ländern verabschiedet.
+                </p>
+                <p>
+                  Das <strong>Internationale Jahr der Hirse (2023)</strong> war ein Wendepunkt.
+                  Veranstaltungen in über 100 Ländern, Hirse-Menüs in UN-Kantinen und weltweite
+                  Kampagnen rückten Hirse ins öffentliche Bewusstsein. Universitäten wie Hohenheim
+                  erforschen den Hirseanbau in Mitteleuropa, während Startups innovative
+                  Hirseprodukte — von Hirsedrinks bis Hirsenudeln — auf den Markt bringen.
+                </p>
+                <p>
+                  Heute steht Hirse im Schnittpunkt der drängendsten globalen Herausforderungen —
+                  Ernährungssicherheit, Mangelernährung, Klimawandel und nachhaltige Landwirtschaft.
+                  Ihre jahrtausendealte Widerstandsfähigkeit ist für die moderne Welt aktueller denn je.
                 </p>
               </>
             ) : locale === 'fr' ? (
