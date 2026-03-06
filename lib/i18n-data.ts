@@ -143,6 +143,25 @@ import { searchIndex as deSearchIndex } from '@/data/de/search-index';
 import { sources as deSources } from '@/data/de/sources';
 
 /* ------------------------------------------------------------------ */
+/*  Hindi data                                                         */
+/* ------------------------------------------------------------------ */
+
+import { millets as hiMillets, getMilletBySlug as hiGetMilletBySlug } from '@/data/hi/millets';
+import { recipes as hiRecipes } from '@/data/hi/recipes';
+import { faqItems as hiFaqItems } from '@/data/hi/faq';
+import { timelineEvents as hiTimelineEvents } from '@/data/hi/history-timeline';
+import { myths as hiMyths } from '@/data/hi/myths';
+import { ayurvedaPageData as hiAyurvedaData } from '@/data/hi/ayurveda';
+import { regionalTraditions as hiRegionalTraditions, getRegionalTraditionBySlug as hiGetRegionalTraditionBySlug } from '@/data/hi/regional-traditions';
+import { globalMilletRegions as hiGlobalMilletRegions, getGlobalMilletRegionBySlug as hiGetGlobalMilletRegionBySlug } from '@/data/hi/global-millets';
+import { fermentedProducts as hiFermentedProducts } from '@/data/hi/fermentation';
+import { buyingGuideItems as hiBuyingGuideItems } from '@/data/hi/buying-guide';
+import { mealPlans as hiMealPlans, getMealPlanBySlug as hiGetMealPlanBySlug } from '@/data/hi/meal-plans';
+import { substitutionEntries as hiSubstitutionEntries } from '@/data/hi/substitution-data';
+import { ancientReferences as hiAncientReferences } from '@/data/hi/ancient-references';
+import { searchIndex as hiSearchIndex } from '@/data/hi/search-index';
+
+/* ------------------------------------------------------------------ */
 /*  Locale data registry                                               */
 /*  To add a new locale: add 1 import block above + 1 entry below.    */
 /* ------------------------------------------------------------------ */
@@ -202,6 +221,17 @@ const localeData: Record<Locale, LocaleDataModule> = {
     mealPlans: deMealPlans, getMealPlanBySlug: deGetMealPlanBySlug,
     substitutionEntries: deSubstitutionEntries, ancientReferences: deAncientReferences,
     searchIndex: deSearchIndex, sources: deSources,
+  },
+  hi: {
+    millets: hiMillets, getMilletBySlug: hiGetMilletBySlug,
+    recipes: hiRecipes, faqItems: hiFaqItems, timelineEvents: hiTimelineEvents,
+    myths: hiMyths, ayurvedaPageData: hiAyurvedaData,
+    regionalTraditions: hiRegionalTraditions, getRegionalTraditionBySlug: hiGetRegionalTraditionBySlug,
+    globalMilletRegions: hiGlobalMilletRegions, getGlobalMilletRegionBySlug: hiGetGlobalMilletRegionBySlug,
+    fermentedProducts: hiFermentedProducts, buyingGuideItems: hiBuyingGuideItems,
+    mealPlans: hiMealPlans, getMealPlanBySlug: hiGetMealPlanBySlug,
+    substitutionEntries: hiSubstitutionEntries, ancientReferences: hiAncientReferences,
+    searchIndex: hiSearchIndex, sources: enSources,
   },
 };
 

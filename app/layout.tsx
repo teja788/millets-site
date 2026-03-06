@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
-import { Playfair_Display, Source_Sans_3, Noto_Sans_Telugu, Noto_Sans_Arabic } from 'next/font/google';
+import { Playfair_Display, Source_Sans_3, Noto_Sans_Telugu, Noto_Sans_Arabic, Noto_Sans_Devanagari } from 'next/font/google';
 import '@/styles/globals.css';
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
@@ -29,6 +29,13 @@ const notoTelugu = Noto_Sans_Telugu({
 const notoArabic = Noto_Sans_Arabic({
   subsets: ['arabic'],
   variable: '--font-arabic',
+  display: 'swap',
+  weight: ['400', '500', '600', '700'],
+});
+
+const notoDevanagari = Noto_Sans_Devanagari({
+  subsets: ['devanagari'],
+  variable: '--font-hindi',
   display: 'swap',
   weight: ['400', '500', '600', '700'],
 });
@@ -79,7 +86,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${playfair.variable} ${sourceSans.variable} ${notoTelugu.variable} ${notoArabic.variable}`}
+      className={`${playfair.variable} ${sourceSans.variable} ${notoTelugu.variable} ${notoArabic.variable} ${notoDevanagari.variable}`}
       suppressHydrationWarning
     >
       {GA_ID && (

@@ -49,6 +49,7 @@
   --font-body: var(--font-source-sans), "Segoe UI", "Helvetica Neue", sans-serif;
   --font-telugu: var(--font-telugu), "Noto Sans Telugu", "Segoe UI", sans-serif;
   --font-arabic: var(--font-arabic), "Noto Sans Arabic", "Segoe UI", sans-serif;
+  --font-devanagari: var(--font-hindi), "Noto Sans Devanagari", "Segoe UI", sans-serif;
   --font-mono: "JetBrains Mono", "Fira Code", "Consolas", monospace;
 
   /* === Spacing === */
@@ -289,6 +290,23 @@
 
 .dark .wave-divider .shape-fill {
   fill: #2a2a2a;
+}
+
+/* ========================================
+   HINDI (Devanagari) FONT
+   ======================================== */
+
+[lang="hi"] body {
+  font-family: var(--font-devanagari), var(--font-body);
+}
+
+[lang="hi"] h1,
+[lang="hi"] h2,
+[lang="hi"] h3,
+[lang="hi"] h4,
+[lang="hi"] h5,
+[lang="hi"] h6 {
+  font-family: var(--font-devanagari), var(--font-heading);
 }
 
 /* ========================================

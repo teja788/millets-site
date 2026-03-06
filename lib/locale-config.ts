@@ -65,4 +65,11 @@ export const localeFeatures: Record<Locale, LocaleFeatureConfig> = {
       { section: 'culture', href: '/hirse-in-der-deutschen-kueche', label: 'Hirse in der deutschen Küche' },
     ],
   },
+  hi: {
+    hasAyurveda: true,
+    healthPageRedirect: null,
+    namesTable: null,
+    isRTL: false,
+    exclusiveNavItems: [],
+  },
 };

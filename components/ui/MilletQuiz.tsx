@@ -34,6 +34,7 @@ const milletInfo: Record<string, Record<Locale, MilletInfo>> = {
     ar: { slug: 'finger-millet', name: 'دخن الإصبع (راغي)', tagline: 'بطل الكالسيوم بين الحبوب' },
     fr: { slug: 'finger-millet', name: 'Éleusine (Mil rouge)', tagline: 'Le champion du calcium parmi les céréales' },
     de: { slug: 'finger-millet', name: 'Fingerhirse (Ragi)', tagline: 'Der Kalzium-Champion unter den Getreiden' },
+    hi: { slug: 'finger-millet', name: 'रागी (Ragi)', tagline: 'अनाजों में कैल्शियम का चैंपियन' },
   },
   'pearl-millet': {
     en: { slug: 'pearl-millet', name: 'Pearl Millet (Bajra)', tagline: 'The iron-rich powerhouse grain' },
@@ -41,6 +42,7 @@ const milletInfo: Record<string, Record<Locale, MilletInfo>> = {
     ar: { slug: 'pearl-millet', name: 'الدخن اللؤلؤي (باجرا)', tagline: 'حبوب غنية بالحديد وعالية الطاقة' },
     fr: { slug: 'pearl-millet', name: 'Mil à chandelle (Petit mil)', tagline: 'La céréale riche en fer et pleine d\'énergie' },
     de: { slug: 'pearl-millet', name: 'Perlhirse (Bajra)', tagline: 'Das eisenreiche Kraftkorn' },
+    hi: { slug: 'pearl-millet', name: 'बाजरा (Bajra)', tagline: 'आयरन से भरपूर ताकतवर अनाज' },
   },
   'sorghum': {
     en: { slug: 'sorghum', name: 'Sorghum (Jowar)', tagline: 'The versatile everyday millet' },
@@ -48,6 +50,7 @@ const milletInfo: Record<string, Record<Locale, MilletInfo>> = {
     ar: { slug: 'sorghum', name: 'الذرة الرفيعة (جوار)', tagline: 'الدخن اليومي متعدد الاستخدامات' },
     fr: { slug: 'sorghum', name: 'Sorgho (Gros mil)', tagline: 'Le millet polyvalent du quotidien' },
     de: { slug: 'sorghum', name: 'Sorghum (Jowar)', tagline: 'Die vielseitige Alltagshirse' },
+    hi: { slug: 'sorghum', name: 'ज्वार (Jowar)', tagline: 'बहुमुखी रोज़मर्रा का अनाज' },
   },
   'foxtail-millet': {
     en: { slug: 'foxtail-millet', name: 'Foxtail Millet (Kangni)', tagline: 'The quick-cooking, protein-rich grain' },
@@ -55,6 +58,7 @@ const milletInfo: Record<string, Record<Locale, MilletInfo>> = {
     ar: { slug: 'foxtail-millet', name: 'دخن ذيل الثعلب (كانغني)', tagline: 'حبوب سريعة الطهي وغنية بالبروتين' },
     fr: { slug: 'foxtail-millet', name: 'Millet des oiseaux', tagline: 'La céréale riche en protéines à cuisson rapide' },
     de: { slug: 'foxtail-millet', name: 'Kolbenhirse (Kangni)', tagline: 'Das schnell kochende, proteinreiche Korn' },
+    hi: { slug: 'foxtail-millet', name: 'कंगनी (Kangni)', tagline: 'जल्दी बनने वाला प्रोटीन से भरपूर अनाज' },
   },
   'little-millet': {
     en: { slug: 'little-millet', name: 'Little Millet (Samai)', tagline: 'The mild, easy rice alternative' },
@@ -62,6 +66,7 @@ const milletInfo: Record<string, Record<Locale, MilletInfo>> = {
     ar: { slug: 'little-millet', name: 'الدخن الصغير (ساماي)', tagline: 'بديل الأرز السهل واللطيف' },
     fr: { slug: 'little-millet', name: 'Petit millet', tagline: 'L\'alternative douce et facile au riz' },
     de: { slug: 'little-millet', name: 'Kleine Hirse (Samai)', tagline: 'Die milde, einfache Reisalternative' },
+    hi: { slug: 'little-millet', name: 'कुटकी (Kutki)', tagline: 'हल्का और आसान चावल का विकल्प' },
   },
   'kodo-millet': {
     en: { slug: 'kodo-millet', name: 'Kodo Millet (Kodon)', tagline: 'The high-fiber, low-GI grain' },
@@ -69,6 +74,7 @@ const milletInfo: Record<string, Record<Locale, MilletInfo>> = {
     ar: { slug: 'kodo-millet', name: 'دخن كودو (كودون)', tagline: 'حبوب عالية الألياف ومنخفضة المؤشر الجلايسيمي' },
     fr: { slug: 'kodo-millet', name: 'Millet kodo', tagline: 'La céréale riche en fibres à faible indice glycémique' },
     de: { slug: 'kodo-millet', name: 'Kodohirse (Kodon)', tagline: 'Das ballaststoffreiche Korn mit niedrigem GI' },
+    hi: { slug: 'kodo-millet', name: 'कोदो (Kodo)', tagline: 'हाई-फाइबर, लो-GI अनाज' },
   },
   'barnyard-millet': {
     en: { slug: 'barnyard-millet', name: 'Barnyard Millet (Sanwa)', tagline: 'The low-calorie fasting grain' },
@@ -76,6 +82,7 @@ const milletInfo: Record<string, Record<Locale, MilletInfo>> = {
     ar: { slug: 'barnyard-millet', name: 'دخن الحظيرة (سانوا)', tagline: 'حبوب الصيام منخفضة السعرات' },
     fr: { slug: 'barnyard-millet', name: 'Millet japonais', tagline: 'La céréale légère et pauvre en calories' },
     de: { slug: 'barnyard-millet', name: 'Japanische Hirse (Sanwa)', tagline: 'Das kalorienarme Fastenkorn' },
+    hi: { slug: 'barnyard-millet', name: 'साँवा (Sanwa)', tagline: 'कम कैलोरी वाला व्रत का अनाज' },
   },
   'proso-millet': {
     en: { slug: 'proso-millet', name: 'Proso Millet (Chena)', tagline: 'The protein-packed quick grower' },
@@ -83,6 +90,7 @@ const milletInfo: Record<string, Record<Locale, MilletInfo>> = {
     ar: { slug: 'proso-millet', name: 'الدخن العادي (تشينا)', tagline: 'حبوب سريعة النمو وغنية بالبروتين' },
     fr: { slug: 'proso-millet', name: 'Millet commun', tagline: 'La céréale riche en protéines à croissance rapide' },
     de: { slug: 'proso-millet', name: 'Rispenhirse (Chena)', tagline: 'Der proteinreiche Schnellwachser' },
+    hi: { slug: 'proso-millet', name: 'चेना (Chena)', tagline: 'प्रोटीन से भरपूर तेज़ उगने वाला अनाज' },
   },
   'browntop-millet': {
     en: { slug: 'browntop-millet', name: 'Browntop Millet (Korle)', tagline: 'The fiber king of millets' },
@@ -90,6 +98,7 @@ const milletInfo: Record<string, Record<Locale, MilletInfo>> = {
     ar: { slug: 'browntop-millet', name: 'دخن القمة البنية (كورلي)', tagline: 'ملك الألياف بين أنواع الدخن' },
     fr: { slug: 'browntop-millet', name: 'Millet brun', tagline: 'Le roi des fibres parmi les millets' },
     de: { slug: 'browntop-millet', name: 'Brauntop-Hirse (Korle)', tagline: 'Der Ballaststoff-König unter den Hirsen' },
+    hi: { slug: 'browntop-millet', name: 'कोरले (Korle)', tagline: 'मिलेट्स में फाइबर का राजा' },
   },
 };
 
