@@ -7,7 +7,7 @@ import Fuse from 'fuse.js';
 import { Search, Wheat, UtensilsCrossed, HelpCircle, FileText, ArrowRight, Wrench, MapPin, Globe } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Breadcrumb from '@/components/layout/Breadcrumb';
-import { getSearchIndex } from '@/lib/i18n-data';
+import { getSearchIndexByLocale } from '@/lib/search-index-data';
 import type { Locale } from '@/lib/i18n';
 import { localePath, isValidLocale, getTranslations } from '@/lib/i18n';
 import type { SearchableItem } from '@/lib/types';
@@ -53,7 +53,7 @@ function SearchResults() {
   const locale: Locale = isValidLocale(lang) ? lang : 'en';
 
   const t = getTranslations(locale);
-  const searchIndex = getSearchIndex(locale);
+  const searchIndex = getSearchIndexByLocale(locale);
 
   const groupLabels: Record<SearchableItem['type'], string> = {
     millet: t.search.typeLabels.millet,

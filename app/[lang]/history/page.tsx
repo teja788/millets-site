@@ -256,7 +256,7 @@ export default async function HistoryPage({
                 <p>
                   Die Folgen waren dramatisch. In Indien fiel der Anteil der Hirse an der
                   Getreideanbaufläche von etwa 37 % in den 1960er Jahren auf unter 20 % Anfang der
-                  2000er Jahre. Hirse wurde als „grobes Getreide" und „Arme-Leute-Essen" abgestempelt,
+                  2000er Jahre. Hirse wurde als „grobes Getreide&quot; und „Arme-Leute-Essen&quot; abgestempelt,
                   während eine ganze Generation ohne Hirse auf dem Teller aufwuchs und traditionelles
                   Wissen über Anbau und Zubereitung verblasste.
                 </p>
@@ -356,11 +356,11 @@ export default async function HistoryPage({
                   bemerkenswerte Wiederentdeckung. Bio-Pioniere wie Alnatura und Rapunzel brachten
                   Hirse in Reformhäuser und Biomärkte. Die DGE empfiehlt Vollkorngetreide als Teil
                   einer ausgewogenen Ernährung, und die UN-Erklärung von 2023 als „Internationales
-                  Jahr der Hirse" hat das Interesse weiter gesteigert.
+                  Jahr der Hirse&quot; hat das Interesse weiter gesteigert.
                 </p>
                 <p>
                   In <strong>2018</strong> erklärte die indische Regierung Hirse offiziell zu
-                  „Nutri-Cereals" und rief das Nationale Jahr der Hirse aus. Indien trieb auch die
+                  „Nutri-Cereals&quot; und rief das Nationale Jahr der Hirse aus. Indien trieb auch die
                   internationale Anerkennung voran.
                 </p>
                 <p>
@@ -476,3 +476,5 @@ export default async function HistoryPage({
     </main>
   );
 }
+
+

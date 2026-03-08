@@ -44,17 +44,22 @@ export default function CookingTimer({ locale = 'en', millets }: { locale?: Loca
   // Set timer when millet or mode changes
   useEffect(() => {
     if (!millet) return;
-    if (timerMode === 'cooking') {
-      startTimer(parseMinutes(millet.cooking.cookingTime));
-    } else {
-      const soakStr = millet.cooking.soakingTime;
-      if (soakStr.toLowerCase().includes('no') || soakStr.toLowerCase().includes('optional')) {
-        startTimer(0);
+
+    const timeoutId = window.setTimeout(() => {
+      if (timerMode === 'cooking') {
+        startTimer(parseMinutes(millet.cooking.cookingTime));
       } else {
-        const hours = soakStr.match(/(\d+)/);
-        startTimer(hours ? parseInt(hours[1], 10) * 60 : 30);
+        const soakStr = millet.cooking.soakingTime;
+        if (soakStr.toLowerCase().includes('no') || soakStr.toLowerCase().includes('optional')) {
+          startTimer(0);
+        } else {
+          const hours = soakStr.match(/(\d+)/);
+          startTimer(hours ? parseInt(hours[1], 10) * 60 : 30);
+        }
       }
-    }
+    }, 0);
+
+    return () => window.clearTimeout(timeoutId);
   }, [millet, timerMode, startTimer]);
 
   // Countdown logic
@@ -270,3 +275,7 @@ export default function CookingTimer({ locale = 'en', millets }: { locale?: Loca
     </div>
   );
 }
+
+
+
+

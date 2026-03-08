@@ -1,7 +1,16 @@
 import type { Metadata, Viewport } from 'next';
+import { headers } from 'next/headers';
 import Script from 'next/script';
-import { Playfair_Display, Source_Sans_3, Noto_Sans_Telugu, Noto_Sans_Arabic, Noto_Sans_Devanagari } from 'next/font/google';
+import {
+  Playfair_Display,
+  Source_Sans_3,
+  Noto_Sans_Telugu,
+  Noto_Sans_Arabic,
+  Noto_Sans_Devanagari,
+} from 'next/font/google';
 import '@/styles/globals.css';
+import { defaultLocale, isValidLocale, type Locale } from '@/lib/i18n';
+import { localeFeatures } from '@/lib/locale-config';
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
@@ -47,7 +56,7 @@ export const metadata: Metadata = {
     template: '%s | Millets Guide',
   },
   description:
-    'A comprehensive, evidence-based guide to millets — nutrition, recipes, history, Ayurveda, and sustainable farming. Every fact sourced and verified.',
+    'A comprehensive, evidence-based guide to millets - nutrition, recipes, history, Ayurveda, and sustainable farming. Every fact sourced and verified.',
   keywords: [
     'millets',
     'bajra',
@@ -78,14 +87,34 @@ export const viewport: Viewport = {
   themeColor: '#5B8C5A',
 };
 
-export default function RootLayout({
+function parseLocale(pathnameHeader: string | null, localeHeader: string | null): Locale {
+  if (localeHeader && isValidLocale(localeHeader)) {
+    return localeHeader;
+  }
+
+  if (pathnameHeader) {
+    const segment = pathnameHeader.split('/').filter(Boolean)[0];
+    if (segment && isValidLocale(segment)) {
+      return segment;
+    }
+  }
+
+  return defaultLocale;
+}
+
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const headersList = await headers();
+  const locale = parseLocale(headersList.get('x-pathname'), headersList.get('x-locale'));
+  const dir = localeFeatures[locale].isRTL ? 'rtl' : 'ltr';
+
   return (
     <html
-      lang="en"
+      lang={locale}
+      dir={dir}
       className={`${playfair.variable} ${sourceSans.variable} ${notoTelugu.variable} ${notoArabic.variable} ${notoDevanagari.variable}`}
       suppressHydrationWarning
     >
@@ -105,9 +134,8 @@ export default function RootLayout({
           </Script>
         </>
       )}
-      <body className="font-body antialiased">
-        {children}
-      </body>
+      <body className="font-body antialiased">{children}</body>
     </html>
   );
 }
+

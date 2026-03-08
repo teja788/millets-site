@@ -29,7 +29,7 @@ export default function ScrollProgress() {
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     // Initial calculation
-    updateProgress();
+    rafRef.current = requestAnimationFrame(updateProgress);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -58,3 +58,6 @@ export default function ScrollProgress() {
     </div>
   );
 }
+
+
+

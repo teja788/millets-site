@@ -39,7 +39,7 @@ function isGroup(item: NavItem): item is NavGroup {
 export default function Navbar({ locale }: { locale: Locale }) {
   const pathname = usePathname();
   const { resolvedTheme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+  const mounted = true;
 
   const t = getTranslations(locale);
   const features = localeFeatures[locale];
@@ -128,9 +128,6 @@ export default function Navbar({ locale }: { locale: Locale }) {
   /* ---------------------------------------------------------------- */
   /*  Effects                                                          */
   /* ---------------------------------------------------------------- */
-
-  useEffect(() => setMounted(true), []);
-
   // Scroll detection
   useEffect(() => {
     const handleScroll = () => {
@@ -145,9 +142,13 @@ export default function Navbar({ locale }: { locale: Locale }) {
 
   // Close everything on route change
   useEffect(() => {
-    setIsOpen(false);
-    setOpenDropdown(null);
-    setExpandedMobileGroup(null);
+    const timeoutId = window.setTimeout(() => {
+      setIsOpen(false);
+      setOpenDropdown(null);
+      setExpandedMobileGroup(null);
+    }, 0);
+
+    return () => window.clearTimeout(timeoutId);
   }, [pathname]);
 
   // Body scroll lock when mobile menu is open
@@ -497,3 +498,7 @@ export default function Navbar({ locale }: { locale: Locale }) {
     </header>
   );
 }
+
+
+
+
