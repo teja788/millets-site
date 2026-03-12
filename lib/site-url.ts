@@ -1,4 +1,4 @@
-const DEFAULT_SITE_URL = 'https://simplymillets.com';
+const DEFAULT_SITE_URL = 'https://www.simplymillets.com';
 
 function withProtocol(url: string): string {
   return /^https?:\/\//i.test(url) ? url : `https://${url}`;
