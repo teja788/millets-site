@@ -10,6 +10,7 @@ import ShareButton, { FloatingShareButton } from '@/components/ui/ShareButton';
 import type { Locale } from '@/lib/i18n';
 import { localePath, getTranslations, isValidLocale, locales, hreflangAlternates } from '@/lib/i18n';
 import { getRecipes, getRecipeBySlugLocale, getMilletBySlugLocale } from '@/lib/i18n-data';
+import { toAbsoluteSiteUrl } from '@/lib/site-url';
 
 interface PageProps {
   params: Promise<{ lang: string; slug: string }>;
@@ -103,7 +104,7 @@ export default async function RecipeDetailPage({ params }: PageProps) {
     name: recipe.title,
     description: recipe.description,
     inLanguage: locale,
-    ...(recipe.imageFile && { image: `https://simplymillets.com${recipe.imageFile}` }),
+    ...(recipe.imageFile && { image: toAbsoluteSiteUrl(recipe.imageFile) }),
     prepTime: recipe.prepTime,
     cookTime: recipe.cookTime,
     recipeYield: `${recipe.servings}`,

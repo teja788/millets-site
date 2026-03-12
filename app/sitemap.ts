@@ -4,8 +4,9 @@ import { recipes } from '@/data/recipes';
 import { globalMilletRegions } from '@/data/global-millets';
 import { regionalTraditions } from '@/data/regional-traditions';
 import { locales } from '@/lib/i18n';
+import { siteUrl } from '@/lib/site-url';
 
-const BASE_URL = 'https://simplymillets.com';
+const BASE_URL = siteUrl;
 
 /** Build hreflang alternates object for a given path */
 function alternatesFor(path: string) {

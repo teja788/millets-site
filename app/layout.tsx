@@ -11,6 +11,7 @@ import {
 import '@/styles/globals.css';
 import { defaultLocale, isValidLocale, type Locale } from '@/lib/i18n';
 import { localeFeatures } from '@/lib/locale-config';
+import { siteUrl } from '@/lib/site-url';
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
@@ -50,7 +51,7 @@ const notoDevanagari = Noto_Sans_Devanagari({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://simplymillets.com'),
+  metadataBase: new URL(siteUrl),
   title: {
     default: 'Millets Guide - Ancient Grains, Timeless Nourishment',
     template: '%s | Millets Guide',
