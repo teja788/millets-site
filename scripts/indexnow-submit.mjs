@@ -118,8 +118,23 @@ async function submitIndexNow({ host, key, keyLocation, urlList }) {
 
   if (!response.ok) {
     const body = await response.text();
+    let parsedBody = null;
+
+    try {
+      parsedBody = body ? JSON.parse(body) : null;
+    } catch {
+      parsedBody = null;
+    }
+
+    if (response.status === 403 && parsedBody?.errorCode === 'SiteVerificationNotCompleted') {
+      log('Skipping submission: IndexNow site verification is not completed yet.');
+      return false;
+    }
+
     throw new Error(`IndexNow submission failed (${response.status}): ${body || 'empty response'}`);
   }
+
+  return true;
 }
 
 async function main() {
@@ -144,14 +159,16 @@ async function main() {
     return;
   }
 
-  await submitIndexNow({
+  const submitted = await submitIndexNow({
     host: new URL(siteUrl).host,
     key,
     keyLocation,
     urlList,
   });
 
-  log(`Submitted ${urlList.length} URLs to IndexNow.`);
+  if (submitted) {
+    log(`Submitted ${urlList.length} URLs to IndexNow.`);
+  }
 }
 
 main().catch((error) => {
