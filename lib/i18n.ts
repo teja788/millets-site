@@ -5,8 +5,9 @@ import { ar } from './translations/ar';
 import { fr } from './translations/fr';
 import { de } from './translations/de';
 import { hi } from './translations/hi';
+import { es } from './translations/es';
 
-export const locales = ['en', 'te', 'ar', 'fr', 'de', 'hi'] as const;
+export const locales = ['en', 'te', 'ar', 'fr', 'de', 'hi', 'es'] as const;
 export type Locale = (typeof locales)[number];
 export const defaultLocale: Locale = 'en';
 
@@ -21,7 +22,7 @@ export function localePath(locale: Locale, path: string): string {
   return `/${locale}${path}`;
 }
 
-const translationMap: Record<Locale, TranslationKeys> = { en, te, ar, fr, de, hi };
+const translationMap: Record<Locale, TranslationKeys> = { en, te, ar, fr, de, hi, es };
 
 export function getTranslations(locale: Locale) {
   return translationMap[locale] ?? en;

@@ -162,6 +162,26 @@ import { ancientReferences as hiAncientReferences } from '@/data/hi/ancient-refe
 import { searchIndex as hiSearchIndex } from '@/data/hi/search-index';
 
 /* ------------------------------------------------------------------ */
+/*  Spanish data                                                       */
+/* ------------------------------------------------------------------ */
+
+import { millets as esMillets, getMilletBySlug as esGetMilletBySlug } from '@/data/es/millets';
+import { recipes as esRecipes } from '@/data/es/recipes';
+import { faqItems as esFaqItems } from '@/data/es/faq';
+import { timelineEvents as esTimelineEvents } from '@/data/es/history-timeline';
+import { myths as esMyths } from '@/data/es/myths';
+import { ayurvedaPageData as esAyurvedaData } from '@/data/es/ayurveda';
+import { regionalTraditions as esRegionalTraditions, getRegionalTraditionBySlug as esGetRegionalTraditionBySlug } from '@/data/es/regional-traditions';
+import { globalMilletRegions as esGlobalMilletRegions, getGlobalMilletRegionBySlug as esGetGlobalMilletRegionBySlug } from '@/data/es/global-millets';
+import { fermentedProducts as esFermentedProducts } from '@/data/es/fermentation';
+import { buyingGuideItems as esBuyingGuideItems } from '@/data/es/buying-guide';
+import { mealPlans as esMealPlans, getMealPlanBySlug as esGetMealPlanBySlug } from '@/data/es/meal-plans';
+import { substitutionEntries as esSubstitutionEntries } from '@/data/es/substitution-data';
+import { ancientReferences as esAncientReferences } from '@/data/es/ancient-references';
+import { searchIndex as esSearchIndex } from '@/data/es/search-index';
+import { sources as esSources } from '@/data/es/sources';
+
+/* ------------------------------------------------------------------ */
 /*  Locale data registry                                               */
 /*  To add a new locale: add 1 import block above + 1 entry below.    */
 /* ------------------------------------------------------------------ */
@@ -232,6 +252,17 @@ const localeData: Record<Locale, LocaleDataModule> = {
     mealPlans: hiMealPlans, getMealPlanBySlug: hiGetMealPlanBySlug,
     substitutionEntries: hiSubstitutionEntries, ancientReferences: hiAncientReferences,
     searchIndex: hiSearchIndex, sources: enSources,
+  },
+  es: {
+    millets: esMillets, getMilletBySlug: esGetMilletBySlug,
+    recipes: esRecipes, faqItems: esFaqItems, timelineEvents: esTimelineEvents,
+    myths: esMyths, ayurvedaPageData: esAyurvedaData,
+    regionalTraditions: esRegionalTraditions, getRegionalTraditionBySlug: esGetRegionalTraditionBySlug,
+    globalMilletRegions: esGlobalMilletRegions, getGlobalMilletRegionBySlug: esGetGlobalMilletRegionBySlug,
+    fermentedProducts: esFermentedProducts, buyingGuideItems: esBuyingGuideItems,
+    mealPlans: esMealPlans, getMealPlanBySlug: esGetMealPlanBySlug,
+    substitutionEntries: esSubstitutionEntries, ancientReferences: esAncientReferences,
+    searchIndex: esSearchIndex, sources: esSources,
   },
 };
 

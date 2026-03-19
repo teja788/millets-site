@@ -6,6 +6,7 @@ import { searchIndex as arSearchIndex } from '@/data/ar/search-index';
 import { searchIndex as frSearchIndex } from '@/data/fr/search-index';
 import { searchIndex as deSearchIndex } from '@/data/de/search-index';
 import { searchIndex as hiSearchIndex } from '@/data/hi/search-index';
+import { searchIndex as esSearchIndex } from '@/data/es/search-index';
 
 const searchIndexByLocale: Record<Locale, SearchableItem[]> = {
   en: enSearchIndex,
@@ -14,6 +15,7 @@ const searchIndexByLocale: Record<Locale, SearchableItem[]> = {
   fr: frSearchIndex,
   de: deSearchIndex,
   hi: hiSearchIndex,
+  es: esSearchIndex,
 };
 
 export function getSearchIndexByLocale(locale: Locale): SearchableItem[] {

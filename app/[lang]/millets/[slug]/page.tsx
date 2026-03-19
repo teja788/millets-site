@@ -29,6 +29,7 @@ import {
 import LanguageTable from '@/components/ui/LanguageTable';
 import FrenchNamesTable from '@/components/ui/FrenchNamesTable';
 import GermanNamesTable from '@/components/ui/GermanNamesTable';
+import SpanishNamesTable from '@/components/ui/SpanishNamesTable';
 import NutritionChart from '@/components/ui/NutritionChart';
 import SourceCitation from '@/components/ui/SourceCitation';
 import NutritionHighlight from '@/components/sections/NutritionHighlight';
@@ -293,6 +294,8 @@ export default async function MilletDetailPage({ params }: PageProps) {
               <FrenchNamesTable slug={millet.slug} />
             ) : localeFeatures[locale].namesTable === 'german' ? (
               <GermanNamesTable slug={millet.slug} />
+            ) : localeFeatures[locale].namesTable === 'spanish' ? (
+              <SpanishNamesTable slug={millet.slug} />
             ) : (
               <LanguageTable names={millet.names} />
             )}

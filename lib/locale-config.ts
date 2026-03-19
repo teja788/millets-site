@@ -12,7 +12,7 @@ export interface LocaleFeatureConfig {
   /** Redirect target for /ayurveda (null = no redirect) */
   healthPageRedirect: string | null;
   /** Which NamesTable to render on millet detail pages */
-  namesTable: 'french' | 'german' | null;
+  namesTable: 'french' | 'german' | 'spanish' | null;
   /** Right-to-left locale */
   isRTL: boolean;
   /** Nav items injected into Navbar dropdowns for this locale */
@@ -71,5 +71,17 @@ export const localeFeatures: Record<Locale, LocaleFeatureConfig> = {
     namesTable: null,
     isRTL: false,
     exclusiveNavItems: [],
+  },
+  es: {
+    hasAyurveda: false,
+    healthPageRedirect: '/es/nutricion-y-salud',
+    namesTable: 'spanish',
+    isRTL: false,
+    exclusiveNavItems: [
+      { section: 'learn', href: '/nutricion-y-salud', label: 'Nutrición y salud' },
+      { section: 'learn', href: '/mijo-vs-quinoa', label: 'Mijo vs Quinoa' },
+      { section: 'learn', href: '/donde-comprar-mijo', label: 'Dónde comprar mijo' },
+      { section: 'culture', href: '/mijo-en-la-cocina-hispanica', label: 'Mijo en la cocina hispánica' },
+    ],
   },
 };
