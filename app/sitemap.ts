@@ -87,6 +87,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   }
 
+  // German-only pages
+  const germanOnlyRoutes = ['/ernaehrung-und-gesundheit', '/hirse-vs-quinoa', '/hirse-in-der-deutschen-kueche', '/wo-hirse-kaufen'];
+  for (const route of germanOnlyRoutes) {
+    entries.push({
+      url: `${BASE_URL}/de${route}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    });
+  }
+
+  // Spanish-only pages
+  const spanishOnlyRoutes = ['/nutricion-y-salud', '/mijo-vs-quinoa', '/mijo-en-la-cocina-hispanica', '/donde-comprar-mijo'];
+  for (const route of spanishOnlyRoutes) {
+    entries.push({
+      url: `${BASE_URL}/es${route}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    });
+  }
+
   // Dynamic millet pages (all locales)
   for (const millet of millets) {
     for (const locale of locales) {
