@@ -6,6 +6,7 @@ import { localePath, getTranslations, isValidLocale, locales, localeParams, href
 import { getFaqItems } from '@/lib/i18n-data';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import Accordion from '@/components/ui/Accordion';
+import MedicalDisclaimer from '@/components/ui/MedicalDisclaimer';
 
 export async function generateMetadata({
   params,
@@ -105,6 +106,8 @@ export default async function FAQPage({
             ? 'చిరుధాన్యాల గురించి అత్యంత సాధారణ ప్రశ్నలకు సమాధానాలు -- పోషణ మరియు వంట నుండి ఆరోగ్య ప్రయోజనాలు మరియు ఆయుర్వేద దృక్పథాల వరకు.'
             : 'Answers to the most common questions about millets -- from nutrition and cooking to health benefits and Ayurvedic perspectives.'}
         </p>
+
+        <MedicalDisclaimer locale={locale} />
 
         {/* FAQ Groups */}
         <div className="space-y-10 max-w-3xl">

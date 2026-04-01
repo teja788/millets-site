@@ -5,6 +5,7 @@ import { Heart, Droplets, Scale, Bone, Wheat } from 'lucide-react';
 import type { Locale } from '@/lib/i18n';
 import { localePath, isValidLocale, hreflangAlternates } from '@/lib/i18n';
 import Breadcrumb from '@/components/layout/Breadcrumb';
+import MedicalDisclaimer from '@/components/ui/MedicalDisclaimer';
 import { Card, CardBody } from '@/components/ui/Card';
 
 export async function generateMetadata({
@@ -110,6 +111,8 @@ export default async function NutritionEtSantePage({
             données nutritionnelles de référence.
           </p>
         </div>
+
+        <MedicalDisclaimer locale={locale} />
 
         {/* Key Nutrition Facts */}
         <section className="mb-12">

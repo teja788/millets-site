@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import MedicalDisclaimer from '@/components/ui/MedicalDisclaimer';
 import {
   Droplets,
   Sun,
@@ -344,6 +345,8 @@ export default async function MilletDetailPage({ params }: PageProps) {
             </h3>
             <NutritionChart data={chartData} chartType="bar" locale={locale} />
           </section>
+
+          <MedicalDisclaimer locale={locale} />
 
           {/* ===== Health Benefits ===== */}
           <section id="health-benefits">
