@@ -4,6 +4,7 @@ import type { Locale } from '@/lib/i18n';
 import { localePath, getTranslations, isValidLocale, locales, localeParams, hreflangAlternates } from '@/lib/i18n';
 import { getMillets, riceNutrition } from '@/lib/i18n-data';
 import Breadcrumb from '@/components/layout/Breadcrumb';
+import MedicalDisclaimer from '@/components/ui/MedicalDisclaimer';
 import ComparisonTable from '@/components/ui/ComparisonTable';
 import NutritionChart from '@/components/ui/NutritionChart';
 import SourceCitation from '@/components/ui/SourceCitation';
@@ -175,6 +176,8 @@ export default async function NutritionPage({
                 ? 'Vergleichen Sie die Nährwerte von 9 Hirsesorten mit Reis und Weizen. Alle Daten pro 100 g, basierend auf DGE-Nährwerttabellen und USDA-Daten.'
                 : 'Millets are nutritional powerhouses. Use the interactive comparison table below to select millets and see their nutritional values side by side. All data is per 100 grams of raw grain, sourced from the ICMR-NIN Indian Food Composition Tables (2017).'}
         </p>
+
+        <MedicalDisclaimer locale={locale} />
 
         {/* Comparison Table */}
         <section className="mb-14">

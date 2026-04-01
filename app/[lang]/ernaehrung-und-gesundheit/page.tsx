@@ -7,6 +7,7 @@ import { Heart, Activity, Scale, Wheat, Pill } from 'lucide-react';
 import type { Locale } from '@/lib/i18n';
 import { localePath, isValidLocale, getTranslations } from '@/lib/i18n';
 import Breadcrumb from '@/components/layout/Breadcrumb';
+import MedicalDisclaimer from '@/components/ui/MedicalDisclaimer';
 import { Card, CardBody } from '@/components/ui/Card';
 
 /* ------------------------------------------------------------------ */
@@ -140,6 +141,8 @@ export default function ErnaehrungUndGesundheitPage() {
             </p>
           </div>
         </motion.div>
+
+        <MedicalDisclaimer locale={locale} />
 
         {/* Key Nutrition Facts */}
         <section className="mb-12">

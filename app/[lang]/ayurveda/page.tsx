@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound, redirect } from 'next/navigation';
-import { AlertTriangle } from 'lucide-react';
 import type { Locale } from '@/lib/i18n';
 import { localePath, getTranslations, isValidLocale, locales, localeParams, hreflangAlternates } from '@/lib/i18n';
 import { localeFeatures } from '@/lib/locale-config';
 import { getAyurvedaData, getMilletBySlugLocale } from '@/lib/i18n-data';
 import Breadcrumb from '@/components/layout/Breadcrumb';
+import MedicalDisclaimer from '@/components/ui/MedicalDisclaimer';
 import TestimonialOrQuote from '@/components/sections/TestimonialOrQuote';
 import SourceCitation from '@/components/ui/SourceCitation';
 import Badge from '@/components/ui/Badge';
@@ -338,22 +338,7 @@ export default async function AyurvedaPage({
           </div>
         </section>
 
-        {/* Disclaimer */}
-        <section className="mb-12">
-          <div className="bg-orange-900/30 border-2 border-orange-700 rounded-xl p-6 md:p-8">
-            <div className="flex items-start gap-3">
-              <AlertTriangle className="w-6 h-6 text-orange-600 flex-shrink-0 mt-0.5" />
-              <div>
-                <h3 className="font-heading text-lg font-bold text-orange-300 mb-2">
-                  {locale === 'te' ? 'ముఖ్యమైన గమనిక' : 'Important Disclaimer'}
-                </h3>
-                <p className="text-orange-200 leading-relaxed">
-                  {ayurvedaPageData.disclaimer}
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <MedicalDisclaimer locale={locale} context="ayurveda" />
 
         {/* Sources */}
         <section className="border-t border-earth-200 dark:border-earth-700 pt-8">
