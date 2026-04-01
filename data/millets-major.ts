@@ -73,7 +73,7 @@ export const majorMillets: Millet[] = [
         'Provides sustained energy and nourishment',
         'Strengthens muscles and tissues',
         'Useful in cold climates and winter season',
-        'Supports lactation in nursing mothers',
+        'Traditionally believed to support lactation in nursing mothers',
       ],
       contraindications: [
         'Not ideal for individuals with high Vata imbalance',
@@ -251,7 +251,7 @@ export const majorMillets: Millet[] = [
         'Excellent for bone strengthening and calcium supplementation',
         'Recommended for growing children and elderly',
         'Cooling effect beneficial in Pitta conditions',
-        'Supports weight management due to light quality',
+        'May support weight management due to light quality',
         'Used in convalescence and recovery diets',
       ],
       contraindications: [
@@ -437,9 +437,9 @@ export const majorMillets: Millet[] = [
         kapha: 'decreases',
       },
       therapeuticUses: [
-        'Promotes digestive health due to high fiber content',
+        'May promote digestive health due to high fiber content',
         'Cooling effect beneficial in Pitta-dominant conditions',
-        'Supports weight management due to light and dry qualities',
+        'May support weight management due to light and dry qualities',
         'Useful for urinary tract health',
       ],
       contraindications: [
@@ -617,7 +617,7 @@ export const majorMillets: Millet[] = [
       },
       therapeuticUses: [
         'Useful for weight management due to light and dry qualities',
-        'Supports digestive fire (Agni)',
+        'May support digestive fire (Agni)',
         'Beneficial for Kapha-related conditions like congestion',
         'Traditionally used in postpartum recovery diets',
       ],
@@ -803,7 +803,7 @@ export const majorMillets: Millet[] = [
       therapeuticUses: [
         'Suitable for all body types due to balanced dosha effect',
         'Cooling nature beneficial in summer and Pitta conditions',
-        'Supports gentle digestion due to Laghu (light) quality',
+        'May support gentle digestion due to Laghu (light) quality',
         'Traditionally used in diets for convalescence',
       ],
       contraindications: [
@@ -853,7 +853,7 @@ export const majorMillets: Millet[] = [
       {
         benefit: 'Very high iron content',
         description:
-          'Little millet contains 9.3mg iron per 100g, one of the highest among all millets and cereals. This makes it valuable for preventing and managing iron-deficiency anemia.',
+          'Little millet contains 9.3mg iron per 100g, one of the highest among all millets and cereals. This makes it valuable for those looking to address iron-deficiency anemia.',
         evidenceLevel: 'well-established',
         source: 'ICMR-NIN IFCT 2017',
       },

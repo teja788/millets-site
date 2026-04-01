@@ -72,7 +72,7 @@ export const minorMillets: Millet[] = [
       therapeuticUses: [
         'Used traditionally in diabetic diets for blood sugar management',
         'Cooling effect beneficial during Pitta aggravation',
-        'Supports weight management due to low calorie content',
+        'May support weight management due to low calorie content',
         'Traditionally recommended during fasting for its light quality',
       ],
       contraindications: [
@@ -122,7 +122,7 @@ export const minorMillets: Millet[] = [
       {
         benefit: 'High antioxidant polyphenol content',
         description:
-          'Kodo millet is exceptionally rich in polyphenolic compounds that have strong antioxidant properties, helping protect cells from oxidative damage.',
+          'Kodo millet is exceptionally rich in polyphenolic compounds that have strong antioxidant properties, which may help protect cells from oxidative damage.',
         evidenceLevel: 'supported-by-research',
         source: 'Journal of Food Science and Technology',
       },
@@ -251,7 +251,7 @@ export const minorMillets: Millet[] = [
       therapeuticUses: [
         'Ideal for fasting due to light and easy-to-digest nature',
         'Cooling effect beneficial in summer and Pitta conditions',
-        'Supports digestive health due to very high fiber content',
+        'May support digestive health due to very high fiber content',
         'Traditionally used for convalescent diets',
       ],
       contraindications: [
@@ -321,7 +321,7 @@ export const minorMillets: Millet[] = [
       {
         benefit: 'Good source of iron',
         description:
-          'Contains 5.0mg iron per 100g, making it a valuable source of dietary iron for preventing anemia, particularly important in vegetarian diets.',
+          'Contains 5.0mg iron per 100g, making it a valuable source of dietary iron which may help address anemia, particularly important in vegetarian diets.',
         evidenceLevel: 'well-established',
         source: 'ICMR-NIN / published literature',
       },
@@ -686,9 +686,9 @@ export const minorMillets: Millet[] = [
         source: 'Journal of Food Science and Technology',
       },
       {
-        benefit: 'Supports gut health',
+        benefit: 'May support gut health',
         description:
-          'The very high fiber content acts as a prebiotic, supporting the growth of beneficial gut bacteria and promoting overall gut health and digestive regularity.',
+          'The very high fiber content acts as a prebiotic, potentially supporting the growth of beneficial gut bacteria and promoting overall gut health and digestive regularity.',
         evidenceLevel: 'supported-by-research',
         source: 'Nutrition Research Reviews',
       },
