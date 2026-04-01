@@ -19,6 +19,21 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
+  if (pathname === '/') {
+    const url = request.nextUrl.clone();
+    url.pathname = `/${defaultLocale}`;
+
+    const requestHeaders = new Headers(request.headers);
+    requestHeaders.set('x-pathname', url.pathname);
+    requestHeaders.set('x-locale', defaultLocale);
+
+    return NextResponse.rewrite(url, {
+      request: {
+        headers: requestHeaders,
+      },
+    });
+  }
+
   const pathnameLocale = locales.find(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`,
   );
