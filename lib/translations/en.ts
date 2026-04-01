@@ -147,6 +147,14 @@ export const en = {
     noRecipesFilter: 'No recipes found for the selected filters. Try a different combination.',
   },
 
+  // Cookie consent banner
+  cookieConsent: {
+    message: 'This website uses cookies for analytics and personalized advertising. By clicking "Accept", you consent to the use of all cookies.',
+    accept: 'Accept',
+    decline: 'Decline',
+    learnMore: 'Learn more',
+  },
+
   // Medical disclaimer banner
   medicalDisclaimer: {
     health: 'The health information below is for educational purposes only and is not medical advice. Consult a healthcare professional before making dietary changes.',
@@ -587,16 +595,18 @@ export const en = {
   // Privacy Policy page
   privacyPolicy: {
     title: 'Privacy Policy',
-    lastUpdated: 'Last updated: February 2026',
+    lastUpdated: 'Last updated: April 2026',
     intro: 'Simply Millets ("we", "us", or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard information when you visit simplymillets.com.',
     informationWeCollectTitle: 'Information We Collect',
     informationWeCollectText: 'We do not collect any personal information such as names, email addresses, or phone numbers. Our website is purely informational and does not require user registration or login. We may collect anonymous usage data through analytics tools, including pages visited, time spent on pages, browser type, device type, and approximate geographic location.',
     howWeUseTitle: 'How We Use Information',
     howWeUseText: 'Any anonymous data we collect is used solely to understand how visitors interact with our content, improve the quality and relevance of our articles and recipes, identify popular topics to create more helpful content, and ensure the website functions properly across devices and browsers.',
     cookiesTitle: 'Cookies',
-    cookiesText: 'Our website may use cookies and similar technologies for analytics purposes, remembering your language preference, and enabling dark mode preferences. You can control cookies through your browser settings. Disabling cookies will not affect the core functionality of our website.',
+    cookiesText: 'Our website uses cookies and similar technologies for analytics purposes, remembering your language preference, enabling dark mode preferences, and serving personalized advertisements. Third-party advertising partners, including Google AdSense, may use cookies to serve ads based on your prior visits to this or other websites. You can control cookies through your browser settings or through our cookie consent banner. You may opt out of personalized advertising by visiting Google\'s Ads Settings (adssettings.google.com) or the Network Advertising Initiative opt-out page (optout.networkadvertising.org).',
     thirdPartyTitle: 'Third-Party Services',
-    thirdPartyText: 'We may use third-party services such as Vercel for hosting and Google Analytics for understanding traffic patterns. These services may collect anonymous data as described in their respective privacy policies. We do not sell, trade, or share any data with third parties for advertising purposes.',
+    thirdPartyText: 'We use third-party services including Vercel for hosting, Google Analytics for understanding traffic patterns, and Google AdSense for displaying advertisements. These services may collect anonymous data as described in their respective privacy policies. Google AdSense uses cookies to serve ads based on your interests and browsing history. For more information about how Google uses data, visit Google\'s Privacy & Terms page (policies.google.com/privacy).',
+    advertisingTitle: 'Advertising',
+    advertisingText: 'This website displays advertisements served by Google AdSense. Google and its advertising partners may use cookies, web beacons, and similar technologies to collect information about your browsing activity across websites in order to provide personalized advertisements. This information may include your IP address, browser type, pages visited, and interactions with advertisements. You can opt out of personalized advertising by visiting Google\'s Ads Settings or by using the cookie consent options provided on this website. We do not have access to or control over cookies placed by third-party advertisers.',
     dataSecurityTitle: 'Data Security',
     dataSecurityText: 'Our website is served over HTTPS to ensure secure communication. Since we do not collect personal data, there is minimal risk to your privacy. We take reasonable measures to protect the integrity of our website and any data processed by our analytics tools.',
     yourRightsTitle: 'Your Rights',

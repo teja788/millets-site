@@ -149,6 +149,14 @@ export const fr: TranslationKeys = {
     noRecipesFilter: 'Aucune recette trouvée pour les filtres sélectionnés. Essayez une autre combinaison.',
   },
 
+  // Cookie consent banner
+  cookieConsent: {
+    message: 'Ce site utilise des cookies à des fins d\'analyse et de publicité personnalisée. En cliquant sur « Accepter », vous consentez à l\'utilisation de tous les cookies.',
+    accept: 'Accepter',
+    decline: 'Refuser',
+    learnMore: 'En savoir plus',
+  },
+
   // Medical disclaimer banner
   medicalDisclaimer: {
     health: 'Les informations de santé ci-dessous sont à titre éducatif uniquement et ne constituent pas un avis médical. Consultez un professionnel de santé avant de modifier votre alimentation.',
@@ -590,7 +598,7 @@ export const fr: TranslationKeys = {
   // Privacy Policy page
   privacyPolicy: {
     title: 'Politique de confidentialité',
-    lastUpdated: 'Dernière mise à jour : février 2026',
+    lastUpdated: 'Dernière mise à jour : avril 2026',
     intro: 'Simply Millets (« nous ») s\'engage à protéger votre vie privée. Cette politique de confidentialité explique comment nous collectons, utilisons et protégeons les informations lorsque vous visitez simplymillets.com.',
     informationWeCollectTitle: 'Informations que nous collectons',
     informationWeCollectText: 'Nous ne collectons aucune information personnelle telle que noms, adresses e-mail ou numéros de téléphone. Notre site est purement informatif et ne nécessite ni inscription ni connexion. Nous pouvons collecter des données d\'utilisation anonymes via des outils d\'analyse, notamment les pages visitées, le temps passé sur les pages, le type de navigateur, le type d\'appareil et la localisation géographique approximative.',
@@ -600,6 +608,8 @@ export const fr: TranslationKeys = {
     cookiesText: 'Notre site peut utiliser des cookies et technologies similaires à des fins d\'analyse, pour mémoriser votre préférence de langue et activer les préférences de mode sombre. Vous pouvez contrôler les cookies via les paramètres de votre navigateur. La désactivation des cookies n\'affectera pas les fonctionnalités essentielles de notre site.',
     thirdPartyTitle: 'Services tiers',
     thirdPartyText: 'Nous pouvons utiliser des services tiers tels que Vercel pour l\'hébergement et Google Analytics pour comprendre les tendances de trafic. Ces services peuvent collecter des données anonymes comme décrit dans leurs politiques de confidentialité respectives. Nous ne vendons, n\'échangeons ni ne partageons aucune donnée avec des tiers à des fins publicitaires.',
+    advertisingTitle: 'Publicité',
+    advertisingText: 'Ce site affiche des publicités diffusées par Google AdSense. Google et ses partenaires publicitaires peuvent utiliser des cookies pour diffuser des annonces personnalisées en fonction de votre activité de navigation. Vous pouvez désactiver la publicité personnalisée en visitant les paramètres de publicité de Google.',
     dataSecurityTitle: 'Sécurité des données',
     dataSecurityText: 'Notre site est servi via HTTPS pour garantir une communication sécurisée. Comme nous ne collectons pas de données personnelles, le risque pour votre vie privée est minimal. Nous prenons des mesures raisonnables pour protéger l\'intégrité de notre site et de toute donnée traitée par nos outils d\'analyse.',
     yourRightsTitle: 'Vos droits',

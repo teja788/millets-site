@@ -52,6 +52,7 @@ export default async function PrivacyPolicyPage({
     { title: p.howWeUseTitle, text: p.howWeUseText },
     { title: p.cookiesTitle, text: p.cookiesText },
     { title: p.thirdPartyTitle, text: p.thirdPartyText },
+    { title: p.advertisingTitle, text: p.advertisingText },
     { title: p.dataSecurityTitle, text: p.dataSecurityText },
     { title: p.yourRightsTitle, text: p.yourRightsText },
     { title: p.childrenTitle, text: p.childrenText },

@@ -5,6 +5,7 @@ import Footer from '@/components/layout/Footer';
 import ScrollProgress from '@/components/ui/ScrollProgress';
 import BackToTop from '@/components/ui/BackToTop';
 import LangSetter from '@/components/ui/LangSetter';
+import CookieConsent from '@/components/ui/CookieConsent';
 import { isValidLocale, localeParams } from '@/lib/i18n';
 import type { Locale } from '@/lib/i18n';
 
@@ -37,6 +38,7 @@ export default async function LocaleLayout({
       </main>
       <Footer locale={locale} />
       <BackToTop />
+      <CookieConsent />
     </ThemeProvider>
   );
 }
