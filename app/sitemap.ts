@@ -45,6 +45,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/tools/millet-quiz',
     '/tools/substitution-calculator',
     '/privacy-policy',
+    '/disclaimer',
   ];
 
   for (const route of staticRoutes) {
