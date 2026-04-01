@@ -82,6 +82,9 @@ export const metadata: Metadata = {
     statusBarStyle: 'default',
     title: 'Millets Guide',
   },
+  other: {
+    'google-adsense-account': 'ca-pub-5986156458101759',
+  },
 };
 
 export const viewport: Viewport = {
@@ -139,10 +142,9 @@ export default async function RootLayout({
         async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5986156458101759"
         crossOrigin="anonymous"
-        strategy="afterInteractive"
+        strategy="beforeInteractive"
       />
       <body className="font-body antialiased">{children}</body>
     </html>
   );
 }
-

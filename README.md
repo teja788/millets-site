@@ -12,7 +12,7 @@ Next.js site for multilingual millet content, recipes, and reference pages.
 
 Set this Vercel environment variable for the Production environment:
 
-- `SITE_URL=https://www.simplymillets.com`
+- `SITE_URL=https://simplymillets.com`
 
 `SITE_URL` is used for canonical metadata, robots, the sitemap, and the IndexNow payload.
 
@@ -34,7 +34,7 @@ Optional validation command:
 
 ```powershell
 $env:VERCEL_ENV='production'
-$env:SITE_URL='https://www.simplymillets.com'
+$env:SITE_URL='https://simplymillets.com'
 $env:INDEXNOW_DRY_RUN='1'
 node scripts/indexnow-submit.mjs
 ```
