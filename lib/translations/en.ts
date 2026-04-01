@@ -34,6 +34,7 @@ export const en = {
     cookingTimer: 'Cooking Timer',
     mealPlans: 'Meal Plans',
     privacyPolicy: 'Privacy Policy',
+    disclaimer: 'Disclaimer',
     contact: 'Contact',
     menu: 'Menu',
     search: 'Search',
@@ -73,6 +74,7 @@ export const en = {
     'substitution-calculator': 'Substitution Calculator',
     'cooking-timer': 'Cooking Timer',
     'privacy-policy': 'Privacy Policy',
+    disclaimer: 'Disclaimer',
     'nutrition-et-sante': 'Nutrition & Health',
     'millet-vs-quinoa': 'Millet vs Quinoa',
     'culture-africaine-du-mil': 'African Millet Culture',
@@ -143,6 +145,13 @@ export const en = {
     recipeSingular: 'recipe',
     recipePlural: 'recipes',
     noRecipesFilter: 'No recipes found for the selected filters. Try a different combination.',
+  },
+
+  // Medical disclaimer banner
+  medicalDisclaimer: {
+    health: 'The health information below is for educational purposes only and is not medical advice. Consult a healthcare professional before making dietary changes.',
+    ayurveda: 'The traditional knowledge below is presented for cultural and educational interest. These are not clinically validated medical claims.',
+    readMore: 'Read full disclaimer',
   },
 
   // Home page
@@ -598,6 +607,16 @@ export const en = {
     changesText: 'We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date. We encourage you to review this page periodically.',
     contactTitle: 'Contact Us',
     contactText: 'If you have any questions about this Privacy Policy, please reach out to us at se3ker.of.truth@gmail.com.',
+  },
+  // Disclaimer page
+  disclaimerPage: {
+    title: 'Disclaimer',
+    lastUpdated: 'Last updated: April 2026',
+    intro: 'Please read this disclaimer carefully before using the information on this website.',
+    healthDisclaimerTitle: 'Health & Medical Disclaimer',
+    healthDisclaimerText: 'This website provides general nutritional information about millets and related foods for educational purposes only. The content is not intended as medical advice, diagnosis, or treatment. Always consult a qualified healthcare professional before making dietary changes, especially if you have existing health conditions. Individual health conditions vary, and what works for one person may not work for another. Information about specific health conditions such as diabetes, bone health, or cardiovascular health reflects published research but should not replace professional medical guidance.',
+    aiDisclosureTitle: 'AI & Content Disclosure',
+    aiDisclosureText: 'Content on this website is created with the assistance of AI tools and is based on published research, government databases (such as ICMR-NIN and USDA), peer-reviewed journals, and traditional knowledge systems. While we strive for accuracy and cite our sources wherever possible, errors may occur. Users should verify critical health information with qualified professionals. The evidence levels displayed alongside health claims reflect our assessment of the supporting research and should not be interpreted as medical endorsements.',
   },
   // Contact page
   contactPage: {
