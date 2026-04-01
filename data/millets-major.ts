@@ -121,21 +121,21 @@ export const majorMillets: Millet[] = [
       {
         benefit: 'Rich iron source',
         description:
-          'Pearl millet contains 8.0mg iron per 100g, making it one of the best plant-based iron sources among cereals. This helps combat iron-deficiency anemia, which is prevalent in India.',
+          'Pearl millet contains 8.0mg iron per 100g, making it one of the best plant-based iron sources among cereals. This may help address iron-deficiency anemia, which is prevalent in India.',
         evidenceLevel: 'well-established',
         source: 'ICMR-NIN IFCT 2017',
       },
       {
-        benefit: 'Supports cardiovascular health',
+        benefit: 'May support cardiovascular health',
         description:
-          'The magnesium and potassium content in pearl millet supports heart health by helping regulate blood pressure and maintaining healthy heart rhythm.',
+          'The magnesium and potassium content in pearl millet may support heart health by helping regulate blood pressure and maintaining healthy heart rhythm.',
         evidenceLevel: 'supported-by-research',
         source: 'Journal of Food Science and Technology',
       },
       {
-        benefit: 'Good for diabetes management',
+        benefit: 'May support blood sugar management',
         description:
-          'With a glycemic index of ~55, pearl millet releases glucose slowly into the bloodstream, making it suitable for people managing diabetes.',
+          'With a glycemic index of ~55, pearl millet releases glucose slowly into the bloodstream, which may be beneficial for people managing blood sugar levels.',
         evidenceLevel: 'supported-by-research',
         source: 'International Journal of Food Sciences and Nutrition',
       },
@@ -301,28 +301,28 @@ export const majorMillets: Millet[] = [
       {
         benefit: 'Exceptional calcium source',
         description:
-          'Finger millet contains 344mg calcium per 100g, the highest among all cereals and comparable to milk. This makes it invaluable for bone health, especially for those who are lactose intolerant.',
+          'Finger millet contains 344mg calcium per 100g, the highest among all cereals and comparable to milk. This may support bone health, especially for those who are lactose intolerant.',
         evidenceLevel: 'well-established',
         source: 'ICMR-NIN IFCT 2017',
       },
       {
-        benefit: 'Supports bone health and osteoporosis prevention',
+        benefit: 'May support bone health',
         description:
-          'The high calcium and phosphorus content supports bone density and may help prevent osteoporosis, particularly in postmenopausal women and the elderly.',
+          'The high calcium and phosphorus content may support bone density, particularly in postmenopausal women and the elderly.',
         evidenceLevel: 'supported-by-research',
         source: 'Journal of Bone and Mineral Research',
       },
       {
-        benefit: 'Good for diabetes management',
+        benefit: 'May support blood sugar management',
         description:
-          'Finger millet contains amino acids that help lower blood sugar response. Its seed coat is rich in polyphenols and dietary fiber that slow glucose absorption.',
+          'Finger millet contains amino acids that may help lower blood sugar response. Its seed coat is rich in polyphenols and dietary fiber that slow glucose absorption.',
         evidenceLevel: 'supported-by-research',
         source: 'Journal of Agricultural and Food Chemistry',
       },
       {
         benefit: 'Rich in antioxidants',
         description:
-          'Contains phenolic acids, flavonoids, and tannins that have significant antioxidant activity, helping combat oxidative stress in the body.',
+          'Contains phenolic acids, flavonoids, and tannins that have significant antioxidant activity, which may help address oxidative stress in the body.',
         evidenceLevel: 'supported-by-research',
         source: 'Food Chemistry',
       },
@@ -487,9 +487,9 @@ export const majorMillets: Millet[] = [
 
     healthBenefits: [
       {
-        benefit: 'Very high fiber content aids digestion',
+        benefit: 'Very high fiber content may aid digestion',
         description:
-          'Sorghum contains 9.7g fiber per 100g, among the highest of all cereals. This promotes healthy digestion, regular bowel movements, and supports gut microbiome diversity.',
+          'Sorghum contains 9.7g fiber per 100g, among the highest of all cereals. This may promote healthy digestion, regular bowel movements, and may support gut microbiome diversity.',
         evidenceLevel: 'well-established',
         source: 'ICMR-NIN IFCT 2017',
       },
@@ -508,7 +508,7 @@ export const majorMillets: Millet[] = [
         source: 'Nutrition and Cancer journal',
       },
       {
-        benefit: 'Supports heart health',
+        benefit: 'May support heart health',
         description:
           'The high fiber and magnesium content, along with policosanols found in sorghum wax, may help lower cholesterol and support cardiovascular health.',
         evidenceLevel: 'supported-by-research',
@@ -679,7 +679,7 @@ export const majorMillets: Millet[] = [
         source: 'ICMR-NIN IFCT 2017',
       },
       {
-        benefit: 'Low glycemic index good for diabetics',
+        benefit: 'Low glycemic index may benefit blood sugar management',
         description:
           'With a GI of approximately 50, foxtail millet has a slow glucose release, making it a suitable grain for people managing diabetes.',
         evidenceLevel: 'supported-by-research',
@@ -688,7 +688,7 @@ export const majorMillets: Millet[] = [
       {
         benefit: 'Rich in dietary fiber',
         description:
-          'Contains 8.0g fiber per 100g, supporting digestive health, promoting satiety, and helping maintain healthy cholesterol levels.',
+          'Contains 8.0g fiber per 100g, which may support digestive health, promote satiety, and help maintain healthy cholesterol levels.',
         evidenceLevel: 'well-established',
         source: 'ICMR-NIN IFCT 2017',
       },
@@ -860,7 +860,7 @@ export const majorMillets: Millet[] = [
       {
         benefit: 'Good fiber source for digestive health',
         description:
-          'With 7.6g fiber per 100g, little millet supports healthy digestion, regular bowel movements, and may help lower cholesterol levels.',
+          'With 7.6g fiber per 100g, little millet may support healthy digestion, regular bowel movements, and may help lower cholesterol levels.',
         evidenceLevel: 'well-established',
         source: 'ICMR-NIN IFCT 2017',
       },

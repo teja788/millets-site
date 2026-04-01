@@ -129,7 +129,7 @@ export const minorMillets: Millet[] = [
       {
         benefit: 'Rich in fiber for digestive health',
         description:
-          'With 9.0g fiber per 100g, kodo millet supports healthy digestion, promotes regular bowel movements, and may help maintain healthy cholesterol levels.',
+          'With 9.0g fiber per 100g, kodo millet may support healthy digestion, promote regular bowel movements, and may help maintain healthy cholesterol levels.',
         evidenceLevel: 'well-established',
         source: 'ICMR-NIN IFCT 2017',
       },
@@ -301,7 +301,7 @@ export const minorMillets: Millet[] = [
       {
         benefit: 'Highest fiber among millets',
         description:
-          'Barnyard millet contains 9.8g fiber per 100g, the highest among commonly consumed millets. This exceptional fiber content supports digestive health, promotes satiety, and aids in cholesterol management.',
+          'Barnyard millet contains 9.8g fiber per 100g, the highest among commonly consumed millets. This exceptional fiber content may support digestive health, promote satiety, and aid in cholesterol management.',
         evidenceLevel: 'well-established',
         source: 'ICMR-NIN / published literature',
       },
@@ -427,9 +427,9 @@ export const minorMillets: Millet[] = [
         kapha: 'decreases',
       },
       therapeuticUses: [
-        'Supports muscle building due to high protein content',
+        'May support muscle building due to high protein content',
         'Warming quality beneficial in cold seasons',
-        'Light quality supports easy digestion',
+        'Light quality is said to support easy digestion',
         'Traditionally used for strength and vitality',
       ],
       contraindications: [
@@ -491,9 +491,9 @@ export const minorMillets: Millet[] = [
         source: 'ICMR-NIN IFCT 2017',
       },
       {
-        benefit: 'Lecithin supports liver health',
+        benefit: 'Lecithin may support liver health',
         description:
-          'Proso millet contains lecithin, a phospholipid that supports liver function and may help in fat metabolism. Preliminary studies suggest this may support overall liver health.',
+          'Proso millet contains lecithin, a phospholipid that may support liver function and may help in fat metabolism. Preliminary studies suggest this may support overall liver health.',
         evidenceLevel: 'preliminary-evidence',
         source: 'Journal of Cereal Science',
       },
@@ -617,7 +617,7 @@ export const minorMillets: Millet[] = [
       therapeuticUses: [
         'Exceptional for gut health and digestive regularity due to very high fiber',
         'Cooling nature suitable for Pitta conditions',
-        'Light quality supports easy digestion and detoxification',
+        'Light quality is said to support easy digestion and detoxification',
         'May support healthy weight management',
       ],
       contraindications: [
@@ -667,7 +667,7 @@ export const minorMillets: Millet[] = [
       {
         benefit: 'Highest fiber content among all millets',
         description:
-          'Browntop millet contains 12.5g fiber per 100g, the highest among all millets. This extraordinary fiber content supports digestive health, promotes satiety, and aids in maintaining healthy cholesterol and blood sugar levels.',
+          'Browntop millet contains 12.5g fiber per 100g, the highest among all millets. This extraordinary fiber content may support digestive health, promote satiety, and aid in maintaining healthy cholesterol and blood sugar levels.',
         evidenceLevel: 'well-established',
         source: 'Published literature on millet nutrition',
       },
