@@ -135,6 +135,12 @@ export default async function RootLayout({
           </Script>
         </>
       )}
+      <Script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5986156458101759"
+        crossOrigin="anonymous"
+        strategy="afterInteractive"
+      />
       <body className="font-body antialiased">{children}</body>
     </html>
   );
