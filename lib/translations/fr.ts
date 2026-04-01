@@ -36,6 +36,7 @@ export const fr: TranslationKeys = {
     cookingTimer: 'Minuteur de cuisson',
     mealPlans: 'Plans de repas',
     privacyPolicy: 'Politique de confidentialité',
+    disclaimer: 'Avertissement',
     contact: 'Contact',
     menu: 'Menu',
     search: 'Rechercher',
@@ -75,6 +76,7 @@ export const fr: TranslationKeys = {
     'substitution-calculator': 'Calculateur de substitution',
     'cooking-timer': 'Minuteur de cuisson',
     'privacy-policy': 'Politique de confidentialité',
+    disclaimer: 'Avertissement',
     'nutrition-et-sante': 'Nutrition et santé',
     'millet-vs-quinoa': 'Millet vs Quinoa',
     'culture-africaine-du-mil': 'Culture africaine du mil',
@@ -145,6 +147,13 @@ export const fr: TranslationKeys = {
     recipeSingular: 'recette',
     recipePlural: 'recettes',
     noRecipesFilter: 'Aucune recette trouvée pour les filtres sélectionnés. Essayez une autre combinaison.',
+  },
+
+  // Medical disclaimer banner
+  medicalDisclaimer: {
+    health: 'Les informations de santé ci-dessous sont à titre éducatif uniquement et ne constituent pas un avis médical. Consultez un professionnel de santé avant de modifier votre alimentation.',
+    ayurveda: 'Les connaissances traditionnelles ci-dessous sont présentées à titre culturel et éducatif. Il ne s\'agit pas d\'allégations médicales cliniquement validées.',
+    readMore: 'Lire l\'avertissement complet',
   },
 
   // Home page
@@ -601,6 +610,16 @@ export const fr: TranslationKeys = {
     changesText: 'Nous pouvons mettre à jour cette politique de confidentialité de temps en temps. Toute modification sera publiée sur cette page avec une date de révision mise à jour. Nous vous encourageons à consulter cette page régulièrement.',
     contactTitle: 'Nous contacter',
     contactText: 'Si vous avez des questions concernant cette politique de confidentialité, n\'hésitez pas à nous contacter à se3ker.of.truth@gmail.com.',
+  },
+  // Disclaimer page
+  disclaimerPage: {
+    title: 'Avertissement',
+    lastUpdated: 'Dernière mise à jour : avril 2026',
+    intro: 'Veuillez lire attentivement cet avertissement avant d\'utiliser les informations de ce site.',
+    healthDisclaimerTitle: 'Avertissement santé et médical',
+    healthDisclaimerText: 'Ce site fournit des informations nutritionnelles générales sur les millets à des fins éducatives uniquement. Le contenu ne constitue pas un avis médical, un diagnostic ou un traitement. Consultez toujours un professionnel de santé qualifié avant de modifier votre alimentation.',
+    aiDisclosureTitle: 'Divulgation IA et contenu',
+    aiDisclosureText: 'Le contenu de ce site est créé avec l\'aide d\'outils d\'IA et repose sur des recherches publiées, des bases de données gouvernementales et des systèmes de connaissances traditionnels. Malgré nos efforts de précision, des erreurs peuvent survenir.',
   },
 
   // Contact page

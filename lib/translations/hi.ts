@@ -36,6 +36,7 @@ export const hi: TranslationKeys = {
     cookingTimer: 'पकाने का टाइमर',
     mealPlans: 'भोजन योजनाएँ',
     privacyPolicy: 'गोपनीयता नीति',
+    disclaimer: 'अस्वीकरण',
     contact: 'संपर्क करें',
     menu: 'मेन्यू',
     search: 'खोजें',
@@ -75,6 +76,7 @@ export const hi: TranslationKeys = {
     'substitution-calculator': 'विकल्प कैलकुलेटर',
     'cooking-timer': 'पकाने का टाइमर',
     'privacy-policy': 'गोपनीयता नीति',
+    disclaimer: 'अस्वीकरण',
     'nutrition-et-sante': 'Nutrition & Health',
     'millet-vs-quinoa': 'Millet vs Quinoa',
     'culture-africaine-du-mil': 'African Millet Culture',
@@ -145,6 +147,13 @@ export const hi: TranslationKeys = {
     recipeSingular: 'रेसिपी',
     recipePlural: 'रेसिपी',
     noRecipesFilter: 'चुने गए फ़िल्टर के लिए कोई रेसिपी नहीं मिली। दूसरा कॉम्बिनेशन आज़माएँ।',
+  },
+
+  // Medical disclaimer banner
+  medicalDisclaimer: {
+    health: 'नीचे दी गई स्वास्थ्य जानकारी केवल शैक्षिक उद्देश्यों के लिए है और यह चिकित्सा सलाह नहीं है। आहार में बदलाव करने से पहले किसी स्वास्थ्य पेशेवर से परामर्श करें।',
+    ayurveda: 'नीचे दिया गया पारंपरिक ज्ञान सांस्कृतिक और शैक्षिक रुचि के लिए प्रस्तुत किया गया है। ये चिकित्सकीय रूप से मान्य दावे नहीं हैं।',
+    readMore: 'पूरा अस्वीकरण पढ़ें',
   },
 
   // Home page
@@ -601,6 +610,16 @@ export const hi: TranslationKeys = {
     changesText: 'हम समय-समय पर इस गोपनीयता नीति को अपडेट कर सकते हैं। कोई भी बदलाव अपडेट की गई तारीख के साथ इस पेज पर पोस्ट किया जाएगा। हम आपसे अनुरोध करते हैं कि इस पेज को नियमित रूप से देखें।',
     contactTitle: 'हमसे संपर्क करें',
     contactText: 'अगर इस गोपनीयता नीति के बारे में आपके कोई सवाल हैं, तो कृपया हमें se3ker.of.truth@gmail.com पर संपर्क करें।',
+  },
+  // Disclaimer page
+  disclaimerPage: {
+    title: 'अस्वीकरण',
+    lastUpdated: 'अंतिम अपडेट: अप्रैल 2026',
+    intro: 'इस वेबसाइट पर जानकारी का उपयोग करने से पहले कृपया इस अस्वीकरण को ध्यान से पढ़ें।',
+    healthDisclaimerTitle: 'स्वास्थ्य और चिकित्सा अस्वीकरण',
+    healthDisclaimerText: 'यह वेबसाइट बाजरा और संबंधित खाद्य पदार्थों के बारे में सामान्य पोषण जानकारी केवल शैक्षिक उद्देश्यों के लिए प्रदान करती है। यह सामग्री चिकित्सा सलाह, निदान या उपचार के रूप में अभिप्रेत नहीं है। आहार में बदलाव करने से पहले हमेशा किसी योग्य स्वास्थ्य पेशेवर से परामर्श करें।',
+    aiDisclosureTitle: 'AI और सामग्री प्रकटीकरण',
+    aiDisclosureText: 'इस वेबसाइट पर सामग्री AI उपकरणों की सहायता से बनाई गई है और प्रकाशित शोध, सरकारी डेटाबेस और पारंपरिक ज्ञान प्रणालियों पर आधारित है। सटीकता के लिए हमारे प्रयासों के बावजूद, त्रुटियां हो सकती हैं।',
   },
 
   // Contact page

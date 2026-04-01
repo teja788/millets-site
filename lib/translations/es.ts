@@ -36,6 +36,7 @@ export const es: TranslationKeys = {
     cookingTimer: 'Temporizador de cocción',
     mealPlans: 'Planes de comidas',
     privacyPolicy: 'Política de privacidad',
+    disclaimer: 'Aviso legal',
     contact: 'Contacto',
     menu: 'Menú',
     search: 'Buscar',
@@ -75,6 +76,7 @@ export const es: TranslationKeys = {
     'substitution-calculator': 'Calculadora de sustitución',
     'cooking-timer': 'Temporizador de cocción',
     'privacy-policy': 'Política de privacidad',
+    disclaimer: 'Aviso legal',
     'nutricion-y-salud': 'Nutrición y salud',
     'mijo-vs-quinoa': 'Mijo vs Quinoa',
     'mijo-en-la-cocina-hispanica': 'Mijo en la cocina hispánica',
@@ -145,6 +147,13 @@ export const es: TranslationKeys = {
     recipeSingular: 'receta',
     recipePlural: 'recetas',
     noRecipesFilter: 'No se encontraron recetas para los filtros seleccionados. Pruebe otra combinación.',
+  },
+
+  // Medical disclaimer banner
+  medicalDisclaimer: {
+    health: 'La información de salud a continuación es solo con fines educativos y no constituye consejo médico. Consulte a un profesional de la salud antes de realizar cambios en su dieta.',
+    ayurveda: 'El conocimiento tradicional a continuación se presenta con fines culturales y educativos. No se trata de afirmaciones médicas clínicamente validadas.',
+    readMore: 'Leer aviso legal completo',
   },
 
   // Home page
@@ -601,6 +610,16 @@ export const es: TranslationKeys = {
     changesText: 'Podemos actualizar esta política de privacidad de vez en cuando. Cualquier cambio se publicará en esta página con una fecha de revisión actualizada. Le recomendamos que consulte esta página periódicamente.',
     contactTitle: 'Contáctenos',
     contactText: 'Si tiene preguntas sobre esta política de privacidad, no dude en contactarnos en se3ker.of.truth@gmail.com.',
+  },
+  // Disclaimer page
+  disclaimerPage: {
+    title: 'Aviso legal',
+    lastUpdated: 'Última actualización: abril de 2026',
+    intro: 'Por favor, lea este aviso legal detenidamente antes de utilizar la información de este sitio web.',
+    healthDisclaimerTitle: 'Aviso legal de salud y médico',
+    healthDisclaimerText: 'Este sitio web proporciona información nutricional general sobre mijo y alimentos relacionados solo con fines educativos. El contenido no pretende ser consejo médico, diagnóstico ni tratamiento. Consulte siempre a un profesional de la salud cualificado antes de realizar cambios en su dieta.',
+    aiDisclosureTitle: 'Divulgación de IA y contenido',
+    aiDisclosureText: 'El contenido de este sitio web se ha creado con la ayuda de herramientas de IA y se basa en investigaciones publicadas, bases de datos gubernamentales y sistemas de conocimiento tradicional. A pesar de nuestros esfuerzos por la precisión, pueden producirse errores.',
   },
 
   // Contact page

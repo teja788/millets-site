@@ -36,6 +36,7 @@ export const ar: TranslationKeys = {
     cookingTimer: 'مؤقت الطهي',
     mealPlans: 'خطط الوجبات',
     privacyPolicy: 'سياسة الخصوصية',
+    disclaimer: 'إخلاء المسؤولية',
     contact: 'اتصل بنا',
     menu: 'القائمة',
     search: 'بحث',
@@ -75,6 +76,7 @@ export const ar: TranslationKeys = {
     'substitution-calculator': 'حاسبة الإحلال',
     'cooking-timer': 'مؤقت الطهي',
     'privacy-policy': 'سياسة الخصوصية',
+    disclaimer: 'إخلاء المسؤولية',
     'nutrition-et-sante': 'Nutrition & Health',
     'millet-vs-quinoa': 'Millet vs Quinoa',
     'culture-africaine-du-mil': 'African Millet Culture',
@@ -145,6 +147,13 @@ export const ar: TranslationKeys = {
     recipeSingular: 'وصفة',
     recipePlural: 'وصفات',
     noRecipesFilter: 'لم يتم العثور على وصفات للمرشحات المحددة. جرّب مجموعة أخرى.',
+  },
+
+  // Medical disclaimer banner
+  medicalDisclaimer: {
+    health: 'المعلومات الصحية أدناه هي لأغراض تعليمية فقط وليست نصيحة طبية. استشر أخصائي الرعاية الصحية قبل إجراء تغييرات غذائية.',
+    ayurveda: 'المعرفة التقليدية أدناه مقدمة للاهتمام الثقافي والتعليمي. هذه ليست ادعاءات طبية مثبتة سريرياً.',
+    readMore: 'اقرأ إخلاء المسؤولية الكامل',
   },
 
   // Home page
@@ -600,6 +609,16 @@ export const ar: TranslationKeys = {
     changesText: 'قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. سيتم نشر أي تغييرات على هذه الصفحة مع تاريخ المراجعة المحدث. نشجعك على مراجعة هذه الصفحة بشكل دوري.',
     contactTitle: 'اتصل بنا',
     contactText: 'إذا كانت لديك أي أسئلة حول سياسة الخصوصية هذه، يرجى التواصل معنا عبر موقعنا الإلكتروني.',
+  },
+  // Disclaimer page
+  disclaimerPage: {
+    title: 'إخلاء المسؤولية',
+    lastUpdated: 'آخر تحديث: أبريل 2026',
+    intro: 'يرجى قراءة إخلاء المسؤولية هذا بعناية قبل استخدام المعلومات الموجودة على هذا الموقع.',
+    healthDisclaimerTitle: 'إخلاء المسؤولية الصحية والطبية',
+    healthDisclaimerText: 'يوفر هذا الموقع معلومات غذائية عامة عن الدخن والأطعمة ذات الصلة لأغراض تعليمية فقط. لا يُقصد من المحتوى أن يكون نصيحة طبية أو تشخيصاً أو علاجاً. استشر دائماً أخصائي رعاية صحية مؤهل قبل إجراء تغييرات غذائية.',
+    aiDisclosureTitle: 'إفصاح الذكاء الاصطناعي والمحتوى',
+    aiDisclosureText: 'تم إنشاء المحتوى على هذا الموقع بمساعدة أدوات الذكاء الاصطناعي ويستند إلى أبحاث منشورة وقواعد بيانات حكومية وأنظمة المعرفة التقليدية. على الرغم من سعينا للدقة، قد تحدث أخطاء.',
   },
   contactPage: {
     title: 'Contact Us',

@@ -36,6 +36,7 @@ export const de: TranslationKeys = {
     cookingTimer: 'Kochtimer',
     mealPlans: 'Mahlzeitpläne',
     privacyPolicy: 'Datenschutz',
+    disclaimer: 'Haftungsausschluss',
     contact: 'Kontakt',
     menu: 'Menü',
     search: 'Suche',
@@ -75,6 +76,7 @@ export const de: TranslationKeys = {
     'substitution-calculator': 'Austausch-Rechner',
     'cooking-timer': 'Kochtimer',
     'privacy-policy': 'Datenschutz',
+    disclaimer: 'Haftungsausschluss',
     'nutrition-et-sante': 'Ernährung & Gesundheit',
     'millet-vs-quinoa': 'Hirse vs Quinoa',
     'culture-africaine-du-mil': 'Afrikanische Hirsekultur',
@@ -145,6 +147,13 @@ export const de: TranslationKeys = {
     recipeSingular: 'Rezept',
     recipePlural: 'Rezepte',
     noRecipesFilter: 'Keine Rezepte für die gewählten Filter gefunden. Versuchen Sie eine andere Kombination.',
+  },
+
+  // Medical disclaimer banner
+  medicalDisclaimer: {
+    health: 'Die folgenden Gesundheitsinformationen dienen ausschließlich Bildungszwecken und stellen keine medizinische Beratung dar. Konsultieren Sie einen Arzt, bevor Sie Ihre Ernährung umstellen.',
+    ayurveda: 'Das folgende traditionelle Wissen wird zu kulturellen und bildungsbezogenen Zwecken präsentiert. Es handelt sich nicht um klinisch validierte medizinische Aussagen.',
+    readMore: 'Vollständigen Haftungsausschluss lesen',
   },
 
   // Home page
@@ -601,6 +610,16 @@ export const de: TranslationKeys = {
     changesText: 'Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren. Änderungen werden auf dieser Seite mit einem aktualisierten Datum veröffentlicht. Wir empfehlen Ihnen, diese Seite regelmäßig zu überprüfen.',
     contactTitle: 'Kontakt',
     contactText: 'Bei Fragen zu dieser Datenschutzerklärung wenden Sie sich bitte an se3ker.of.truth@gmail.com.',
+  },
+  // Disclaimer page
+  disclaimerPage: {
+    title: 'Haftungsausschluss',
+    lastUpdated: 'Zuletzt aktualisiert: April 2026',
+    intro: 'Bitte lesen Sie diesen Haftungsausschluss sorgfältig, bevor Sie die Informationen auf dieser Website nutzen.',
+    healthDisclaimerTitle: 'Gesundheits- und medizinischer Haftungsausschluss',
+    healthDisclaimerText: 'Diese Website bietet allgemeine Ernährungsinformationen über Hirse ausschließlich zu Bildungszwecken. Der Inhalt ist nicht als medizinische Beratung, Diagnose oder Behandlung gedacht. Konsultieren Sie immer einen qualifizierten Arzt, bevor Sie Ihre Ernährung ändern.',
+    aiDisclosureTitle: 'KI- und Inhaltsoffenlegung',
+    aiDisclosureText: 'Der Inhalt dieser Website wurde mit Hilfe von KI-Tools erstellt und basiert auf veröffentlichten Forschungsergebnissen, staatlichen Datenbanken und traditionellen Wissenssystemen. Trotz unserer Bemühungen um Genauigkeit können Fehler auftreten.',
   },
 
   // Contact page
