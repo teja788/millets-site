@@ -39,15 +39,16 @@ Three coordinated changes:
 - Users should verify critical health information with qualified professionals
 
 ### Integration
-- Add "Disclaimer" link to Footer.tsx Resources column (alongside Privacy Policy)
-- Add `nav.disclaimer` translation key
-- Add `disclaimer` page translation keys to all 7 locale files (en, te, ar, fr, de, hi, es)
+- Add "Disclaimer" link to Footer.tsx Resources column (alongside Privacy Policy), ungated (available to all locales)
+- Add `nav.disclaimer` translation key (this is the footer nav link label; distinct from `common.disclaimer` which is used as the inline section header on the Privacy Policy page)
+- Add `breadcrumb.disclaimer` key to all 7 locale files for breadcrumb rendering
+- Add `disclaimerPage` translation key group to all 7 locale files (en, te, ar, fr, de, hi, es)
 - Keep existing footer nutrition attribution text unchanged
 - Keep existing `common.disclaimer` / `common.disclaimerText` keys unchanged (still used on Privacy Policy page)
 
 ### Page structure
-- Breadcrumb
-- Page title + last updated date
+- Breadcrumb (requires `breadcrumb.disclaimer` key in translations)
+- Page title + last updated date (use `disclaimerPage.lastUpdated` translation key, e.g. `'Last updated: April 2026'`)
 - Two sections with h2 headings
 - Same styling as Privacy Policy page (max-w-3xl, same typography)
 - Static metadata with hreflang alternates
@@ -74,18 +75,23 @@ interface MedicalDisclaimerProps {
 - `"health"` (default): "The health information below is for educational purposes only and is not medical advice. Consult a healthcare professional before making dietary changes." + [Read full disclaimer]
 - `"ayurveda"`: "The traditional knowledge below is presented for cultural and educational interest. These are not clinically validated medical claims." + [Read full disclaimer]
 
+### Link construction
+- The "Read full disclaimer" link MUST use `localePath(locale, '/disclaimer')` to generate the correct locale-prefixed URL
+- The `locale` prop exists specifically for this purpose
+
 ### Translation keys
 - Add `medicalDisclaimer.health` and `medicalDisclaimer.ayurveda` keys to all 7 locale files
-- Add `medicalDisclaimer.readMore` key for the link text
+- Add `medicalDisclaimer.readMore` key for the link text (e.g. "Read full disclaimer")
+- Non-English translations: provide appropriate translations for the banner text in all 6 non-English locales
 
 ### Placement (files to modify)
-1. `app/[lang]/millets/[slug]/page.tsx` — above the Health Benefits section (`id="health-benefits"`)
-2. `app/[lang]/faq/page.tsx` — near the top of the page content
-3. `app/[lang]/ayurveda/page.tsx` — near the top, with `context="ayurveda"`
-4. `app/[lang]/nutrition/page.tsx` — near the top
-5. `app/[lang]/nutrition-et-sante/page.tsx` — near the top (French health page)
-6. `app/[lang]/nutricion-y-salud/page.tsx` — near the top (Spanish health page)
-7. `app/[lang]/ernaehrung-und-gesundheit/page.tsx` — near the top (German health page)
+1. `app/[lang]/millets/[slug]/page.tsx` — above the Health Benefits section (`id="health-benefits"`) — server component, pass `locale` directly
+2. `app/[lang]/faq/page.tsx` — near the top of the page content — server component
+3. `app/[lang]/ayurveda/page.tsx` — **replace** the existing inline `AlertTriangle` disclaimer section (lines ~342-356) with the new `MedicalDisclaimer` component using `context="ayurveda"` to avoid duplicate disclaimers
+4. `app/[lang]/nutrition/page.tsx` — near the top — server component
+5. `app/[lang]/nutrition-et-sante/page.tsx` — near the top (French health page) — **client component**: extract locale from `useParams()`, not server props
+6. `app/[lang]/nutricion-y-salud/page.tsx` — near the top (Spanish health page) — **client component**: extract locale from `useParams()`
+7. `app/[lang]/ernaehrung-und-gesundheit/page.tsx` — near the top (German health page) — **client component**: extract locale from `useParams()`
 
 ## 3. Claim Language Softening
 
