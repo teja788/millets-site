@@ -112,6 +112,8 @@ export default async function HomePage({
             <p>{t.home.whatAreMilletsP1}</p>
             <p>{t.home.whatAreMilletsP2}</p>
             <p>{t.home.whatAreMilletsP3}</p>
+            <p>{t.home.whatAreMilletsP4}</p>
+            <p>{t.home.whatAreMilletsP5}</p>
           </div>
         </div>
       </section>
@@ -225,35 +227,19 @@ export default async function HomePage({
               </Card>
             </Link>
 
-            {locale === 'en' ? (
-              <Link href={localePath(locale, '/about')} className="group">
-                <Card variant="outlined" className="h-full transition-shadow hover:shadow-elevated">
-                  <CardBody className="text-center">
-                    <BookOpen className="w-8 h-8 text-earth-400 mx-auto mb-3 group-hover:text-forest-600 transition-colors" />
-                    <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-2">
-                      {t.home.learnMoreTitle}
-                    </h3>
-                    <p className="text-sm text-earth-600 dark:text-earth-300">
-                      {t.home.learnMoreDesc}
-                    </p>
-                  </CardBody>
-                </Card>
-              </Link>
-            ) : (
-              <Link href={localePath(locale, '/history')} className="group">
-                <Card variant="outlined" className="h-full transition-shadow hover:shadow-elevated">
-                  <CardBody className="text-center">
-                    <BookOpen className="w-8 h-8 text-earth-400 mx-auto mb-3 group-hover:text-forest-600 transition-colors" />
-                    <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-2">
-                      {t.home.learnMoreTitle}
-                    </h3>
-                    <p className="text-sm text-earth-600 dark:text-earth-300">
-                      {t.home.learnMoreDesc}
-                    </p>
-                  </CardBody>
-                </Card>
-              </Link>
-            )}
+            <Link href={localePath(locale, '/about')} className="group">
+              <Card variant="outlined" className="h-full transition-shadow hover:shadow-elevated">
+                <CardBody className="text-center">
+                  <BookOpen className="w-8 h-8 text-earth-400 mx-auto mb-3 group-hover:text-forest-600 transition-colors" />
+                  <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-2">
+                    {t.home.learnMoreTitle}
+                  </h3>
+                  <p className="text-sm text-earth-600 dark:text-earth-300">
+                    {t.home.learnMoreDesc}
+                  </p>
+                </CardBody>
+              </Card>
+            </Link>
           </div>
         </div>
       </section>

@@ -171,7 +171,9 @@ export const en = {
     whatAreMillets: 'What Are Millets?',
     whatAreMilletsP1: 'Millets are a diverse group of small-seeded cereal grains belonging to the family Poaceae, cultivated for thousands of years. They include several distinct species — pearl millet, finger millet, sorghum, foxtail millet, and more. Most millets are C4 plants with a highly efficient photosynthetic pathway, allowing them to thrive in hot, dry conditions.',
     whatAreMilletsP2: 'What makes millets remarkable is their nutritional density and environmental resilience. They are naturally gluten-free, rich in protein, fiber, iron, and calcium, and have low glycemic indices — making them ideal for modern health-conscious diets.',
-    whatAreMilletsP3: 'India is the world\'s largest producer of millets, and 2023 was declared the International Year of Millets by the United Nations, championed by India. This website is a comprehensive, evidence-based resource to help you explore, cook, and benefit from these ancient grains.',
+    whatAreMilletsP3: 'India is the world\'s largest producer of millets, and 2023 was declared the International Year of Millets by the United Nations, championed by India and supported by more than 70 countries. This renewed global attention builds on a history that reaches back far before modern agriculture: archaeological sites in northern China preserve foxtail and proso millet from around 8700 BCE, while pearl millet was independently domesticated in the West African Sahel by roughly 4500 BCE and reached the Indian subcontinent some two millennia later.',
+    whatAreMilletsP4: 'Millets are attracting renewed attention as climate-resilient crops. Pearl millet can produce a harvest on as little as 350–500 mm of seasonal rainfall and matures in 65 to 85 days, while foxtail, little, and kodo millets set seed on similarly short water budgets. Finger millet (ragi), for its part, provides roughly 344 mg of calcium per 100 grams — the highest among common cereals, and several times that of milled rice. Traditional Indian medical texts such as the Charaka Samhita, Sushruta Samhita, and Bhavaprakasha Nighantu classified these grains within specific therapeutic categories — generally placing them among the laghu (light to digest) and kashaya (astringent) grains — long before modern nutrition research examined them.',
+    whatAreMilletsP5: 'This website covers nine millets in depth: their nutrition (anchored to the ICMR-NIN Indian Food Composition Tables and USDA databases), traditional and contemporary recipes, Ayurvedic properties, cultivation practices, and regional culinary traditions across India and abroad. Wherever a claim is made, we try to attribute it to a named source and to distinguish well-established findings from preliminary research. The goal is not to sell millets as a superfood, but to help you understand what they are, how the different species differ from one another, and how to actually use them in a kitchen.',
     exploreAllMillets: 'Explore All 9 Millets',
     exploreAllMilletsDesc: 'Click on any millet to discover its nutrition, recipes, Ayurvedic properties, cooking methods, and more.',
     whyMillets: 'Why Millets?',
@@ -627,6 +629,14 @@ export const en = {
     healthDisclaimerText: 'This website provides general nutritional information about millets and related foods for educational purposes only. The content is not intended as medical advice, diagnosis, or treatment. Always consult a qualified healthcare professional before making dietary changes, especially if you have existing health conditions. Individual health conditions vary, and what works for one person may not work for another. Information about specific health conditions such as diabetes, bone health, or cardiovascular health reflects published research but should not replace professional medical guidance.',
     aiDisclosureTitle: 'AI & Content Disclosure',
     aiDisclosureText: 'Content on this website is created with the assistance of AI tools and is based on published research, government databases (such as ICMR-NIN and USDA), peer-reviewed journals, and traditional knowledge systems. While we strive for accuracy and cite our sources wherever possible, errors may occur. Users should verify critical health information with qualified professionals. The evidence levels displayed alongside health claims reflect our assessment of the supporting research and should not be interpreted as medical endorsements.',
+    noEndorsementTitle: 'No Professional Endorsement',
+    noEndorsementText: 'Nothing on this website constitutes an endorsement by any medical, nutritional, agricultural, or governmental body. References to ICMR-NIN, USDA, FAO, and other institutions are provided as citations for underlying data only. These organisations have not reviewed, approved, or endorsed the content, interpretation, or recommendations presented on Simply Millets. Any product names, brands, or third-party resources mentioned are for informational purposes and do not imply sponsorship or affiliation.',
+    resultsVaryTitle: 'Individual Results May Vary',
+    resultsVaryText: 'Nutritional benefits, Ayurvedic effects, cooking outcomes, and health responses described on this site are generalisations drawn from published research and traditional sources. Your personal response to any food, including millets, depends on genetics, gut microbiome, existing health conditions, medications, activity level, preparation method, and the particular variety and source of the grain. Do not assume that typical results apply to your specific situation.',
+    consultProfessionalTitle: 'Consult a Qualified Professional',
+    consultProfessionalText: 'Before making significant dietary changes — especially if you live with diabetes, thyroid conditions, kidney disease, coeliac disease or gluten sensitivity, pregnancy, or if you are feeding infants or young children — consult a registered dietitian, your physician, or a qualified Ayurvedic practitioner. Do not use this website as a substitute for personalised medical or nutritional guidance. If you experience any adverse reaction after introducing a new grain into your diet, stop consumption and seek professional advice.',
+    affiliateDisclosureTitle: 'Affiliate & Commercial Disclosure',
+    affiliateDisclosureText: 'Simply Millets does not currently participate in affiliate marketing programs for the products or ingredients mentioned. If this ever changes, relevant pages will be clearly labelled. We do display advertising through Google AdSense; those ads are served by third parties and are not endorsements by Simply Millets. We receive no payment for featuring specific millet varieties, recipes, brands, or suppliers.',
   },
   // Contact page
   contactPage: {
@@ -635,6 +645,22 @@ export const en = {
     emailLabel: 'Email',
     email: 'se3ker.of.truth@gmail.com',
     message: 'Feel free to reach out to us for any queries related to millets, recipe suggestions, corrections, or general feedback. We typically respond within a few days.',
+  },
+  // About page
+  aboutPage: {
+    title: 'About',
+    heading: 'About This Website',
+    introP1: 'This website exists to provide comprehensive and accessible information about millets. In an era of health trends and superfood marketing, there is a real need for a single, well-organised resource that presents millet information based on evidence rather than hype.',
+    introP2: 'We cover nutrition (sourced from ICMR-NIN and USDA databases), traditional recipes, Ayurvedic properties (referenced from classical texts like Charaka Samhita and Bhavaprakasha Nighantu), cultivation practices, and historical context. We believe that understanding millets fully — not just as a health food, but as a cultural, ecological, and agricultural treasure — is key to their revival.',
+    introP3: 'Nutritional data follows the ICMR-NIN Indian Food Composition Tables (2017) as the primary reference. Ayurvedic information is attributed to specific classical texts. We distinguish between well-established science and preliminary evidence.',
+    keyReferencesHeading: 'Key References',
+    readyToExplore: 'Ready to explore?',
+    browseAllMillets: 'Browse All Millets',
+    nutritionComparison: 'Nutrition Comparison',
+    recipes: 'Recipes',
+    history: 'History',
+    privacyPolicy: 'Privacy Policy',
+    contact: 'Contact',
   },
 } as const;
 

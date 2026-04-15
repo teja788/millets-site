@@ -2,14 +2,19 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Breadcrumb from '@/components/layout/Breadcrumb';
-import { Card, CardBody } from '@/components/ui/Card';
 import SourceCitation from '@/components/ui/SourceCitation';
 import { sources } from '@/data/sources';
 import type { Locale } from '@/lib/i18n';
-import { localePath, getTranslations, isValidLocale } from '@/lib/i18n';
+import {
+  localePath,
+  getTranslations,
+  isValidLocale,
+  localeParams,
+  pageAlternates,
+} from '@/lib/i18n';
 
 export function generateStaticParams() {
-  return [{ lang: 'en' }];
+  return localeParams();
 }
 
 export async function generateMetadata({
@@ -18,18 +23,12 @@ export async function generateMetadata({
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = await params;
-  if (lang !== 'en') return {};
-  const t = getTranslations('en');
+  if (!isValidLocale(lang)) return {};
+  const t = getTranslations(lang);
   return {
-    title: `About | ${t.site.siteName}`,
-    description:
-      'About this website — our mission, methodology, and the key references behind every fact on Simply Millets.',
-    alternates: {
-      canonical: '/en/about',
-      languages: {
-        en: '/en/about',
-      },
-    },
+    title: `${t.aboutPage.title} | ${t.site.siteName}`,
+    description: t.aboutPage.introP1.slice(0, 160),
+    alternates: pageAlternates(lang, '/about'),
   };
 }
 
@@ -51,12 +50,11 @@ export default async function AboutPage({
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
+  if (!isValidLocale(lang)) notFound();
 
-  // About page is English-only
-  if (lang !== 'en') notFound();
-
-  const locale = 'en' as Locale;
+  const locale: Locale = lang;
   const t = getTranslations(locale);
+  const a = t.aboutPage;
 
   return (
     <>
@@ -65,43 +63,23 @@ export default async function AboutPage({
       <div className="content-wrapper section-padding">
         {/* Page Title */}
         <h1 className="font-heading text-4xl md:text-5xl font-bold text-earth-800 dark:text-earth-100 mb-8">
-          About This Website
+          {a.heading}
         </h1>
 
         <div className="max-w-3xl space-y-12">
           {/* About This Website */}
           <section>
             <div className="space-y-4 text-earth-600 dark:text-earth-300 leading-relaxed">
-              <p>
-                This website exists to provide comprehensive and
-                accessible information about millets. In an era of health trends
-                and superfood marketing, there is a real need for a single,
-                well-organized resource that presents millet information based on
-                evidence rather than hype.
-              </p>
-              <p>
-                We cover nutrition (sourced from ICMR-NIN and USDA databases),
-                traditional recipes, Ayurvedic properties (referenced from
-                classical texts like Charaka Samhita and Bhavaprakasha Nighantu),
-                cultivation practices, and historical context. We believe that
-                understanding millets fully — not just as a health food, but as a
-                cultural, ecological, and agricultural treasure — is key to their
-                revival.
-              </p>
-              <p>
-                Nutritional data follows the ICMR-NIN
-                Indian Food Composition Tables (2017) as the primary reference.
-                Ayurvedic information is attributed to specific classical texts.
-                We distinguish between well-established science and preliminary
-                evidence.
-              </p>
+              <p>{a.introP1}</p>
+              <p>{a.introP2}</p>
+              <p>{a.introP3}</p>
             </div>
           </section>
 
           {/* Key Sources */}
           <section>
             <h2 className="font-heading text-2xl font-bold text-earth-800 dark:text-earth-100 mb-4">
-              Key References
+              {a.keyReferencesHeading}
             </h2>
             <ol className="list-decimal list-inside space-y-3">
               {keySources.map((source) => (
@@ -113,44 +91,44 @@ export default async function AboutPage({
           {/* Navigation Links */}
           <section className="pt-4 border-t border-earth-200 dark:border-earth-700">
             <p className="text-earth-600 dark:text-earth-300 mb-4">
-              Ready to explore?
+              {a.readyToExplore}
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
                 href={localePath(locale, '/millets')}
                 className="text-earth-500 hover:text-earth-700 dark:text-earth-400 dark:hover:text-earth-200 font-medium underline transition-colors"
               >
-                Browse All Millets
+                {a.browseAllMillets}
               </Link>
               <Link
                 href={localePath(locale, '/nutrition')}
                 className="text-earth-500 hover:text-earth-700 dark:text-earth-400 dark:hover:text-earth-200 font-medium underline transition-colors"
               >
-                Nutrition Comparison
+                {a.nutritionComparison}
               </Link>
               <Link
                 href={localePath(locale, '/recipes')}
                 className="text-earth-500 hover:text-earth-700 dark:text-earth-400 dark:hover:text-earth-200 font-medium underline transition-colors"
               >
-                Recipes
+                {a.recipes}
               </Link>
               <Link
                 href={localePath(locale, '/history')}
                 className="text-earth-500 hover:text-earth-700 dark:text-earth-400 dark:hover:text-earth-200 font-medium underline transition-colors"
               >
-                History
+                {a.history}
               </Link>
               <Link
                 href={localePath(locale, '/privacy-policy')}
                 className="text-earth-500 hover:text-earth-700 dark:text-earth-400 dark:hover:text-earth-200 font-medium underline transition-colors"
               >
-                Privacy Policy
+                {a.privacyPolicy}
               </Link>
               <Link
                 href={localePath(locale, '/contact')}
                 className="text-earth-500 hover:text-earth-700 dark:text-earth-400 dark:hover:text-earth-200 font-medium underline transition-colors"
               >
-                Contact
+                {a.contact}
               </Link>
             </div>
           </section>

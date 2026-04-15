@@ -2,10 +2,15 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import type { Locale } from '@/lib/i18n';
-import { getTranslations } from '@/lib/i18n';
+import {
+  getTranslations,
+  isValidLocale,
+  localeParams,
+  pageAlternates,
+} from '@/lib/i18n';
 
 export function generateStaticParams() {
-  return [{ lang: 'en' }];
+  return localeParams();
 }
 
 export async function generateMetadata({
@@ -14,17 +19,12 @@ export async function generateMetadata({
   params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang } = await params;
-  if (lang !== 'en') return {};
-  const t = getTranslations('en');
+  if (!isValidLocale(lang)) return {};
+  const t = getTranslations(lang);
   return {
     title: `${t.contactPage.title} | ${t.site.siteName}`,
     description: t.contactPage.description,
-    alternates: {
-      canonical: '/en/contact',
-      languages: {
-        en: '/en/contact',
-      },
-    },
+    alternates: pageAlternates(lang, '/contact'),
   };
 }
 
@@ -34,10 +34,9 @@ export default async function ContactPage({
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
+  if (!isValidLocale(lang)) notFound();
 
-  if (lang !== 'en') notFound();
-
-  const locale = 'en' as Locale;
+  const locale: Locale = lang;
   const t = getTranslations(locale);
   const c = t.contactPage;
 
