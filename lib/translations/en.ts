@@ -661,6 +661,11 @@ export const en = {
     history: 'History',
     privacyPolicy: 'Privacy Policy',
     contact: 'Contact',
+    authorHeading: 'About the author',
+    authorName: 'Se3ker_of_truth',
+    authorCredentials: 'A curious person working in technology and AI, interested in building products that make everyday life a little better. Exploring millets in the kitchen over the past year, and gradually incorporating them into a daily diet.',
+    authorStoryP1: 'Simply Millets started as a personal research project. I spend most of my working hours around technology and AI — building, debugging, reading — and for a long time I didn\'t pay much attention to what I was eating. That changed when I began looking more carefully at traditional Indian grains and realised how little good, consolidated English-language information existed in one place. I also started cooking with millets myself: ragi porridge in the morning, bajra rotis, foxtail millet in place of rice — slowly working them into daily meals.',
+    authorStoryP2: 'This site is the consolidated notebook I wish had existed when I first went looking. I use AI tools to draft and organise the content, but every health or nutrition claim here is pinned to a named source, and I try to separate well-established science from preliminary research. The pseudonym Se3ker_of_truth is deliberate: the focus should be on what\'s actually true about these grains, not on me.',
   },
 } as const;
 

@@ -665,5 +665,10 @@ export const de: TranslationKeys = {
     history: 'Geschichte',
     privacyPolicy: 'Datenschutzerklärung',
     contact: 'Kontakt',
+    authorHeading: 'Über den Autor',
+    authorName: 'Se3ker_of_truth',
+    authorCredentials: 'Ein neugieriger Mensch, der in Technologie und KI arbeitet und daran interessiert ist, Produkte zu bauen, die den Alltag ein wenig besser machen. Erkunde seit etwa einem Jahr Hirse in der Küche und baue sie schrittweise in meine tägliche Ernährung ein.',
+    authorStoryP1: 'Simply Millets begann als persönliches Rechercheprojekt. Ich verbringe die meisten meiner Arbeitsstunden mit Technologie und KI — bauen, debuggen, lesen — und lange Zeit habe ich nicht viel darauf geachtet, was ich esse. Das änderte sich, als ich begann, traditionelle indische Getreidearten genauer zu betrachten und feststellte, wie wenig gut aufbereitete, englischsprachige Informationen an einem Ort existierten. Ich begann auch selbst mit Hirse zu kochen: Ragi-Brei am Morgen, Bajra-Rotis, Kolbenhirse statt Reis — und baute sie langsam in meine täglichen Mahlzeiten ein.',
+    authorStoryP2: 'Diese Website ist das konsolidierte Notizbuch, das ich mir gewünscht hätte, als ich mit der Suche begann. Ich nutze KI-Werkzeuge zum Entwerfen und Strukturieren der Inhalte, aber jede Aussage zu Gesundheit oder Ernährung ist mit einer namentlich genannten Quelle verknüpft, und ich versuche, gut belegte Wissenschaft von vorläufiger Forschung zu unterscheiden. Das Pseudonym Se3ker_of_truth ist bewusst gewählt: Der Fokus soll darauf liegen, was tatsächlich über diese Körner wahr ist, nicht auf mir.',
   },
 };

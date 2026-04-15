@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Breadcrumb from '@/components/layout/Breadcrumb';
+import AuthorBio from '@/components/AuthorBio';
 import SourceCitation from '@/components/ui/SourceCitation';
 import { sources } from '@/data/sources';
 import type { Locale } from '@/lib/i18n';
@@ -67,6 +68,15 @@ export default async function AboutPage({
         </h1>
 
         <div className="max-w-3xl space-y-12">
+          {/* Author bio */}
+          <AuthorBio
+            heading={a.authorHeading}
+            name={a.authorName}
+            credentials={a.authorCredentials}
+            storyP1={a.authorStoryP1}
+            storyP2={a.authorStoryP2}
+          />
+
           {/* About This Website */}
           <section>
             <div className="space-y-4 text-earth-600 dark:text-earth-300 leading-relaxed">

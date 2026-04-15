@@ -665,5 +665,10 @@ export const es: TranslationKeys = {
     history: 'Historia',
     privacyPolicy: 'Política de privacidad',
     contact: 'Contacto',
+    authorHeading: 'Sobre el autor',
+    authorName: 'Se3ker_of_truth',
+    authorCredentials: 'Una persona curiosa que trabaja en tecnología e IA, interesada en crear productos que hagan la vida cotidiana un poco mejor. Llevo aproximadamente un año explorando los mijos en la cocina e incorporándolos poco a poco a mi dieta diaria.',
+    authorStoryP1: 'Simply Millets comenzó como un proyecto de investigación personal. Paso la mayor parte de mis horas de trabajo en torno a la tecnología y la IA — construyendo, depurando, leyendo — y durante mucho tiempo no presté mucha atención a lo que comía. Eso cambió cuando empecé a fijarme más detenidamente en los cereales tradicionales indios y me di cuenta de lo poca información en inglés, bien organizada y en un solo lugar, que existía. También empecé a cocinar con mijos yo mismo: gachas de ragi por la mañana, rotis de bajra, mijo de los pájaros en lugar de arroz — incorporándolos poco a poco a las comidas diarias.',
+    authorStoryP2: 'Este sitio es el cuaderno consolidado que me habría gustado encontrar cuando empecé a buscar. Uso herramientas de IA para redactar y organizar el contenido, pero cada afirmación sobre salud o nutrición está vinculada a una fuente nombrada, y procuro distinguir entre conocimientos bien establecidos e investigación preliminar. El seudónimo Se3ker_of_truth es deliberado: el foco debe estar en lo que es realmente cierto sobre estos granos, no en mí.',
   },
 };

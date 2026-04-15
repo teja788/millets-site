@@ -665,5 +665,10 @@ export const fr: TranslationKeys = {
     history: 'Histoire',
     privacyPolicy: 'Politique de confidentialité',
     contact: 'Contact',
+    authorHeading: 'À propos de l\'auteur',
+    authorName: 'Se3ker_of_truth',
+    authorCredentials: 'Une personne curieuse travaillant dans la technologie et l\'IA, intéressée par la conception de produits qui améliorent un peu le quotidien. J\'explore les millets en cuisine depuis un an et je les intègre progressivement à mon alimentation.',
+    authorStoryP1: 'Simply Millets a commencé comme un projet de recherche personnel. Je passe la plupart de mes heures de travail autour de la technologie et de l\'IA — à construire, déboguer, lire — et pendant longtemps je n\'ai pas prêté beaucoup d\'attention à ce que je mangeais. Cela a changé lorsque j\'ai commencé à regarder de plus près les céréales traditionnelles indiennes et que j\'ai réalisé à quel point il existait peu d\'informations anglophones de qualité regroupées en un seul endroit. J\'ai aussi commencé à cuisiner moi-même avec les millets : bouillie de ragi le matin, rotis de bajra, millet des oiseaux à la place du riz — en les intégrant peu à peu aux repas quotidiens.',
+    authorStoryP2: 'Ce site est le carnet consolidé que j\'aurais aimé trouver quand j\'ai commencé mes recherches. J\'utilise des outils d\'IA pour rédiger et organiser le contenu, mais chaque affirmation relative à la santé ou à la nutrition est rattachée à une source nommée, et j\'essaie de distinguer les faits bien établis des recherches préliminaires. Le pseudonyme Se3ker_of_truth est délibéré : l\'attention doit porter sur ce qui est réellement vrai à propos de ces grains, pas sur moi.',
   },
 };
