@@ -21,7 +21,7 @@ function alternatesFor(path: string) {
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
 
-  // Static pages (all locales, except /about which is en-only)
+  // Static pages (all locales)
   const staticRoutes = [
     '',
     '/millets',
@@ -44,6 +44,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/tools/cooking-timer',
     '/tools/millet-quiz',
     '/tools/substitution-calculator',
+    '/about',
+    '/contact',
     '/privacy-policy',
     '/disclaimer',
   ];
@@ -59,22 +61,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       });
     }
   }
-
-  // About page (English only)
-  entries.push({
-    url: `${BASE_URL}/en/about`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly',
-    priority: 0.8,
-  });
-
-  // Contact page (English only)
-  entries.push({
-    url: `${BASE_URL}/en/contact`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly',
-    priority: 0.5,
-  });
 
   // French-only pages
   const frenchOnlyRoutes = ['/nutrition-et-sante', '/millet-vs-quinoa', '/culture-africaine-du-mil', '/ou-acheter-du-millet'];

@@ -41,7 +41,11 @@ export default async function DisclaimerPage({
 
   const sections = [
     { title: d.healthDisclaimerTitle, text: d.healthDisclaimerText },
+    { title: d.noEndorsementTitle, text: d.noEndorsementText },
+    { title: d.resultsVaryTitle, text: d.resultsVaryText },
+    { title: d.consultProfessionalTitle, text: d.consultProfessionalText },
     { title: d.aiDisclosureTitle, text: d.aiDisclosureText },
+    { title: d.affiliateDisclosureTitle, text: d.affiliateDisclosureText },
   ];
 
   return (
