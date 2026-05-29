@@ -255,7 +255,7 @@ export const recipes: Recipe[] = [
     servings: 3,
     difficulty: 'easy',
     description:
-      'Simple steamed little millet that serves as a perfect rice replacement for everyday meals. Known as samai sadam in Tamil, this fluffy, mild-flavored grain pairs well with sambar, rasam, curries, and curd. A staple for anyone transitioning from white rice to millets.',
+      'Simple steamed little millet that works as a rice replacement for everyday meals. Known as samai sadam in Tamil, this fluffy, mild-flavored grain pairs well with sambar, rasam, curries, and curd. A staple for anyone transitioning from white rice to millets.',
     ingredients: [
       { item: 'Little millet', quantity: '1 cup (180 g)' },
       { item: 'Water', quantity: '2 cups' },

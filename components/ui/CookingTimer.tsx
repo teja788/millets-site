@@ -133,7 +133,7 @@ export default function CookingTimer({ locale = 'en', millets }: { locale?: Loca
           <Card variant="outlined">
             <CardBody>
               <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-4">
-                {millet.name} — {t.cookingTimerPage.cookingInfo}
+                {millet.name}: {t.cookingTimerPage.cookingInfo}
               </h3>
               <div className="space-y-3">
                 <div className="flex items-center gap-3">

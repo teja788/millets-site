@@ -21,7 +21,7 @@ export const riceNutrition: NutritionPer100g = {
   niacin_mg: 1.7,
   folate_mcg: 8,
   source: 'icmr-nin-ifct-2017',
-  sourceDetail: 'ICMR-NIN Indian Food Composition Tables 2017 — Rice, raw, milled (white)',
+  sourceDetail: 'ICMR-NIN Indian Food Composition Tables 2017, Rice, raw, milled (white)',
 };
 
 /**
@@ -45,7 +45,7 @@ export const wheatNutrition: NutritionPer100g = {
   niacin_mg: 2.7,
   folate_mcg: 36.6,
   source: 'icmr-nin-ifct-2017',
-  sourceDetail: 'ICMR-NIN Indian Food Composition Tables 2017 — Wheat, whole grain flour (atta)',
+  sourceDetail: 'ICMR-NIN Indian Food Composition Tables 2017, Wheat, whole grain flour (atta)',
 };
 
 /**

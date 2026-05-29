@@ -67,7 +67,7 @@ export const searchIndex: SearchableItem[] = [
   ...fermentedProducts.map(f => ({
     id: `fermented-${f.name.toLowerCase().replace(/\s+/g, '-')}`,
     title: f.name,
-    description: `${f.region} — ${f.culturalContext.substring(0, 150)}`,
+    description: `${f.region}, ${f.culturalContext.substring(0, 150)}`,
     type: 'page' as const,
     url: '/fermentation',
     tags: ['fermentation', f.region, ...f.millets],

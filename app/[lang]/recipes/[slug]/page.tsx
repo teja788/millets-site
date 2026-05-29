@@ -110,7 +110,7 @@ export default async function RecipeDetailPage({ params }: PageProps) {
     recipeYield: `${recipe.servings}`,
     recipeCategory: recipe.category,
     recipeCuisine: recipe.cuisine,
-    recipeIngredient: recipe.ingredients.map((i) => `${i.item} — ${i.quantity}`),
+    recipeIngredient: recipe.ingredients.map((i) => `${i.quantity} ${i.item}`),
     recipeInstructions: recipe.instructions.map((step, i) => ({
       '@type': 'HowToStep',
       position: i + 1,

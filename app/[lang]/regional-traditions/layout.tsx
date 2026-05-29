@@ -17,7 +17,7 @@ export async function generateMetadata({
 
   return {
     title: t.regionalPage.title,
-    description: `${t.regionalPage.title} — ${t.site.description}`,
+    description: `${t.regionalPage.title}. ${t.site.description}`,
     alternates: pageAlternates(locale, '/regional-traditions'),
   };
 }

@@ -18,7 +18,7 @@ export const buyingGuideItems: BuyingGuideItem[] = [
     ],
     whatToLookFor: [
       'Choose dark reddish-brown grains that are uniform in size and free of stones, husk fragments, or discoloration.',
-      'For ragi flour, check the manufacturing and expiry dates — fresh flour should have a mild earthy aroma without any rancid or musty smell.',
+      'For ragi flour, check the manufacturing and expiry dates. Fresh flour should have a mild earthy aroma without any rancid or musty smell.',
       'Prefer sprouted ragi flour (ragi malt) for porridge as it is easier to digest and has enhanced nutrient bioavailability.',
       'Look for organic or naturally grown labels, especially for baby food preparations where pesticide residue is a concern.',
       'Avoid flour that has visible clumps or signs of moisture, which indicates poor storage or aging.',
@@ -46,8 +46,8 @@ export const buyingGuideItems: BuyingGuideItem[] = [
     ],
     whatToLookFor: [
       'Select grains that are round, uniform in size, and have a greyish-yellow color. Avoid grains that appear shriveled or have a greenish tinge, which indicates immaturity.',
-      'For bajra flour, freshness is critical — the flour has a high oil content and turns bitter quickly. Buy in small quantities and check for a clean, slightly sweet aroma.',
-      'During winter months (November to February), freshly harvested bajra is available in markets across Rajasthan, Gujarat, and Maharashtra — this is the best time to buy.',
+      'For bajra flour, freshness is critical. The flour has a high oil content and turns bitter quickly. Buy in small quantities and check for a clean, slightly sweet aroma.',
+      'During winter months (November to February), freshly harvested bajra is available in markets across Rajasthan, Gujarat, and Maharashtra. This is the best time to buy.',
       'Check for FSSAI certification on packaged products to ensure the grain has been tested for ergot contamination, a rare but potential issue with pearl millet.',
     ],
     storageInstructions:
@@ -105,7 +105,7 @@ export const buyingGuideItems: BuyingGuideItem[] = [
       'Foxtail millet is available in both unpolished (brown/tan with husk traces) and polished (bright yellow) forms. Unpolished retains more fiber and nutrients but takes longer to cook.',
       'The grains should be small, round, and uniformly yellow-golden in color. Avoid batches with excessive broken grains or dark spots.',
       'For South Indian rice-style preparations, buy the polished (thinai arisi) form. For upma and porridge, the semolina or broken form works best.',
-      'Check the packaging date — foxtail millet has moderate oil content and should ideally be consumed within 6 months of processing.',
+      'Check the packaging date. Foxtail millet has moderate oil content and should ideally be consumed within 6 months of processing.',
     ],
     storageInstructions:
       'Store in a clean, airtight glass or steel container in a cool, dry place away from sunlight. Unpolished foxtail millet benefits from refrigeration in humid climates to prevent the bran layer from turning rancid. Polished foxtail millet is more shelf-stable and can be stored at room temperature. Add a small piece of dried turmeric to the container as a natural preservative.',
@@ -130,7 +130,7 @@ export const buyingGuideItems: BuyingGuideItem[] = [
     whatToLookFor: [
       'Little millet grains are tiny and white to light grey in color when polished. Look for uniform, clean grains without dust, husk, or stone particles.',
       'Unpolished little millet has a light brown color and slightly rough texture. It is more nutritious but requires soaking before cooking.',
-      'The grain should feel completely dry and should not stick together when pressed between fingers — stickiness indicates moisture and potential spoilage.',
+      'The grain should feel completely dry and should not stick together when pressed between fingers. Stickiness indicates moisture and potential spoilage.',
       'Buy from brands that specify "sortex cleaned" on the packaging, which ensures machine-sorting for stones and impurities common in small-grain millets.',
     ],
     storageInstructions:
@@ -155,9 +155,9 @@ export const buyingGuideItems: BuyingGuideItem[] = [
     ],
     whatToLookFor: [
       'Polished kodo millet should be light grey to white in color, while unpolished grains are darker brown. Check for uniform grain size and cleanliness.',
-      'Kodo millet is sometimes confused with similar-looking grains — buy from trusted brands or stores that specialize in millets to ensure authenticity.',
+      'Kodo millet is sometimes confused with similar-looking grains. Buy from trusted brands or stores that specialize in millets to ensure authenticity.',
       'The grains should be completely dry and should pour freely from the hand without clumping. Any clumping or damp feeling indicates improper drying.',
-      'Ensure the packaging mentions FSSAI compliance, as historically there have been occasional issues with cyclopiazonic acid contamination in improperly stored kodo millet — reputable brands test for this.',
+      'Ensure the packaging mentions FSSAI compliance, as historically there have been occasional issues with cyclopiazonic acid contamination in improperly stored kodo millet. Reputable brands test for this.',
       'For biryani and pulao preparations, choose the polished (varagu arisi) form for best texture and appearance.',
     ],
     storageInstructions:
@@ -183,9 +183,9 @@ export const buyingGuideItems: BuyingGuideItem[] = [
     ],
     whatToLookFor: [
       'Barnyard millet grains are small and white with a distinctive round shape. Look for clean, uniform grains that are free from black specks, stones, or husk remnants.',
-      'This millet is extremely popular as a fasting (vrat/upvas) food — during Navratri and other fasting seasons, demand spikes and prices may increase. Buy in advance if possible.',
+      'This millet is extremely popular as a fasting (vrat/upvas) food, during Navratri and other fasting seasons, demand spikes and prices may increase. Buy in advance if possible.',
       'For the best nutritional value, choose unpolished whole grains. The polished version cooks faster but loses some fiber content.',
-      'Check for freshness — barnyard millet has a shorter shelf life than other millets due to its delicate grain structure and should smell clean and neutral.',
+      'Check for freshness. Barnyard millet has a shorter shelf life than other millets due to its delicate grain structure and should smell clean and neutral.',
     ],
     storageInstructions:
       'Store in an airtight container in a cool, dry place. Barnyard millet is best stored in glass or food-grade steel containers rather than plastic, as plastic can trap moisture. In hot and humid climates, refrigerate the grain, especially during monsoon months. If buying in bulk, divide into smaller portions and store separately to minimize air exposure each time you open the container.',
@@ -209,9 +209,9 @@ export const buyingGuideItems: BuyingGuideItem[] = [
     ],
     whatToLookFor: [
       'Proso millet grains are round and pale yellow to cream in color. Select grains that are clean, dry, and free from discoloration or dark spots.',
-      'This is one of the less commonly available millets in mainstream retail — you may need to source it from specialty millet stores or online platforms rather than regular supermarkets.',
+      'This is one of the less commonly available millets in mainstream retail. You may need to source it from specialty millet stores or online platforms rather than regular supermarkets.',
       'Ensure the grain is properly dehusked as proso millet has a relatively hard outer hull that is inedible. Well-processed grain should be smooth and uniform.',
-      'Proso millet is often sold under regional names — look for "pani varagu" (Tamil Nadu), "chena" (Hindi), "barri" (Rajasthan), or "varigalu" (Telugu) depending on your region.',
+      'Proso millet is often sold under regional names. Look for "pani varagu" (Tamil Nadu), "chena" (Hindi), "barri" (Rajasthan), or "varigalu" (Telugu) depending on your region.',
     ],
     storageInstructions:
       'Store in an airtight container in a cool, dry place away from direct sunlight and heat sources. Proso millet stores reasonably well due to its hard grain structure. In humid environments, refrigeration is recommended. If purchasing from bulk bins, sun-dry the grain for 2-3 hours before storing to eliminate any residual moisture.',
@@ -236,7 +236,7 @@ export const buyingGuideItems: BuyingGuideItem[] = [
       'Browntop millet is the rarest and most premium millet variety in the Indian market. The grains are very small, round, and light brown to cream in color when polished.',
       'Due to limited production (primarily in Karnataka and parts of Andhra Pradesh), verify the source and authenticity of the product. Buy from known millet brands or directly from farmer cooperatives.',
       'The grain should be clean and free from impurities. Given its premium price, ensure the packaging is sealed and the product is within its best-before date.',
-      'Browntop millet is sometimes marketed as the "wonder millet" with exaggerated health claims — while it is nutritious, be skeptical of products making therapeutic claims on the packaging.',
+      'Browntop millet is sometimes marketed as the "wonder millet" with exaggerated health claims. While it is nutritious, be skeptical of products making therapeutic claims on the packaging.',
     ],
     storageInstructions:
       'Store in a tightly sealed glass or steel container in a cool, dry place. Due to its premium price, take extra care with storage to prevent any spoilage. In humid climates, refrigerate the grain. As browntop millet is typically purchased in smaller quantities, use it within a few months of purchase for the best taste and nutritional value.',
@@ -244,7 +244,7 @@ export const buyingGuideItems: BuyingGuideItem[] = [
       'Whole grain (unpolished): 8-10 months at room temperature. Polished rice form: 6-8 months. Buy in small quantities (500g to 1kg) due to premium pricing and limited shelf life compared to more robust millets like sorghum and ragi.',
     priceRange: 'Premium',
     onlineAvailability:
-      'Limited retail availability — rarely found in mainstream supermarkets or local kirana shops. Best sourced from specialty online stores like Millet Amma, Native Food Store, and select listings on Amazon. Some Karnataka-based organic cooperatives and farmer-direct platforms offer authentic browntop millet. Prices are typically 2-3 times higher than common millets like jowar or bajra. Availability may be seasonal and stock can sell out quickly.',
+      'Limited retail availability, rarely found in mainstream supermarkets or local kirana shops. Best sourced from specialty online stores like Millet Amma, Native Food Store, and select listings on Amazon. Some Karnataka-based organic cooperatives and farmer-direct platforms offer authentic browntop millet. Prices are typically 2-3 times higher than common millets like jowar or bajra. Availability may be seasonal and stock can sell out quickly.',
   },
 ];
 

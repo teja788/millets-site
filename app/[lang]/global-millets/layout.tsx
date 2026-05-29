@@ -17,7 +17,7 @@ export async function generateMetadata({
 
   return {
     title: t.globalPage.title,
-    description: `${t.globalPage.title} — ${t.site.description}`,
+    description: `${t.globalPage.title}. ${t.site.description}`,
     alternates: pageAlternates(locale, '/global-millets'),
   };
 }

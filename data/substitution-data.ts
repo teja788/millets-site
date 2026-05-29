@@ -228,7 +228,7 @@ export const substitutionEntries: SubstitutionEntry[] = [
         milletName: 'Ragi Flakes / Ragi Malt',
         ratio: '1:1',
         notes:
-          'Ragi flakes can be eaten just like cornflakes — pour into a bowl and add cold or warm milk. They have a toasty, malt-like flavor and are exceptionally rich in calcium (344 mg per 100g). Ragi malt powder mixed with warm milk makes a traditional South Indian breakfast drink that is more nutritious than most commercial cereals. Look for brands that use minimal sugar and no artificial additives.',
+          'Ragi flakes can be eaten just like cornflakes, pour into a bowl and add cold or warm milk. They have a toasty, malt-like flavor and are exceptionally rich in calcium (344 mg per 100g). Ragi malt powder mixed with warm milk makes a traditional South Indian breakfast drink that is more nutritious than most commercial cereals. Look for brands that use minimal sugar and no artificial additives.',
         bestFor: ['cold cereal with milk', 'ragi malt drink', 'smoothie base', 'energy bites'],
         difficulty: 'easy',
       },

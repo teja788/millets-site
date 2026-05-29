@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return { title: t.globalPage.notFound };
   }
   return {
-    title: `${data.region} — ${t.globalPage.title} | ${t.site.siteName}`,
+    title: `${data.region}: ${t.globalPage.title} | ${t.site.siteName}`,
     description: data.tagline,
     alternates: {
       canonical: `/${lang}/global-millets/${region}`,

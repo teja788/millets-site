@@ -76,7 +76,7 @@ export const minorMillets: Millet[] = [
         'Traditionally recommended during fasting for its light quality',
       ],
       contraindications: [
-        'May aggravate Vata — consume with ghee or warm preparations',
+        'May aggravate Vata, consume with ghee or warm preparations',
         'Must be properly cleaned and processed to avoid fungal contamination',
       ],
       classicalReference: 'Charaka Samhita',
@@ -112,7 +112,7 @@ export const minorMillets: Millet[] = [
       tips: [
         'Soak for 6-8 hours or overnight for best results',
         'Rinse thoroughly after soaking to remove any bitterness',
-        'Cook like rice after soaking — the grains separate well',
+        'Cook like rice after soaking, the grains separate well',
         'Works well in upma, pulao, and pongal preparations',
         'Ensure the grain is from a reputable source and properly processed',
       ],
@@ -197,7 +197,7 @@ export const minorMillets: Millet[] = [
       plant: '/images/millets/barnyard-millet-plant.webp',
       cooked: '/images/millets/barnyard-millet-cooked.webp',
     },
-    tagline: 'The fasting grain — lowest carbohydrate content and highest fiber among millets',
+    tagline: 'The fasting grain, lowest carbohydrate content and highest fiber among millets',
     description:
       'Barnyard millet (Sanwa/Jhangora) is the fastest growing millet, maturing in as few as 60 days. It stands out for having the highest fiber content (9.8g per 100g) and the lowest glycemic index (~44) among commonly available millets. It is widely used during Hindu fasting periods (vrat) in North India, where it is known as Sanwa or Jhangora. Its fluffy, rice-like texture and neutral flavor make it an easy substitute for rice.',
 
@@ -291,7 +291,7 @@ export const minorMillets: Millet[] = [
       tips: [
         'Soak for 2-4 hours before cooking for best texture',
         'Cook like rice with slightly more water',
-        'Popular during fasting — make Samo khichdi or Moraiyo pulao',
+        'Popular during fasting, make Samo khichdi or Moraiyo pulao',
         'In Uttarakhand, make Jhangora kheer with milk, sugar, and cardamom',
         'Dry roast briefly before cooking for a nuttier flavor',
       ],
@@ -375,9 +375,9 @@ export const minorMillets: Millet[] = [
       plant: '/images/millets/proso-millet-plant.webp',
       cooked: '/images/millets/proso-millet-cooked.webp',
     },
-    tagline: 'The oldest domesticated millet — high in protein with the shortest growing season',
+    tagline: 'The oldest domesticated millet, high in protein with the shortest growing season',
     description:
-      'Proso millet (Chena/Bari) holds the distinction of being THE oldest domesticated millet in human history, with archaeological evidence from Cishan, China dating to approximately 8000 BCE. It has the highest protein content among minor millets at 12.5g per 100g and the shortest growing season at just 60-75 days. This is the "millet" of European history, having been a staple across Central Asia and Europe for millennia before the widespread adoption of wheat and rice.',
+      'Proso millet (Chena/Bari) is the oldest domesticated millet in human history, with archaeological evidence from Cishan, China dating to approximately 8000 BCE. It has the highest protein content among minor millets at 12.5g per 100g and the shortest growing season at just 60-75 days. This is the "millet" of European history, having been a staple across Central Asia and Europe for millennia before the widespread adoption of wheat and rice.',
 
     names: {
       english: 'Proso Millet',
@@ -434,14 +434,14 @@ export const minorMillets: Millet[] = [
       ],
       contraindications: [
         'Warming nature may not suit people with excess heat conditions',
-        'Dry quality — balance with ghee or moist preparations',
+        'Dry quality, balance with ghee or moist preparations',
       ],
       classicalReference: 'Sushruta Samhita',
     },
 
     history: {
       originRegion: 'Northern China (Cishan archaeological site)',
-      domesticationPeriod: 'Approximately 10000 years ago (~8000 BCE) — the oldest domesticated millet',
+      domesticationPeriod: 'Approximately 10000 years ago (~8000 BCE), the oldest domesticated millet',
       archaeologicalEvidence:
         'Archaeological evidence from Cishan, China dates to approximately 8000 BCE, making proso millet the oldest domesticated millet in human history.',
       spreadPattern:
@@ -474,7 +474,7 @@ export const minorMillets: Millet[] = [
       bestSubstituteFor: 'Couscous, rice',
       tips: [
         'Soak for 20-30 minutes before cooking',
-        'Cook like rice — the grains turn fluffy and separate',
+        'Cook like rice, the grains turn fluffy and separate',
         'Excellent in pulao, upma, and salad preparations',
         'Its couscous-like texture makes it great for cold salads',
         'Dry roast before cooking for a nuttier, more aromatic flavor',
@@ -562,9 +562,9 @@ export const minorMillets: Millet[] = [
       plant: '/images/millets/browntop-millet-plant.webp',
       cooked: '/images/millets/browntop-millet-cooked.webp',
     },
-    tagline: 'The fiber champion — the rarest commercially grown millet, now making a comeback',
+    tagline: 'The highest-fiber millet, the rarest commercially grown millet, now being revived',
     description:
-      'Browntop millet (Korale) is the rarest of commercially grown millets, boasting the highest fiber content of any millet at 12.5g per 100g. Once nearly extinct as a cultivated crop, it is now making a remarkable comeback thanks to revival efforts led by farmers in Karnataka. Grown primarily in the Tumkur and Chitradurga districts of Karnataka, browntop millet has a very low glycemic index (~47) and is gaining attention for its exceptional gut health benefits.',
+      'Browntop millet (Korale) is the rarest of commercially grown millets, with the highest fiber content of any millet at 12.5g per 100g. Once nearly extinct as a cultivated crop, it is now being revived through efforts led by farmers in Karnataka. Grown primarily in the Tumkur and Chitradurga districts of Karnataka, browntop millet has a very low glycemic index (~47) and is being studied for its gut health benefits.',
 
     names: {
       english: 'Browntop Millet',
@@ -635,7 +635,7 @@ export const minorMillets: Millet[] = [
       spreadPattern:
         'Native to Southeast Asia and India. Primarily confined to the hilly regions of Karnataka, with limited spread to neighboring states.',
       culturalSignificance:
-        'Browntop millet represents a story of crop revival. Nearly lost to agricultural modernization, it has been brought back by dedicated farmers in Karnataka. It symbolizes the growing movement to revive forgotten indigenous grains and preserve agricultural biodiversity.',
+        'Browntop millet is an example of crop revival. Nearly lost to agricultural modernization, it has been brought back by farmers in Karnataka. It is part of the wider effort to revive indigenous grains and preserve agricultural biodiversity.',
     },
 
     cultivation: {

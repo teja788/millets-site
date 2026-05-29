@@ -17,7 +17,7 @@ export async function generateMetadata({
 
   return {
     title: t.mealPlan.title,
-    description: `${t.mealPlan.title} — ${t.site.description}`,
+    description: `${t.mealPlan.title}. ${t.site.description}`,
     alternates: pageAlternates(locale, '/meal-plans'),
   };
 }

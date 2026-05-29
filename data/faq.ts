@@ -34,7 +34,7 @@ export const faqItems: FAQItem[] = [
     id: 'major-vs-minor-millets',
     question: 'What is the difference between major and minor millets?',
     answer:
-      'Millets are classified as major or minor based on their grain size and global production volume. Major millets include pearl millet (bajra), sorghum (jowar), and finger millet (ragi) — these are produced in large quantities and are significant commercial crops. Minor millets include foxtail millet, little millet, kodo millet, barnyard millet, proso millet, and browntop millet — these have smaller grains, lower production volumes, and are often cultivated as subsistence crops, though they are equally nutritious and sometimes superior in specific nutrients.',
+      'Millets are classified as major or minor based on their grain size and global production volume. Major millets include pearl millet (bajra), sorghum (jowar), and finger millet (ragi). These are produced in large quantities and are significant commercial crops. Minor millets include foxtail millet, little millet, kodo millet, barnyard millet, proso millet, and browntop millet. These have smaller grains, lower production volumes, and are often cultivated as subsistence crops, though they are equally nutritious and sometimes superior in specific nutrients.',
     category: 'General',
     relatedMillets: [],
   },
@@ -60,7 +60,7 @@ export const faqItems: FAQItem[] = [
     id: 'most-calcium-millet',
     question: 'Which millet has the most calcium?',
     answer:
-      'Finger millet (ragi) has the highest calcium content among all millets — and indeed among all commonly consumed cereals — at approximately 344 mg per 100g according to ICMR-NIN Indian Food Composition Tables 2017. This is over 30 times the calcium in polished rice (10 mg/100g) and about 8 times that of whole wheat (41 mg/100g). Ragi is often recommended for growing children, pregnant women, the elderly, and those at risk of osteoporosis as a natural dietary source of calcium.',
+      'Finger millet (ragi) has the highest calcium content among all millets (and indeed among all commonly consumed cereals) at approximately 344 mg per 100g according to ICMR-NIN Indian Food Composition Tables 2017. This is over 30 times the calcium in polished rice (10 mg/100g) and about 8 times that of whole wheat (41 mg/100g). Ragi is often recommended for growing children, pregnant women, the elderly, and those at risk of osteoporosis as a natural dietary source of calcium.',
     category: 'Nutrition',
     relatedMillets: ['finger-millet'],
   },
@@ -96,7 +96,7 @@ export const faqItems: FAQItem[] = [
     id: 'soaking-millets',
     question: 'Do millets need soaking before cooking?',
     answer:
-      'Soaking requirements vary by millet type. Husked millets like kodo millet, little millet, barnyard millet, and browntop millet benefit from soaking for 30 minutes to 2 hours — this reduces cooking time, improves texture, and helps reduce anti-nutrients like phytic acid. Pearl millet (bajra) and sorghum (jowar) are typically ground into flour and don\'t require soaking. Finger millet (ragi) flour also doesn\'t need soaking. Whole grain preparations of larger millets like sorghum may benefit from 6-8 hours of soaking for softer results.',
+      'Soaking requirements vary by millet type. Husked millets like kodo millet, little millet, barnyard millet, and browntop millet benefit from soaking for 30 minutes to 2 hours. This reduces cooking time, improves texture, and helps reduce anti-nutrients like phytic acid. Pearl millet (bajra) and sorghum (jowar) are typically ground into flour and don\'t require soaking. Finger millet (ragi) flour also doesn\'t need soaking. Whole grain preparations of larger millets like sorghum may benefit from 6-8 hours of soaking for softer results.',
     category: 'Cooking',
     relatedMillets: [
       'kodo-millet',
@@ -142,7 +142,7 @@ export const faqItems: FAQItem[] = [
     id: 'millets-diabetes',
     question: 'Are millets good for people with diabetes?',
     answer:
-      'Millets have a low to medium glycemic index (GI), typically ranging from 44 to 62, which is lower than white rice (GI ~73). Their high fiber content slows glucose absorption, potentially helping manage post-meal blood sugar spikes. Several peer-reviewed studies suggest that replacing rice with millets can improve glycemic control. However, millets are not a medicine or cure for diabetes — they are a healthier dietary choice that should be part of a comprehensive management plan. Always consult your doctor or dietician for personalized advice on managing diabetes.',
+      'Millets have a low to medium glycemic index (GI), typically ranging from 44 to 62, which is lower than white rice (GI ~73). Their high fiber content slows glucose absorption, potentially helping manage post-meal blood sugar spikes. Several peer-reviewed studies suggest that replacing rice with millets can improve glycemic control. However, millets are not a medicine or cure for diabetes. They are a healthier dietary choice that should be part of a comprehensive management plan. Always consult your doctor or dietician for personalized advice on managing diabetes.',
     category: 'Health',
     relatedMillets: [],
   },
@@ -158,7 +158,7 @@ export const faqItems: FAQItem[] = [
     id: 'millets-thyroid',
     question: 'Do millets cause thyroid problems?',
     answer:
-      'Some millets, particularly pearl millet and finger millet, contain goitrogens — compounds that can interfere with iodine uptake by the thyroid gland. However, cooking significantly reduces goitrogen content, and moderate consumption of well-cooked millets is considered safe for most people. If you have a pre-existing thyroid condition (especially hypothyroidism), it is advisable to consult your endocrinologist before making millets a major part of your diet. Ensuring adequate iodine intake through iodized salt also helps mitigate any potential effect.',
+      'Some millets, particularly pearl millet and finger millet, contain goitrogens, compounds that can interfere with iodine uptake by the thyroid gland. However, cooking significantly reduces goitrogen content, and moderate consumption of well-cooked millets is considered safe for most people. If you have a pre-existing thyroid condition (especially hypothyroidism), it is advisable to consult your endocrinologist before making millets a major part of your diet. Ensuring adequate iodine intake through iodized salt also helps mitigate any potential effect.',
     category: 'Health',
     relatedMillets: ['pearl-millet', 'finger-millet'],
   },
@@ -174,7 +174,7 @@ export const faqItems: FAQItem[] = [
     id: 'millets-weight-loss',
     question: 'Which millet is best for weight loss?',
     answer:
-      'For weight management, barnyard millet and browntop millet are particularly noteworthy. Barnyard millet has the lowest calorie content among millets (approximately 307 kcal per 100g compared to 356 kcal for rice) and is also low in carbohydrates. Browntop millet offers the highest fiber content (about 12.5g/100g), which promotes satiety and keeps you feeling full longer. Kodo millet is another good option with its high fiber and low glycemic index. Remember that no single food causes weight loss — millets should be part of an overall balanced diet combined with regular physical activity.',
+      'For weight management, barnyard millet and browntop millet are particularly noteworthy. Barnyard millet has the lowest calorie content among millets (approximately 307 kcal per 100g compared to 356 kcal for rice) and is also low in carbohydrates. Browntop millet offers the highest fiber content (about 12.5g/100g), which promotes satiety and keeps you feeling full longer. Kodo millet is another good option with its high fiber and low glycemic index. Remember that no single food causes weight loss. Millets should be part of an overall balanced diet combined with regular physical activity.',
     category: 'Health',
     relatedMillets: ['barnyard-millet', 'browntop-millet', 'kodo-millet'],
   },

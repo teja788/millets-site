@@ -20,7 +20,7 @@ export const majorMillets: Millet[] = [
     },
     tagline: "India's most widely grown millet, a staple of Rajasthan and Gujarat",
     description:
-      'Pearl millet (Bajra) is the most widely grown millet in India and the sixth most important cereal globally. It is a staple food in the arid and semi-arid regions of Rajasthan, Gujarat, Maharashtra, and Haryana. Known for its exceptional heat and drought tolerance, pearl millet thrives in sandy soils with minimal rainfall. It is rich in iron, protein, and energy, making it a nutritional powerhouse for millions of people across India and Africa.',
+      'Pearl millet (Bajra) is the most widely grown millet in India and the sixth most important cereal globally. It is a staple food in the arid and semi-arid regions of Rajasthan, Gujarat, Maharashtra, and Haryana. Known for its exceptional heat and drought tolerance, pearl millet thrives in sandy soils with minimal rainfall. It is rich in iron, protein, and energy, and is a dietary staple for millions of people across India and Africa.',
 
     names: {
       english: 'Pearl Millet',
@@ -113,7 +113,7 @@ export const majorMillets: Millet[] = [
         'Best used as flour for making bajra roti or bhakri',
         'Mix with wheat flour (50:50) if new to bajra for a milder taste',
         'Serve bajra roti hot with ghee for best flavor and texture',
-        'Pearl millet flour does not keep long — grind fresh or refrigerate',
+        'Pearl millet flour does not keep long, grind fresh or refrigerate',
       ],
     },
 
@@ -196,9 +196,9 @@ export const majorMillets: Millet[] = [
       plant: '/images/millets/finger-millet-plant.webp',
       cooked: '/images/millets/finger-millet-cooked.webp',
     },
-    tagline: "The calcium champion — nature's richest non-dairy calcium source among cereals",
+    tagline: "The calcium champion, nature's richest non-dairy calcium source among cereals",
     description:
-      'Finger millet (Ragi) is renowned as the calcium champion of the cereal world, containing an extraordinary 344mg of calcium per 100g — the highest among all cereals. A staple of Karnataka and Tamil Nadu, ragi has been cultivated in India for over 3000 years. It is especially valued for infant nutrition, bone health, and as a dietary staple for the elderly. Ragi mudde (ragi ball) and ragi malt are iconic South Indian preparations.',
+      'Finger millet (Ragi) has the highest calcium content of any cereal, containing 344mg of calcium per 100g. A staple of Karnataka and Tamil Nadu, ragi has been cultivated in India for over 3000 years. It is especially valued for infant nutrition, bone health, and as a dietary staple for the elderly. Ragi mudde (ragi ball) and ragi malt are iconic South Indian preparations.',
 
     names: {
       english: 'Finger Millet',
@@ -385,9 +385,9 @@ export const majorMillets: Millet[] = [
       plant: '/images/millets/sorghum-plant.webp',
       cooked: '/images/millets/sorghum-cooked.webp',
     },
-    tagline: 'The versatile powerhouse — high in fiber, antioxidants, and culinary adaptability',
+    tagline: 'A versatile grain, high in fiber, antioxidants, and culinary adaptability',
     description:
-      'Sorghum (Jowar) is one of the most versatile and widely cultivated millets, grown across Maharashtra, Karnataka, and Madhya Pradesh. It is the fifth most important cereal globally. Known for its remarkably high fiber content (9.7g per 100g) and rich antioxidant profile, jowar is consumed as rotis (bhakri), in porridges, and even fermented into beverages. It grows in both Kharif and Rabi seasons, making it a year-round staple.',
+      'Sorghum (Jowar) is one of the most versatile and widely cultivated millets, grown across Maharashtra, Karnataka, and Madhya Pradesh. It is the fifth most important cereal globally. Known for its high fiber content (9.7g per 100g) and antioxidant profile, jowar is consumed as rotis (bhakri), in porridges, and even fermented into beverages. It grows in both Kharif and Rabi seasons, making it a year-round staple.',
 
     names: {
       english: 'Sorghum',
@@ -443,7 +443,7 @@ export const majorMillets: Millet[] = [
         'Useful for urinary tract health',
       ],
       contraindications: [
-        'May aggravate Vata — best consumed with ghee or oil to balance',
+        'May aggravate Vata, best consumed with ghee or oil to balance',
         'Excessive consumption may cause dryness in the body',
       ],
       classicalReference: 'Bhavaprakasha Nighantu',
@@ -477,10 +477,10 @@ export const majorMillets: Millet[] = [
       flavorProfile: 'Mild, slightly sweet, neutral',
       bestSubstituteFor: 'Rice, wheat',
       tips: [
-        'Jowar flour makes excellent bhakri — pat the dough while warm for pliable rotis',
+        'Jowar flour makes excellent bhakri, pat the dough while warm for pliable rotis',
         'Whole jowar grains can be cooked like rice after soaking',
         'Popped jowar (like popcorn) is a popular snack in Maharashtra',
-        'Jowar flour does not have gluten — add a binder when baking',
+        'Jowar flour does not have gluten. Add a binder when baking',
         'Combine with vegetables for a nutritious jowar upma or khichdi',
       ],
     },
@@ -564,7 +564,7 @@ export const majorMillets: Millet[] = [
       plant: '/images/millets/foxtail-millet-plant.webp',
       cooked: '/images/millets/foxtail-millet-cooked.webp',
     },
-    tagline: 'One of the oldest cultivated millets — rich in protein and iron, a rice alternative',
+    tagline: 'One of the oldest cultivated millets, rich in protein and iron, a rice alternative',
     description:
       'Foxtail millet (Kangni/Thinai) is one of the oldest cultivated crops in human history, with evidence of domestication in northern China dating back nearly 9000 years. It is high in protein (12.3g per 100g), rich in dietary fiber, and has a low glycemic index of ~50. Its fluffy, rice-like texture when cooked makes it an excellent substitute for rice. It is extremely drought tolerant, requiring only 300-400mm of rainfall.',
 
@@ -622,7 +622,7 @@ export const majorMillets: Millet[] = [
         'Traditionally used in postpartum recovery diets',
       ],
       contraindications: [
-        'May slightly increase Vata — balance with ghee or oil',
+        'May slightly increase Vata, balance with ghee or oil',
         'Not recommended in excess for individuals with dry skin conditions',
       ],
       classicalReference: 'Ashtanga Hridaya',
@@ -663,7 +663,7 @@ export const majorMillets: Millet[] = [
       bestSubstituteFor: 'Rice',
       tips: [
         'Rinse well and soak for 30 minutes before cooking for best results',
-        'Cook like rice — it fluffs up beautifully',
+        'Cook like rice. It fluffs up beautifully',
         'Makes excellent upma, pulao, and pongal',
         'Can be used in sweet dishes like payasam (kheer)',
         'Dry roast lightly before cooking for a nuttier flavor',
@@ -749,9 +749,9 @@ export const majorMillets: Millet[] = [
       plant: '/images/millets/little-millet-plant.webp',
       cooked: '/images/millets/little-millet-cooked.webp',
     },
-    tagline: 'The iron-rich tiny grain — a perfect rice substitute with high fiber content',
+    tagline: 'The iron-rich tiny grain, a perfect rice substitute with high fiber content',
     description:
-      'Little millet (Kutki/Samai) is a small-grained millet native to India, domesticated in the Eastern Ghats region. Despite its tiny size, it packs a powerful nutritional punch with very high iron content (9.3mg per 100g) and significant fiber (7.6g per 100g). Its neutral flavor and rice-like texture make it the closest millet substitute for rice. It has been grown since ancient times in tribal areas of central and southern India.',
+      'Little millet (Kutki/Samai) is a small-grained millet native to India, domesticated in the Eastern Ghats region. Despite its tiny size, it has very high iron content (9.3mg per 100g) and significant fiber (7.6g per 100g). Its neutral flavor and rice-like texture make it the closest millet substitute for rice. It has been grown since ancient times in tribal areas of central and southern India.',
 
     names: {
       english: 'Little Millet',
@@ -842,7 +842,7 @@ export const majorMillets: Millet[] = [
       bestSubstituteFor: 'Rice (closest substitute among millets)',
       tips: [
         'Soak for 30 minutes and rinse well before cooking',
-        'Cook exactly like rice — it is the easiest millet to transition to',
+        'Cook exactly like rice. It is the easiest millet to transition to',
         'Makes excellent lemon rice, pulao, and biryani substitutes',
         'Can be used for idli and dosa batter mixed with urad dal',
         'Its neutral taste makes it versatile for both savory and sweet dishes',

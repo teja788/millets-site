@@ -21,7 +21,7 @@ export const timelineEvents: TimelineEvent[] = [
     year: '~4500 BCE',
     title: 'Pearl Millet Origins',
     description:
-      'Pearl millet (Pennisetum glaucum) begins cultivation in the Sahel region of West Africa, in areas that are now Mali and Niger. Adapted to extreme heat and drought, it becomes a lifeline crop for semi-arid tropical agriculture.',
+      'Pearl millet (Pennisetum glaucum) begins cultivation in the Sahel region of West Africa, in areas that are now Mali and Niger. Adapted to extreme heat and drought, it becomes an essential crop for semi-arid tropical agriculture.',
     region: 'West Africa',
     source: 'fao-millets-1995',
   },
@@ -139,7 +139,7 @@ export const timelineEvents: TimelineEvent[] = [
     year: '2023',
     title: 'International Year of Millets',
     description:
-      'The United Nations celebrates the International Year of Millets (IYM 2023). India leads global campaigns promoting millet consumption, research, and trade. Events are held across 100+ countries, millet-based menus appear at UN cafeterias, and awareness of millets as climate-smart, nutritious grains reaches an unprecedented global audience.',
+      'The United Nations celebrates the International Year of Millets (IYM 2023). India leads global campaigns promoting millet consumption, research, and trade. Events are held across 100+ countries, millet-based menus appear at UN cafeterias, and awareness of millets as climate-smart, nutritious grains reaches a wide global audience.',
     region: 'Global',
     source: 'un-iym-2023',
   },

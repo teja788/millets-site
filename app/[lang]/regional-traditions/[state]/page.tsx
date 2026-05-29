@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return { title: t.regionalPage.notFound };
   }
   return {
-    title: `${tradition.state} — ${t.regionalPage.title} | ${t.site.siteName}`,
+    title: `${tradition.state}: ${t.regionalPage.title} | ${t.site.siteName}`,
     description: tradition.tagline,
     alternates: {
       canonical: `/${lang}/regional-traditions/${state}`,

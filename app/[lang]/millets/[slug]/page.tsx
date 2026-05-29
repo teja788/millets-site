@@ -309,7 +309,7 @@ export default async function MilletDetailPage({ params }: PageProps) {
             </h2>
             <p className="text-sm text-earth-500 dark:text-earth-400 mb-4">
               {t.common.per100g}. {t.common.source}: {millet.nutrition.source}
-              {millet.nutrition.sourceDetail && ` — ${millet.nutrition.sourceDetail}`}
+              {millet.nutrition.sourceDetail && `, ${millet.nutrition.sourceDetail}`}
             </p>
 
             {/* Quick Facts */}
