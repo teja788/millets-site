@@ -89,7 +89,7 @@ export default function Navbar({ locale }: { locale: Locale }) {
         { href: localePath(locale, '/tools/cooking-timer'), label: t.nav.cookingTimer },
       ],
     },
-    ...(locale === 'en' ? [{ href: localePath(locale, '/about'), label: t.nav.about }] : []),
+    { href: localePath(locale, '/about'), label: t.nav.about },
   ];
 
   /* — shared state — */

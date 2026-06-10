@@ -1,19 +1,24 @@
 import type { MetadataRoute } from 'next';
-import { millets } from '@/data/millets';
-import { recipes } from '@/data/recipes';
-import { globalMilletRegions } from '@/data/global-millets';
-import { regionalTraditions } from '@/data/regional-traditions';
-import { locales } from '@/lib/i18n';
+import { locales, type Locale } from '@/lib/i18n';
+import {
+  getGlobalMilletRegions,
+  getMillets,
+  getRecipes,
+  getRegionalTraditions,
+} from '@/lib/i18n-data';
 import { siteUrl } from '@/lib/site-url';
 
 const BASE_URL = siteUrl;
 
-/** Build hreflang alternates object for a given path */
-function alternatesFor(path: string) {
+function alternatesFor(path: string, availableLocales: readonly Locale[]) {
+  const defaultLocale = availableLocales.includes('en') ? 'en' : availableLocales[0];
+
   return {
     languages: {
-      ...Object.fromEntries(locales.map((l) => [l, `${BASE_URL}/${l}${path}`])),
-      'x-default': `${BASE_URL}/en${path}`,
+      ...Object.fromEntries(
+        availableLocales.map((locale) => [locale, `${BASE_URL}/${locale}${path}`]),
+      ),
+      ...(defaultLocale ? { 'x-default': `${BASE_URL}/${defaultLocale}${path}` } : {}),
     },
   };
 }
@@ -38,7 +43,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/buying-guide',
     '/ancient-references',
     '/myths',
-    '/search',
     '/global-millets',
     '/regional-traditions',
     '/tools/cooking-timer',
@@ -51,13 +55,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   for (const route of staticRoutes) {
-    for (const locale of locales) {
+    const availableLocales =
+      route === '/ayurveda'
+        ? locales.filter((locale) => !['fr', 'de', 'es'].includes(locale))
+        : locales;
+
+    for (const locale of availableLocales) {
       entries.push({
         url: `${BASE_URL}/${locale}${route}`,
-        lastModified: new Date(),
         changeFrequency: 'monthly',
         priority: route === '' ? 1.0 : 0.8,
-        alternates: alternatesFor(route),
+        alternates: alternatesFor(route, availableLocales),
       });
     }
   }
@@ -67,7 +75,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const route of frenchOnlyRoutes) {
     entries.push({
       url: `${BASE_URL}/fr${route}`,
-      lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
     });
@@ -78,7 +85,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const route of germanOnlyRoutes) {
     entries.push({
       url: `${BASE_URL}/de${route}`,
-      lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
     });
@@ -89,60 +95,101 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const route of spanishOnlyRoutes) {
     entries.push({
       url: `${BASE_URL}/es${route}`,
-      lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
     });
   }
 
-  // Dynamic millet pages (all locales)
-  for (const millet of millets) {
-    for (const locale of locales) {
+  const milletSlugsByLocale = Object.fromEntries(
+    locales.map((locale) => [locale, new Set(getMillets(locale).map((millet) => millet.slug))]),
+  ) as Record<Locale, Set<string>>;
+  const allMilletSlugs = new Set(
+    locales.flatMap((locale) => [...milletSlugsByLocale[locale]]),
+  );
+
+  for (const slug of allMilletSlugs) {
+    const availableLocales = locales.filter((locale) =>
+      milletSlugsByLocale[locale].has(slug),
+    );
+
+    for (const locale of availableLocales) {
       entries.push({
-        url: `${BASE_URL}/${locale}/millets/${millet.slug}`,
-        lastModified: new Date(),
+        url: `${BASE_URL}/${locale}/millets/${slug}`,
         changeFrequency: 'monthly',
         priority: 0.9,
-        alternates: alternatesFor(`/millets/${millet.slug}`),
+        alternates: alternatesFor(`/millets/${slug}`, availableLocales),
       });
     }
   }
 
-  // Dynamic recipe pages (all locales)
-  for (const recipe of recipes) {
-    for (const locale of locales) {
+  const recipeSlugsByLocale = Object.fromEntries(
+    locales.map((locale) => [locale, new Set(getRecipes(locale).map((recipe) => recipe.slug))]),
+  ) as Record<Locale, Set<string>>;
+  const allRecipeSlugs = new Set(
+    locales.flatMap((locale) => [...recipeSlugsByLocale[locale]]),
+  );
+
+  for (const slug of allRecipeSlugs) {
+    const availableLocales = locales.filter((locale) =>
+      recipeSlugsByLocale[locale].has(slug),
+    );
+
+    for (const locale of availableLocales) {
       entries.push({
-        url: `${BASE_URL}/${locale}/recipes/${recipe.slug}`,
-        lastModified: new Date(),
+        url: `${BASE_URL}/${locale}/recipes/${slug}`,
         changeFrequency: 'monthly',
         priority: 0.9,
-        alternates: alternatesFor(`/recipes/${recipe.slug}`),
+        alternates: alternatesFor(`/recipes/${slug}`, availableLocales),
       });
     }
   }
 
-  // Dynamic global millets region pages (all locales)
-  for (const region of globalMilletRegions) {
-    for (const locale of locales) {
+  const regionSlugsByLocale = Object.fromEntries(
+    locales.map((locale) => [
+      locale,
+      new Set(getGlobalMilletRegions(locale).map((region) => region.slug)),
+    ]),
+  ) as Record<Locale, Set<string>>;
+  const allRegionSlugs = new Set(
+    locales.flatMap((locale) => [...regionSlugsByLocale[locale]]),
+  );
+
+  for (const slug of allRegionSlugs) {
+    const availableLocales = locales.filter((locale) =>
+      regionSlugsByLocale[locale].has(slug),
+    );
+
+    for (const locale of availableLocales) {
       entries.push({
-        url: `${BASE_URL}/${locale}/global-millets/${region.slug}`,
-        lastModified: new Date(),
+        url: `${BASE_URL}/${locale}/global-millets/${slug}`,
         changeFrequency: 'monthly',
         priority: 0.7,
-        alternates: alternatesFor(`/global-millets/${region.slug}`),
+        alternates: alternatesFor(`/global-millets/${slug}`, availableLocales),
       });
     }
   }
 
-  // Dynamic regional traditions state pages (all locales)
-  for (const state of regionalTraditions) {
-    for (const locale of locales) {
+  const traditionSlugsByLocale = Object.fromEntries(
+    locales.map((locale) => [
+      locale,
+      new Set(getRegionalTraditions(locale).map((tradition) => tradition.slug)),
+    ]),
+  ) as Record<Locale, Set<string>>;
+  const allTraditionSlugs = new Set(
+    locales.flatMap((locale) => [...traditionSlugsByLocale[locale]]),
+  );
+
+  for (const slug of allTraditionSlugs) {
+    const availableLocales = locales.filter((locale) =>
+      traditionSlugsByLocale[locale].has(slug),
+    );
+
+    for (const locale of availableLocales) {
       entries.push({
-        url: `${BASE_URL}/${locale}/regional-traditions/${state.slug}`,
-        lastModified: new Date(),
+        url: `${BASE_URL}/${locale}/regional-traditions/${slug}`,
         changeFrequency: 'monthly',
         priority: 0.7,
-        alternates: alternatesFor(`/regional-traditions/${state.slug}`),
+        alternates: alternatesFor(`/regional-traditions/${slug}`, availableLocales),
       });
     }
   }

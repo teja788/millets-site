@@ -8,7 +8,13 @@ import ImageWithFallback from '@/components/ui/ImageWithFallback';
 import PrintButton from '@/components/ui/PrintButton';
 import ShareButton, { FloatingShareButton } from '@/components/ui/ShareButton';
 import type { Locale } from '@/lib/i18n';
-import { localePath, getTranslations, isValidLocale, locales, hreflangAlternates } from '@/lib/i18n';
+import {
+  localePath,
+  getTranslations,
+  isValidLocale,
+  locales,
+  availableHreflangAlternates,
+} from '@/lib/i18n';
 import { getRecipes, getRecipeBySlugLocale, getMilletBySlugLocale } from '@/lib/i18n-data';
 import { toAbsoluteSiteUrl } from '@/lib/site-url';
 
@@ -35,13 +41,19 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const recipe = getRecipeBySlugLocale(slug, locale);
   if (!recipe) return { title: t.recipeDetail.notFound };
   const url = `/${locale}/recipes/${recipe.slug}`;
+  const availableLocales = locales.filter((candidateLocale) =>
+    getRecipeBySlugLocale(slug, candidateLocale),
+  );
 
   return {
     title: `${recipe.title} | ${t.recipesPage.title}`,
     description: recipe.description,
     alternates: {
       canonical: `/${locale}/recipes/${slug}`,
-      languages: hreflangAlternates(`/recipes/${slug}`),
+      languages: availableHreflangAlternates(
+        `/recipes/${slug}`,
+        availableLocales,
+      ),
     },
     openGraph: {
       title: recipe.title,

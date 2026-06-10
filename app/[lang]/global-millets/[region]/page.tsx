@@ -7,7 +7,11 @@ import Sidebar from '@/components/layout/Sidebar';
 import Badge from '@/components/ui/Badge';
 import { Card, CardBody } from '@/components/ui/Card';
 import type { Locale } from '@/lib/i18n';
-import { getTranslations, isValidLocale, hreflangAlternates } from '@/lib/i18n';
+import {
+  getTranslations,
+  isValidLocale,
+  availableHreflangAlternates,
+} from '@/lib/i18n';
 import { locales } from '@/lib/i18n';
 import {
   getGlobalMilletRegions,
@@ -44,12 +48,19 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!data) {
     return { title: t.globalPage.notFound };
   }
+  const availableLocales = locales.filter((candidateLocale) =>
+    getGlobalMilletRegionBySlugLocale(region, candidateLocale),
+  );
+
   return {
     title: `${data.region}: ${t.globalPage.title} | ${t.site.siteName}`,
     description: data.tagline,
     alternates: {
       canonical: `/${lang}/global-millets/${region}`,
-      languages: hreflangAlternates(`/global-millets/${region}`),
+      languages: availableHreflangAlternates(
+        `/global-millets/${region}`,
+        availableLocales,
+      ),
     },
     openGraph: {
       images: [{ url: data.imageFile, width: 1200, height: 800, alt: data.region }],

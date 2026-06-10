@@ -33,10 +33,10 @@ export default function Footer({ locale }: { locale: Locale }) {
     { href: localePath(locale, '/tools/millet-quiz'), label: t.nav.milletQuiz },
     { href: localePath(locale, '/tools/substitution-calculator'), label: t.nav.substitutionCalculator },
     { href: localePath(locale, '/tools/cooking-timer'), label: t.nav.cookingTimer },
-    ...(locale === 'en' ? [{ href: localePath(locale, '/about'), label: t.nav.about }] : []),
+    { href: localePath(locale, '/about'), label: t.nav.about },
     { href: localePath(locale, '/privacy-policy'), label: t.nav.privacyPolicy },
     { href: localePath(locale, '/disclaimer'), label: t.nav.disclaimer },
-    ...(locale === 'en' ? [{ href: localePath(locale, '/contact'), label: t.nav.contact }] : []),
+    { href: localePath(locale, '/contact'), label: t.nav.contact },
     ...(locale === 'fr' ? [
       { href: localePath(locale, '/nutrition-et-sante'), label: 'Nutrition et santé' },
       { href: localePath(locale, '/millet-vs-quinoa'), label: 'Millet vs Quinoa' },

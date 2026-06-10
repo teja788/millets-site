@@ -8,7 +8,12 @@ import Sidebar from '@/components/layout/Sidebar';
 import Badge from '@/components/ui/Badge';
 import { Card, CardBody } from '@/components/ui/Card';
 import type { Locale } from '@/lib/i18n';
-import { localePath, getTranslations, isValidLocale, hreflangAlternates } from '@/lib/i18n';
+import {
+  localePath,
+  getTranslations,
+  isValidLocale,
+  availableHreflangAlternates,
+} from '@/lib/i18n';
 import { locales } from '@/lib/i18n';
 import {
   getRegionalTraditions,
@@ -45,12 +50,19 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!tradition) {
     return { title: t.regionalPage.notFound };
   }
+  const availableLocales = locales.filter((candidateLocale) =>
+    getRegionalTraditionBySlugLocale(state, candidateLocale),
+  );
+
   return {
     title: `${tradition.state}: ${t.regionalPage.title} | ${t.site.siteName}`,
     description: tradition.tagline,
     alternates: {
       canonical: `/${lang}/regional-traditions/${state}`,
-      languages: hreflangAlternates(`/regional-traditions/${state}`),
+      languages: availableHreflangAlternates(
+        `/regional-traditions/${state}`,
+        availableLocales,
+      ),
     },
     openGraph: {
       images: [{ url: tradition.imageFile, width: 1200, height: 800, alt: tradition.state }],

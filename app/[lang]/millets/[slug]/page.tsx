@@ -38,7 +38,13 @@ import FeaturedRecipes from '@/components/sections/FeaturedRecipes';
 import TestimonialOrQuote from '@/components/sections/TestimonialOrQuote';
 import ImageWithFallback from '@/components/ui/ImageWithFallback';
 import type { Locale } from '@/lib/i18n';
-import { localePath, getTranslations, isValidLocale, locales, hreflangAlternates } from '@/lib/i18n';
+import {
+  localePath,
+  getTranslations,
+  isValidLocale,
+  locales,
+  availableHreflangAlternates,
+} from '@/lib/i18n';
 import { localeFeatures } from '@/lib/locale-config';
 import { getMillets, getMilletBySlugLocale, getRecipesByMilletLocale, getSources, riceNutrition } from '@/lib/i18n-data';
 import type { EvidenceLevel } from '@/lib/types';
@@ -71,12 +77,19 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!millet) {
     return { title: t.milletDetail.notFound };
   }
+  const availableLocales = locales.filter((candidateLocale) =>
+    getMilletBySlugLocale(slug, candidateLocale),
+  );
+
   return {
     title: millet.name,
     description: millet.tagline,
     alternates: {
       canonical: `/${locale}/millets/${slug}`,
-      languages: hreflangAlternates(`/millets/${slug}`),
+      languages: availableHreflangAlternates(
+        `/millets/${slug}`,
+        availableLocales,
+      ),
     },
   };
 }

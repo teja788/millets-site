@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     template: '%s | Millets Guide',
   },
   description:
-    'A comprehensive, evidence-based guide to millets - nutrition, recipes, history, Ayurveda, and sustainable farming. Every fact sourced and verified.',
+    'A comprehensive guide to millets - nutrition, recipes, history, Ayurveda, and sustainable farming, with references to published and institutional sources.',
   keywords: [
     'millets',
     'bajra',

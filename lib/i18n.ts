@@ -45,6 +45,21 @@ export function hreflangAlternates(path: string) {
   };
 }
 
+/** Build hreflang alternates only for locales where the target page exists. */
+export function availableHreflangAlternates(
+  path: string,
+  availableLocales: readonly Locale[],
+) {
+  const defaultLocale = availableLocales.includes('en')
+    ? 'en'
+    : availableLocales[0];
+
+  return {
+    ...Object.fromEntries(availableLocales.map((locale) => [locale, `/${locale}${path}`])),
+    ...(defaultLocale ? { 'x-default': `/${defaultLocale}${path}` } : {}),
+  };
+}
+
 /** Build complete alternates object (canonical + hreflang) for a page */
 export function pageAlternates(locale: Locale, path: string) {
   return {
