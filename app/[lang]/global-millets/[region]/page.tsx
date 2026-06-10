@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import Image from 'next/image';
 import { Globe, Utensils, Clock, BookOpen, TrendingUp } from 'lucide-react';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import Sidebar from '@/components/layout/Sidebar';
@@ -50,6 +51,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       canonical: `/${lang}/global-millets/${region}`,
       languages: hreflangAlternates(`/global-millets/${region}`),
     },
+    openGraph: {
+      images: [{ url: data.imageFile, width: 1200, height: 800, alt: data.region }],
+    },
   };
 }
 
@@ -97,25 +101,38 @@ export default async function GlobalMilletRegionDetailPage({ params }: PageProps
 
       {/* Hero Area */}
       <header className="content-wrapper pt-4 pb-8">
-        <div className="flex flex-wrap items-center gap-3 mb-3">
-          <Badge variant={continentBadgeVariant[data.continent] || 'default'}>
-            {data.continent}
-          </Badge>
-          <Badge variant="default" size="sm">
-            {data.countries.length}{' '}
-            {data.countries.length === 1 ? 'Country' : 'Countries'}
-          </Badge>
+        <div className="relative h-56 md:h-72 overflow-hidden rounded-2xl">
+          <Image
+            src={data.imageFile}
+            alt={data.region}
+            fill
+            priority
+            className="object-cover"
+            sizes="(max-width: 1280px) 100vw, 1200px"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/15 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 p-5 md:p-7 text-white">
+            <div className="flex flex-wrap items-center gap-3 mb-3">
+              <Badge variant={continentBadgeVariant[data.continent] || 'default'}>
+                {data.continent}
+              </Badge>
+              <Badge variant="default" size="sm">
+                {data.countries.length}{' '}
+                {data.countries.length === 1 ? 'Country' : 'Countries'}
+              </Badge>
+            </div>
+            <h1 className="font-heading text-4xl md:text-5xl font-bold mb-2">
+              {data.region}
+            </h1>
+            <p className="text-lg italic text-white/90 mb-2">
+              {data.tagline}
+            </p>
+            <p className="text-sm text-white/80">
+              <span className="font-medium text-white">Countries:</span>{' '}
+              {data.countries.join(', ')}
+            </p>
+          </div>
         </div>
-        <h1 className="font-heading text-4xl md:text-5xl font-bold text-earth-800 dark:text-earth-100 mb-2">
-          {data.region}
-        </h1>
-        <p className="text-lg italic text-warm-gray dark:text-earth-400 mb-3">
-          {data.tagline}
-        </p>
-        <p className="text-sm text-warm-gray dark:text-earth-400">
-          <span className="font-medium text-earth-700 dark:text-earth-300">Countries:</span>{' '}
-          {data.countries.join(', ')}
-        </p>
       </header>
 
       {/* Two-column layout */}

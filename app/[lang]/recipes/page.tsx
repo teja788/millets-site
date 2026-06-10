@@ -3,6 +3,7 @@
 import { useState, useMemo } from 'react';
 import { useParams } from 'next/navigation';
 import Breadcrumb from '@/components/layout/Breadcrumb';
+import PageBanner from '@/components/sections/PageBanner';
 import RecipeCard from '@/components/ui/RecipeCard';
 import type { Locale } from '@/lib/i18n';
 import { getTranslations } from '@/lib/i18n';
@@ -47,6 +48,7 @@ export default function RecipesPage() {
   return (
     <main>
       <Breadcrumb locale={locale} />
+      <PageBanner src="/images/hero/hero-recipes.webp" alt={t.recipesPage.title} />
 
       <div className="content-wrapper py-8">
         {/* Page Header */}

@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from 'next';
 import { headers } from 'next/headers';
-import Script from 'next/script';
 import {
   Playfair_Display,
   Source_Sans_3,
@@ -12,8 +11,7 @@ import '@/styles/globals.css';
 import { defaultLocale, isValidLocale, type Locale } from '@/lib/i18n';
 import { localeFeatures } from '@/lib/locale-config';
 import { siteUrl } from '@/lib/site-url';
-
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+import ThirdPartyScripts from '@/components/ui/ThirdPartyScripts';
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -75,6 +73,18 @@ export const metadata: Metadata = {
     siteName: 'Simply Millets',
     locale: 'en_IN',
     type: 'website',
+    images: [
+      {
+        url: '/images/og-image.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Simply Millets',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/images/og-image.webp'],
   },
   manifest: '/manifest.json',
   appleWebApp: {
@@ -122,29 +132,10 @@ export default async function RootLayout({
       className={`${playfair.variable} ${sourceSans.variable} ${notoTelugu.variable} ${notoArabic.variable} ${notoDevanagari.variable}`}
       suppressHydrationWarning
     >
-      {GA_ID && (
-        <>
-          <Script
-            src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-            strategy="afterInteractive"
-          />
-          <Script id="google-analytics" strategy="afterInteractive">
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '${GA_ID}');
-            `}
-          </Script>
-        </>
-      )}
-      <Script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5986156458101759"
-        crossOrigin="anonymous"
-        strategy="beforeInteractive"
-      />
-      <body className="font-body antialiased">{children}</body>
+      <body className="font-body antialiased">
+        <ThirdPartyScripts />
+        {children}
+      </body>
     </html>
   );
 }

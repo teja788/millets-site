@@ -7,6 +7,7 @@ import Fuse from 'fuse.js';
 import { Search, Wheat, UtensilsCrossed, HelpCircle, FileText, ArrowRight, Wrench, MapPin, Globe } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Breadcrumb from '@/components/layout/Breadcrumb';
+import PageBanner from '@/components/sections/PageBanner';
 import { getSearchIndexByLocale } from '@/lib/search-index-data';
 import type { Locale } from '@/lib/i18n';
 import { localePath, isValidLocale, getTranslations } from '@/lib/i18n';
@@ -107,6 +108,7 @@ function SearchResults() {
   return (
     <>
       <Breadcrumb locale={locale} />
+      <PageBanner src="/images/hero/hero-search.webp" alt={t.nav.search} />
       <div className="content-wrapper section-padding">
         {/* Search input */}
         <div className="max-w-2xl mx-auto mb-10">

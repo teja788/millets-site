@@ -1053,7 +1053,7 @@ export const recipes: Recipe[] = [
       'Para una versión dulce, omita el suero de leche y la cebolla e incorpore jaggery con un poco de leche, más parecido a un malta de ragi.',
     ],
     imageUrl: '',
-    imageFile: '',
+    imageFile: '/images/recipes/ragi-ambali.webp',
     tags: ['sin-gluten', 'vegetariano', 'fermentado', 'probiótico', 'tradicional', 'bebida-de-verano', 'rico-en-calcio', 'indio'],
   },
 
@@ -1098,7 +1098,7 @@ export const recipes: Recipe[] = [
       'Una cucharada de ambali fermentado sobrante incorporada a la tanda fresca ayuda a que se acidifique más rápido en una noche fresca.',
     ],
     imageUrl: '',
-    imageFile: '',
+    imageFile: '/images/recipes/foxtail-millet-ambali.webp',
     tags: ['sin-gluten', 'vegetariano', 'fermentado', 'probiótico', 'tradicional', 'bebida-de-verano', 'siridhanya', 'indio'],
   },
 
@@ -1143,7 +1143,7 @@ export const recipes: Recipe[] = [
       'Calcule el remojo y la cocción para la tarde, de modo que el ambali fermente durante la noche y esté listo por la mañana.',
     ],
     imageUrl: '',
-    imageFile: '',
+    imageFile: '/images/recipes/little-millet-ambali.webp',
     tags: ['sin-gluten', 'vegetariano', 'fermentado', 'probiótico', 'tradicional', 'bebida-de-verano', 'siridhanya', 'indio'],
   },
 
@@ -1188,7 +1188,7 @@ export const recipes: Recipe[] = [
       'Cuézalo a fuego lento y bajo hasta que los granos se deshagan, lo que da el ambali más suave.',
     ],
     imageUrl: '',
-    imageFile: '',
+    imageFile: '/images/recipes/kodo-millet-ambali.webp',
     tags: ['sin-gluten', 'vegetariano', 'fermentado', 'probiótico', 'tradicional', 'bebida-de-verano', 'siridhanya', 'indio'],
   },
 
@@ -1233,7 +1233,7 @@ export const recipes: Recipe[] = [
       'Espesa rápido una vez frío, así que aligérelo con suero de leche justo antes de servir.',
     ],
     imageUrl: '',
-    imageFile: '',
+    imageFile: '/images/recipes/barnyard-millet-ambali.webp',
     tags: ['sin-gluten', 'vegetariano', 'fermentado', 'probiótico', 'tradicional', 'bebida-de-verano', 'siridhanya', 'indio'],
   },
 
@@ -1278,7 +1278,7 @@ export const recipes: Recipe[] = [
       'Como el browntop es difícil de encontrar, una tanda de ambali estira el grano en cuatro raciones refrescantes.',
     ],
     imageUrl: '',
-    imageFile: '',
+    imageFile: '/images/recipes/browntop-millet-ambali.webp',
     tags: ['sin-gluten', 'vegetariano', 'fermentado', 'probiótico', 'tradicional', 'bebida-de-verano', 'siridhanya', 'indio'],
   },
 

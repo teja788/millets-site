@@ -1,36 +1,39 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useSyncExternalStore } from 'react';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import type { Locale } from '@/lib/i18n';
 import { localePath, getTranslations, isValidLocale } from '@/lib/i18n';
 
+const CONSENT_EVENT = 'cookie-consent-change';
+
 export default function CookieConsent() {
-  const [visible, setVisible] = useState(false);
+  const [dismissed, setDismissed] = useState(false);
   const params = useParams();
   const lang = (params?.lang as string) || 'en';
   const locale: Locale = isValidLocale(lang) ? lang : 'en';
   const t = getTranslations(locale);
 
-  useEffect(() => {
-    const consent = localStorage.getItem('cookie-consent');
-    if (!consent) {
-      setVisible(true);
-    }
-  }, []);
+  const hasConsent = useSyncExternalStore(
+    () => () => {},
+    () => Boolean(localStorage.getItem('cookie-consent')),
+    () => true,
+  );
 
   function accept() {
     localStorage.setItem('cookie-consent', 'accepted');
-    setVisible(false);
+    setDismissed(true);
+    window.dispatchEvent(new Event(CONSENT_EVENT));
   }
 
   function decline() {
     localStorage.setItem('cookie-consent', 'declined');
-    setVisible(false);
+    setDismissed(true);
+    window.dispatchEvent(new Event(CONSENT_EVENT));
   }
 
-  if (!visible) return null;
+  if (hasConsent || dismissed) return null;
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 bg-earth-900 dark:bg-earth-950 border-t border-earth-700 p-4 shadow-lg">

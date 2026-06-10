@@ -943,7 +943,7 @@ export const recipes: Recipe[] = [
       'لنسخة حلوة، استبعد اللبن المخيض والبصل وأضف بدلاً منهما الجاغري مع قليل من الحليب، فيقترب من شراب الراغي بالحليب.',
     ],
     imageUrl: '',
-    imageFile: '',
+    imageFile: '/images/recipes/ragi-ambali.webp',
     tags: ['gluten-free', 'vegetarian', 'fermented', 'probiotic', 'traditional', 'summer-drink', 'calcium-rich'],
   },
 
@@ -985,7 +985,7 @@ export const recipes: Recipe[] = [
       'ملعقة من الأمبالي المخمّر المتبقي تُضاف إلى الدفعة الطازجة تساعدها على التحميض أسرع في ليلة باردة.',
     ],
     imageUrl: '',
-    imageFile: '',
+    imageFile: '/images/recipes/foxtail-millet-ambali.webp',
     tags: ['gluten-free', 'vegetarian', 'fermented', 'probiotic', 'traditional', 'summer-drink', 'siridhanya'],
   },
 
@@ -1027,7 +1027,7 @@ export const recipes: Recipe[] = [
       'وقّت النقع والطهي للمساء كي يختمر الأمبالي طوال الليل ويكون جاهزاً مع الصباح.',
     ],
     imageUrl: '',
-    imageFile: '',
+    imageFile: '/images/recipes/little-millet-ambali.webp',
     tags: ['gluten-free', 'vegetarian', 'fermented', 'probiotic', 'traditional', 'summer-drink', 'siridhanya'],
   },
 
@@ -1069,7 +1069,7 @@ export const recipes: Recipe[] = [
       'اطبخه على نار هادئة وببطء حتى تنهار الحبّات، فهذا يمنح أنعم أمبالي.',
     ],
     imageUrl: '',
-    imageFile: '',
+    imageFile: '/images/recipes/kodo-millet-ambali.webp',
     tags: ['gluten-free', 'vegetarian', 'fermented', 'probiotic', 'traditional', 'summer-drink', 'siridhanya'],
   },
 
@@ -1111,7 +1111,7 @@ export const recipes: Recipe[] = [
       'يتكاثف بسرعة بعد أن يبرد، لذا خفّفه باللبن المخيض قبيل التقديم.',
     ],
     imageUrl: '',
-    imageFile: '',
+    imageFile: '/images/recipes/barnyard-millet-ambali.webp',
     tags: ['gluten-free', 'vegetarian', 'fermented', 'probiotic', 'traditional', 'summer-drink', 'siridhanya'],
   },
 
@@ -1153,7 +1153,7 @@ export const recipes: Recipe[] = [
       'ولأن الدخن البنّي القمّة يصعب إيجاده، فإن دفعة واحدة من الأمبالي تمدّ الحبّ عبر أربع حصص باردة.',
     ],
     imageUrl: '',
-    imageFile: '',
+    imageFile: '/images/recipes/browntop-millet-ambali.webp',
     tags: ['gluten-free', 'vegetarian', 'fermented', 'probiotic', 'traditional', 'summer-drink', 'siridhanya'],
   },
 

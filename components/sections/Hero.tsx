@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { variantStyles, sizeStyles } from '@/components/ui/Button';
 
 interface CTAButton {
@@ -14,34 +14,27 @@ interface HeroProps {
   title: string;
   subtitle: string;
   ctaButtons?: CTAButton[];
+  image?: string;
 }
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.15,
-      delayChildren: 0.1,
-    },
-  },
-};
-
-const childVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number],
-    },
-  },
-};
-
-export default function Hero({ title, subtitle, ctaButtons }: HeroProps) {
+export default function Hero({ title, subtitle, ctaButtons, image }: HeroProps) {
   return (
     <section className="relative overflow-hidden min-h-[50vh] md:min-h-[70vh] flex items-center grain-texture">
+      {image && (
+        <>
+          <Image
+            src={image}
+            alt=""
+            fill
+            priority
+            fetchPriority="high"
+            className="object-cover"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-cream/95 via-cream/80 to-cream/35 dark:from-earth-950/95 dark:via-earth-950/80 dark:to-earth-950/40" />
+        </>
+      )}
+
       {/* Decorative organic shapes */}
       <svg
         className="absolute top-0 right-0 w-64 h-64 opacity-[0.06] pointer-events-none"
@@ -84,31 +77,17 @@ export default function Hero({ title, subtitle, ctaButtons }: HeroProps) {
 
       {/* Content */}
       <div className="content-wrapper w-full relative z-10">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="max-w-3xl"
-        >
-          <motion.h1
-            variants={childVariants}
-            className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-earth-800 dark:text-earth-100 mb-6"
-          >
+        <div className="max-w-3xl">
+          <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-earth-800 dark:text-earth-100 mb-6">
             {title}
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            variants={childVariants}
-            className="text-xl text-earth-800 dark:text-earth-300 mb-8 max-w-2xl leading-relaxed"
-          >
+          <p className="text-xl text-earth-800 dark:text-earth-300 mb-8 max-w-2xl leading-relaxed">
             {subtitle}
-          </motion.p>
+          </p>
 
           {ctaButtons && ctaButtons.length > 0 && (
-            <motion.div
-              variants={childVariants}
-              className="flex flex-wrap gap-4"
-            >
+            <div className="flex flex-wrap gap-4">
               {ctaButtons.map((cta) => (
                 <Link
                   key={cta.href}
@@ -118,9 +97,9 @@ export default function Hero({ title, subtitle, ctaButtons }: HeroProps) {
                   {cta.label}
                 </Link>
               ))}
-            </motion.div>
+            </div>
           )}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

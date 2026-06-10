@@ -4,6 +4,7 @@ import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { Search } from 'lucide-react';
 import Breadcrumb from '@/components/layout/Breadcrumb';
+import PageBanner from '@/components/sections/PageBanner';
 import type { Millet, LanguageNames } from '@/lib/types';
 import type { Locale } from '@/lib/i18n';
 import { localePath } from '@/lib/i18n';
@@ -49,6 +50,7 @@ export default function GlossaryPageClient({
   return (
     <main>
       <Breadcrumb locale={locale} />
+      <PageBanner src="/images/hero/hero-glossary.webp" alt={t.glossaryPage.title} />
 
       <div className="content-wrapper py-8">
         {/* Page Header */}

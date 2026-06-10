@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Breadcrumb from '@/components/layout/Breadcrumb';
+import PageBanner from '@/components/sections/PageBanner';
 import SourceCitation from '@/components/ui/SourceCitation';
 import { sources } from '@/data/sources';
 import type { Locale } from '@/lib/i18n';
@@ -59,6 +60,7 @@ export default async function AboutPage({
   return (
     <>
       <Breadcrumb locale={locale} />
+      <PageBanner src="/images/hero/hero-about.webp" alt={a.heading} />
 
       <div className="content-wrapper section-padding">
         {/* Page Title */}

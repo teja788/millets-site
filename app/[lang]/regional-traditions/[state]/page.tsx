@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { MapPin, Utensils, Calendar, BookOpen, Sprout } from 'lucide-react';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import Sidebar from '@/components/layout/Sidebar';
@@ -51,6 +52,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       canonical: `/${lang}/regional-traditions/${state}`,
       languages: hreflangAlternates(`/regional-traditions/${state}`),
     },
+    openGraph: {
+      images: [{ url: tradition.imageFile, width: 1200, height: 800, alt: tradition.state }],
+    },
   };
 }
 
@@ -99,20 +103,33 @@ export default async function RegionalTraditionDetailPage({ params }: PageProps)
 
       {/* Hero Area */}
       <header className="content-wrapper pt-4 pb-8">
-        <div className="flex flex-wrap items-center gap-3 mb-3">
-          <Badge variant={regionBadgeVariant[tradition.region] || 'default'}>
-            {tradition.region}
-          </Badge>
-          <Badge variant="default" size="sm">
-            {tradition.iconicDishes.length} {t.regionalPage.iconicDishes}
-          </Badge>
+        <div className="relative h-56 md:h-72 overflow-hidden rounded-2xl mb-6">
+          <Image
+            src={tradition.imageFile}
+            alt={tradition.state}
+            fill
+            priority
+            className="object-cover"
+            sizes="(max-width: 1280px) 100vw, 1200px"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 p-5 md:p-7 text-white">
+            <div className="flex flex-wrap items-center gap-3 mb-3">
+              <Badge variant={regionBadgeVariant[tradition.region] || 'default'}>
+                {tradition.region}
+              </Badge>
+              <Badge variant="default" size="sm">
+                {tradition.iconicDishes.length} {t.regionalPage.iconicDishes}
+              </Badge>
+            </div>
+            <h1 className="font-heading text-4xl md:text-5xl font-bold mb-2">
+              {tradition.state}
+            </h1>
+            <p className="text-lg italic text-white/90">
+              {tradition.tagline}
+            </p>
+          </div>
         </div>
-        <h1 className="font-heading text-4xl md:text-5xl font-bold text-earth-800 dark:text-earth-100 mb-2">
-          {tradition.state}
-        </h1>
-        <p className="text-lg italic text-warm-gray dark:text-earth-400 mb-4">
-          {tradition.tagline}
-        </p>
       </header>
 
       {/* Two-column layout */}

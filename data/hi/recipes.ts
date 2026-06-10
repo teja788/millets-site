@@ -1033,7 +1033,7 @@ export const recipes: Recipe[] = [
       'मीठे रूप के लिए छाछ और प्याज़ छोड़ दें और इसके बजाय थोड़े दूध के साथ गुड़ मिलाएँ, जो रागी माल्ट के क़रीब होता है।',
     ],
     imageUrl: '',
-    imageFile: '',
+    imageFile: '/images/recipes/ragi-ambali.webp',
     tags: ['gluten-free', 'vegetarian', 'fermented', 'probiotic', 'traditional', 'summer-drink', 'calcium-rich'],
   },
 
@@ -1078,7 +1078,7 @@ export const recipes: Recipe[] = [
       'ठंडी रात में जल्दी खट्टा करने के लिए ताज़े मिश्रण में एक चम्मच बचा हुआ फर्मेंटेड अंबली मिला दें।',
     ],
     imageUrl: '',
-    imageFile: '',
+    imageFile: '/images/recipes/foxtail-millet-ambali.webp',
     tags: ['gluten-free', 'vegetarian', 'fermented', 'probiotic', 'traditional', 'summer-drink', 'siridhanya'],
   },
 
@@ -1123,7 +1123,7 @@ export const recipes: Recipe[] = [
       'भिगोने और पकाने का समय शाम के लिए रखें ताकि अंबली रात भर फर्मेंट हो और सुबह तक तैयार रहे।',
     ],
     imageUrl: '',
-    imageFile: '',
+    imageFile: '/images/recipes/little-millet-ambali.webp',
     tags: ['gluten-free', 'vegetarian', 'fermented', 'probiotic', 'traditional', 'summer-drink', 'siridhanya'],
   },
 
@@ -1168,7 +1168,7 @@ export const recipes: Recipe[] = [
       'इसे धीमी आँच पर तब तक पकाएँ जब तक दाने बिखर न जाएँ, जिससे सबसे चिकना अंबली बनता है।',
     ],
     imageUrl: '',
-    imageFile: '',
+    imageFile: '/images/recipes/kodo-millet-ambali.webp',
     tags: ['gluten-free', 'vegetarian', 'fermented', 'probiotic', 'traditional', 'summer-drink', 'siridhanya'],
   },
 
@@ -1213,7 +1213,7 @@ export const recipes: Recipe[] = [
       'ठंडा होते ही यह जल्दी गाढ़ा हो जाता है, इसलिए परोसने से ठीक पहले छाछ से पतला करें।',
     ],
     imageUrl: '',
-    imageFile: '',
+    imageFile: '/images/recipes/barnyard-millet-ambali.webp',
     tags: ['gluten-free', 'vegetarian', 'fermented', 'probiotic', 'traditional', 'summer-drink', 'siridhanya'],
   },
 
@@ -1258,7 +1258,7 @@ export const recipes: Recipe[] = [
       'चूँकि छोटी कंगनी मिलना मुश्किल है, अंबली का एक बैच इस अनाज को चार ठंडी सर्विंग्स में फैला देता है।',
     ],
     imageUrl: '',
-    imageFile: '',
+    imageFile: '/images/recipes/browntop-millet-ambali.webp',
     tags: ['gluten-free', 'vegetarian', 'fermented', 'probiotic', 'traditional', 'summer-drink', 'siridhanya'],
   },
 

@@ -6,6 +6,7 @@ import { localePath, getTranslations, isValidLocale, locales, localeParams, href
 import { localeFeatures } from '@/lib/locale-config';
 import { getAyurvedaData, getMilletBySlugLocale } from '@/lib/i18n-data';
 import Breadcrumb from '@/components/layout/Breadcrumb';
+import PageBanner from '@/components/sections/PageBanner';
 import MedicalDisclaimer from '@/components/ui/MedicalDisclaimer';
 import TestimonialOrQuote from '@/components/sections/TestimonialOrQuote';
 import SourceCitation from '@/components/ui/SourceCitation';
@@ -98,6 +99,7 @@ export default async function AyurvedaPage({
   return (
     <main>
       <Breadcrumb locale={locale} />
+      <PageBanner src="/images/hero/hero-ayurveda.webp" alt={t.ayurvedaPage.title} />
 
       <div className="content-wrapper py-8">
         {/* Page Header */}

@@ -4,6 +4,7 @@ import type { Locale } from '@/lib/i18n';
 import { localePath, getTranslations, isValidLocale, locales, localeParams, hreflangAlternates } from '@/lib/i18n';
 import { getMillets, riceNutrition } from '@/lib/i18n-data';
 import Breadcrumb from '@/components/layout/Breadcrumb';
+import PageBanner from '@/components/sections/PageBanner';
 import MedicalDisclaimer from '@/components/ui/MedicalDisclaimer';
 import ComparisonTable from '@/components/ui/ComparisonTable';
 import NutritionChart from '@/components/ui/NutritionChart';
@@ -161,6 +162,7 @@ export default async function NutritionPage({
   return (
     <>
       <Breadcrumb locale={locale} />
+      <PageBanner src="/images/hero/hero-nutrition.webp" alt={t.comparison.title} />
 
       <div className="content-wrapper section-padding">
         {/* Page Title */}

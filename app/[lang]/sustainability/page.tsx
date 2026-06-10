@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Droplets, Thermometer, Footprints, Sprout, TreePine, Users, Globe } from 'lucide-react';
 import Breadcrumb from '@/components/layout/Breadcrumb';
+import PageBanner from '@/components/sections/PageBanner';
 import QuickFactBox from '@/components/ui/QuickFactBox';
 import SourceCitation from '@/components/ui/SourceCitation';
 import { sources } from '@/data/sources';
@@ -59,6 +60,7 @@ export default async function SustainabilityPage({
   return (
     <main>
       <Breadcrumb locale={locale} />
+      <PageBanner src="/images/hero/hero-sustainability.webp" alt={t.sustainabilityPage.title} />
 
       <div className="content-wrapper py-8">
         {/* Page Header */}

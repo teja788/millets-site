@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import Breadcrumb from '@/components/layout/Breadcrumb';
@@ -100,6 +101,15 @@ export default function RegionalTraditionsPage() {
               >
                 <motion.div whileHover={{ y: -2 }} transition={{ duration: 0.2 }}>
                   <Card variant="outlined" className="h-full hover:border-earth-500 transition-colors">
+                    <div className="relative h-44">
+                      <Image
+                        src={tradition.imageFile}
+                        alt={tradition.state}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      />
+                    </div>
                     <CardBody>
                       <div className="flex items-start justify-between gap-2 mb-3">
                         <h2 className="font-heading text-xl font-bold text-earth-800 dark:text-earth-100">

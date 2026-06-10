@@ -5,6 +5,7 @@ import type { Locale } from '@/lib/i18n';
 import { localePath, getTranslations, isValidLocale, locales, localeParams, hreflangAlternates } from '@/lib/i18n';
 import { getFaqItems } from '@/lib/i18n-data';
 import Breadcrumb from '@/components/layout/Breadcrumb';
+import PageBanner from '@/components/sections/PageBanner';
 import Accordion from '@/components/ui/Accordion';
 import MedicalDisclaimer from '@/components/ui/MedicalDisclaimer';
 
@@ -95,6 +96,7 @@ export default async function FAQPage({
       />
 
       <Breadcrumb locale={locale} />
+      <PageBanner src="/images/hero/hero-faq.webp" alt={t.faqPage.title} />
 
       <div className="content-wrapper py-8">
         {/* Page Header */}

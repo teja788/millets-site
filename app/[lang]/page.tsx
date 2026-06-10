@@ -96,6 +96,7 @@ export default async function HomePage({
       <Hero
         title={t.home.heroTitle}
         subtitle={t.home.heroSubtitle}
+        image="/images/hero/hero-main.webp"
         ctaButtons={[
           { label: t.home.exploreMillets, href: localePath(locale, '/millets'), variant: 'primary' },
           { label: t.home.browseRecipes, href: localePath(locale, '/recipes'), variant: 'secondary' },

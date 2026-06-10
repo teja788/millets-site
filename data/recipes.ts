@@ -1033,7 +1033,7 @@ export const recipes: Recipe[] = [
       'For a sweet version, leave out the buttermilk and onion and stir in jaggery with a little milk instead, closer to a ragi malt.',
     ],
     imageUrl: '',
-    imageFile: '',
+    imageFile: '/images/recipes/ragi-ambali.webp',
     tags: ['gluten-free', 'vegetarian', 'fermented', 'probiotic', 'traditional', 'summer-drink', 'calcium-rich'],
   },
 
@@ -1078,7 +1078,7 @@ export const recipes: Recipe[] = [
       'A spoon of leftover fermented ambali stirred into the fresh batch helps it sour faster on a cool night.',
     ],
     imageUrl: '',
-    imageFile: '',
+    imageFile: '/images/recipes/foxtail-millet-ambali.webp',
     tags: ['gluten-free', 'vegetarian', 'fermented', 'probiotic', 'traditional', 'summer-drink', 'siridhanya'],
   },
 
@@ -1123,7 +1123,7 @@ export const recipes: Recipe[] = [
       'Time the soak and cook for the evening so the ambali ferments overnight and is ready by morning.',
     ],
     imageUrl: '',
-    imageFile: '',
+    imageFile: '/images/recipes/little-millet-ambali.webp',
     tags: ['gluten-free', 'vegetarian', 'fermented', 'probiotic', 'traditional', 'summer-drink', 'siridhanya'],
   },
 
@@ -1168,7 +1168,7 @@ export const recipes: Recipe[] = [
       'Cook it low and slow until the grains collapse, which gives the smoothest ambali.',
     ],
     imageUrl: '',
-    imageFile: '',
+    imageFile: '/images/recipes/kodo-millet-ambali.webp',
     tags: ['gluten-free', 'vegetarian', 'fermented', 'probiotic', 'traditional', 'summer-drink', 'siridhanya'],
   },
 
@@ -1213,7 +1213,7 @@ export const recipes: Recipe[] = [
       'It thickens quickly once cool, so loosen with buttermilk just before serving.',
     ],
     imageUrl: '',
-    imageFile: '',
+    imageFile: '/images/recipes/barnyard-millet-ambali.webp',
     tags: ['gluten-free', 'vegetarian', 'fermented', 'probiotic', 'traditional', 'summer-drink', 'siridhanya'],
   },
 
@@ -1258,7 +1258,7 @@ export const recipes: Recipe[] = [
       'Because browntop is hard to find, one batch of ambali stretches the grain across four cooling servings.',
     ],
     imageUrl: '',
-    imageFile: '',
+    imageFile: '/images/recipes/browntop-millet-ambali.webp',
     tags: ['gluten-free', 'vegetarian', 'fermented', 'probiotic', 'traditional', 'summer-drink', 'siridhanya'],
   },
 

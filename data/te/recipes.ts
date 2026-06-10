@@ -1032,7 +1032,7 @@ export const recipes: Recipe[] = [
       'తీపి రకం కోసం మజ్జిగ, ఉల్లిపాయ వదిలేసి బదులుగా బెల్లం కొంచెం పాలతో కలపండి, ఇది రాగి మాల్ట్‌కు దగ్గరగా ఉంటుంది.',
     ],
     imageUrl: '',
-    imageFile: '',
+    imageFile: '/images/recipes/ragi-ambali.webp',
     tags: ['gluten-free', 'vegetarian', 'fermented', 'probiotic', 'traditional', 'summer-drink', 'calcium-rich'],
   },
 
@@ -1077,7 +1077,7 @@ export const recipes: Recipe[] = [
       'చల్లని రాత్రిలో, మిగిలిన పులిసిన అంబలి ఒక చెంచా తాజా మిశ్రమంలో కలిపితే అది వేగంగా పులవడానికి సహాయపడుతుంది.',
     ],
     imageUrl: '',
-    imageFile: '',
+    imageFile: '/images/recipes/foxtail-millet-ambali.webp',
     tags: ['gluten-free', 'vegetarian', 'fermented', 'probiotic', 'traditional', 'summer-drink', 'siridhanya'],
   },
 
@@ -1122,7 +1122,7 @@ export const recipes: Recipe[] = [
       'అంబలి రాత్రంతా పులిసి ఉదయానికి సిద్ధంగా ఉండేలా నానబెట్టడం, ఉడికించడం సాయంత్రం వేళకు సరిచూసుకోండి.',
     ],
     imageUrl: '',
-    imageFile: '',
+    imageFile: '/images/recipes/little-millet-ambali.webp',
     tags: ['gluten-free', 'vegetarian', 'fermented', 'probiotic', 'traditional', 'summer-drink', 'siridhanya'],
   },
 
@@ -1167,7 +1167,7 @@ export const recipes: Recipe[] = [
       'అత్యంత నున్నని అంబలి కోసం గింజలు విడిపోయే వరకు తక్కువ మంటపై నిదానంగా ఉడికించండి.',
     ],
     imageUrl: '',
-    imageFile: '',
+    imageFile: '/images/recipes/kodo-millet-ambali.webp',
     tags: ['gluten-free', 'vegetarian', 'fermented', 'probiotic', 'traditional', 'summer-drink', 'siridhanya'],
   },
 
@@ -1212,7 +1212,7 @@ export const recipes: Recipe[] = [
       'చల్లారిన తరువాత ఇది వేగంగా చిక్కబడుతుంది కాబట్టి, సర్వ్ చేయడానికి ముందు మజ్జిగతో పలచన చేయండి.',
     ],
     imageUrl: '',
-    imageFile: '',
+    imageFile: '/images/recipes/barnyard-millet-ambali.webp',
     tags: ['gluten-free', 'vegetarian', 'fermented', 'probiotic', 'traditional', 'summer-drink', 'siridhanya'],
   },
 
@@ -1257,7 +1257,7 @@ export const recipes: Recipe[] = [
       'అండ కొర్రలు దొరకడం కష్టం కాబట్టి, ఒక బ్యాచ్ అంబలి ఈ ధాన్యాన్ని నాలుగు చల్లని సర్వింగ్‌లుగా విస్తరిస్తుంది.',
     ],
     imageUrl: '',
-    imageFile: '',
+    imageFile: '/images/recipes/browntop-millet-ambali.webp',
     tags: ['gluten-free', 'vegetarian', 'fermented', 'probiotic', 'traditional', 'summer-drink', 'siridhanya'],
   },
 

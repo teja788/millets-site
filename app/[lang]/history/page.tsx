@@ -4,6 +4,7 @@ import type { Locale } from '@/lib/i18n';
 import { localePath, getTranslations, isValidLocale, locales, localeParams, hreflangAlternates } from '@/lib/i18n';
 import { getTimelineEvents } from '@/lib/i18n-data';
 import Breadcrumb from '@/components/layout/Breadcrumb';
+import PageBanner from '@/components/sections/PageBanner';
 import TimelineSection from '@/components/sections/TimelineSection';
 import SourceCitation from '@/components/ui/SourceCitation';
 import { sources } from '@/data/sources';
@@ -67,6 +68,7 @@ export default async function HistoryPage({
   return (
     <main>
       <Breadcrumb locale={locale} />
+      <PageBanner src="/images/hero/hero-history.webp" alt={t.historyPage.title} />
 
       <div className="content-wrapper py-8">
         {/* Page Header */}

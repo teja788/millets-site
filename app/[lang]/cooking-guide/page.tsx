@@ -4,6 +4,7 @@ import type { Locale } from '@/lib/i18n';
 import { localePath, getTranslations, isValidLocale, locales, localeParams, hreflangAlternates } from '@/lib/i18n';
 import { getMillets } from '@/lib/i18n-data';
 import Breadcrumb from '@/components/layout/Breadcrumb';
+import PageBanner from '@/components/sections/PageBanner';
 import {
   Table,
   TableHead,
@@ -58,6 +59,7 @@ export default async function CookingGuidePage({
   return (
     <main>
       <Breadcrumb locale={locale} />
+      <PageBanner src="/images/hero/hero-cooking.webp" alt={t.nav.cookingGuide} />
 
       <div className="content-wrapper py-8">
         {/* Page Header */}
