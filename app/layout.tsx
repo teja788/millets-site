@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from 'next';
-import { headers } from 'next/headers';
 import {
   Playfair_Display,
   Source_Sans_3,
@@ -7,9 +6,9 @@ import {
   Noto_Sans_Arabic,
   Noto_Sans_Devanagari,
 } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import '@/styles/globals.css';
-import { defaultLocale, isValidLocale, type Locale } from '@/lib/i18n';
-import { localeFeatures } from '@/lib/locale-config';
 import { siteUrl } from '@/lib/site-url';
 import ThirdPartyScripts from '@/components/ui/ThirdPartyScripts';
 
@@ -101,40 +100,31 @@ export const viewport: Viewport = {
   themeColor: '#5B8C5A',
 };
 
-function parseLocale(pathnameHeader: string | null, localeHeader: string | null): Locale {
-  if (localeHeader && isValidLocale(localeHeader)) {
-    return localeHeader;
-  }
-
-  if (pathnameHeader) {
-    const segment = pathnameHeader.split('/').filter(Boolean)[0];
-    if (segment && isValidLocale(segment)) {
-      return segment;
-    }
-  }
-
-  return defaultLocale;
-}
-
-export default async function RootLayout({
+// The root layout sits above the [lang] segment, so it cannot read the active
+// locale from route params. Previously it read the locale from request headers
+// (set by middleware), but `headers()` opts the ENTIRE app out of static
+// generation — forcing every page to render dynamically with
+// `Cache-Control: no-store` and no CDN caching. We now render a static default
+// and let the client-side <LangSetter> (in app/[lang]/layout.tsx) apply the
+// correct lang/dir per locale. The locale signal for SEO is carried by the
+// hreflang tags and URL structure, which remain per-locale correct.
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const headersList = await headers();
-  const locale = parseLocale(headersList.get('x-pathname'), headersList.get('x-locale'));
-  const dir = localeFeatures[locale].isRTL ? 'rtl' : 'ltr';
-
   return (
     <html
-      lang={locale}
-      dir={dir}
+      lang="en"
+      dir="ltr"
       className={`${playfair.variable} ${sourceSans.variable} ${notoTelugu.variable} ${notoArabic.variable} ${notoDevanagari.variable}`}
       suppressHydrationWarning
     >
       <body className="font-body antialiased">
         <ThirdPartyScripts />
         {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
