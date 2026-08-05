@@ -307,19 +307,6 @@ export default function ErnaehrungUndGesundheitPage() {
             </motion.div>
             <motion.div variants={itemVariants}>
               <Link
-                href={localePath(locale, '/ayurveda')}
-                className="block bg-forest-50 dark:bg-earth-800 rounded-xl p-6 hover:bg-forest-100 dark:hover:bg-earth-700 transition-colors h-full"
-              >
-                <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-2">
-                  Gesundheitsprofile
-                </h3>
-                <p className="text-sm text-earth-600 dark:text-earth-400">
-                  Saisonale Empfehlungen und wissenschaftlich fundierte Zubereitungstipps
-                </p>
-              </Link>
-            </motion.div>
-            <motion.div variants={itemVariants}>
-              <Link
                 href={localePath(locale, '/hirse-vs-quinoa')}
                 className="block bg-forest-50 dark:bg-earth-800 rounded-xl p-6 hover:bg-forest-100 dark:hover:bg-earth-700 transition-colors h-full"
               >

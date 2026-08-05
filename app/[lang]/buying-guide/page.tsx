@@ -7,7 +7,7 @@ import { Card, CardBody } from '@/components/ui/Card';
 import Badge from '@/components/ui/Badge';
 import type { Locale } from '@/lib/i18n';
 import { localePath, getTranslations, isValidLocale, localeParams, hreflangAlternates } from '@/lib/i18n';
-import { getBuyingGuideItems } from '@/lib/i18n-data';
+import { getBuyingGuideItems, getMilletBySlugLocale } from '@/lib/i18n-data';
 
 export function generateStaticParams() {
   return localeParams();
@@ -124,12 +124,18 @@ export default async function BuyingGuidePage({
                 <CardBody>
                   {/* Millet Name (linked) */}
                   <div className="flex items-start justify-between gap-3 mb-4">
-                    <Link
-                      href={localePath(locale, `/millets/${item.millet}`)}
-                      className="font-heading text-xl font-bold text-earth-800 dark:text-earth-100 hover:text-earth-600 dark:hover:text-earth-300 transition-colors underline underline-offset-2"
-                    >
-                      {item.milletName}
-                    </Link>
+                    {getMilletBySlugLocale(item.millet, locale) ? (
+                      <Link
+                        href={localePath(locale, `/millets/${item.millet}`)}
+                        className="font-heading text-xl font-bold text-earth-800 dark:text-earth-100 hover:text-earth-600 dark:hover:text-earth-300 transition-colors underline underline-offset-2"
+                      >
+                        {item.milletName}
+                      </Link>
+                    ) : (
+                      <span className="font-heading text-xl font-bold text-earth-800 dark:text-earth-100">
+                        {item.milletName}
+                      </span>
+                    )}
                     <Badge variant={getPriceVariant(item.priceRange)} size="sm">
                       {item.priceRange}
                     </Badge>

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import { isValidLocale, hreflangAlternates } from '@/lib/i18n';
+import { notFound } from 'next/navigation';
+import { isValidLocale } from '@/lib/i18n';
 
 export function generateStaticParams() {
   return [{ lang: 'de' }];
@@ -19,15 +20,20 @@ export async function generateMetadata({
       'Wissenschaftlich fundierte Gesundheitsvorteile der Hirse: Herzgesundheit, Diabetes-Prävention, Gewichtsmanagement, glutenfrei. Daten von DGE, BfR, EFSA und DZG.',
     alternates: {
       canonical: '/de/ernaehrung-und-gesundheit',
-      languages: hreflangAlternates('/ernaehrung-und-gesundheit'),
+      languages: { de: '/de/ernaehrung-und-gesundheit' },
     },
   };
 }
 
-export default function ErnaehrungUndGesundheitLayout({
+export default async function ErnaehrungUndGesundheitLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: Promise<{ lang: string }>;
 }) {
+  const { lang } = await params;
+  if (!isValidLocale(lang) || lang !== 'de') notFound();
+
   return children;
 }

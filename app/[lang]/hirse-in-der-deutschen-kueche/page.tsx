@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Wheat, MapPin, History, ChefHat } from 'lucide-react';
 import type { Locale } from '@/lib/i18n';
-import { localePath, isValidLocale, getTranslations, hreflangAlternates } from '@/lib/i18n';
+import { localePath, isValidLocale, getTranslations } from '@/lib/i18n';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import { Card, CardBody } from '@/components/ui/Card';
 
@@ -23,7 +23,7 @@ export async function generateMetadata({
       'Hirse in der deutschen Küche: Von mittelalterlichem Hirsebrei über regionale Traditionen bis zur modernen Bio-Küche. Geschichte, Rezepte und Wiederentdeckung.',
     alternates: {
       canonical: '/de/hirse-in-der-deutschen-kueche',
-      languages: hreflangAlternates('/hirse-in-der-deutschen-kueche'),
+      languages: { de: '/de/hirse-in-der-deutschen-kueche' },
     },
   };
 }

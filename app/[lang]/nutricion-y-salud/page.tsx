@@ -215,17 +215,6 @@ export default async function NutricionYSaludPage({
               </p>
             </Link>
             <Link
-              href={localePath(locale, '/ayurveda')}
-              className="block bg-forest-50 dark:bg-earth-800 rounded-xl p-6 hover:bg-forest-100 dark:hover:bg-earth-700 transition-colors"
-            >
-              <h3 className="font-heading text-lg font-bold text-earth-800 dark:text-earth-100 mb-2">
-                Perfiles de salud detallados
-              </h3>
-              <p className="text-sm text-earth-600 dark:text-earth-400">
-                Guía estacional y consejos de preparación basados en la ciencia
-              </p>
-            </Link>
-            <Link
               href={localePath(locale, '/mijo-vs-quinoa')}
               className="block bg-forest-50 dark:bg-earth-800 rounded-xl p-6 hover:bg-forest-100 dark:hover:bg-earth-700 transition-colors"
             >

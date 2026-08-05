@@ -85,16 +85,8 @@ export const searchIndex: SearchableItem[] = [
     title: 'Klassischer Hirsebrei',
     description: 'Traditioneller süddeutscher Hirsebrei mit Milch, Zimt und Äpfeln — ein wärmendes Frühstück nach alter Tradition.',
     type: 'recipe',
-    url: '/de/recipes/hirsebrei-klassisch',
+    url: '/de/recipes/hirsebrei',
     tags: ['Hirsebrei', 'Frühstück', 'Brein', 'Bayern', 'Österreich', 'Porridge', 'süss', 'traditionell', 'Rispenhirse', 'warm'],
-  },
-  {
-    id: 'hirseauflauf-gemuese',
-    title: 'Hirseauflauf mit Gemüse',
-    description: 'Herzhafter Auflauf mit Hirse, saisonalem Gemüse und Käsekruste — ein vollwertiges Mittag- oder Abendessen.',
-    type: 'recipe',
-    url: '/de/recipes/hirseauflauf-gemuese',
-    tags: ['Hirseauflauf', 'Auflauf', 'Gemüse', 'Mittagessen', 'Abendessen', 'herzhaft', 'Käse', 'vollwertig', 'vegetarisch'],
   },
   {
     id: 'hirsebratlinge',
@@ -109,7 +101,7 @@ export const searchIndex: SearchableItem[] = [
     title: 'Mediterraner Hirsesalat',
     description: 'Erfrischender Salat mit Hirse, Tomaten, Oliven, Feta und frischen Kräutern — ideal für den Sommer.',
     type: 'recipe',
-    url: '/de/recipes/hirsesalat-mediterran',
+    url: '/de/recipes/hirsesalat-mit-rucola',
     tags: ['Hirsesalat', 'Salat', 'mediterran', 'Sommer', 'kalt', 'Tomaten', 'Feta', 'Oliven', 'leicht', 'Mittagessen'],
   },
   {
@@ -117,71 +109,23 @@ export const searchIndex: SearchableItem[] = [
     title: 'Hirsesuppe mit Kürbis',
     description: 'Cremige Herbstsuppe mit Hirse und Hokkaido-Kürbis — wärmend, sättigend und voller Vitamine.',
     type: 'recipe',
-    url: '/de/recipes/hirsesuppe-kuerbis',
+    url: '/de/recipes/hirse-kuerbis-eintopf',
     tags: ['Hirsesuppe', 'Suppe', 'Kürbis', 'Herbst', 'Winter', 'cremig', 'wärmend', 'Hokkaido', 'Vitamin A'],
-  },
-  {
-    id: 'sorghum-risotto',
-    title: 'Sorghum-Risotto mit Pilzen',
-    description: 'Cremiges Risotto aus Sorghum mit Waldpilzen und Parmesan — eine glutenfreie Alternative zum Klassiker.',
-    type: 'recipe',
-    url: '/de/recipes/sorghum-risotto',
-    tags: ['Risotto', 'Sorghum', 'Pilze', 'Waldpilze', 'Parmesan', 'glutenfrei', 'Abendessen', 'cremig', 'Herbst', 'italienisch'],
-  },
-  {
-    id: 'hirsebrot-glutenfrei',
-    title: 'Glutenfreies Hirsebrot',
-    description: 'Saftiges Brot aus Hirsemehl ohne Gluten — perfekt für Zöliakie-Betroffene und bewusste Ernährung.',
-    type: 'recipe',
-    url: '/de/recipes/hirsebrot-glutenfrei',
-    tags: ['Hirsebrot', 'Brot', 'glutenfrei', 'Zöliakie', 'Backen', 'Hirsemehl', 'Bäckerei', 'Frühstück', 'Pausenbrot'],
-  },
-  {
-    id: 'hirse-energiekugeln',
-    title: 'Hirse-Energiekugeln',
-    description: 'Gesunde Snackbällchen aus gepuffter Hirse, Datteln und Nüssen — ideal für unterwegs und als Sportlernahrung.',
-    type: 'recipe',
-    url: '/de/recipes/hirse-energiekugeln',
-    tags: ['Energiekugeln', 'Energy Balls', 'Snack', 'Datteln', 'Nüsse', 'gepuffte Hirse', 'Sport', 'unterwegs', 'gesund', 'vegan'],
   },
   {
     id: 'hirse-pfannkuchen',
     title: 'Hirse-Pfannkuchen',
     description: 'Lockere Pfannkuchen aus Hirsemehl — süss oder herzhaft, als Frühstück oder Dessert.',
     type: 'recipe',
-    url: '/de/recipes/hirse-pfannkuchen',
+    url: '/de/recipes/hirsepfannkuchen',
     tags: ['Pfannkuchen', 'Crêpes', 'Hirsemehl', 'Frühstück', 'Dessert', 'süss', 'herzhaft', 'glutenfrei', 'einfach'],
-  },
-  {
-    id: 'hirse-smoothie',
-    title: 'Hirse-Bananen-Smoothie',
-    description: 'Cremiger Smoothie mit gekochter Hirse, Banane und Hafermilch — ein sättigender Frühstücksdrink.',
-    type: 'recipe',
-    url: '/de/recipes/hirse-smoothie',
-    tags: ['Smoothie', 'Getränk', 'Banane', 'Hafermilch', 'Frühstück', 'cremig', 'vegan', 'schnell', 'Protein'],
-  },
-  {
-    id: 'hirsetaler-susskartoffel',
-    title: 'Hirsetaler mit Süsskartoffel',
-    description: 'Goldbraune Taler aus Hirse und Süsskartoffel mit Kräuterdip — vegetarisch, nahrhaft und kinderfreundlich.',
-    type: 'recipe',
-    url: '/de/recipes/hirsetaler-susskartoffel',
-    tags: ['Hirsetaler', 'Süsskartoffel', 'Taler', 'vegetarisch', 'Kinder', 'Beilage', 'goldbraun', 'Kräuter', 'Dip'],
-  },
-  {
-    id: 'hirsegratin-brokkoli',
-    title: 'Hirsegratin mit Brokkoli',
-    description: 'Überbackener Gratin mit Hirse und Brokkoli in cremiger Béchamelsauce — ein vollwertiges Familienessen.',
-    type: 'recipe',
-    url: '/de/recipes/hirsegratin-brokkoli',
-    tags: ['Gratin', 'Brokkoli', 'Béchamel', 'überbacken', 'Familie', 'Abendessen', 'Käse', 'vollwertig', 'vegetarisch'],
   },
   {
     id: 'hirseporridge-beeren',
     title: 'Hirseporridge mit Beeren',
     description: 'Warmes Frühstücksporridge aus Hirse mit frischen Beeren, Nüssen und Honig — der perfekte Start in den Tag.',
     type: 'recipe',
-    url: '/de/recipes/hirseporridge-beeren',
+    url: '/de/recipes/hirse-fruehstuecksbowl',
     tags: ['Porridge', 'Frühstück', 'Beeren', 'Nüsse', 'Honig', 'warm', 'gesund', 'Superfood', 'vegan möglich'],
   },
 
@@ -225,7 +169,7 @@ export const searchIndex: SearchableItem[] = [
     title: 'Ernährungswissenschaft und Hirse',
     description: 'Wissenschaftlich fundierte Informationen zu Hirse und Gesundheit — Herzschutz, Blutzucker, Gewichtsmanagement nach DGE-Empfehlungen.',
     type: 'page',
-    url: '/de/ayurveda',
+    url: '/de/ernaehrung-und-gesundheit',
     tags: ['Ernährungswissenschaft', 'Gesundheit', 'DGE', 'EFSA', 'BfR', 'Herzgesundheit', 'Blutzucker', 'Gewicht', 'Wissenschaft'],
   },
   {
@@ -324,15 +268,6 @@ export const searchIndex: SearchableItem[] = [
     url: '/de/meal-plans',
     tags: ['Ernährungsplan', 'Wochenplan', 'Mahlzeitenplan', 'gesund', 'ausgewogen', 'Planung'],
   },
-  {
-    id: 'quellen',
-    title: 'Wissenschaftliche Quellen',
-    description: 'Peer-Review-Studien, DGE-Publikationen und EFSA-Berichte, die unseren Inhalten zugrunde liegen.',
-    type: 'page',
-    url: '/de/sources',
-    tags: ['Quellen', 'Studien', 'Wissenschaft', 'Peer-Review', 'DGE', 'EFSA', 'BfR', 'Referenzen'],
-  },
-
   // =====================
   // TOOLS
   // =====================
@@ -341,7 +276,7 @@ export const searchIndex: SearchableItem[] = [
     title: 'Hirse-Quiz',
     description: 'Finden Sie heraus, welche Hirsesorte am besten zu Ihnen passt — basierend auf Ihren Gesundheitszielen und Geschmacksvorlieben.',
     type: 'tool',
-    url: '/de/quiz',
+    url: '/de/tools/millet-quiz',
     tags: ['Quiz', 'Test', 'Empfehlung', 'persönlich', 'welche Hirse', 'Beratung', 'interaktiv'],
   },
   {
@@ -349,7 +284,7 @@ export const searchIndex: SearchableItem[] = [
     title: 'Getreide-Austauschrechner',
     description: 'Berechnen Sie, wie Sie Reis, Weizen oder Hafer durch Hirse ersetzen können — mit Mengenangaben und Kochtipps.',
     type: 'tool',
-    url: '/de/substitution',
+    url: '/de/tools/substitution-calculator',
     tags: ['Austauschrechner', 'Rechner', 'Substitution', 'Ersatz', 'Reis ersetzen', 'Weizen ersetzen', 'Umrechnung', 'Verhältnis'],
   },
   {
@@ -357,7 +292,7 @@ export const searchIndex: SearchableItem[] = [
     title: 'Hirse-Kochtimer',
     description: 'Interaktiver Timer mit optimalen Kochzeiten für alle 9 Hirsearten — nie mehr zu weich oder zu hart.',
     type: 'tool',
-    url: '/de/cooking-guide#timer',
+    url: '/de/tools/cooking-timer',
     tags: ['Timer', 'Kochtimer', 'Kochzeit', 'Stoppuhr', 'Eieruhr', 'Küchentimer', 'Garzeit'],
   },
   {
@@ -365,7 +300,7 @@ export const searchIndex: SearchableItem[] = [
     title: 'Nährwertrechner',
     description: 'Vergleichen Sie die Nährwerte verschiedener Hirsearten nebeneinander — interaktive Diagramme und Tabellen.',
     type: 'tool',
-    url: '/de/nutrition#compare',
+    url: '/de/nutrition',
     tags: ['Nährwertrechner', 'Vergleichstool', 'Diagramm', 'interaktiv', 'Nährstoffvergleich', 'Tabelle'],
   },
 
@@ -393,7 +328,7 @@ export const searchIndex: SearchableItem[] = [
     title: 'Hirsetraditionen in Österreich',
     description: 'Österreichische Hirsekultur: Brein-Sterz, Hirsekoch und die Steiermark als historisches Hirseanbaugebiet.',
     type: 'tradition',
-    url: '/de/regional-traditions/oesterreich',
+    url: '/de/regional-traditions/tirol-vorarlberg',
     tags: ['Österreich', 'Brein', 'Sterz', 'Hirsekoch', 'Steiermark', 'Burgenland', 'Alpen', 'Austria'],
   },
   {
@@ -401,7 +336,7 @@ export const searchIndex: SearchableItem[] = [
     title: 'Hirsetraditionen in der Schweiz',
     description: 'Der Berner Hirsimontag und die Schweizer Hirsebrei-Tradition — ein Fest der Freundschaft seit dem Mittelalter.',
     type: 'tradition',
-    url: '/de/regional-traditions/schweiz',
+    url: '/de/regional-traditions/graubuenden-wallis',
     tags: ['Schweiz', 'Hirsimontag', 'Bern', 'Hirsebrei', 'Mittelalter', 'Freundschaft', 'Swiss', 'Tradition'],
   },
   {
@@ -417,7 +352,7 @@ export const searchIndex: SearchableItem[] = [
     title: 'Hirsetraditionen in Sachsen und Thüringen',
     description: 'Mitteldeutsche Hirsekultur: Goldene Hochzeitsbräuche mit Hirse und der Hirsebrei als Glückssymbol.',
     type: 'tradition',
-    url: '/de/regional-traditions/sachsen',
+    url: '/de/regional-traditions/sachsen-lausitz',
     tags: ['Sachsen', 'Thüringen', 'Mitteldeutschland', 'Hochzeit', 'Glück', 'Brauch', 'Goldene Hochzeit', 'Hirsebrei'],
   },
 
@@ -477,7 +412,7 @@ export const searchIndex: SearchableItem[] = [
     title: 'Hirse in Südeuropa',
     description: 'Hirse im antiken Rom, italienische Polenta-Traditionen und die Wiederentdeckung alter Getreidesorten im Mittelmeerraum.',
     type: 'region',
-    url: '/de/global-millets/suedeuropa',
+    url: '/de/global-millets/mittelmeerraum',
     tags: ['Südeuropa', 'Italien', 'Spanien', 'Griechenland', 'Rom', 'Polenta', 'Mittelmeer', 'antik'],
   },
 ];

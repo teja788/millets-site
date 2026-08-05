@@ -22,16 +22,7 @@ export function middleware(request: NextRequest) {
   if (pathname === '/') {
     const url = request.nextUrl.clone();
     url.pathname = `/${defaultLocale}`;
-
-    const requestHeaders = new Headers(request.headers);
-    requestHeaders.set('x-pathname', url.pathname);
-    requestHeaders.set('x-locale', defaultLocale);
-
-    return NextResponse.rewrite(url, {
-      request: {
-        headers: requestHeaders,
-      },
-    });
+    return NextResponse.redirect(url, 308);
   }
 
   const pathnameLocale = locales.find(
@@ -59,4 +50,3 @@ export function middleware(request: NextRequest) {
 export const config = {
   matcher: ['/((?!_next|api|images|fonts|manifest\\.json|favicon\\.ico|robots\\.txt|sitemap\\.xml).*)'],
 };
-

@@ -33,7 +33,7 @@ export const searchIndex: SearchableItem[] = [
     title: f.question,
     description: f.answer.substring(0, 200),
     type: 'faq' as const,
-    url: `/fr/faq#${f.id}`,
+    url: '/fr/faq',
     tags: [f.category],
   })),
   // Map regional traditions
@@ -60,7 +60,7 @@ export const searchIndex: SearchableItem[] = [
     title: m.myth,
     description: m.fact.substring(0, 200),
     type: 'page' as const,
-    url: `/fr/myths#${m.id}`,
+    url: '/fr/myths',
     tags: [m.category, 'mythe', 'réalité'],
   })),
   // Map fermented products
@@ -85,7 +85,7 @@ export const searchIndex: SearchableItem[] = [
   { id: 'millets', title: 'Les millets', description: 'Explorez tous les millets et leurs bienfaits nutritionnels', type: 'page' as const, url: '/fr/millets', tags: ['millets', 'céréales'] },
   { id: 'recipes', title: 'Recettes de millets', description: 'Recettes traditionnelles et modernes à base de millets', type: 'page' as const, url: '/fr/recipes', tags: ['recettes', 'cuisine'] },
   { id: 'history', title: 'Histoire des millets', description: 'Chronologie archéologique de la culture des millets, de 8000 av. J.-C. à nos jours', type: 'page' as const, url: '/fr/history', tags: ['histoire', 'archéologie'] },
-  { id: 'ayurveda', title: 'Millets et nutrition traditionnelle', description: 'Propriétés nutritionnelles traditionnelles et recommandations saisonnières', type: 'page' as const, url: '/fr/ayurveda', tags: ['nutrition', 'santé', 'ayurveda'] },
+  { id: 'ayurveda', title: 'Millets et nutrition traditionnelle', description: 'Propriétés nutritionnelles traditionnelles et recommandations saisonnières', type: 'page' as const, url: '/fr/nutrition-et-sante', tags: ['nutrition', 'santé', 'ayurveda'] },
   { id: 'sustainability', title: 'Durabilité et millets', description: 'Les avantages environnementaux des millets : efficacité hydrique et résilience climatique', type: 'page' as const, url: '/fr/sustainability', tags: ['durabilité', 'environnement', 'climat'] },
   { id: 'cooking-guide', title: 'Guide de cuisson', description: 'Comment cuire, tremper, conserver et substituer les millets', type: 'page' as const, url: '/fr/cooking-guide', tags: ['cuisson', 'guide', 'cuisine'] },
   { id: 'glossary', title: 'Glossaire des millets', description: 'Noms des millets dans différentes langues du monde', type: 'page' as const, url: '/fr/glossary', tags: ['glossaire', 'langues', 'noms'] },

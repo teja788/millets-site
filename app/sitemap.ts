@@ -70,6 +70,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
+  entries.push({
+    url: `${BASE_URL}/en/open-millet-reference`,
+    changeFrequency: 'monthly',
+    priority: 0.9,
+  });
+
   // French-only pages
   const frenchOnlyRoutes = ['/nutrition-et-sante', '/millet-vs-quinoa', '/culture-africaine-du-mil', '/ou-acheter-du-millet'];
   for (const route of frenchOnlyRoutes) {

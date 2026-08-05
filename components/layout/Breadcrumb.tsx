@@ -23,6 +23,7 @@ export default function Breadcrumb({ locale }: { locale: Locale }) {
   if (pathWithoutLocale === '/') return null;
 
   const segments = pathWithoutLocale.split('/').filter(Boolean);
+  const nonLinkableParents = new Set(['/tools']);
 
   const crumbs = segments.map((segment, index) => {
     const href = localePath(locale, '/' + segments.slice(0, index + 1).join('/'));
@@ -45,7 +46,7 @@ export default function Breadcrumb({ locale }: { locale: Locale }) {
         {crumbs.map((crumb) => (
           <li key={crumb.href} className="flex items-center">
             <ChevronRight className="w-3.5 h-3.5 text-earth-400 dark:text-earth-300 mx-1 flex-shrink-0 rtl:rotate-180" />
-            {crumb.isLast ? (
+            {crumb.isLast || nonLinkableParents.has(crumb.href.replace(localePattern, '')) ? (
               <span className="text-earth-600 dark:text-earth-300 font-medium">
                 {crumb.label}
               </span>

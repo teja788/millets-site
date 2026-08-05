@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import type { Locale } from '@/lib/i18n';
 import { localePath, getTranslations, isValidLocale, locales, localeParams, hreflangAlternates } from '@/lib/i18n';
 import { getFaqItems } from '@/lib/i18n-data';
+import { localeFeatures } from '@/lib/locale-config';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import PageBanner from '@/components/sections/PageBanner';
 import Accordion from '@/components/ui/Accordion';
@@ -52,6 +53,7 @@ export default async function FAQPage({
   const locale: Locale = lang;
   const t = getTranslations(locale);
   const faqItems = getFaqItems(locale);
+  const healthGuideHref = localeFeatures[locale].healthPageRedirect ?? localePath(locale, '/ayurveda');
 
   // Map English category names to translation keys
   const categoryKeyMap: Record<string, keyof typeof t.faqPage.categories> = {
@@ -152,7 +154,7 @@ export default async function FAQPage({
               {t.nav.nutrition}
             </Link>
             <Link
-              href={localePath(locale, '/ayurveda')}
+              href={healthGuideHref}
               className="inline-flex items-center px-5 py-2.5 rounded-lg border-2 border-earth-500 text-earth-600 dark:text-earth-400 font-medium hover:bg-earth-500 hover:text-white transition"
             >
               {t.nav.ayurveda}

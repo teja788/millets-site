@@ -12,14 +12,15 @@ export type Locale = (typeof locales)[number];
 export const defaultLocale: Locale = 'en';
 
 /** Regex to strip locale prefix from a pathname, e.g. /en/millets → /millets */
-export const localePattern = new RegExp(`^/(${locales.join('|')})`);
+export const localePattern = new RegExp(`^/(${locales.join('|')})(?=/|$)`);
 
 export function isValidLocale(lang: string): lang is Locale {
   return locales.includes(lang as Locale);
 }
 
 export function localePath(locale: Locale, path: string): string {
-  return `/${locale}${path}`;
+  const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+  return localePattern.test(normalizedPath) ? normalizedPath : `/${locale}${normalizedPath}`;
 }
 
 const translationMap: Record<Locale, TranslationKeys> = { en, te, ar, fr, de, hi, es };

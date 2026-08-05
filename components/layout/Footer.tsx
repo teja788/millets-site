@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { Locale } from '@/lib/i18n';
 import { localePath, getTranslations } from '@/lib/i18n';
+import { localeFeatures } from '@/lib/locale-config';
 
 export default function Footer({ locale }: { locale: Locale }) {
   const t = getTranslations(locale);
@@ -16,7 +17,9 @@ export default function Footer({ locale }: { locale: Locale }) {
 
   const learnMoreLinks = [
     { href: localePath(locale, '/history'), label: t.nav.history },
-    ...(locale !== 'fr' ? [{ href: localePath(locale, '/ayurveda'), label: t.nav.ayurveda }] : []),
+    ...(localeFeatures[locale].hasAyurveda
+      ? [{ href: localePath(locale, '/ayurveda'), label: t.nav.ayurveda }]
+      : []),
     ...(locale === 'fr' ? [{ href: localePath(locale, '/culture-africaine-du-mil'), label: 'Culture africaine du mil' }] : []),
     { href: localePath(locale, '/regional-traditions'), label: t.nav.regionalTraditions },
     { href: localePath(locale, '/global-millets'), label: t.nav.globalMillets },
@@ -27,6 +30,9 @@ export default function Footer({ locale }: { locale: Locale }) {
   ];
 
   const resourceLinks = [
+    ...(locale === 'en'
+      ? [{ href: localePath(locale, '/open-millet-reference'), label: 'Open millet names data' }]
+      : []),
     { href: localePath(locale, '/glossary'), label: t.nav.glossary },
     { href: localePath(locale, '/faq'), label: t.nav.faq },
     { href: localePath(locale, '/myths'), label: t.nav.mythsFacts },

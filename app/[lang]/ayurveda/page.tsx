@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { notFound, redirect } from 'next/navigation';
+import { notFound, permanentRedirect } from 'next/navigation';
 import type { Locale } from '@/lib/i18n';
-import { localePath, getTranslations, isValidLocale, locales, localeParams, hreflangAlternates } from '@/lib/i18n';
+import { localePath, getTranslations, isValidLocale, locales, availableHreflangAlternates } from '@/lib/i18n';
 import { localeFeatures } from '@/lib/locale-config';
 import { getAyurvedaData, getMilletBySlugLocale } from '@/lib/i18n-data';
 import Breadcrumb from '@/components/layout/Breadcrumb';
@@ -21,6 +21,8 @@ import {
 } from '@/components/ui/Table';
 import { sources } from '@/data/sources';
 
+const ayurvedaLocales = locales.filter((locale) => localeFeatures[locale].hasAyurveda);
+
 export async function generateMetadata({
   params,
 }: {
@@ -38,13 +40,13 @@ export async function generateMetadata({
         : 'Explore the Ayurvedic classification of millets as Trina Dhanya, dosha-specific recommendations, seasonal eating guidelines (Ritucharya), and traditional preparation methods.',
     alternates: {
       canonical: `/${lang}/ayurveda`,
-      languages: hreflangAlternates('/ayurveda'),
+      languages: availableHreflangAlternates('/ayurveda', ayurvedaLocales),
     },
   };
 }
 
 export function generateStaticParams() {
-  return localeParams();
+  return ayurvedaLocales.map((lang) => ({ lang }));
 }
 
 const doshaColors: Record<string, string> = {
@@ -77,7 +79,7 @@ export default async function AyurvedaPage({
 
   const locale: Locale = lang;
   const { healthPageRedirect } = localeFeatures[locale];
-  if (healthPageRedirect) redirect(healthPageRedirect);
+  if (healthPageRedirect) permanentRedirect(healthPageRedirect);
   const t = getTranslations(locale);
   const ayurvedaPageData = getAyurvedaData(locale);
   const sourceKeys = ayurvedicSourceKeys;

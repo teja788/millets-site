@@ -7,7 +7,8 @@
     "build": "next build",
     "postbuild": "node scripts/indexnow-submit.mjs",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "audit:seo": "node scripts/audit-seo.mjs"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",

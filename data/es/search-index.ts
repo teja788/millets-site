@@ -279,7 +279,7 @@ export const searchIndex: SearchableItem[] = [
   { id: 'history', title: 'Historia de los mijos', description: 'Cronologa arqueolgica del cultivo de mijos desde 8000 a.C. hasta la actualidad', type: 'page' as const, url: '/es/history', tags: ['historia', 'arqueologa', 'cronologa'] },
   { id: 'sustainability', title: 'Sostenibilidad y mijos', description: 'Ventajas ambientales de los mijos: eficiencia hdrica, resiliencia climtica y huella de carbono baja', type: 'page' as const, url: '/es/sustainability', tags: ['sostenibilidad', 'medio ambiente', 'clima', 'agua'] },
   { id: 'cooking-guide', title: 'Gua de coccin', description: 'Cmo cocinar, remojar, conservar y sustituir los mijos en sus recetas favoritas', type: 'page' as const, url: '/es/cooking-guide', tags: ['coccin', 'gua', 'cocina', 'tcnicas'] },
-  { id: 'ayurveda', title: 'Mijos y nutricin tradicional', description: 'Propiedades nutricionales tradicionales de los mijos en la medicina ayurvdica', type: 'page' as const, url: '/es/ayurveda', tags: ['nutricin', 'ayurveda', 'salud', 'tradicional'] },
+  { id: 'ayurveda', title: 'Mijos y nutricin tradicional', description: 'Propiedades nutricionales tradicionales de los mijos en la medicina ayurvdica', type: 'page' as const, url: '/es/nutricion-y-salud', tags: ['nutricin', 'ayurveda', 'salud', 'tradicional'] },
   { id: 'glossary', title: 'Glosario de mijos', description: 'Nombres de los mijos en diferentes idiomas del mundo', type: 'page' as const, url: '/es/glossary', tags: ['glosario', 'idiomas', 'nombres', 'traduccin'] },
   { id: 'nutrition', title: 'Comparacin nutricional', description: 'Compare los perfiles nutricionales de los 9 mijos con el arroz y el trigo', type: 'page' as const, url: '/es/nutrition', tags: ['nutricin', 'comparacin', 'minerales', 'vitaminas'] },
   { id: 'regional-traditions', title: 'Tradiciones regionales del mijo', description: 'Tradiciones culinarias del mijo en la India, frica y el mundo hispano', type: 'page' as const, url: '/es/regional-traditions', tags: ['regional', 'tradiciones', 'India', 'frica'] },
@@ -305,7 +305,7 @@ export const searchIndex: SearchableItem[] = [
     title: 'Qu es el mijo?',
     description: 'El mijo es un grupo de cereales de grano pequeo cultivados desde hace miles de aos. Son sin gluten, ricos en nutrientes y resistentes a la sequa.',
     type: 'faq' as const,
-    url: '/es/faq#que-es-mijo',
+    url: '/es/faq',
     tags: ['mijo', 'definicin', 'cereal', 'grano'],
   },
   {
@@ -313,7 +313,7 @@ export const searchIndex: SearchableItem[] = [
     title: 'Es el mijo sin gluten?',
     description: 'S, todos los mijos son naturalmente sin gluten, lo que los hace seguros para personas con enfermedad celaca o sensibilidad al gluten.',
     type: 'faq' as const,
-    url: '/es/faq#mijo-sin-gluten',
+    url: '/es/faq',
     tags: ['sin gluten', 'celaco', 'alergia', 'seguro'],
   },
   {
@@ -321,7 +321,7 @@ export const searchIndex: SearchableItem[] = [
     title: 'Cmo se cocina el mijo?',
     description: 'La mayora de los mijos se cocinan con una proporcin de 1:2.5 de mijo a agua. Enjuague, hierva y cocine a fuego lento durante 15-20 minutos.',
     type: 'faq' as const,
-    url: '/es/faq#como-cocinar-mijo',
+    url: '/es/faq',
     tags: ['coccin', 'preparacin', 'agua', 'instrucciones'],
   },
   {
@@ -329,7 +329,7 @@ export const searchIndex: SearchableItem[] = [
     title: 'Cules son los beneficios del mijo para la salud?',
     description: 'Los mijos son ricos en fibra, hierro, calcio y antioxidantes. Ayudan a controlar la diabetes, mejoran la digestin y fortalecen los huesos.',
     type: 'faq' as const,
-    url: '/es/faq#beneficios-mijo',
+    url: '/es/faq',
     tags: ['beneficios', 'salud', 'nutricin', 'diabetes', 'calcio'],
   },
   {
@@ -337,7 +337,7 @@ export const searchIndex: SearchableItem[] = [
     title: 'Es el mijo mejor que el arroz?',
     description: 'Los mijos tienen mayor contenido de fibra, hierro y calcio que el arroz blanco. Tienen un ndice glucmico ms bajo, lo que los hace mejores para diabticos.',
     type: 'faq' as const,
-    url: '/es/faq#mijo-vs-arroz',
+    url: '/es/faq',
     tags: ['arroz', 'comparacin', 'ndice glucmico', 'fibra'],
   },
   {
@@ -345,7 +345,7 @@ export const searchIndex: SearchableItem[] = [
     title: 'Cmo se conserva el mijo?',
     description: 'Guarde los mijos en un recipiente hermtico en un lugar fresco y seco. Los granos enteros duran hasta 2 aos; la harina de mijo, 2-3 meses.',
     type: 'faq' as const,
-    url: '/es/faq#conservar-mijo',
+    url: '/es/faq',
     tags: ['conservacin', 'almacenamiento', 'duracin', 'frescura'],
   },
   {
@@ -353,7 +353,7 @@ export const searchIndex: SearchableItem[] = [
     title: 'Pueden los bebs comer mijo?',
     description: 'S, los mijos son excelentes para bebs a partir de los 6 meses. El ragi (eleusine) es especialmente recomendado por su alto contenido en calcio.',
     type: 'faq' as const,
-    url: '/es/faq#mijo-bebes',
+    url: '/es/faq',
     tags: ['bebs', 'nios', 'alimentacin infantil', 'ragi', 'calcio'],
   },
   {
@@ -361,7 +361,7 @@ export const searchIndex: SearchableItem[] = [
     title: 'Afecta el mijo a la tiroides?',
     description: 'Algunos mijos contienen compuestos bociognicos que pueden afectar la funcin tiroidea si se consumen en exceso. Un consumo moderado y variado es seguro.',
     type: 'faq' as const,
-    url: '/es/faq#tiroides-mijo',
+    url: '/es/faq',
     tags: ['tiroides', 'bociognicos', 'precaucin', 'moderacin'],
   },
 
@@ -397,7 +397,7 @@ export const searchIndex: SearchableItem[] = [
     title: 'Tradiciones de mijo en frica Occidental',
     description: 'El mijo perla es esencial en el Sahel: fonio en Guinea, thiakry en Senegal y tuwo en Nigeria forman la base alimentaria de millones.',
     type: 'tradition' as const,
-    url: '/es/regional-traditions/west-africa',
+    url: '/es/global-millets/west-africa-sahel',
     tags: ['frica', 'Sahel', 'Senegal', 'Nigeria', 'fonio', 'thiakry'],
   },
 
@@ -409,7 +409,7 @@ export const searchIndex: SearchableItem[] = [
     title: 'Mijos en Asia del Sur',
     description: 'India es el mayor productor mundial de mijo, con Rajastn, Maharashtra y Karnataka como principales regiones de cultivo.',
     type: 'region' as const,
-    url: '/es/global-millets/south-asia',
+    url: '/es/global-millets/india-south-asia',
     tags: ['Asia del Sur', 'India', 'produccin', 'cultivo'],
   },
   {
@@ -417,7 +417,7 @@ export const searchIndex: SearchableItem[] = [
     title: 'Mijos en frica',
     description: 'frica produce casi un tercio del mijo mundial. Niger, Nigeria, Mali y Senegal son los principales productores del continente.',
     type: 'region' as const,
-    url: '/es/global-millets/africa',
+    url: '/es/global-millets/west-africa-sahel',
     tags: ['frica', 'Niger', 'Nigeria', 'Mali', 'Sahel'],
   },
   {
@@ -437,7 +437,7 @@ export const searchIndex: SearchableItem[] = [
     title: 'Mito: El mijo es comida de pobres',
     description: 'Los mijos fueron la base alimentaria de grandes civilizaciones. Son superalimentos nutritivos adoptados por chefs de todo el mundo.',
     type: 'page' as const,
-    url: '/es/myths#mijo-comida-pobres',
+    url: '/es/myths',
     tags: ['mito', 'realidad', 'prejuicio', 'superalimento'],
   },
   {
@@ -445,7 +445,7 @@ export const searchIndex: SearchableItem[] = [
     title: 'Mito: El mijo no tiene sabor',
     description: 'Cada mijo tiene un perfil de sabor nico: la eleusine es terrosa, el sorgo es dulce y el mijo cola de zorro es alimonado.',
     type: 'page' as const,
-    url: '/es/myths#mijo-sin-sabor',
+    url: '/es/myths',
     tags: ['mito', 'sabor', 'perfil gustativo', 'cocina'],
   },
   {
@@ -453,7 +453,7 @@ export const searchIndex: SearchableItem[] = [
     title: 'Mito: El mijo es difcil de cocinar',
     description: 'La mayora de los mijos se cocinan en 15-20 minutos, ms rpido que el arroz integral. Son verstiles y fciles de preparar.',
     type: 'page' as const,
-    url: '/es/myths#mijo-dificil-cocinar',
+    url: '/es/myths',
     tags: ['mito', 'coccin', 'fcil', 'rpido'],
   },
 

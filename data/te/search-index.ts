@@ -33,7 +33,7 @@ export const searchIndex: SearchableItem[] = [
     title: f.question,
     description: f.answer.substring(0, 200),
     type: 'faq' as const,
-    url: `/te/faq#${f.id}`,
+    url: '/te/faq',
     tags: [f.category],
   })),
   // Map regional traditions
@@ -60,7 +60,7 @@ export const searchIndex: SearchableItem[] = [
     title: m.myth,
     description: m.fact.substring(0, 200),
     type: 'page' as const,
-    url: `/te/myths#${m.id}`,
+    url: '/te/myths',
     tags: [m.category, 'myth', 'fact'],
   })),
   // Map fermented products
