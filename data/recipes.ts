@@ -1,6 +1,16 @@
 import type { Recipe, RecipeCategory } from '@/lib/types';
 
-export const recipes: Recipe[] = [
+const redirectedRecipeSlugs = new Set([
+  'foxtail-millet-ambali',
+  'little-millet-ambali',
+  'kodo-millet-ambali',
+  'barnyard-millet-ambali',
+  'browntop-millet-ambali',
+  'jowar-roti',
+  'ragi-malt',
+]);
+
+const recipeCatalog: Recipe[] = [
   // ============================================================
   // BREAKFAST RECIPES (5)
   // ============================================================
@@ -994,16 +1004,16 @@ export const recipes: Recipe[] = [
 
   {
     slug: 'ragi-ambali',
-    title: 'Ragi Ambali (Fermented Finger Millet Cooler)',
-    millets: ['finger-millet'],
+    title: 'Millet Ambali Variants (Ragi and Five Siridhanya Millets)',
+    millets: ['finger-millet', 'foxtail-millet', 'little-millet', 'kodo-millet', 'barnyard-millet', 'browntop-millet'],
     category: 'drink',
     cuisine: 'South Indian',
-    prepTime: '10 min + overnight ferment',
-    cookTime: '15 min',
+    prepTime: '10 min to 8 hr soak + overnight ferment',
+    cookTime: '10-25 min',
     servings: 4,
     difficulty: 'easy',
     description:
-      'Ragi ambali is the everyday fermented cooler of Karnataka and the Telugu country, made from finger millet (ragi) cooked into a soft porridge, soured overnight, then loosened with buttermilk and salted to taste. Farmers have carried it to the fields for generations because it sits well in the heat and keeps you going through a long morning. It is served cool, never reheated, with chopped onion and curry leaves on top.',
+      'This consolidated guide uses ragi ambali as the base method and covers five whole-grain variations made with foxtail, little, kodo, barnyard, or browntop millet. The fermentation and serving method stays the same; the soaking time, water, and cooking time change with the grain. Use the variation notes below before following the common cooling, overnight fermentation, and serving steps.',
     ingredients: [
       { item: 'Ragi (finger millet) flour', quantity: '1/2 cup (60 g)' },
       { item: 'Water', quantity: '4 cups' },
@@ -1030,11 +1040,15 @@ export const recipes: Recipe[] = [
     tips: [
       'An earthen pot gives the cleanest sour note and keeps the ambali cool through the day, though a glass jar works too.',
       'Add salt only after fermentation, never before. Salt slows the souring, so holding it back lets the cultures work overnight.',
-      'For a sweet version, leave out the buttermilk and onion and stir in jaggery with a little milk instead, closer to a ragi malt.',
+      'Foxtail variation: soak 1/2 cup grain for 30 minutes, then simmer in 4 cups water for 15 to 20 minutes.',
+      'Little millet variation: soak 1/2 cup grain for 30 minutes, then simmer in 4 cups water for 12 to 15 minutes.',
+      'Kodo variation: soak 1/2 cup grain for 6 to 8 hours, then simmer in 5 cups water for 20 to 25 minutes.',
+      'Barnyard variation: soak 1/2 cup grain for 2 to 4 hours, then simmer in 4 cups water for 15 to 20 minutes.',
+      'Browntop variation: soak 1/2 cup grain for 6 to 8 hours, then simmer in 5 cups water for 20 to 25 minutes.',
     ],
     imageUrl: '',
     imageFile: '/images/recipes/ragi-ambali.webp',
-    tags: ['gluten-free', 'vegetarian', 'fermented', 'probiotic', 'traditional', 'summer-drink', 'calcium-rich'],
+    tags: ['gluten-free', 'vegetarian', 'fermented', 'traditional', 'ambali', 'siridhanya'],
   },
 
   {
@@ -1354,6 +1368,10 @@ export const recipes: Recipe[] = [
     tags: ['gluten-free', 'vegan', 'traditional', 'maharashtrian', 'staple', 'everyday'],
   },
 ];
+
+export const recipes = recipeCatalog.filter(
+  (recipe) => !redirectedRecipeSlugs.has(recipe.slug),
+);
 
 // === HELPER FUNCTIONS ===
 

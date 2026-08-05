@@ -4,11 +4,45 @@ import { notFound } from 'next/navigation';
 import { Database, Download, ExternalLink } from 'lucide-react';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import { openMilletReference } from '@/data/open-millet-reference';
+import { toAbsoluteSiteUrl } from '@/lib/site-url';
+
+const datasetDescription =
+  'An openly licensed, field-level reference for scientific names, selected synonyms, vernacular names, source records, and provenance for millets and sorghum.';
+
+const datasetStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'Dataset',
+  name: openMilletReference.title,
+  description: datasetDescription,
+  url: toAbsoluteSiteUrl('/en/open-millet-reference'),
+  version: openMilletReference.version,
+  dateModified: openMilletReference.version,
+  license: openMilletReference.license.url,
+  isAccessibleForFree: true,
+  creator: {
+    '@type': 'Organization',
+    name: 'Simply Millets',
+    url: toAbsoluteSiteUrl('/en'),
+  },
+  keywords: [
+    'millets',
+    'sorghum',
+    'taxonomy',
+    'scientific names',
+    'vernacular names',
+    'multilingual data',
+  ],
+  isBasedOn: openMilletReference.source.datasetUrl,
+  distribution: {
+    '@type': 'DataDownload',
+    contentUrl: toAbsoluteSiteUrl('/api/open-millet-reference'),
+    encodingFormat: 'application/json',
+  },
+};
 
 export const metadata: Metadata = {
   title: 'Open Millet Names Reference',
-  description:
-    'An openly licensed, field-level reference for scientific names, selected synonyms, vernacular names, source records, and provenance for millets and sorghum.',
+  description: datasetDescription,
   alternates: {
     canonical: '/en/open-millet-reference',
     languages: { en: '/en/open-millet-reference', 'x-default': '/en/open-millet-reference' },
@@ -29,6 +63,10 @@ export default async function OpenMilletReferencePage({
 
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(datasetStructuredData) }}
+      />
       <Breadcrumb locale="en" />
       <div className="content-wrapper py-10 md:py-14">
         <header className="max-w-4xl mb-10">

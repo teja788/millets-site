@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import type { Locale } from '@/lib/i18n';
-import { localePath, getTranslations, isValidLocale, locales, localeParams, hreflangAlternates } from '@/lib/i18n';
+import { localePath, getTranslations, isValidLocale, locales, localeParams, availableHreflangAlternates } from '@/lib/i18n';
 import { getMillets } from '@/lib/i18n-data';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import PageBanner from '@/components/sections/PageBanner';
@@ -13,6 +13,11 @@ import {
   TableCell,
   TableHeaderCell,
 } from '@/components/ui/Table';
+
+const TEMPORARILY_NOINDEXED_LOCALES = new Set<Locale>(['ar', 'hi', 'es']);
+const INDEXABLE_LOCALES = locales.filter(
+  (locale) => !TEMPORARILY_NOINDEXED_LOCALES.has(locale),
+);
 
 export async function generateMetadata({
   params,
@@ -35,8 +40,11 @@ export async function generateMetadata({
             : 'Complete guide to cooking millets: water ratios, soaking times, cooking methods (stovetop, pressure cooker, rice cooker), reducing antinutrients, storage, and substitution tips.',
     alternates: {
       canonical: `/${lang}/cooking-guide`,
-      languages: hreflangAlternates('/cooking-guide'),
+      languages: availableHreflangAlternates('/cooking-guide', INDEXABLE_LOCALES),
     },
+    robots: TEMPORARILY_NOINDEXED_LOCALES.has(lang)
+      ? { index: false, follow: true }
+      : undefined,
   };
 }
 

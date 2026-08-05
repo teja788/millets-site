@@ -1,6 +1,14 @@
 import type { Recipe } from '@/lib/types';
 
-export const recipes: Recipe[] = [
+const redirectedRecipeSlugs = new Set([
+  'foxtail-millet-ambali',
+  'little-millet-ambali',
+  'kodo-millet-ambali',
+  'barnyard-millet-ambali',
+  'browntop-millet-ambali',
+]);
+
+const recipeCatalog: Recipe[] = [
   // ============================================================
   // DESAYUNO / BREAKFAST (3)
   // ============================================================
@@ -1014,16 +1022,16 @@ export const recipes: Recipe[] = [
 
   {
     slug: 'ragi-ambali',
-    title: 'Ambali de ragi (mijo africano fermentado)',
-    millets: ['finger-millet'],
+    title: 'Variantes de ambali de mijo (ragi y cinco Siridhanya)',
+    millets: ['finger-millet', 'foxtail-millet', 'little-millet', 'kodo-millet', 'barnyard-millet', 'browntop-millet'],
     category: 'drink',
     cuisine: 'India del Sur',
-    prepTime: '10 min + fermentación nocturna',
-    cookTime: '15 min',
+    prepTime: 'de 10 min a 8 h de remojo + fermentación nocturna',
+    cookTime: '10-25 min',
     servings: 4,
     difficulty: 'easy',
     description:
-      'El ambali de ragi es el refresco fermentado de todos los días en Karnataka y la región telugu, hecho con mijo africano (ragi) cocido hasta formar unas gachas suaves, acidificadas durante la noche, aligeradas con suero de leche y saladas al gusto. Los campesinos lo han llevado al campo durante generaciones porque sienta bien con el calor y da fuerzas durante toda una larga mañana. Se sirve frío, nunca recalentado, con cebolla picada y hojas de curry por encima.',
+      'Esta guía consolidada usa el ambali de ragi como método base e incluye cinco variantes de grano entero: mijo cola de zorra, mijo menor, mijo kodo, mijo de corral y mijo browntop. La fermentación y el servicio son iguales; el tiempo de remojo, el agua y la cocción cambian según el grano. Consulte las notas de cada variante antes de seguir los pasos comunes de enfriado, fermentación nocturna y servicio.',
     ingredients: [
       { item: 'Harina de ragi (mijo africano)', quantity: '60 g' },
       { item: 'Agua', quantity: '1 litro' },
@@ -1050,11 +1058,15 @@ export const recipes: Recipe[] = [
     tips: [
       'Una olla de barro aporta la nota ácida más limpia y mantiene el ambali fresco durante todo el día, aunque un tarro de cristal también sirve.',
       'Añada la sal solo después de la fermentación, nunca antes. La sal ralentiza la acidificación, así que reservarla deja que los cultivos trabajen durante la noche.',
-      'Para una versión dulce, omita el suero de leche y la cebolla e incorpore jaggery con un poco de leche, más parecido a un malta de ragi.',
+      'Variante de mijo cola de zorra: remoje 1/2 taza de grano durante 30 minutos y cuézalo en 4 tazas de agua de 15 a 20 minutos.',
+      'Variante de mijo menor: remoje 1/2 taza de grano durante 30 minutos y cuézalo en 4 tazas de agua de 12 a 15 minutos.',
+      'Variante de mijo kodo: remoje 1/2 taza de grano de 6 a 8 horas y cuézalo en 5 tazas de agua de 20 a 25 minutos.',
+      'Variante de mijo de corral: remoje 1/2 taza de grano de 2 a 4 horas y cuézalo en 4 tazas de agua de 15 a 20 minutos.',
+      'Variante de mijo browntop: remoje 1/2 taza de grano de 6 a 8 horas y cuézalo en 5 tazas de agua de 20 a 25 minutos.',
     ],
     imageUrl: '',
     imageFile: '/images/recipes/ragi-ambali.webp',
-    tags: ['sin-gluten', 'vegetariano', 'fermentado', 'probiótico', 'tradicional', 'bebida-de-verano', 'rico-en-calcio', 'indio'],
+    tags: ['sin-gluten', 'vegetariano', 'fermentado', 'tradicional', 'ambali', 'siridhanya', 'indio'],
   },
 
   {
@@ -1378,3 +1390,7 @@ export const recipes: Recipe[] = [
     tags: ['sin-gluten', 'vegetariano', 'indio', 'postre', 'festivo', 'navratri'],
   },
 ];
+
+export const recipes = recipeCatalog.filter(
+  (recipe) => !redirectedRecipeSlugs.has(recipe.slug),
+);

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import type { Locale } from '@/lib/i18n';
-import { localePath, getTranslations, isValidLocale, locales, localeParams, hreflangAlternates } from '@/lib/i18n';
+import { localePath, getTranslations, isValidLocale, locales, localeParams, availableHreflangAlternates } from '@/lib/i18n';
 import { getMillets, riceNutrition } from '@/lib/i18n-data';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import PageBanner from '@/components/sections/PageBanner';
@@ -11,6 +11,11 @@ import NutritionChart from '@/components/ui/NutritionChart';
 import SourceCitation from '@/components/ui/SourceCitation';
 import { Card, CardBody } from '@/components/ui/Card';
 import { sources } from '@/data/sources';
+
+const TEMPORARILY_NOINDEXED_LOCALES = new Set<Locale>(['ar', 'hi', 'es']);
+const INDEXABLE_LOCALES = locales.filter(
+  (locale) => !TEMPORARILY_NOINDEXED_LOCALES.has(locale),
+);
 
 export async function generateMetadata({
   params,
@@ -33,8 +38,11 @@ export async function generateMetadata({
             : 'Compare the nutritional profiles of all 9 millets side by side. See how millets compare to rice and wheat in protein, calcium, iron, fiber, and more.',
     alternates: {
       canonical: `/${lang}/nutrition`,
-      languages: hreflangAlternates('/nutrition'),
+      languages: availableHreflangAlternates('/nutrition', INDEXABLE_LOCALES),
     },
+    robots: TEMPORARILY_NOINDEXED_LOCALES.has(lang)
+      ? { index: false, follow: true }
+      : undefined,
   };
 }
 

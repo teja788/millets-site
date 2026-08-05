@@ -10,6 +10,14 @@ import { siteUrl } from '@/lib/site-url';
 
 const BASE_URL = siteUrl;
 
+const TEMPORARILY_NOINDEXED_STATIC_ROUTES = new Set([
+  '/cooking-guide',
+  '/history',
+  '/nutrition',
+  '/sustainability',
+]);
+const MIXED_LANGUAGE_LOCALES = new Set<Locale>(['ar', 'hi', 'es']);
+
 function alternatesFor(path: string, availableLocales: readonly Locale[]) {
   const defaultLocale = availableLocales.includes('en') ? 'en' : availableLocales[0];
 
@@ -58,6 +66,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const availableLocales =
       route === '/ayurveda'
         ? locales.filter((locale) => !['fr', 'de', 'es'].includes(locale))
+        : TEMPORARILY_NOINDEXED_STATIC_ROUTES.has(route)
+          ? locales.filter((locale) => !MIXED_LANGUAGE_LOCALES.has(locale))
         : locales;
 
     for (const locale of availableLocales) {
@@ -187,7 +197,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   for (const slug of allTraditionSlugs) {
     const availableLocales = locales.filter((locale) =>
-      traditionSlugsByLocale[locale].has(slug),
+      locale !== 'ar' && traditionSlugsByLocale[locale].has(slug),
     );
 
     for (const locale of availableLocales) {

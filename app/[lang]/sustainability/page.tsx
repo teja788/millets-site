@@ -7,7 +7,12 @@ import QuickFactBox from '@/components/ui/QuickFactBox';
 import SourceCitation from '@/components/ui/SourceCitation';
 import { sources } from '@/data/sources';
 import type { Locale } from '@/lib/i18n';
-import { localePath, getTranslations, isValidLocale, localeParams, hreflangAlternates } from '@/lib/i18n';
+import { localePath, getTranslations, isValidLocale, locales, localeParams, availableHreflangAlternates } from '@/lib/i18n';
+
+const TEMPORARILY_NOINDEXED_LOCALES = new Set<Locale>(['ar', 'hi', 'es']);
+const INDEXABLE_LOCALES = locales.filter(
+  (locale) => !TEMPORARILY_NOINDEXED_LOCALES.has(locale),
+);
 
 export function generateStaticParams() {
   return localeParams();
@@ -33,8 +38,11 @@ export async function generateMetadata({
             : 'Discover why millets are climate-smart crops: low water use, drought tolerance, carbon efficiency, soil health benefits, and alignment with UN Sustainable Development Goals.',
     alternates: {
       canonical: `/${lang}/sustainability`,
-      languages: hreflangAlternates('/sustainability'),
+      languages: availableHreflangAlternates('/sustainability', INDEXABLE_LOCALES),
     },
+    robots: TEMPORARILY_NOINDEXED_LOCALES.has(lang)
+      ? { index: false, follow: true }
+      : undefined,
   };
 }
 

@@ -1,6 +1,16 @@
 import type { Recipe, RecipeCategory } from '@/lib/types';
 
-export const recipes: Recipe[] = [
+const redirectedRecipeSlugs = new Set([
+  'foxtail-millet-ambali',
+  'little-millet-ambali',
+  'kodo-millet-ambali',
+  'barnyard-millet-ambali',
+  'browntop-millet-ambali',
+  'jowar-roti',
+  'ragi-malt',
+]);
+
+const recipeCatalog: Recipe[] = [
   // ============================================================
   // BREAKFAST RECIPES (5)
   // ============================================================
@@ -994,16 +1004,16 @@ export const recipes: Recipe[] = [
 
   {
     slug: 'ragi-ambali',
-    title: 'रागी अंबली (रागी का फर्मेंटेड ठंडा पेय)',
-    millets: ['finger-millet'],
+    title: 'मिलेट अंबली के प्रकार (रागी और पाँच सिरिधान्य)',
+    millets: ['finger-millet', 'foxtail-millet', 'little-millet', 'kodo-millet', 'barnyard-millet', 'browntop-millet'],
     category: 'drink',
     cuisine: 'दक्षिण भारतीय',
-    prepTime: '10 मिनट + रात भर फर्मेंटेशन',
-    cookTime: '15 मिनट',
+    prepTime: '10 मिनट से 8 घंटे भिगोना + रात भर फर्मेंटेशन',
+    cookTime: '10-25 मिनट',
     servings: 4,
     difficulty: 'easy',
     description:
-      'रागी अंबली कर्नाटक और तेलुगु इलाके का रोज़मर्रा का फर्मेंटेड ठंडा पेय है, जो रागी (फिंगर मिलेट) को नरम दलिये में पकाकर, रात भर खट्टा करके, छाछ से पतला करके और स्वादानुसार नमक डालकर बनाया जाता है। किसान पीढ़ियों से इसे खेतों में ले जाते रहे हैं क्योंकि यह गर्मी में अच्छा रहता है और लंबी सुबह भर आपको चलाए रखता है। इसे ठंडा परोसा जाता है, कभी दोबारा गर्म नहीं किया जाता, ऊपर से कटा प्याज़ और करी पत्ता डालकर।',
+      'यह समेकित मार्गदर्शिका रागी अंबली को मूल विधि के रूप में इस्तेमाल करती है और कंगनी, कुटकी, कोदो, सांवा तथा छोटी कंगनी से बनने वाले पाँच साबुत-अनाज प्रकारों को भी शामिल करती है। फर्मेंटेशन और परोसने की विधि समान रहती है; अनाज के अनुसार भिगोने का समय, पानी और पकाने का समय बदलता है। सामान्य ठंडा करने, रात भर फर्मेंटेशन और परोसने के चरणों से पहले नीचे दिए प्रकारों के नोट देखें।',
     ingredients: [
       { item: 'रागी (फिंगर मिलेट) का आटा', quantity: '1/2 कप (60 ग्राम)' },
       { item: 'पानी', quantity: '4 कप' },
@@ -1030,11 +1040,15 @@ export const recipes: Recipe[] = [
     tips: [
       'मिट्टी का बर्तन सबसे साफ़ खट्टा स्वाद देता है और अंबली को दिन भर ठंडा रखता है, हालाँकि काँच का जार भी चलता है।',
       'नमक हमेशा फर्मेंटेशन के बाद ही डालें, पहले कभी नहीं। नमक खट्टापन धीमा करता है, इसलिए इसे रोककर रखने से कल्चर रात भर अपना काम कर पाते हैं।',
-      'मीठे रूप के लिए छाछ और प्याज़ छोड़ दें और इसके बजाय थोड़े दूध के साथ गुड़ मिलाएँ, जो रागी माल्ट के क़रीब होता है।',
+      'कंगनी प्रकार: 1/2 कप अनाज को 30 मिनट भिगोएँ, फिर 4 कप पानी में 15 से 20 मिनट पकाएँ।',
+      'कुटकी प्रकार: 1/2 कप अनाज को 30 मिनट भिगोएँ, फिर 4 कप पानी में 12 से 15 मिनट पकाएँ।',
+      'कोदो प्रकार: 1/2 कप अनाज को 6 से 8 घंटे भिगोएँ, फिर 5 कप पानी में 20 से 25 मिनट पकाएँ।',
+      'सांवा प्रकार: 1/2 कप अनाज को 2 से 4 घंटे भिगोएँ, फिर 4 कप पानी में 15 से 20 मिनट पकाएँ।',
+      'छोटी कंगनी प्रकार: 1/2 कप अनाज को 6 से 8 घंटे भिगोएँ, फिर 5 कप पानी में 20 से 25 मिनट पकाएँ।',
     ],
     imageUrl: '',
     imageFile: '/images/recipes/ragi-ambali.webp',
-    tags: ['gluten-free', 'vegetarian', 'fermented', 'probiotic', 'traditional', 'summer-drink', 'calcium-rich'],
+    tags: ['gluten-free', 'vegetarian', 'fermented', 'traditional', 'ambali', 'siridhanya'],
   },
 
   {
@@ -1354,6 +1368,10 @@ export const recipes: Recipe[] = [
     tags: ['gluten-free', 'vegan', 'traditional', 'maharashtrian', 'staple', 'everyday'],
   },
 ];
+
+export const recipes = recipeCatalog.filter(
+  (recipe) => !redirectedRecipeSlugs.has(recipe.slug),
+);
 
 // === HELPER FUNCTIONS ===
 

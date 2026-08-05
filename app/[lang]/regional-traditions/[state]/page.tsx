@@ -51,7 +51,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return { title: t.regionalPage.notFound };
   }
   const availableLocales = locales.filter((candidateLocale) =>
-    getRegionalTraditionBySlugLocale(state, candidateLocale),
+    candidateLocale !== 'ar' && getRegionalTraditionBySlugLocale(state, candidateLocale),
   );
 
   return {
@@ -64,6 +64,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         availableLocales,
       ),
     },
+    robots: locale === 'ar' ? { index: false, follow: true } : undefined,
     openGraph: {
       images: [{ url: tradition.imageFile, width: 1200, height: 800, alt: tradition.state }],
     },

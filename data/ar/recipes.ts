@@ -1,6 +1,16 @@
 import type { Recipe, RecipeCategory } from '@/lib/types';
 
-export const recipes: Recipe[] = [
+const redirectedRecipeSlugs = new Set([
+  'foxtail-millet-ambali',
+  'little-millet-ambali',
+  'kodo-millet-ambali',
+  'barnyard-millet-ambali',
+  'browntop-millet-ambali',
+  'jowar-roti',
+  'ragi-malt',
+]);
+
+const recipeCatalog: Recipe[] = [
   // ─── BREAKFAST 1: ragi-porridge (already translated — copied exactly) ───
   {
     slug: 'ragi-porridge',
@@ -908,16 +918,16 @@ export const recipes: Recipe[] = [
   // DRINK 3: ragi-ambali
   {
     slug: 'ragi-ambali',
-    title: 'أمبالي الراغي (عصيدة الدخن الإصبعي المخمّرة)',
-    millets: ['finger-millet'],
+    title: 'أنواع أمبالي الدخن (الراغي وخمسة أنواع سيريذانيا)',
+    millets: ['finger-millet', 'foxtail-millet', 'little-millet', 'kodo-millet', 'barnyard-millet', 'browntop-millet'],
     category: 'drink',
     cuisine: 'South Indian',
-    prepTime: '10 min + overnight ferment',
-    cookTime: '15 min',
+    prepTime: 'من 10 دقائق إلى 8 ساعات نقع + تخمير طوال الليل',
+    cookTime: '10-25 دقيقة',
     servings: 4,
     difficulty: 'easy',
     description:
-      'أمبالي الراغي هو المشروب المخمّر اليومي في كارناتاكا وبلاد التيلوغو، يُصنع من الدخن الإصبعي (الراغي) المطهوّ إلى عصيدة طريّة، يُترك ليحمض طوال الليل، ثم يُخفَّف باللبن المخيض ويُملَّح حسب الذوق. حمله المزارعون إلى الحقول جيلاً بعد جيل لأنه يتحمّل الحرارة جيداً ويمدّهم بالطاقة طوال صباح طويل. يُقدَّم بارداً، ولا يُعاد تسخينه أبداً، مع البصل المفروم وأوراق الكاري في الأعلى.',
+      'يستخدم هذا الدليل الموحّد أمبالي الراغي بوصفه الطريقة الأساسية، ويغطي خمس تنويعات من الحبوب الكاملة: الدخن الإيطالي، والدخن الصغير، ودخن الكودو، ودخن الديس، والدخن البنّي القمّة. تبقى طريقة التخمير والتقديم واحدة، بينما تختلف مدة النقع وكمية الماء ووقت الطهي حسب الحبوب. استخدم ملاحظات التنويعات أدناه قبل اتباع خطوات التبريد والتخمير طوال الليل والتقديم.',
     ingredients: [
       { item: 'دقيق الراغي (الدخن الإصبعي)', quantity: '1/2 كوب (60 غ)' },
       { item: 'ماء', quantity: '4 أكواب' },
@@ -940,11 +950,15 @@ export const recipes: Recipe[] = [
     tips: [
       'الوعاء الفخاري يمنح أنقى نكهة حامضة ويبقي الأمبالي بارداً طوال اليوم، مع أن البرطمان الزجاجي يفي بالغرض أيضاً.',
       'أضف الملح بعد التخمير فقط، لا قبله أبداً. الملح يبطّئ التحميض، لذا تأخيره يترك المزارع تؤدي عملها طوال الليل.',
-      'لنسخة حلوة، استبعد اللبن المخيض والبصل وأضف بدلاً منهما الجاغري مع قليل من الحليب، فيقترب من شراب الراغي بالحليب.',
+      'تنويعة الدخن الإيطالي: انقع نصف كوب من الحبوب 30 دقيقة، ثم اطبخه في 4 أكواب ماء لمدة 15 إلى 20 دقيقة.',
+      'تنويعة الدخن الصغير: انقع نصف كوب من الحبوب 30 دقيقة، ثم اطبخه في 4 أكواب ماء لمدة 12 إلى 15 دقيقة.',
+      'تنويعة دخن الكودو: انقع نصف كوب من الحبوب 6 إلى 8 ساعات، ثم اطبخه في 5 أكواب ماء لمدة 20 إلى 25 دقيقة.',
+      'تنويعة دخن الديس: انقع نصف كوب من الحبوب 2 إلى 4 ساعات، ثم اطبخه في 4 أكواب ماء لمدة 15 إلى 20 دقيقة.',
+      'تنويعة الدخن البنّي القمّة: انقع نصف كوب من الحبوب 6 إلى 8 ساعات، ثم اطبخه في 5 أكواب ماء لمدة 20 إلى 25 دقيقة.',
     ],
     imageUrl: '',
     imageFile: '/images/recipes/ragi-ambali.webp',
-    tags: ['gluten-free', 'vegetarian', 'fermented', 'probiotic', 'traditional', 'summer-drink', 'calcium-rich'],
+    tags: ['gluten-free', 'vegetarian', 'fermented', 'traditional', 'ambali', 'siridhanya'],
   },
 
   // DRINK 4: foxtail-millet-ambali
@@ -1239,6 +1253,10 @@ export const recipes: Recipe[] = [
     tags: ['gluten-free', 'vegan', 'traditional', 'maharashtrian', 'staple', 'everyday'],
   },
 ];
+
+export const recipes = recipeCatalog.filter(
+  (recipe) => !redirectedRecipeSlugs.has(recipe.slug),
+);
 
 // === HELPER FUNCTIONS ===
 

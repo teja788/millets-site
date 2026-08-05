@@ -1,13 +1,18 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import type { Locale } from '@/lib/i18n';
-import { localePath, getTranslations, isValidLocale, locales, localeParams, hreflangAlternates } from '@/lib/i18n';
+import { localePath, getTranslations, isValidLocale, locales, localeParams, availableHreflangAlternates } from '@/lib/i18n';
 import { getTimelineEvents } from '@/lib/i18n-data';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import PageBanner from '@/components/sections/PageBanner';
 import TimelineSection from '@/components/sections/TimelineSection';
 import SourceCitation from '@/components/ui/SourceCitation';
 import { sources } from '@/data/sources';
+
+const TEMPORARILY_NOINDEXED_LOCALES = new Set<Locale>(['ar', 'hi', 'es']);
+const INDEXABLE_LOCALES = locales.filter(
+  (locale) => !TEMPORARILY_NOINDEXED_LOCALES.has(locale),
+);
 
 export async function generateMetadata({
   params,
@@ -30,8 +35,11 @@ export async function generateMetadata({
             : 'Trace the fascinating 10,000-year journey of millets from the earliest cultivated crops in China to the 2023 International Year of Millets. Discover archaeological evidence, Vedic references, and the modern millet revival.',
     alternates: {
       canonical: `/${lang}/history`,
-      languages: hreflangAlternates('/history'),
+      languages: availableHreflangAlternates('/history', INDEXABLE_LOCALES),
     },
+    robots: TEMPORARILY_NOINDEXED_LOCALES.has(lang)
+      ? { index: false, follow: true }
+      : undefined,
   };
 }
 
@@ -478,5 +486,4 @@ export default async function HistoryPage({
     </main>
   );
 }
-
 

@@ -353,7 +353,6 @@ export const majorMillets: Millet[] = [
     isGlutenFree: true,
     relatedRecipes: [
       'ragi-mudde',
-      'ragi-malt',
       'ragi-dosa',
       'ragi-porridge',
       'ragi-ladoo',
